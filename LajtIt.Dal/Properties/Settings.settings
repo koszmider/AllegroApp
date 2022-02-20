@@ -2,87 +2,7 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="LajtIt.Dal.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="AllegroDBConnectionString" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=.\sqlexpress;Initial Catalog=AllegroDB;Integrated Security=True&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=.\sqlexpress;Initial Catalog=AllegroDB;Integrated Security=True</Value>
-    </Setting>
-    <Setting Name="LajtitDB_TestConnectionString" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=.\sqlexpress;Initial Catalog=LajtitDB_Test;Integrated Security=True&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=.\sqlexpress;Initial Catalog=LajtitDB_Test;Integrated Security=True</Value>
-    </Setting>
-    <Setting Name="LajtitTestConnectionString" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=JACEK\SQLEXPRESS;Initial Catalog=LajtitTest;Integrated Security=True&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=JACEK\SQLEXPRESS;Initial Catalog=LajtitTest;Integrated Security=True</Value>
-    </Setting>
-    <Setting Name="LajtitTestHelperConnectionString" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=.\sqlexpress;Initial Catalog=LajtitTestHelper;Integrated Security=True&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=.\sqlexpress;Initial Catalog=LajtitTestHelper;Integrated Security=True</Value>
-    </Setting>
-    <Setting Name="LajtitProdConnectionString" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=LAPTOP-429BP44U\SQLEXPRESS;Initial Catalog=LajtitProd;Integrated Security=True;Encrypt=False;TrustServerCertificate=True&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=LAPTOP-429BP44U\SQLEXPRESS;Initial Catalog=LajtitProd;Integrated Security=True;Encrypt=False;TrustServerCertificate=True</Value>
-    </Setting>
     <Setting Name="LajtitProdHelperConnectionString" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=LAPTOP-429BP44U\SQLEXPRESS;Initial Catalog=LajtitProdHelper;Integrated Security=True;Encrypt=False;TrustServerCertificate=True&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=LAPTOP-429BP44U\SQLEXPRESS;Initial Catalog=LajtitProdHelper;Integrated Security=True;Encrypt=False;TrustServerCertificate=True</Value>
-    </Setting>
-    <Setting Name="LajtitProdAllegroConnectionString" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=LAPTOP-429BP44U\SQLEXPRESS;Initial Catalog=LajtitProdAllegro;Integrated Security=True;Encrypt=False;TrustServerCertificate=True&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=LAPTOP-429BP44U\SQLEXPRESS;Initial Catalog=LajtitProdAllegro;Integrated Security=True;Encrypt=False;TrustServerCertificate=True</Value>
-    </Setting>
-    <Setting Name="LajtitProdConnectionString1" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=LAPTOP-E90OCQH9\SQLEXPRESS;Initial Catalog=LajtitProd;Integrated Security=True&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=LAPTOP-E90OCQH9\SQLEXPRESS;Initial Catalog=LajtitProd;Integrated Security=True</Value>
-    </Setting>
-    <Setting Name="LajtitProdConnectionString2" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=JACEK\SQLEXPRESS;Initial Catalog=LajtitProd;Integrated Security=True&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=JACEK\SQLEXPRESS;Initial Catalog=LajtitProd;Integrated Security=True</Value>
-    </Setting>
-    <Setting Name="LajtitProdAllegroConnectionString1" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=jacek\sqlexpress;Initial Catalog=LajtitProdAllegro;Integrated Security=True&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=jacek\sqlexpress;Initial Catalog=LajtitProdAllegro;Integrated Security=True</Value>
-    </Setting>
-    <Setting Name="LajtitProdHelperConnectionString1" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
   &lt;ConnectionString&gt;Data Source=.\sqlexpress;Initial Catalog=LajtitProdHelper;Integrated Security=True&lt;/ConnectionString&gt;
@@ -114,21 +34,19 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=192.168.0.107\sqlexpress;Initial Catalog=LajtitProdAllegro;Integrated Security=False; User ID=admin; Password=edingedu</Value>
     </Setting>
-    <Setting Name="LajtitProdConnectionString4" Type="(Connection string)" Scope="Application">
+    <Setting Name="LajtitProdAllegroConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=192.168.0.107\SQLEXPRESS;Initial Catalog=LajtitProd;User ID=admin&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+  &lt;ConnectionString&gt;Data Source=.\sqlexpress;Initial Catalog=LajtitProdAllegro;Integrated Security=True&lt;/ConnectionString&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=192.168.0.107\SQLEXPRESS;Initial Catalog=LajtitProd;User ID=admin</Value>
+      <Value Profile="(Default)">Data Source=.\sqlexpress;Initial Catalog=LajtitProdAllegro;Integrated Security=True</Value>
     </Setting>
-    <Setting Name="LajtitProdConnectionString5" Type="(Connection string)" Scope="Application">
+    <Setting Name="LajtitProdConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=192.168.0.107\SQLEXPRESS;Initial Catalog=LajtitProd;Persist Security Info=True;User ID=admin;Password=edingedu&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+  &lt;ConnectionString&gt;Data Source=.\sqlexpress;Initial Catalog=LajtitProd;Integrated Security=True&lt;/ConnectionString&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=192.168.0.107\SQLEXPRESS;Initial Catalog=LajtitProd;Persist Security Info=True;User ID=admin;Password=edingedu</Value>
+      <Value Profile="(Default)">Data Source=.\sqlexpress;Initial Catalog=LajtitProd;Integrated Security=True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

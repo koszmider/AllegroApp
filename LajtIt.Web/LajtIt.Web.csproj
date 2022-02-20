@@ -33,90 +33,48 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\</OutputPath>
+    <OutputPath>..\..\..\..\..\..\inetpub\wwwlajtit\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <PublishDatabaseSettings>
       <Objects>
-        <ObjectGroup Name="LajtitAllegroDB_lajtit_www_user — wdrażanie" Order="1" Enabled="False" xmlns="">
-          <Destination Path="" />
-          <Object Type="DbFullSql">
-            <PreSource Path="Data Source=.\sqlexpress%3bInitial Catalog=LajtitProdAllegro%3bIntegrated Security=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
-            <Source Path="obj\Debug\AutoScripts\LajtitAllegroDB_lajtit_www_user — wdrażanie_SchemaOnly.sql" Transacted="True" />
-          </Object>
-        </ObjectGroup>
-        <ObjectGroup Name="LajtitAllegroDB_wwwlajtit — wdrażanie" Order="2" xmlns="">
+        <ObjectGroup Name="LajtitAllegroDB_wwwlajtit — wdrażanie" Order="1" xmlns="">
           <Destination Path="" />
           <Object Type="DbFullSql">
             <PreSource Path="Data Source=.\sqlexpress%3bInitial Catalog=LajtitProdAllegro%3bIntegrated Security=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
             <Source Path="obj\Debug\AutoScripts\LajtitAllegroDB_wwwlajtit — wdrażanie_SchemaOnly.sql" Transacted="True" />
           </Object>
         </ObjectGroup>
-        <ObjectGroup Name="LajtitAllegroDB_jacek — wdrażanie" Order="3" Enabled="False" xmlns="">
-          <Destination Path="" />
-          <Object Type="DbFullSql">
-            <PreSource Path="Data Source=.\sqlexpress%3bInitial Catalog=LajtitProdAllegro%3bIntegrated Security=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
-            <Source Path="obj\Debug\AutoScripts\LajtitAllegroDB_jacek — wdrażanie_SchemaOnly.sql" Transacted="True" />
-          </Object>
-        </ObjectGroup>
-        <ObjectGroup Name="LajtitDB_lajtit_www_user — wdrażanie" Order="5" Enabled="False" xmlns="">
-          <Destination Path="" />
-          <Object Type="DbFullSql">
-            <PreSource Path="Data Source=.\sqlexpress%3bInitial Catalog=LajtitProd%3bIntegrated Security=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
-            <Source Path="obj\Debug\AutoScripts\LajtitDB_lajtit_www_user — wdrażanie_SchemaOnly.sql" Transacted="True" />
-          </Object>
-        </ObjectGroup>
-        <ObjectGroup Name="LajtitDB_wwwlajtit — wdrażanie" Order="6" xmlns="">
-          <Destination Path="" />
-          <Object Type="DbFullSql">
-            <PreSource Path="Data Source=.\sqlexpress%3bInitial Catalog=LajtitProd%3bIntegrated Security=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
-            <Source Path="obj\Debug\AutoScripts\LajtitDB_wwwlajtit — wdrażanie_SchemaOnly.sql" Transacted="True" />
-          </Object>
-        </ObjectGroup>
-        <ObjectGroup Name="LajtitDB_jacek — wdrażanie" Order="7" Enabled="False" xmlns="">
-          <Destination Path="" />
-          <Object Type="DbFullSql">
-            <PreSource Path="Data Source=.\sqlexpress%3bInitial Catalog=LajtitProd%3bIntegrated Security=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
-            <Source Path="obj\Debug\AutoScripts\LajtitDB_jacek — wdrażanie_SchemaOnly.sql" Transacted="True" />
-          </Object>
-        </ObjectGroup>
-        <ObjectGroup Name="LajtitHelperDB_HOME — wdrażanie" Order="9" Enabled="False" xmlns="">
-          <Destination Path="" />
-          <Object Type="DbFullSql">
-            <PreSource Path="Data Source=.\sqlexpress%3bInitial Catalog=LajtitTestHelper%3bIntegrated Security=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
-            <Source Path="obj\Debug\AutoScripts\LajtitHelperDB_HOME — wdrażanie_SchemaOnly.sql" Transacted="True" />
-          </Object>
-        </ObjectGroup>
-        <ObjectGroup Name="LajtitHelperDB_wwwlajtit — wdrażanie" Order="10" xmlns="">
+        <ObjectGroup Name="LajtitHelperDB_wwwlajtit — wdrażanie" Order="2" xmlns="">
           <Destination Path="" />
           <Object Type="DbFullSql">
             <PreSource Path="Data Source=.\sqlexpress%3bInitial Catalog=LajtitProdHelper%3bIntegrated Security=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
             <Source Path="obj\Debug\AutoScripts\LajtitHelperDB_wwwlajtit — wdrażanie_SchemaOnly.sql" Transacted="True" />
           </Object>
         </ObjectGroup>
-        <ObjectGroup Name="LajtitHelperDB_jacek — wdrażanie" Order="11" Enabled="False" xmlns="">
+        <ObjectGroup Name="LajtitDB_wwwlajtit — wdrażanie" Order="3" xmlns="">
           <Destination Path="" />
           <Object Type="DbFullSql">
-            <PreSource Path="Data Source=.\sqlexpress%3bInitial Catalog=LajtitProdHelper%3bIntegrated Security=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
-            <Source Path="obj\Debug\AutoScripts\LajtitHelperDB_jacek — wdrażanie_SchemaOnly.sql" Transacted="True" />
+            <PreSource Path="Data Source=.\sqlexpress%3bInitial Catalog=LajtitProd%3bIntegrated Security=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\LajtitDB_wwwlajtit — wdrażanie_SchemaOnly.sql" Transacted="True" />
           </Object>
         </ObjectGroup>
-        <ObjectGroup Name="LajtitDB_tomek — wdrażanie" Order="12" xmlns="">
+        <ObjectGroup Name="LajtitDB_tomek — wdrażanie" Order="4" xmlns="">
           <Destination Path="" />
           <Object Type="DbFullSql">
             <PreSource Path="Data Source=192.168.0.107\sqlexpress%3bInitial Catalog=LajtitProd%3bIntegrated Security=False%3b User ID=admin%3b Password=edingedu" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
             <Source Path="obj\Debug\AutoScripts\LajtitDB_tomek — wdrażanie_SchemaOnly.sql" Transacted="True" />
           </Object>
         </ObjectGroup>
-        <ObjectGroup Name="LajtitAllegroDB_tomek — wdrażanie" Order="13" xmlns="">
+        <ObjectGroup Name="LajtitAllegroDB_tomek — wdrażanie" Order="5" xmlns="">
           <Destination Path="" />
           <Object Type="DbFullSql">
             <PreSource Path="Data Source=192.168.0.107\sqlexpress%3bInitial Catalog=LajtitProdAllegro%3bIntegrated Security=False%3b User ID=admin%3b Password=edingedu" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
             <Source Path="obj\Debug\AutoScripts\LajtitAllegroDB_tomek — wdrażanie_SchemaOnly.sql" Transacted="True" />
           </Object>
         </ObjectGroup>
-        <ObjectGroup Name="LajtitHelperDB_tomek — wdrażanie" Order="14" xmlns="">
+        <ObjectGroup Name="LajtitHelperDB_tomek — wdrażanie" Order="6" xmlns="">
           <Destination Path="" />
           <Object Type="DbFullSql">
             <PreSource Path="Data Source=192.168.0.107\sqlexpress%3bInitial Catalog=LajtitProdHelper%3bIntegrated Security=False%3b User ID=admin%3b Password=edingedu" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
@@ -483,15 +441,6 @@
     <Content Include="WebApiTestPage.aspx" />
     <Content Include="LajtitImport.xls" />
     <Content Include="packages.config" />
-    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
-    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
-    <None Include="Properties\PublishProfiles\Profile1.pubxml">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Properties\PublishProfiles\Profile2.pubxml" />
-    <None Include="Properties\PublishProfiles\Profile3.pubxml">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="Scripts\jquery-ui-1.12.1.custom\package.json" />
     <None Include="Scripts\uploader.fla" />
     <Content Include="AllegroItems.aspx" />
@@ -1674,6 +1623,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />

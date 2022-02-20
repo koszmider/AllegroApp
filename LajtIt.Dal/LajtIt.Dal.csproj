@@ -123,6 +123,9 @@
     <Compile Include="Allegro\AllegroHelper.Payments.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="FtpHelper.cs" />
+    <Compile Include="HelperDBLinqSet.cs">
+      <DependentUpon>HelperDBLinqSet.dbml</DependentUpon>
+    </Compile>
     <Compile Include="InventoryHelper.cs" />
     <Compile Include="KingHomeHelper.cs" />
     <Compile Include="LajtitViewsDB.designer.cs">

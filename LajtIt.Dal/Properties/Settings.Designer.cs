@@ -26,117 +26,11 @@ namespace LajtIt.Dal.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\sqlexpress;Initial Catalog=AllegroDB;Integrated Security=True")]
-        public string AllegroDBConnectionString {
-            get {
-                return ((string)(this["AllegroDBConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\sqlexpress;Initial Catalog=LajtitDB_Test;Integrated Security=True")]
-        public string LajtitDB_TestConnectionString {
-            get {
-                return ((string)(this["LajtitDB_TestConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=JACEK\\SQLEXPRESS;Initial Catalog=LajtitTest;Integrated Security=True")]
-        public string LajtitTestConnectionString {
-            get {
-                return ((string)(this["LajtitTestConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\sqlexpress;Initial Catalog=LajtitTestHelper;Integrated Security=Tru" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\sqlexpress;Initial Catalog=LajtitProdHelper;Integrated Security=Tru" +
             "e")]
-        public string LajtitTestHelperConnectionString {
-            get {
-                return ((string)(this["LajtitTestHelperConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-429BP44U\\SQLEXPRESS;Initial Catalog=LajtitProd;Integrated Secu" +
-            "rity=True;Encrypt=False;TrustServerCertificate=True")]
-        public string LajtitProdConnectionString {
-            get {
-                return ((string)(this["LajtitProdConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-429BP44U\\SQLEXPRESS;Initial Catalog=LajtitProdHelper;Integrate" +
-            "d Security=True;Encrypt=False;TrustServerCertificate=True")]
         public string LajtitProdHelperConnectionString {
             get {
                 return ((string)(this["LajtitProdHelperConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-429BP44U\\SQLEXPRESS;Initial Catalog=LajtitProdAllegro;Integrat" +
-            "ed Security=True;Encrypt=False;TrustServerCertificate=True")]
-        public string LajtitProdAllegroConnectionString {
-            get {
-                return ((string)(this["LajtitProdAllegroConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-E90OCQH9\\SQLEXPRESS;Initial Catalog=LajtitProd;Integrated Secu" +
-            "rity=True")]
-        public string LajtitProdConnectionString1 {
-            get {
-                return ((string)(this["LajtitProdConnectionString1"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=JACEK\\SQLEXPRESS;Initial Catalog=LajtitProd;Integrated Security=True")]
-        public string LajtitProdConnectionString2 {
-            get {
-                return ((string)(this["LajtitProdConnectionString2"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=jacek\\sqlexpress;Initial Catalog=LajtitProdAllegro;Integrated Securit" +
-            "y=True")]
-        public string LajtitProdAllegroConnectionString1 {
-            get {
-                return ((string)(this["LajtitProdAllegroConnectionString1"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\sqlexpress;Initial Catalog=LajtitProdHelper;Integrated Security=Tru" +
-            "e")]
-        public string LajtitProdHelperConnectionString1 {
-            get {
-                return ((string)(this["LajtitProdHelperConnectionString1"]));
             }
         }
         
@@ -176,21 +70,21 @@ namespace LajtIt.Dal.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.107\\SQLEXPRESS;Initial Catalog=LajtitProd;User ID=admin")]
-        public string LajtitProdConnectionString4 {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\sqlexpress;Initial Catalog=LajtitProdAllegro;Integrated Security=Tr" +
+            "ue")]
+        public string LajtitProdAllegroConnectionString {
             get {
-                return ((string)(this["LajtitProdConnectionString4"]));
+                return ((string)(this["LajtitProdAllegroConnectionString"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.107\\SQLEXPRESS;Initial Catalog=LajtitProd;Persist Security " +
-            "Info=True;User ID=admin;Password=edingedu")]
-        public string LajtitProdConnectionString5 {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\sqlexpress;Initial Catalog=LajtitProd;Integrated Security=True")]
+        public string LajtitProdConnectionString {
             get {
-                return ((string)(this["LajtitProdConnectionString5"]));
+                return ((string)(this["LajtitProdConnectionString"]));
             }
         }
     }
