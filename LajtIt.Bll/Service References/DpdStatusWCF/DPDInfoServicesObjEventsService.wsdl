@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://events.dpdinfoservices.dpd.com.pl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DPDInfoServicesObjEventsService" targetNamespace="http://events.dpdinfoservices.dpd.com.pl/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <ns1:Policy xmlns:ns1="http://www.w3.org/ns/ws-policy" wsu:Id="DPDInfoServicesObjEventsPortBinding_getEventsForCustomerV2_WSAT_Policy">
+    <ns1:ExactlyOne>
+      <ns1:All>
+        <ns2:ATAlwaysCapability xmlns:ns2="http://schemas.xmlsoap.org/ws/2004/10/wsat">
+        </ns2:ATAlwaysCapability>
+        <ns3:ATAssertion xmlns:ns4="http://schemas.xmlsoap.org/ws/2002/12/policy" xmlns:ns3="http://schemas.xmlsoap.org/ws/2004/10/wsat" ns1:Optional="true" ns4:Optional="true">
+        </ns3:ATAssertion>
+      </ns1:All>
+    </ns1:ExactlyOne>
+  </ns1:Policy>
+  <ns5:Policy xmlns:ns5="http://www.w3.org/ns/ws-policy" wsu:Id="DPDInfoServicesObjEventsPortBinding_markEventsAsProcessedV1_WSAT_Policy">
+    <ns5:ExactlyOne>
+      <ns5:All>
+        <ns6:ATAlwaysCapability xmlns:ns6="http://schemas.xmlsoap.org/ws/2004/10/wsat">
+        </ns6:ATAlwaysCapability>
+        <ns7:ATAssertion xmlns:ns8="http://schemas.xmlsoap.org/ws/2002/12/policy" xmlns:ns7="http://schemas.xmlsoap.org/ws/2004/10/wsat" ns5:Optional="true" ns8:Optional="true">
+        </ns7:ATAssertion>
+      </ns5:All>
+    </ns5:ExactlyOne>
+  </ns5:Policy>
+  <ns9:Policy xmlns:ns9="http://www.w3.org/ns/ws-policy" wsu:Id="DPDInfoServicesObjEventsPortBinding_getEventsForCustomerV4_WSAT_Policy">
+    <ns9:ExactlyOne>
+      <ns9:All>
+        <ns10:ATAlwaysCapability xmlns:ns10="http://schemas.xmlsoap.org/ws/2004/10/wsat">
+        </ns10:ATAlwaysCapability>
+        <ns11:ATAssertion xmlns:ns12="http://schemas.xmlsoap.org/ws/2002/12/policy" xmlns:ns11="http://schemas.xmlsoap.org/ws/2004/10/wsat" ns9:Optional="true" ns12:Optional="true">
+        </ns11:ATAssertion>
+      </ns9:All>
+    </ns9:ExactlyOne>
+  </ns9:Policy>
+  <ns13:Policy xmlns:ns13="http://www.w3.org/ns/ws-policy" wsu:Id="DPDInfoServicesObjEventsPortBinding_getEventsForCustomerV3_WSAT_Policy">
+    <ns13:ExactlyOne>
+      <ns13:All>
+        <ns14:ATAlwaysCapability xmlns:ns14="http://schemas.xmlsoap.org/ws/2004/10/wsat">
+        </ns14:ATAlwaysCapability>
+        <ns15:ATAssertion xmlns:ns16="http://schemas.xmlsoap.org/ws/2002/12/policy" xmlns:ns15="http://schemas.xmlsoap.org/ws/2004/10/wsat" ns13:Optional="true" ns16:Optional="true">
+        </ns15:ATAssertion>
+      </ns13:All>
+    </ns13:ExactlyOne>
+  </ns13:Policy>
+  <ns17:Policy xmlns:ns17="http://www.w3.org/ns/ws-policy" wsu:Id="DPDInfoServicesObjEventsPortBinding_getEventsForCustomerV1_WSAT_Policy">
+    <ns17:ExactlyOne>
+      <ns17:All>
+        <ns18:ATAlwaysCapability xmlns:ns18="http://schemas.xmlsoap.org/ws/2004/10/wsat">
+        </ns18:ATAlwaysCapability>
+        <ns19:ATAssertion xmlns:ns20="http://schemas.xmlsoap.org/ws/2002/12/policy" xmlns:ns19="http://schemas.xmlsoap.org/ws/2004/10/wsat" ns17:Optional="true" ns20:Optional="true">
+        </ns19:ATAssertion>
+      </ns17:All>
+    </ns17:ExactlyOne>
+  </ns17:Policy>
+  <ns21:Policy xmlns:ns21="http://www.w3.org/ns/ws-policy" wsu:Id="DPDInfoServicesObjEventsPortBinding_getEventsForWaybillV1_WSAT_Policy">
+    <ns21:ExactlyOne>
+      <ns21:All>
+        <ns22:ATAlwaysCapability xmlns:ns22="http://schemas.xmlsoap.org/ws/2004/10/wsat">
+        </ns22:ATAlwaysCapability>
+        <ns23:ATAssertion xmlns:ns24="http://schemas.xmlsoap.org/ws/2002/12/policy" xmlns:ns23="http://schemas.xmlsoap.org/ws/2004/10/wsat" ns21:Optional="true" ns24:Optional="true">
+        </ns23:ATAssertion>
+      </ns21:All>
+    </ns21:ExactlyOne>
+  </ns21:Policy>
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://dpdinfoservices.dpd.com.pl/DPDInfoServicesObjEventsService/DPDInfoServicesObjEvents?xsd=1" namespace="http://events.dpdinfoservices.dpd.com.pl/" />
+    </xsd:schema>
+  </types>
+  <message name="markEventsAsProcessedV1">
+    <part name="parameters" element="tns:markEventsAsProcessedV1" />
+  </message>
+  <message name="markEventsAsProcessedV1Response">
+    <part name="parameters" element="tns:markEventsAsProcessedV1Response" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+  <message name="getEventsForCustomerV1">
+    <part name="parameters" element="tns:getEventsForCustomerV1" />
+  </message>
+  <message name="getEventsForCustomerV1Response">
+    <part name="parameters" element="tns:getEventsForCustomerV1Response" />
+  </message>
+  <message name="getEventsForCustomerV2">
+    <part name="parameters" element="tns:getEventsForCustomerV2" />
+  </message>
+  <message name="getEventsForCustomerV2Response">
+    <part name="parameters" element="tns:getEventsForCustomerV2Response" />
+  </message>
+  <message name="getEventsForWaybillV1">
+    <part name="parameters" element="tns:getEventsForWaybillV1" />
+  </message>
+  <message name="getEventsForWaybillV1Response">
+    <part name="parameters" element="tns:getEventsForWaybillV1Response" />
+  </message>
+  <message name="getEventsForCustomerV3">
+    <part name="parameters" element="tns:getEventsForCustomerV3" />
+  </message>
+  <message name="getEventsForCustomerV3Response">
+    <part name="parameters" element="tns:getEventsForCustomerV3Response" />
+  </message>
+  <message name="getEventsForCustomerV4">
+    <part name="parameters" element="tns:getEventsForCustomerV4" />
+  </message>
+  <message name="getEventsForCustomerV4Response">
+    <part name="parameters" element="tns:getEventsForCustomerV4Response" />
+  </message>
+  <portType name="DPDInfoServicesObjEvents">
+    <operation name="markEventsAsProcessedV1">
+      <input message="tns:markEventsAsProcessedV1" />
+      <output message="tns:markEventsAsProcessedV1Response" />
+      <fault name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="getEventsForCustomerV1">
+      <input message="tns:getEventsForCustomerV1" />
+      <output message="tns:getEventsForCustomerV1Response" />
+      <fault name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="getEventsForCustomerV2">
+      <input message="tns:getEventsForCustomerV2" />
+      <output message="tns:getEventsForCustomerV2Response" />
+      <fault name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="getEventsForWaybillV1">
+      <input message="tns:getEventsForWaybillV1" />
+      <output message="tns:getEventsForWaybillV1Response" />
+      <fault name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="getEventsForCustomerV3">
+      <input message="tns:getEventsForCustomerV3" />
+      <output message="tns:getEventsForCustomerV3Response" />
+      <fault name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="getEventsForCustomerV4">
+      <input message="tns:getEventsForCustomerV4" />
+      <output message="tns:getEventsForCustomerV4Response" />
+      <fault name="Exception" message="tns:Exception" />
+    </operation>
+  </portType>
+  <binding name="DPDInfoServicesObjEventsPortBinding" type="tns:DPDInfoServicesObjEvents">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="markEventsAsProcessedV1">
+      <ns25:PolicyReference xmlns:ns25="http://www.w3.org/ns/ws-policy" URI="#DPDInfoServicesObjEventsPortBinding_markEventsAsProcessedV1_WSAT_Policy">
+      </ns25:PolicyReference>
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getEventsForCustomerV1">
+      <ns26:PolicyReference xmlns:ns26="http://www.w3.org/ns/ws-policy" URI="#DPDInfoServicesObjEventsPortBinding_getEventsForCustomerV1_WSAT_Policy">
+      </ns26:PolicyReference>
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getEventsForCustomerV2">
+      <ns27:PolicyReference xmlns:ns27="http://www.w3.org/ns/ws-policy" URI="#DPDInfoServicesObjEventsPortBinding_getEventsForCustomerV2_WSAT_Policy">
+      </ns27:PolicyReference>
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getEventsForWaybillV1">
+      <ns28:PolicyReference xmlns:ns28="http://www.w3.org/ns/ws-policy" URI="#DPDInfoServicesObjEventsPortBinding_getEventsForWaybillV1_WSAT_Policy">
+      </ns28:PolicyReference>
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getEventsForCustomerV3">
+      <ns29:PolicyReference xmlns:ns29="http://www.w3.org/ns/ws-policy" URI="#DPDInfoServicesObjEventsPortBinding_getEventsForCustomerV3_WSAT_Policy">
+      </ns29:PolicyReference>
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getEventsForCustomerV4">
+      <ns30:PolicyReference xmlns:ns30="http://www.w3.org/ns/ws-policy" URI="#DPDInfoServicesObjEventsPortBinding_getEventsForCustomerV4_WSAT_Policy">
+      </ns30:PolicyReference>
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="DPDInfoServicesObjEventsService">
+    <port name="DPDInfoServicesObjEventsPort" binding="tns:DPDInfoServicesObjEventsPortBinding">
+      <soap:address location="https://dpdinfoservices.dpd.com.pl/DPDInfoServicesObjEventsService/DPDInfoServicesObjEvents" />
+    </port>
+  </service>
+</definitions>

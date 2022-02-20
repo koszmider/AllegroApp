@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Nadawca">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Zbior" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Przesylka" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Atrybut" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent msdata:ColumnName="Atrybut_Text" msdata:Ordinal="2">
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="Typ" type="xs:string" />
+                            <xs:attribute name="Nazwa" type="xs:string" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="Guid" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="Nazwa" type="xs:string" />
+            <xs:attribute name="DataUtworzenia" type="xs:string" />
+            <xs:attribute name="Opis" type="xs:string" />
+            <xs:attribute name="IloscPrzesylek" type="xs:string" />
+            <xs:attribute name="Guid" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="Struktura" type="xs:string" />
+      <xs:attribute name="Nazwa" type="xs:string" />
+      <xs:attribute name="NazwaSkrocona" type="xs:string" />
+      <xs:attribute name="Ulica" type="xs:string" />
+      <xs:attribute name="Dom" type="xs:string" />
+      <xs:attribute name="Lokal" type="xs:string" />
+      <xs:attribute name="Miejscowosc" type="xs:string" />
+      <xs:attribute name="Kod" type="xs:string" />
+      <xs:attribute name="NIP" type="xs:string" />
+      <xs:attribute name="Zrodlo" type="xs:string" />
+      <xs:attribute name="Guid" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Nadawca" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

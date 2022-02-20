@@ -1,0 +1,552 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LajtitProdAllegro" Class="AllegroDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=jacek\sqlexpress;Initial Catalog=LajtitProdAllegro;Integrated Security=True" SettingsObjectName="LajtIt.Dal.Properties.Settings" SettingsPropertyName="LajtitProdAllegroConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AllegroActionType" Member="AllegroActionType">
+    <Type Name="AllegroActionType">
+      <Column Name="TypeId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="AllegroActionType_AllegroAction" Member="AllegroAction" ThisKey="TypeId" OtherKey="TypeId" Type="AllegroAction" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroBadge" Member="AllegroBadge">
+    <Type Name="AllegroBadge">
+      <Column Name="BadgeId" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BadgeName" Type="System.String" DbType="NVarChar(254) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="InsertDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RebateFrom" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="RebateTo" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="SupplierIds" Type="System.String" DbType="NVarChar(1024) NOT NULL" CanBeNull="false" />
+      <Association Name="AllegroBadge_AllegroItemBadge" Member="AllegroItemBadge" ThisKey="BadgeId" OtherKey="BadgeId" Type="AllegroItemBadge" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroCategory" Member="AllegroCategory">
+    <Type Name="AllegroCategory">
+      <Column Name="CategoryId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryParentId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CanCreateAuction" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroComment" Member="AllegroComment">
+    <Type Name="AllegroComment">
+      <Column Name="AuthorUserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="RecipentUserId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CommentDateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CommentTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="ItemId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ReplyComment" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Side" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CommentId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ReplyTime" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ReplyDateTime" Type="System.DateTime" DbType="DateTime" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="EmailSent" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AuthorUserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EmailSentDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ReplyCommentId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroCommentText" Member="AllegroCommentText">
+    <Type Name="AllegroCommentText">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroEmail" Member="AllegroEmail">
+    <Type Name="AllegroEmail">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmailId" Type="System.String" DbType="VarChar(254) NOT NULL" CanBeNull="false" />
+      <Column Name="SentDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FromEmail" Type="System.String" DbType="NVarChar(254) NOT NULL" CanBeNull="false" />
+      <Column Name="UserEmail" Type="System.String" DbType="NVarChar(254) NOT NULL" CanBeNull="false" />
+      <Column Name="HtmlBody" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="NVarChar(1024) NOT NULL" CanBeNull="false" />
+      <Column Name="IsReplied" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroItemBadge" Member="AllegroItemBadge">
+    <Type Name="AllegroItemBadge">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ItemId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="BadgeId" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="InsertDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BadgePrice" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="RequestStatus" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RequestRejectReasons" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ApplicationId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastUpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="AllegroBadge_AllegroItemBadge" Member="AllegroBadge" ThisKey="BadgeId" OtherKey="BadgeId" Type="AllegroBadge" IsForeignKey="true" />
+      <Association Name="AllegroItem_AllegroItemBadge" Member="AllegroItem" ThisKey="ItemId" OtherKey="ItemId" Type="AllegroItem" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroItemOrder" Member="AllegroItemOrder">
+    <Type Name="AllegroItemOrder">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ItemId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserPointCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ItemsOrdered" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ItemPrice" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="OrderDate" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="OrderStatus" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CountryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StateId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Postcode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Phone2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RegistrationCountryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Junior" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HasShop" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CompanyIcon" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ShipmentFirstName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ShipmentLastName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ShipmentCompanyName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ShipmentCountryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShipmentPostcode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ShipmentCity" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ShipmentAddress" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="AllegroStandard" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LastUpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OrderStatusId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OrderDateTime" Type="System.DateTime" DbType="DateTime" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="OrderCreated" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="AllegroItem_AllegroItemOrder" Member="AllegroItem" ThisKey="ItemId" OtherKey="ItemId" Type="AllegroItem" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroItemTransaction" Member="AllegroItemTransaction">
+    <Type Name="AllegroItemTransaction">
+      <Column Name="TransactionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BuyFormId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="UserBuyerId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="BuyAmount" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="PostageAmount" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="UserMessage" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Invoice" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="InvoiceStreet" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="InvoicePostcode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="InvoiceCity" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="InvoiceName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="InvoiceCompany" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="InvoicePhone" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="InvoiceNIP" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ShipmentStreet" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="ShipmentPostcode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ShipmentCity" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="ShipmentName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="ShipmentCompany" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="ShipmentPhone" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="PaymentType" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentStatus" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PaymentStartDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PaymentEndDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PaymentCancelDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShipmentId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PaymentAmount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="InsertDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="OrderCreated" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ShipmentDeliveryPointInfo" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="OrderId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TrackingNumberSent" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="AllegroItemTransaction_AllegroItemTransactionItem" Member="AllegroItemTransactionItem" ThisKey="TransactionId" OtherKey="TransactionId" Type="AllegroItemTransactionItem" />
+      <Association Name="AllegroShipment_AllegroItemTransaction" Member="AllegroShipment" ThisKey="ShipmentId" OtherKey="ShipmentId" Type="AllegroShipment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroItemTransactionItem" Member="AllegroItemTransactionItem">
+    <Type Name="AllegroItemTransactionItem">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TransactionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ItemId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="InsertDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="AllegroItemTransaction_AllegroItemTransactionItem" Member="AllegroItemTransaction" ThisKey="TransactionId" OtherKey="TransactionId" Type="AllegroItemTransaction" IsForeignKey="true" />
+      <Association Name="AllegroItem_AllegroItemTransactionItem" Member="AllegroItem" ThisKey="ItemId" OtherKey="ItemId" Type="AllegroItem" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroOrder" Member="AllegroOrder">
+    <Type Name="AllegroOrder">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OccuredAt" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Guest" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Login" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="SellerId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CheckoutFormId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Type" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="IsProcessed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="AllegroOrder_AllegroOrderLineItem" Member="AllegroOrderLineItem" ThisKey="Id" OtherKey="AllegroOrderId" Type="AllegroOrderLineItem" />
+      <Association Name="AllegroUser_AllegroOrder" Member="AllegroUser" ThisKey="UserId" OtherKey="UserId" Type="AllegroUser" IsForeignKey="true" />
+      <Association Name="AllegroUser_AllegroOrder1" Member="AllegroUser1" ThisKey="SellerId" OtherKey="UserId" Type="AllegroUser" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroOrderLineItem" Member="AllegroOrderLineItem">
+    <Type Name="AllegroOrderLineItem">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AllegroOrderId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="BoughtAt" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CheckoutFormId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ExternalId" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ItemId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="OriginalPrice" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="AllegroOrder_AllegroOrderLineItem" Member="AllegroOrder" ThisKey="AllegroOrderId" OtherKey="Id" Type="AllegroOrder" IsForeignKey="true" />
+      <Association Name="AllegroItem_AllegroOrderLineItem" Member="AllegroItem" ThisKey="ItemId" OtherKey="ItemId" Type="AllegroItem" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroPayment" Member="AllegroPayment">
+    <Type Name="AllegroPayment">
+      <Column Name="ItemId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="BuyerId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionStatus" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionAmount" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionStartDate" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionEndDate" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionPrice" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PostageAmount" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionIncomplate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentTransactiondId" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OrderId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TransactionStartDateTime" Type="System.DateTime" DbType="DateTime" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TransactionEndDateTime" Type="System.DateTime" DbType="DateTime" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="AllegroPayment_AllegroPaymentDetails" Member="AllegroPaymentDetails" ThisKey="PaymentTransactiondId" OtherKey="PaymentTransactiondId" Type="AllegroPaymentDetails" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroPaymentDetails" Member="AllegroPaymentDetails">
+    <Type Name="AllegroPaymentDetails">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ItemId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Count" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentTransactiondId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="AllegroPayment_AllegroPaymentDetails" Member="AllegroPayment" ThisKey="PaymentTransactiondId" OtherKey="PaymentTransactiondId" Type="AllegroPayment" IsForeignKey="true" />
+      <Association Name="AllegroItem_AllegroPaymentDetails" Member="AllegroItem" ThisKey="ItemId" OtherKey="ItemId" Type="AllegroItem" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroShipment" Member="AllegroShipment">
+    <Type Name="AllegroShipment">
+      <Column Name="ShipmentId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ShipmentTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ShippingTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="AllegroShipment_AllegroItemTransaction" Member="AllegroItemTransaction" ThisKey="ShipmentId" OtherKey="ShipmentId" Type="AllegroItemTransaction" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroSiteJournal" Member="AllegroSiteJournal">
+    <Type Name="AllegroSiteJournal">
+      <Column Name="RowId" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ItemId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ChangeType" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ChangeDate" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CurrentPrice" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="UserSellerId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ChangeDateTime" Type="System.DateTime" DbType="DateTime" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IsProcessed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ProcessedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="AllegroUser_AllegroSiteJournal" Member="AllegroUser" ThisKey="UserSellerId" OtherKey="UserId" Type="AllegroUser" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroSiteJournalDeals" Member="AllegroSiteJournalDeals">
+    <Type Name="AllegroSiteJournalDeals">
+      <Column Name="DealEventId" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DealEventType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DealEventTime" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DealId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DealTransactionId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DealSellerId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DealItemId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DealBuyerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DealQuantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DealEventDateTime" Type="System.DateTime" DbType="DateTime" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IsProcessed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ProcessedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="AllegroUser_AllegroSiteJournalDeals" Member="AllegroUser" ThisKey="DealSellerId" OtherKey="UserId" Type="AllegroUser" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroTags" Member="AllegroTags">
+    <Type Name="AllegroTags">
+      <Column Name="UserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="TagId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(254) NOT NULL" CanBeNull="false" />
+      <Column Name="IsHidden" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="AllegroUser_AllegroTags" Member="AllegroUser" ThisKey="UserId" OtherKey="UserId" Type="AllegroUser" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroUser" Member="AllegroUser">
+    <Type Name="AllegroUser">
+      <Column Name="UserId" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastUpdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Follow" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="MyUserId" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CanBid" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EncodedPwd" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="WebApiKey" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="PaczkomatWebApiCode" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ImpliedWarranty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReturnPolicy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Warranty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Token" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="TokenRefresh" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="TokenCreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TokenEndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ClientId" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ClientSecret" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="AllegroUser_AllegroOrder" Member="AllegroOrder" ThisKey="UserId" OtherKey="UserId" Type="AllegroOrder" />
+      <Association Name="AllegroUser_AllegroOrder1" Member="AllegroOrder1" ThisKey="UserId" OtherKey="SellerId" Type="AllegroOrder" />
+      <Association Name="AllegroUser_AllegroSiteJournal" Member="AllegroSiteJournal" ThisKey="UserId" OtherKey="UserSellerId" Type="AllegroSiteJournal" />
+      <Association Name="AllegroUser_AllegroSiteJournalDeals" Member="AllegroSiteJournalDeals" ThisKey="UserId" OtherKey="DealSellerId" Type="AllegroSiteJournalDeals" />
+      <Association Name="AllegroUser_AllegroTags" Member="AllegroTags" ThisKey="UserId" OtherKey="UserId" Type="AllegroTags" />
+      <Association Name="AllegroUser_AllegroUserSupplier" Member="AllegroUserSupplier" ThisKey="UserId" OtherKey="UserId" Type="AllegroUserSupplier" />
+      <Association Name="AllegroUser_AllegroPayments" Member="AllegroPayments" ThisKey="UserId" OtherKey="UserId" Type="AllegroPayments" />
+      <Association Name="AllegroUser_AllegroItem" Member="AllegroItem" ThisKey="UserId" OtherKey="UserId" Type="AllegroItem" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroUserSupplier" Member="AllegroUserSupplier">
+    <Type Name="AllegroUserSupplier">
+      <Column Name="UserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="SupplierId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="AllegroUser_AllegroUserSupplier" Member="AllegroUser" ThisKey="UserId" OtherKey="UserId" Type="AllegroUser" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroOrderLastId" Member="AllegroOrderLastId">
+    <Type Name="AllegroOrderLastId">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroItemBadgeView" Member="AllegroItemBadgeView">
+    <Type Name="AllegroItemBadgeView">
+      <Column Name="BadgeId" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="BadgePrice" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ItemId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="RequestStatus" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RequestRejectReasons" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RebateFrom" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="RebateTo" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="SupplierIds" Type="System.String" DbType="NVarChar(1024) NOT NULL" CanBeNull="false" />
+      <Column Name="ApplicationId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastUpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PriceBruttoFixed" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActivePricePromo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AllegroPriceBruttoPromo" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="AllegroCommision" Type="System.Decimal" DbType="Decimal(18,6) NOT NULL" CanBeNull="false" />
+      <Column Name="AllegroSellDiscount" Type="System.Decimal" DbType="Decimal(18,6) NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroItemsView" Member="AllegroItemsView">
+    <Type Name="AllegroItemsView">
+      <Column Name="ItemId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="BidCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CurrentPrice" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastUpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndingTime" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FotoCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Options" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InsertDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndingDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsPromoted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ItemStatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HasOrders" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SellingMode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CategoryTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ItemsOrdered" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ItemsValue" Type="System.Decimal" DbType="Decimal(38,2) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroItemUserView" Member="AllegroItemUserView">
+    <Type Name="AllegroItemUserView">
+      <Column Name="ItemId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Token" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroOrderDisputeReply" Member="AllegroOrderDisputeReply">
+    <Type Name="AllegroOrderDisputeReply">
+      <Column Name="DisputeId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="SellerId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroPayments" Member="AllegroPayments">
+    <Type Name="AllegroPayments">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="OccuredAt" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="GroupType" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentType" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="BuyerUserId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="BuyerLogin" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PaymentId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="CurrencyCode" Type="System.String" DbType="Char(3) NOT NULL" CanBeNull="false" />
+      <Column Name="WalletBalance" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentOperator" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="WalletType" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="AllegroUser_AllegroPayments" Member="AllegroUser" ThisKey="UserId" OtherKey="UserId" Type="AllegroUser" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroOrderDispute" Member="AllegroOrderDispute">
+    <Type Name="AllegroOrderDispute">
+      <Column Name="DisputeId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CheckoutFormId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedAt" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IsReplied" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DisputeStatus" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="AllegroOrderDispute_AllegroOrderDisputeMessages" Member="AllegroOrderDisputeMessages" ThisKey="DisputeId" OtherKey="DisputeId" Type="AllegroOrderDisputeMessages" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroOrderDisputeMessages" Member="AllegroOrderDisputeMessages">
+    <Type Name="AllegroOrderDisputeMessages">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MessageId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="DisputeId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="InsertDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Msg" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Attachement" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
+      <Column Name="UserRole" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="AllegroOrderDispute_AllegroOrderDisputeMessages" Member="AllegroOrderDispute" ThisKey="DisputeId" OtherKey="DisputeId" Type="AllegroOrderDispute" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroBilling" Member="AllegroBilling">
+    <Type Name="AllegroBilling">
+      <Column Name="Id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BillingTypeId" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="InsertDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ItemId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Tax" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Association Name="AllegroBillingTypes_AllegroBilling" Member="AllegroBillingTypes" ThisKey="BillingTypeId" OtherKey="Id" Type="AllegroBillingTypes" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroBillingTypes" Member="AllegroBillingTypes">
+    <Type Name="AllegroBillingTypes">
+      <Column Name="Id" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(254) NOT NULL" CanBeNull="false" />
+      <Association Name="AllegroBillingTypes_AllegroBilling" Member="AllegroBilling" ThisKey="Id" OtherKey="BillingTypeId" Type="AllegroBilling" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroProduct" Member="AllegroProduct">
+    <Type Name="AllegroProduct">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="InsertDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastUpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Json" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsFound" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsValid" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Ean" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroItemsRestoreView" Member="AllegroItemsRestoreView">
+    <Type Name="AllegroItemsRestoreView">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ItemId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsValid" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsImageReady" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ProductCatalogId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EndingDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroActionView" Member="AllegroActionView">
+    <Type Name="AllegroActionView">
+      <Column Name="ActionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="InsertDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ItemId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsProcessed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ProcessedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
+      <Column Name="ActionType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ProductCatalogId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SupplierId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DoNotReActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroAction" Member="AllegroAction">
+    <Type Name="AllegroAction">
+      <Column Name="ActionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="InsertDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ItemId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsProcessed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ProcessedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
+      <Column Name="DoNotReActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Version" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="AllegroActionType_AllegroAction" Member="AllegroActionType" ThisKey="TypeId" OtherKey="TypeId" Type="AllegroActionType" IsForeignKey="true" />
+      <Association Name="AllegroItem_AllegroAction" Member="AllegroItem" ThisKey="ItemId" OtherKey="ItemId" Type="AllegroItem" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllegroItem" Member="AllegroItem">
+    <Type Name="AllegroItem">
+      <Column Name="ItemId" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="BuyNowPrice" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="BidCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CurrentPrice" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastUpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndingTime" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Options" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StartingQuantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QuantityOrdered" Type="System.Int32" DbType="Int" IsDbGenerated="true" CanBeNull="true" />
+      <Column Name="InsertDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndingDateTime" Type="System.DateTime" DbType="DateTime" IsDbGenerated="true" CanBeNull="true" />
+      <Column Name="IsPromoted" Type="System.Boolean" DbType="Bit" IsDbGenerated="true" CanBeNull="true" />
+      <Column Name="ItemStatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HasOrders" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SellingMode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ProductId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="HasProductId" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EndingDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DoNotReActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Version" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="AllegroItem_AllegroItemBadge" Member="AllegroItemBadge" ThisKey="ItemId" OtherKey="ItemId" Type="AllegroItemBadge" />
+      <Association Name="AllegroItem_AllegroItemOrder" Member="AllegroItemOrder" ThisKey="ItemId" OtherKey="ItemId" Type="AllegroItemOrder" />
+      <Association Name="AllegroItem_AllegroItemTransactionItem" Member="AllegroItemTransactionItem" ThisKey="ItemId" OtherKey="ItemId" Type="AllegroItemTransactionItem" />
+      <Association Name="AllegroItem_AllegroOrderLineItem" Member="AllegroOrderLineItem" ThisKey="ItemId" OtherKey="ItemId" Type="AllegroOrderLineItem" />
+      <Association Name="AllegroItem_AllegroPaymentDetails" Member="AllegroPaymentDetails" ThisKey="ItemId" OtherKey="ItemId" Type="AllegroPaymentDetails" />
+      <Association Name="AllegroItem_AllegroAction" Member="AllegroAction" ThisKey="ItemId" OtherKey="ItemId" Type="AllegroAction" />
+      <Association Name="AllegroUser_AllegroItem" Member="AllegroUser" ThisKey="UserId" OtherKey="UserId" Type="AllegroUser" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.AllegroProductSet" Method="AllegroProductSet">
+    <Parameter Name="Ean" Parameter="ean" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="ProductId" Parameter="productId" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="Json" Parameter="json" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IsValid" Parameter="isValid" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

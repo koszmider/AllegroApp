@@ -1,0 +1,187 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="LajtIt.Web.LajtitMasterPage1" %>
+
+<%@ Register Src="~/Controls/SystemMenu.ascx" TagName="SystemMenu" TagPrefix="uc" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>Lajt it backend</title>
+    <link href="/Styles/Site.css" rel="stylesheet" type="text/css" />
+ 
+
+    <%--<link href="/styles/menu_styles.css" rel="stylesheet" type="text/css" />
+    <script src="/scripts/jquery-1.9.1.js" type="text/javascript"></script>
+    <script src="/scripts/jquery-ui.js" type="text/javascript"></script>
+    <link href="/styles/jquery-ui.css" rel="stylesheet" type="text/css" />--%>
+    <script src="/scripts/jquery-ui-1.12.1.custom/jquery-1.12.4.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Scripts/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.uploadify.js"></script>
+
+
+    <link href="/Scripts/jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" /> 
+
+
+    <link rel="Stylesheet" type="text/css" href="/styles/uploadify.css" />
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+  <style>
+     
+  .ui-menu { width: 260px;  padding: 8px;}
+  .ui-menu-item { padding: 3px; }
+  </style> 
+    <script language="javascript">
+
+        $(function () {
+            $('.two-digits').keyup(function () {
+                if ($(this).val().indexOf('.') != -1) {
+                    if ($(this).val().split(".")[1].length > 2) {
+                        if (isNaN(parseFloat(this.value))) return;
+                        this.value = parseFloat(this.value).toFixed(2);
+                    }
+                }
+                return this; //for chaining
+            });
+        });
+        function strip(txb)
+        { 
+            txb.value = txb.value.replace(/[^\d.,-]/g, '');
+            txb.value = txb.value.replace('.', ',');
+
+        }
+        function showDialog() {
+            $("#divDialog").dialog({
+                modal: true,
+                // autoOpen: false,
+                width: 800,
+                buttons: {
+                    Ok: function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+        }
+   
+
+        function initMe() {
+            //$(document).tooltip();
+            $("#menu").menu({ width: 200, position: { my: "left top", at: "right-25 top+5" } });
+            $("#menu2").menu({ width: 200, position: { my: "left top", at: "right-25 top+5" } });
+       
+        }
+      
+
+
+        function SelectAllCheckboxes(spanChk, txt) {
+            if (typeof String.prototype.contains != 'function') {
+                // see below for better implementation!
+                String.prototype.contains = function (str) {
+                    return this.indexOf(str) != -1;
+                };
+            }
+
+            // Added as ASPX uses SPAN for checkbox
+            var oItem = spanChk.children;
+            var theBox = (spanChk.type == "checkbox") ?
+                spanChk : spanChk.children.item[0];
+            xState = theBox.checked;
+            elm = theBox.form.elements;
+
+            for (i = 0; i < elm.length; i++) {
+                if (elm[i].type == "checkbox"
+            && elm[i].id.contains(txt)
+            && elm[i].id != theBox.id) {
+                    //elm[i].click();
+                    if (elm[i].checked != xState)
+                        elm[i].click();
+                    //elm[i].checked=xState;
+                }
+            }
+        }
+     
+            function checkRadioBtn(id, g) {
+        var gv = document.getElementById(g);
+        
+        for (var i = 1; i < gv.rows.length; i++) {
+            var radioBtn = gv.rows[i].cells[0].getElementsByTagName("input");
+
+            // Check if the id not same
+            if (radioBtn[0].id != id.id) {
+                radioBtn[0].checked = false;
+            }
+        }
+    }
+ 
+    </script>
+</head>
+<body>
+    <asp:Label runat="server" ID="lblStyle">
+        <style>
+            body {font-size:larger;}
+        </style>
+
+    </asp:Label>
+    <form runat="server">
+        <asp:ScriptManager runat="server"  EnablePageMethods="true" >
+   <Services>
+   
+      <asp:ServiceReference Path="~/AutoComplete.asmx" />
+   </Services></asp:ScriptManager>     
+
+        
+
+        <asp:UpdatePanel runat="server">
+            <Triggers>
+                <asp:PostBackTrigger ControlID="lbtnLogout" />
+            </Triggers>
+            <ContentTemplate>
+                <asp:Timer runat="server" ID="tmLogout" Enabled="false" Interval="600000" OnTick="lbtnLogout_Click"></asp:Timer>
+                <div id="divDialog" runat="server" clientidmode="Static" style="display: none;" onclick="this.focus();">
+                </div>
+                <div class="page">
+                    <div class="header test" runat="server" id="divHeader" style="" >
+                        <table style="width:100%">
+                            <tr valign="top">
+                                <td>
+                                    <uc:SystemMenu runat="server" ID="ucSystemMenu"></uc:SystemMenu>
+                                </td>
+                                <td style="width:200px;">
+                                    <table>
+                                        <tr valign="top">
+                                            <td style="text-align: right;" class="loginMenu">
+                                                <asp:Panel runat="server" ID="pnlUser" Visible="false">
+                                                    <asp:Label runat="server" ID="lblUserName"></asp:Label><br />
+                                                    <asp:LinkButton runat="server" ID="lbtnLogout" OnClick="lbtnLogout_Click" CausesValidation="false" Text="wyloguj"></asp:LinkButton>/<a
+                                                        href="/ChangePassword.aspx">zmień hasło</a>
+                                                </asp:Panel>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: right;" class="loginMenu">
+                                                <asp:HyperLink runat="server" ID="hlTasks" NavigateUrl="~/UserTasks.aspx">
+                                                 <div style="padding-left: 50px;">
+                                                        <div class="taskNumber">
+                                                            <asp:Literal runat="server" ID="litTasksCount"></asp:Literal>
+                                                        </div> 
+                                                  </div>
+                                                </asp:HyperLink>
+                                                <asp:Label ID="lblInfo" runat="server" Text=""></asp:Label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="main">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                    </div>
+                    <div class="clear">
+                    </div>
+                </div>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+        <div class="footer">
+        </div>
+    </form>
+</body>
+</html>

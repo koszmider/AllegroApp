@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="ConsoleApp1.exe" version="1.0.0.0" publicKeyToken="d0b7103ea37d62c3" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="ConsoleApp1" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="ConsoleApp1.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          Opcje manifestu kontroli konta użytkownika
+          Jeśli chcesz zmienić poziom kontroli konta użytkownika systemu Windows, zastąp węzeł 
+          requestedExecutionLevel jednym z następujących.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         Jeśli chcesz użyć wirtualizacji plików i rejestru do celów zgodności wstecznej, 
+         usuń węzeł requestedExecutionLevel.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ConsoleApp1.exe" size="29608">
+      <assemblyIdentity name="ConsoleApp1" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>49ZWMw8b875zMOuzLgRpCBDInFVURsl5fcjJ0Ngjd7w=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ConsoleApp1.XmlSerializers.dll" size="55808">
+      <assemblyIdentity name="ConsoleApp1.XmlSerializers" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>b2q6zUTGi+uw1qaGLRRMBpt9LTnk6vjtVbhoMTwLfXU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LajtIt.Dal.dll" size="1476096">
+      <assemblyIdentity name="LajtIt.Dal" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>3A3eGX5j/RAn/kyUbWqHREGQrRSoU0HiMbUEBcLqeuM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="ConsoleApp1.exe.config" size="1954">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>K51Eb/DpN78ae/HaJI5p8ssGD59/sDKF/I5hO++BO4c=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=JACEK\jacek" issuerKeyHash="a355394c00922c7a322e4eb59b9ea5946b3f7d14" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>ITW+SiRg3lJaD/DppbKCv/phzZYbPQCv2leuc5NI1as=</DigestValue></Reference></SignedInfo><SignatureValue>HTUILhGUSWpzb3LdXQWzyDx80fOWF9oR2oG6x1qO6mRvPln9Pf/5wrMTc6IItWoclpaoFBGgin/QKu1ZU1XgKC/73YY6lDcXgtQrL2DQFHaR43il+srkJzNPJnHr+0geuedULGstJ3kr9y/5cmp8gpmr/9YxflLagfqMyg6Y9LM=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>yg6xImvTYjhNqbo+8tok0pIR7NY8Ibykb+koYS60naOyq6v6Vt8uQdKmAQmjcMf5o8H5I4E/sDxeYwcnGn+Oav4VJo86eSXAR/VmXn5OvZqj73/FFRC/e5TIKEYMKv1w8vU7lD5kpryp6++MvgcBg9G29PXtgpEkwl7hI09HnSE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="abd5489373ae57daaf003d1b96cd61fabf82b2a5e9f00f5a52de60244abe3521" Description="" Url=""><as:assemblyIdentity name="ConsoleApp1.exe" version="1.0.0.0" publicKeyToken="d0b7103ea37d62c3" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=JACEK\jacek</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>EP3eFfACC6RdCCxseXfmYFoEoliYps2g0y/jHODRRYI=</DigestValue></Reference></SignedInfo><SignatureValue>d6b6KSi1rdSXUyZJZbLeVIKgeTD9o9wNzfZfh0Ii3E5/jj7xe90VuXoWADTqlQFN97wF9OnqoqSyPsVH6vAa3+3lrbiooHaO642OA/asxeqCu4kE+vO8UdZrSKnnAxlVuWkfiEsxq+Yxh1zQhMtickuzSxJ2n40U/1OFeUzCAZk=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>yg6xImvTYjhNqbo+8tok0pIR7NY8Ibykb+koYS60naOyq6v6Vt8uQdKmAQmjcMf5o8H5I4E/sDxeYwcnGn+Oav4VJo86eSXAR/VmXn5OvZqj73/FFRC/e5TIKEYMKv1w8vU7lD5kpryp6++MvgcBg9G29PXtgpEkwl7hI09HnSE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBxTCCAS6gAwIBAgIQGfS/UUgty59FOk9A6RLjbzANBgkqhkiG9w0BAQsFADAhMR8wHQYDVQQDHhYASgBBAEMARQBLAFwAagBhAGMAZQBrMB4XDTIwMTAwOTA4NTY1OVoXDTIxMTAwOTE0NTY1OVowITEfMB0GA1UEAx4WAEoAQQBDAEUASwBcAGoAYQBjAGUAazCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAyg6xImvTYjhNqbo+8tok0pIR7NY8Ibykb+koYS60naOyq6v6Vt8uQdKmAQmjcMf5o8H5I4E/sDxeYwcnGn+Oav4VJo86eSXAR/VmXn5OvZqj73/FFRC/e5TIKEYMKv1w8vU7lD5kpryp6++MvgcBg9G29PXtgpEkwl7hI09HnSECAwEAATANBgkqhkiG9w0BAQsFAAOBgQB6Z3lOjcFy+apdXOaX3v/pYhHWr7kVXvp/PRwc4hYN0QyNgofjIHxfDLO7nPW3q3Qc5pK0wj9YYSRzKTwwP8KAL37YhoDFyrDuou8NwnNvk2l6lBcMxt2EL/w1jmZO3FtNeQKHEqqqIsoeHWwfm9NIadwphd7+R6LJYNykfQLwZA==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ws.alfaprojekt.com/" targetNamespace="http://ws.alfaprojekt.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Fault" type="tns:Fault" />
+  <xs:element name="dodajKlienta" type="tns:dodajKlienta" />
+  <xs:element name="dodajKlientaResponse" type="tns:dodajKlientaResponse" />
+  <xs:element name="dodajPaczkeDoPrzesylki" type="tns:dodajPaczkeDoPrzesylki" />
+  <xs:element name="dodajPaczkeDoPrzesylkiResponse" type="tns:dodajPaczkeDoPrzesylkiResponse" />
+  <xs:element name="edytujKlienta" type="tns:edytujKlienta" />
+  <xs:element name="edytujKlientaResponse" type="tns:edytujKlientaResponse" />
+  <xs:element name="pobierzDokumentWydania" type="tns:pobierzDokumentWydania" />
+  <xs:element name="pobierzDokumentWydaniaResponse" type="tns:pobierzDokumentWydaniaResponse" />
+  <xs:element name="pobierzNumerDokumentuList" type="tns:pobierzNumerDokumentuList" />
+  <xs:element name="pobierzNumerDokumentuListResponse" type="tns:pobierzNumerDokumentuListResponse" />
+  <xs:element name="pobierzStatusyPrzesylki" type="tns:pobierzStatusyPrzesylki" />
+  <xs:element name="pobierzStatusyPrzesylkiResponse" type="tns:pobierzStatusyPrzesylkiResponse" />
+  <xs:element name="pobierzWersje" type="tns:pobierzWersje" />
+  <xs:element name="pobierzWersjeResponse" type="tns:pobierzWersjeResponse" />
+  <xs:element name="szukajKlienta" type="tns:szukajKlienta" />
+  <xs:element name="szukajKlientaResponse" type="tns:szukajKlientaResponse" />
+  <xs:element name="wydrukjList" type="tns:wydrukjList" />
+  <xs:element name="wydrukjListResponse" type="tns:wydrukjListResponse" />
+  <xs:element name="wydrukujEtykiete" type="tns:wydrukujEtykiete" />
+  <xs:element name="wydrukujEtykietePaczki" type="tns:wydrukujEtykietePaczki" />
+  <xs:element name="wydrukujEtykietePaczkiResponse" type="tns:wydrukujEtykietePaczkiResponse" />
+  <xs:element name="wydrukujEtykieteResponse" type="tns:wydrukujEtykieteResponse" />
+  <xs:element name="zapiszDokumentWydania" type="tns:zapiszDokumentWydania" />
+  <xs:element name="zapiszDokumentWydaniaResponse" type="tns:zapiszDokumentWydaniaResponse" />
+  <xs:element name="zapiszList" type="tns:zapiszList" />
+  <xs:element name="zapiszListResponse" type="tns:zapiszListResponse" />
+  <xs:element name="zmienParametrPrzesylki" type="tns:zmienParametrPrzesylki" />
+  <xs:element name="zmienParametrPrzesylkiResponse" type="tns:zmienParametrPrzesylkiResponse" />
+  <xs:complexType name="dodajKlienta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="kodDostepu" type="xs:string" />
+      <xs:element minOccurs="0" name="klient" type="tns:kontrahent" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="kontrahent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="numer" type="xs:string" />
+      <xs:element minOccurs="0" name="nrExt" type="xs:string" />
+      <xs:element minOccurs="0" name="nazwa" type="xs:string" />
+      <xs:element minOccurs="0" name="czyFirma" type="xs:string" />
+      <xs:element minOccurs="0" name="nip" type="xs:string" />
+      <xs:element minOccurs="0" name="imie" type="xs:string" />
+      <xs:element minOccurs="0" name="nazwisko" type="xs:string" />
+      <xs:element minOccurs="0" name="miasto" type="xs:string" />
+      <xs:element minOccurs="0" name="kod" type="xs:string" />
+      <xs:element minOccurs="0" name="kodKraju" type="xs:string" />
+      <xs:element minOccurs="0" name="ulica" type="xs:string" />
+      <xs:element minOccurs="0" name="nrDom" type="xs:string" />
+      <xs:element minOccurs="0" name="nrLokal" type="xs:string" />
+      <xs:element minOccurs="0" name="telKontakt" type="xs:string" />
+      <xs:element minOccurs="0" name="emailKontakt" type="xs:string" />
+      <xs:element minOccurs="0" name="czyNadawca" type="xs:string" />
+      <xs:element minOccurs="0" name="telefonKom" type="xs:string" />
+      <xs:element minOccurs="0" name="fax" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="dodajKlientaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="klientZapisany" type="tns:kontrahent" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Fault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bledy" type="tns:bledy" />
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bledy">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="blad" nillable="true" type="tns:blad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="blad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="kod" type="xs:long" />
+      <xs:element minOccurs="0" name="opis" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="wydrukujEtykietePaczki">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="kodDostepu" type="xs:string" />
+      <xs:element minOccurs="0" name="numerPaczki" type="xs:string" />
+      <xs:element minOccurs="0" name="format" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="wydrukujEtykietePaczkiResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="etykietaBajty" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pobierzDokumentWydania">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="kodDostepu" type="xs:string" />
+      <xs:element minOccurs="0" name="numerDokumentu" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pobierzDokumentWydaniaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dokumentWydaniaPdf" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="wydrukjList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="kodDostepu" type="xs:string" />
+      <xs:element minOccurs="0" name="numerPrzesylki" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="wydrukjListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="listPdf" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pobierzStatusyPrzesylki">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="kodDostepu" type="xs:string" />
+      <xs:element minOccurs="0" name="numerPrzesylki" type="xs:string" />
+      <xs:element minOccurs="0" name="czyOstatni" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pobierzStatusyPrzesylkiResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="statusyPrzesylki" type="tns:paczkaStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="paczkaStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nrP" type="xs:long" />
+      <xs:element minOccurs="0" name="dataS" type="xs:string" />
+      <xs:element minOccurs="0" name="skrot" type="xs:string" />
+      <xs:element minOccurs="0" name="opis" type="xs:string" />
+      <xs:element minOccurs="0" name="oddSymbol" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="zmienParametrPrzesylki">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="kodDostepu" type="xs:string" />
+      <xs:element minOccurs="0" name="numerPrzesylka" type="xs:string" />
+      <xs:element minOccurs="0" name="przesylkaOtwarta" type="xs:string" />
+      <xs:element minOccurs="0" name="parametry" type="tns:parametry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="parametry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="parametr" nillable="true" type="tns:parametr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="parametr">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nazwa" type="xs:string" />
+      <xs:element minOccurs="0" name="wartosc" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="zmienParametrPrzesylkiResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="zmienioneParametryPrzesylki" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="edytujKlienta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="kodDostepu" type="xs:string" />
+      <xs:element minOccurs="0" name="klient" type="tns:kontrahent" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="edytujKlientaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="klientZapisany" type="tns:kontrahent" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="wydrukujEtykiete">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="kodDostepu" type="xs:string" />
+      <xs:element minOccurs="0" name="numerPrzesylki" type="xs:string" />
+      <xs:element minOccurs="0" name="format" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="wydrukujEtykieteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="etykietaBajty" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pobierzWersje">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="kodDostepu" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pobierzWersjeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="wersja" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="zapiszList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="kodDostepu" type="xs:string" />
+      <xs:element minOccurs="0" name="przesylka" type="tns:list" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="list">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nrPrzesylki" type="xs:string" />
+      <xs:element minOccurs="0" name="nrExt" type="xs:string" />
+      <xs:element minOccurs="0" name="formaPlatnosci" type="xs:string" />
+      <xs:element minOccurs="0" name="rodzajPrzesylki" type="xs:string" />
+      <xs:element minOccurs="0" name="placi" type="xs:string" />
+      <xs:element minOccurs="0" name="nadawca" type="tns:kontrahentNadawca" />
+      <xs:element minOccurs="0" name="odbiorca" type="tns:kontrahentOdbiorca" />
+      <xs:element minOccurs="0" name="platnik" type="tns:kontrahentPlatnik" />
+      <xs:element minOccurs="0" name="potwierdzenieNadania" type="tns:potwierdzenieNadania" />
+      <xs:element minOccurs="0" name="uslugi" type="tns:uslugi" />
+      <xs:element minOccurs="0" name="paczki" type="tns:paczki" />
+      <xs:element minOccurs="0" name="uwagi" type="xs:string" />
+      <xs:element minOccurs="0" name="mpk" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="kontrahentNadawca">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="numer" type="xs:string" />
+      <xs:element minOccurs="0" name="imie" type="xs:string" />
+      <xs:element minOccurs="0" name="nazwisko" type="xs:string" />
+      <xs:element minOccurs="0" name="nazwa" type="xs:string" />
+      <xs:element minOccurs="0" name="telKontakt" type="xs:string" />
+      <xs:element minOccurs="0" name="emailKontakt" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="kontrahentOdbiorca">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="numer" type="xs:string" />
+      <xs:element minOccurs="0" name="nrExt" type="xs:string" />
+      <xs:element minOccurs="0" name="nazwa" type="xs:string" />
+      <xs:element minOccurs="0" name="czyFirma" type="xs:string" />
+      <xs:element minOccurs="0" name="nip" type="xs:string" />
+      <xs:element minOccurs="0" name="imie" type="xs:string" />
+      <xs:element minOccurs="0" name="nazwisko" type="xs:string" />
+      <xs:element minOccurs="0" name="miasto" type="xs:string" />
+      <xs:element minOccurs="0" name="kod" type="xs:string" />
+      <xs:element minOccurs="0" name="kodKraju" type="xs:string" />
+      <xs:element minOccurs="0" name="ulica" type="xs:string" />
+      <xs:element minOccurs="0" name="nrDom" type="xs:string" />
+      <xs:element minOccurs="0" name="nrLokal" type="xs:string" />
+      <xs:element minOccurs="0" name="telKontakt" type="xs:string" />
+      <xs:element minOccurs="0" name="emailKontakt" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="kontrahentPlatnik">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="numer" type="xs:string" />
+      <xs:element minOccurs="0" name="telKontakt" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="potwierdzenieNadania">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="podpisNadawcy" type="xs:string" />
+      <xs:element minOccurs="0" name="numerKuriera" type="xs:string" />
+      <xs:element minOccurs="0" name="dataNadania" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="uslugi">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="pobranie" type="tns:pobranie" />
+      <xs:element minOccurs="0" name="ubezpieczenie" type="tns:ubezpieczenie" />
+      <xs:element minOccurs="0" name="zwrotDokumentow" type="xs:string" />
+      <xs:element minOccurs="0" name="zwrotKopiListu" type="xs:string" />
+      <xs:element minOccurs="0" name="doreczeniaAdresPrywatny" type="xs:string" />
+      <xs:element minOccurs="0" name="doreczeniaSiecHandlowa" type="xs:string" />
+      <xs:element minOccurs="0" name="potwDostEmail" type="xs:string" />
+      <xs:element minOccurs="0" name="potwNadEmail" type="xs:string" />
+      <xs:element minOccurs="0" name="zastrzDorNaGodzine" type="xs:string" />
+      <xs:element minOccurs="0" name="zastrzDorDoGodziny" type="xs:string" />
+      <xs:element minOccurs="0" name="zastrzDorNaDzien" type="xs:string" />
+      <xs:element minOccurs="0" name="ud01" type="xs:string" />
+      <xs:element minOccurs="0" name="ud02" type="xs:string" />
+      <xs:element minOccurs="0" name="ud03" type="xs:string" />
+      <xs:element minOccurs="0" name="ud04" type="xs:string" />
+      <xs:element minOccurs="0" name="ud05" type="xs:string" />
+      <xs:element minOccurs="0" name="ud06" type="xs:string" />
+      <xs:element minOccurs="0" name="ud07" type="xs:string" />
+      <xs:element minOccurs="0" name="ud08" type="xs:string" />
+      <xs:element minOccurs="0" name="ud09" type="xs:string" />
+      <xs:element minOccurs="0" name="ud10" type="xs:string" />
+      <xs:element minOccurs="0" name="ud11" type="xs:string" />
+      <xs:element minOccurs="0" name="ud12" type="xs:string" />
+      <xs:element minOccurs="0" name="ud13" type="xs:string" />
+      <xs:element minOccurs="0" name="ud14" type="xs:string" />
+      <xs:element minOccurs="0" name="ud15" type="xs:string" />
+      <xs:element minOccurs="0" name="ud16" type="xs:string" />
+      <xs:element minOccurs="0" name="ud17" type="xs:string" />
+      <xs:element minOccurs="0" name="ud18" type="xs:string" />
+      <xs:element minOccurs="0" name="ud19" type="xs:string" />
+      <xs:element minOccurs="0" name="ud20" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pobranie">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="formaPobrania" type="xs:string" />
+      <xs:element minOccurs="0" name="kwotaPobrania" type="xs:string" />
+      <xs:element minOccurs="0" name="nrKonta" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ubezpieczenie">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="kwotaUbezpieczenia" type="xs:string" />
+      <xs:element minOccurs="0" name="opisZawartosci" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="paczki">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="paczka" nillable="true" type="tns:paczka" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="paczka">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nrpp" type="xs:string" />
+      <xs:element minOccurs="0" name="typ" type="xs:string" />
+      <xs:element minOccurs="0" name="waga" type="xs:string" />
+      <xs:element minOccurs="0" name="gab1" type="xs:string" />
+      <xs:element minOccurs="0" name="gab2" type="xs:string" />
+      <xs:element minOccurs="0" name="gab3" type="xs:string" />
+      <xs:element minOccurs="0" name="ksztalt" type="xs:string" />
+      <xs:element minOccurs="0" name="wagaGabaryt" type="xs:string" />
+      <xs:element minOccurs="0" name="nrExtPp" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="zapiszListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="przesylkaZapisana" type="tns:list" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pobierzNumerDokumentuList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="kodDostepu" type="xs:string" />
+      <xs:element minOccurs="0" name="numerListu" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pobierzNumerDokumentuListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="numerDokumentu" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="szukajKlienta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="kodDostepu" type="xs:string" />
+      <xs:element minOccurs="0" name="klient" type="tns:kontrahent" />
+      <xs:element minOccurs="0" name="tryb" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="szukajKlientaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="klienci" type="tns:kontrahent" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="dodajPaczkeDoPrzesylki">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="kodDostepu" type="xs:string" />
+      <xs:element minOccurs="0" name="numerPrzesylka" type="xs:string" />
+      <xs:element minOccurs="0" name="paczki" type="tns:paczki" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="dodajPaczkeDoPrzesylkiResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dodanaPaczka" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="zapiszDokumentWydania">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="kodDostepu" type="xs:string" />
+      <xs:element minOccurs="0" name="numeryPrzesylki" type="xs:string" />
+      <xs:element minOccurs="0" name="separator" type="xs:string" />
+      <xs:element minOccurs="0" name="kurierNumer" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="zapiszDokumentWydaniaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dokumentWydaniaPdf" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

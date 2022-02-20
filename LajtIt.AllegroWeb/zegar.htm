@@ -1,0 +1,309 @@
+﻿
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head><title>
+
+</title>
+</head>
+<body>
+    <form method="post" action="zegar.aspx" id="ctl01">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTY1NDU2MTA1MmRkrzTgw09Le/RHCVwgN7dx9kKm6/d/3fJuGcDu2kG57A8=" />
+</div>
+
+    
+<style>
+    #container
+    {
+        background-image: url('http://www.lajtit.pl/public/assets/allegro/lajtit_background.png');
+        width: 100%;
+        text-align: center;
+        font-family: Arial;
+        font-size:16px;
+        background-color: Silver;
+    }
+    #page
+    {
+        margin: auto;
+        width: 980px;
+        border: solid 1px #00B0EB;
+        background-color: White;
+        text-align: left;
+    }
+    #header
+    {
+        position: relative;
+        width: 980px;
+        height: 174px;
+        background-image: url('http://www.lajtit.pl/public/assets/allegro/ljatit_blog_banner.jpg');
+    }
+    #header_flags
+    {
+        width: 330px;
+        height: 50px;
+        position: absolute;
+        right: 310px;
+        top: 0px; 
+        text-align:right;
+        padding: 2px 2px 2px 0; 
+    }
+    #header_links
+    {
+        width: 300px;
+        height: 20px;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        background-color: Gray;
+        padding: 2px 2px 2px 0;
+        text-align: right;
+        font-weight:bold;
+        color:White;
+    }
+    
+    #header_links a
+    {
+        color: White;
+        font-size: 12px;
+    }
+    #short
+    {
+        width: 200px;
+        height: 100px;
+        background-color: White;
+        border: solid 3px #E60A80;
+        right: 10px;
+        top: 32px;
+        position: absolute;
+        text-align: left;
+        padding: 15px;
+        font-size: 12px;
+    }
+    #arrange
+    {
+        padding: 0 30px 30px 30px;
+        font-size: 10px;
+    }
+    #arrange table
+    {
+        width: 100%;
+    }
+    #arrange table td
+    {
+        width: 50%;
+        text-align: center;
+    }
+    #arrange table td img
+    {
+        width: 400px;
+    }
+    #offer
+    {
+        padding: 0 30px 30px 30px;
+    }
+    .offer_main_photo
+    {
+        float: left;
+        width: 600px;
+        text-align:center;
+    }
+    .offer_main_photo_frame
+    {
+        border: solid 1px #00B0EB;
+        padding: 10px;
+        margin: 0 10px 10px 0;
+    } 
+    .border
+    {        
+        border: solid 1px #00B0EB;
+    }
+    .offer_main_photo_frame img
+    {
+        max-width:560px;
+    } 
+    .offer_spec
+    {
+        float: left;
+        width: 260px;
+        padding: 10px;
+    }
+    .offer_spec_comments
+    {
+    clear: left; text-align: right; font-size: 10px; padding:30px;
+    }
+    .offer_spec table
+    {
+        font-size: 12px;
+        font-family: Tahoma;
+    }
+    .offer_spec table td
+    {
+        background-color: #ebebeb;
+        padding: 4px;
+    }
+    #contact
+    {
+        width: 970px;
+        height: 25px;
+        background-color: Gray;
+        padding: 5px;
+        text-align: center;
+    }
+    #contact a
+    {
+        color: White;
+        text-decoration: underline;
+    }
+    .color-it
+    {
+        color: #B0CC1F;
+    }
+    .color-lajt
+    {
+        color: #00B0EB;
+    }
+    .color-r
+    {
+        color: #E60A80;
+    }
+    .color-white
+    {
+        color: #ffffff;
+    }
+    .bold
+    {
+        font-weight: bold;
+    }
+    .regular_text
+    {
+        padding: 15px 10px 15px 10px;
+        text-indent: 10px;
+    }
+    .item_title
+    {
+        margin:10px 0 10px 0;
+        font-size: 26px;
+    }
+    #suggestions table.t1  {padding:0px;margin:0px; border:0px; width:980px ;height:300px; }
+    #suggestions table.t1 td  {padding:0px;margin:0px; border:0px;  }
+    .table_row_header { text-decoration:bold; font-size:18pt;}
+    .table_row_desc {font-size:8pt; text-align:center;}
+    .table_row_img {text-align:center;}      
+    
+    div.price
+    {text-align: center; position: absolute; right: 10px; top: 0px; width: 200px;
+        height: 100px; background-image: url('http://www.lajtit.pl/public/assets/allegro/cena_zawiera.jpg');
+    }     
+    div.price div   {font-size: 18pt; margin: 35px;}
+    div.offer_main_photo_comment {font-size: 10pt;}
+    div.hidden {font-size:1px; color:White;}
+</style>
+
+    <div id="container">
+        <div id="page">
+            <div id="header">
+            
+                 
+                
+            </div>
+          
+           
+            <div style="position:relative;">
+            <a name="przedmiot_aukcji"></a>
+            <img src="http://www.lajtit.pl/public/assets/allegro/lajtit_oferujemy.png" alt="Na tej aukcji oferujemy" />
+            
+ 
+    <div id="offer">
+        <h1 class="item_title color-r">
+            Zegar Karlsson Cubic </h1>
+        <div class="offer_main_photo">
+            <div class="offer_main_photo_frame">
+                <img src="http://www.lajtit.pl/public/assets/allegro/zegar/karlsson4.jpg"
+                    alt="Zegar Kalsson" />
+                    <div class="offer_main_photo_comment">Ułożenie kostek zależy tylko od Twojej wyobraźni</div>
+            </div>
+            <div class="offer_main_photo_frame">
+                <img src="http://www.lajtit.pl/public/assets/allegro/zegar/karlsson5.jpg"
+                    alt="Zegar Kalsson" />
+            </div>
+            <div class="offer_main_photo_frame">
+                <img src="http://www.lajtit.pl/public/assets/allegro/zegar/karlsson1.jpg"
+                    alt="Zegar Kalsson" />
+                    <div class="offer_main_photo_comment">Zegar w aranżacji</div>
+            </div> 
+        </div>
+        <div class="offer_spec">
+            <table>
+                <tr>
+                    <td>
+                        Wymiary wskazówek:
+
+                    </td>
+                    <td>
+                        31cm i 24 cm 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                       Wymiary kostek:
+                    </td>
+                    <td>
+                        6 cm x 6 cm x 6 cm
+                    </td>
+                </tr> 
+                <tr>
+                    <td>
+                       Materiał:
+                    </td>
+                    <td>
+                       stal, plastik
+                    </td>
+                </tr> 
+                <tr>
+                    <td>
+                      Bateria:
+                    </td>
+                    <td>
+                        1 x AA (nie ma w zestawie)
+                    </td>
+                </tr> 
+            </table>
+        </div>
+    </div>
+    
+
+    <a name="wysylka"></a>
+    <div id="shipping">
+        <img src="http://www.lajtit.pl/public/assets/allegro/lajtit_wysylka.png" alt="Wysyłka" />
+        <div class="regular_text">
+            Zamówiony towar wysyłamy   Pocztą Polską.   Poczta Polska dostarcza towar w ciągu 2-4 dni
+            roboczych. 
+        </div>
+    </div>
+
+            </div>
+            <div id="rules">
+                <img src="http://www.lajtit.pl/public/assets/allegro/lajtit_regulamin_zakupow.png"
+                    alt="Regulamin" />
+                <div class="regular_text">
+                    Wyciąg z regulaminu zakupów:
+                    <ul>
+                        <li>Zakup przedmiotu oznacza akceptację regulaminu.</li>
+                        <li>Zakupiony towar (nieuszkodzony) można zwrócić w ciągu 10 dni od daty jego otrzymania.
+                            Koszt zwrotu towaru, w oryginalnym opakowaniu, ponosi Kupujący. Towar należy odesłać
+                            przesyłką rejestrowaną oraz niepobraniową. Zwrot kwoty zakupu towaru dokonujemy
+                            na wskazany nr konta bankowego w ciągu 7 dni od daty jego otrzymania. W przypadku
+                            aukcji z darmową wysyłką od kwoty zwrotu potrącany jest faktyczny koszt wysyłki
+                            towaru do Kupującego.</li>
+                        <li>Nie wysyłamy towaru przesyłką pobraniową do Kupujących, którzy nie mają pełnej aktywacji
+                            konta lub posiadają negatywne komentarze dotyczące problemów z odbiorem przesyłki.</li>
+                    </ul> 
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    </form>
+</body>
+</html>

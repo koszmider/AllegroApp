@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 18, 45" name="AllegroDB">
+  <DataContextMoniker Name="/AllegroDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="44b004d0-9f8b-457e-8872-54208188d481" absoluteBounds="6.5, 28.125, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroActionType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a4cef0ed-9a81-464c-aee9-32d4536f006c" absoluteBounds="6.515, 28.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5052a331-f804-417e-8df8-75eadad28d18" absoluteBounds="9.5, 16.75, 2, 2.1554996744791595">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroBadge" />
+      <nestedChildShapes>
+        <elementListCompartment Id="15d3f65b-0574-492a-acaa-a5130249a825" absoluteBounds="9.515, 17.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="44012232-1b69-4590-bd82-cf737fcf3c58" absoluteBounds="3.75, 27.875, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fb14dabd-fdbe-4054-88ac-96ac2155040e" absoluteBounds="3.765, 28.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6bfddf81-ebfe-476f-8a5b-f8ee45a63de3" absoluteBounds="0.75, 4.75, 2, 3.8862125651041595">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroComment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2d008bb1-9b62-4bff-aa90-04ef937f4177" absoluteBounds="0.76500000000000057, 5.2100000000000009, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dbf49122-3887-4f06-8889-d59e6365801c" absoluteBounds="6.75, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroCommentText" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1a3748d3-9492-423a-b13a-2f2228bc24b1" absoluteBounds="6.7650000000000006, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="042c0578-e831-475b-8905-4182d15a6e80" absoluteBounds="3.75, 8.75, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroEmail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f4e818a6-3273-497e-bdea-5dcf1b50ce63" absoluteBounds="3.765, 9.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3d2661e7-c031-4c21-9ed8-e21ad42cde3e" absoluteBounds="12.25, 20.5, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroItemBadge" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3567b800-2a43-4ffe-b8db-f83f74b45541" absoluteBounds="12.265, 20.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d08aa8d2-302c-4bee-bd4a-6bee592bef71" absoluteBounds="9.25, 36.625, 2, 7.7322412109375023">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroItemOrder" />
+      <nestedChildShapes>
+        <elementListCompartment Id="33937f0c-3567-46fb-9a74-4a612e30fa5c" absoluteBounds="9.265, 37.085, 1.9700000000000002, 7.1722412109375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1bb9882c-3f55-4c58-a9cb-c7ca99e4d6e2" absoluteBounds="7.125, 2.875, 2, 7.1553369140625023">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroItemTransaction" />
+      <nestedChildShapes>
+        <elementListCompartment Id="578b8f34-0733-4c55-809b-60881c9282bc" absoluteBounds="7.1400000000000006, 3.3350000000000009, 1.9700000000000002, 6.5953369140625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="db9cc2dd-7b40-48a9-9312-696c4a302fbe" absoluteBounds="12.25, 26.625, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroItemTransactionItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9ba96780-c2a9-4cce-ab2a-f56d9a4526ce" absoluteBounds="12.265, 27.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fa39c5cf-7e82-41f5-8c69-676e294356d4" absoluteBounds="3.5, 38.125, 2, 2.7324039713541595">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroOrder" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c6ba0bde-0877-427f-b193-7183d5bec9d2" absoluteBounds="3.515, 38.585, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1b788250-f820-40a5-872d-f8c1d74f1ad4" absoluteBounds="9.25, 30.375, 2, 2.732403971354163">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroOrderLineItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cbc5c3ce-7fdd-485e-8aae-4a91e66ff44f" absoluteBounds="9.265, 30.835, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="054c471c-2ac2-419d-88cd-2343aa26003f" absoluteBounds="9.5, 11.875, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroPayment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6b497f18-79af-4713-a7d7-dc7663f792cc" absoluteBounds="9.515, 12.335, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="63da8cf1-86ac-4305-98e4-16185c43b6fa" absoluteBounds="12.25, 23.875, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroPaymentDetails" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2ec64b4b-4b87-4b00-be2d-79cd3ae9a3ef" absoluteBounds="12.265, 24.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4f5b1b22-090a-4410-a3f9-5bb9c2c19ab9" absoluteBounds="6.75, 6, 2, 1.5785953776041595">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroShipment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5fcbd57b-02c7-4c6e-8208-69d18baf8a24" absoluteBounds="6.7650000000000006, 6.4600000000000009, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ccba3768-4545-46cd-98fd-166fcc1c08ce" absoluteBounds="3.5, 24, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroSiteJournal" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a945056d-2855-470d-9100-caaf4ab383c2" absoluteBounds="3.515, 24.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="27dddd0c-2878-4ad0-bfcc-de303d0966b5" absoluteBounds="3.5, 41.625, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroSiteJournalDeals" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f3e91e66-158d-434a-a210-941bce185bc3" absoluteBounds="3.515, 42.085, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="73a48b67-c104-4993-b477-eb387b9ff2aa" absoluteBounds="3.5, 21.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroTags" />
+      <nestedChildShapes>
+        <elementListCompartment Id="878251a7-6cb2-4531-8cea-15c3fdf15cfd" absoluteBounds="3.515, 22.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1013cdd3-05b8-4114-8e81-8492d3b80ee8" absoluteBounds="0.75, 22.625, 2, 4.2708154296875023">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fa486fa2-6540-4475-8afa-0359cbf02929" absoluteBounds="0.765, 23.085, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c7ca5e1c-40a5-483f-8fac-497283bc3e57" absoluteBounds="3.5, 19.75, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroUserSupplier" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4dbcc4cb-6cba-4bee-af27-bf356d917789" absoluteBounds="3.515, 20.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.5 : 17.8277498372396); (11.7916666666667 : 17.8277498372396 : JumpStart); (11.9583333333333 : 17.8277498372396 : JumpEnd); (11.9791666666667 : 17.8277498372396 : JumpStart); (12.1458333333333 : 17.8277498372396 : JumpEnd); (12.3854166666667 : 17.8277498372396 : JumpStart); (12.5520833333333 : 17.8277498372396 : JumpEnd); (13.25 : 17.8277498372396); (13.25 : 20.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/AllegroDBDataContext/AllegroBadge/AllegroBadge_AllegroItemBadge" />
+      <nodes>
+        <classShapeMoniker Id="5052a331-f804-417e-8df8-75eadad28d18" />
+        <classShapeMoniker Id="3d2661e7-c031-4c21-9ed8-e21ad42cde3e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.125 : 10.0303369140625); (9.5 : 10.4053369140625); (11.875 : 10.4053369140625); (11.875 : 26.25); (12.25 : 26.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/AllegroDBDataContext/AllegroItemTransaction/AllegroItemTransaction_AllegroItemTransactionItem" />
+      <nodes>
+        <classShapeMoniker Id="1bb9882c-3f55-4c58-a9cb-c7ca99e4d6e2" />
+        <classShapeMoniker Id="db9cc2dd-7b40-48a9-9312-696c4a302fbe" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 38.125); (4.5 : 31.7412019856771); (8.91666666666667 : 31.7412019856771 : JumpStart); (9.08333333333333 : 31.7412019856771 : JumpEnd); (9.25 : 31.7412019856771)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/AllegroDBDataContext/AllegroOrder/AllegroOrder_AllegroOrderLineItem" />
+      <nodes>
+        <classShapeMoniker Id="fa39c5cf-7e82-41f5-8c69-676e294356d4" />
+        <classShapeMoniker Id="1b788250-f820-40a5-872d-f8c1d74f1ad4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 15.6996731035657); (11.8160744349011 : 16.0157475384668 : JumpStart); (11.9339255650989 : 16.1335986686646 : JumpEnd); (12.0625 : 16.2621731035657); (12.0625 : 24.7604484049479); (12.25 : 24.7604484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/AllegroDBDataContext/AllegroPayment/AllegroPayment_AllegroPaymentDetails" />
+      <nodes>
+        <classShapeMoniker Id="054c471c-2ac2-419d-88cd-2343aa26003f" />
+        <classShapeMoniker Id="63da8cf1-86ac-4305-98e4-16185c43b6fa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.75 : 6.78929768880208); (6.5 : 6.78929768880208); (6.5 : 6.45266845703125); (7.125 : 6.45266845703125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/AllegroDBDataContext/AllegroShipment/AllegroShipment_AllegroItemTransaction" />
+      <nodes>
+        <classShapeMoniker Id="4f5b1b22-090a-4410-a3f9-5bb9c2c19ab9" />
+        <classShapeMoniker Id="1bb9882c-3f55-4c58-a9cb-c7ca99e4d6e2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 26.8958154296875); (1.75 : 39.4912019856771); (3.5 : 39.4912019856771)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/AllegroDBDataContext/AllegroUser/AllegroUser_AllegroOrder" />
+      <nodes>
+        <classShapeMoniker Id="1013cdd3-05b8-4114-8e81-8492d3b80ee8" />
+        <classShapeMoniker Id="fa39c5cf-7e82-41f5-8c69-676e294356d4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 26.8958154296875); (2.2812525 : 38.7768484928385); (3.5 : 38.7768484928385)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/AllegroDBDataContext/AllegroUser/AllegroUser_AllegroOrder1" />
+      <nodes>
+        <classShapeMoniker Id="1013cdd3-05b8-4114-8e81-8492d3b80ee8" />
+        <classShapeMoniker Id="fa39c5cf-7e82-41f5-8c69-676e294356d4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 25.2700512695313); (3.5 : 25.2700512695313)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/AllegroDBDataContext/AllegroUser/AllegroUser_AllegroSiteJournal" />
+      <nodes>
+        <classShapeMoniker Id="1013cdd3-05b8-4114-8e81-8492d3b80ee8" />
+        <classShapeMoniker Id="ccba3768-4545-46cd-98fd-166fcc1c08ce" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.2187475 : 26.8958154296875); (1.2187475 : 43.1835034179688); (3.5 : 43.1835034179688)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/AllegroDBDataContext/AllegroUser/AllegroUser_AllegroSiteJournalDeals" />
+      <nodes>
+        <classShapeMoniker Id="1013cdd3-05b8-4114-8e81-8492d3b80ee8" />
+        <classShapeMoniker Id="27dddd0c-2878-4ad0-bfcc-de303d0966b5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 22.9142976888021); (3.5 : 22.9142976888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/AllegroDBDataContext/AllegroUser/AllegroUser_AllegroTags" />
+      <nodes>
+        <classShapeMoniker Id="1013cdd3-05b8-4114-8e81-8492d3b80ee8" />
+        <classShapeMoniker Id="73a48b67-c104-4993-b477-eb387b9ff2aa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.281252 : 22.625); (2.281252 : 20.3469962565104); (3.5 : 20.3469962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/AllegroDBDataContext/AllegroUser/AllegroUser_AllegroUserSupplier" />
+      <nodes>
+        <classShapeMoniker Id="1013cdd3-05b8-4114-8e81-8492d3b80ee8" />
+        <classShapeMoniker Id="c7ca5e1c-40a5-483f-8fac-497283bc3e57" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="676eba83-6c74-40bf-9f97-1287973d884b" absoluteBounds="0.75, 12.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroOrderLastId" />
+      <nestedChildShapes>
+        <elementListCompartment Id="518f4ea7-f3fc-4fd5-b624-d869f3adc029" absoluteBounds="0.76500000000000057, 13.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="206281af-a3cf-4246-875d-f2bd6e42a838" absoluteBounds="12.75, 4.75, 2, 4.2708154296874987">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroItemBadgeView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="82a66b43-bc69-4e14-b1b9-639d8ad49d38" absoluteBounds="12.765, 5.21, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f75c46d3-6f3b-4596-b2ca-7b64c831c1e7" absoluteBounds="12.75, 10.75, 2, 5.0400211588541666">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroItemsView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2a010bba-c78a-40dc-a98b-5bc8acd179dc" absoluteBounds="12.765, 11.21, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="addb902c-dece-477e-854a-e4a778b99d68" absoluteBounds="3.75, 12.75, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroItemUserView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="70da76ec-2421-42a0-b33c-3357133f8d63" absoluteBounds="3.7650000000000006, 13.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="80c6f3c0-1dde-4d65-be5c-4749cae702bf" absoluteBounds="15.75, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroOrderDisputeReply" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8100f5c1-d30f-4a85-9cfb-0a3ebecf3e82" absoluteBounds="15.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c2b12c1e-31a9-429a-967b-f8969d8333c5" absoluteBounds="3.5, 15.625, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroPayments" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6ea80d2e-1a63-4e14-b497-6dd11b6b6c7c" absoluteBounds="3.5150000000000006, 16.085, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.75 : 22.625); (1.75 : 17.2796541341146); (3.5 : 17.2796541341146)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/AllegroDBDataContext/AllegroUser/AllegroUser_AllegroPayments" />
+      <nodes>
+        <classShapeMoniker Id="1013cdd3-05b8-4114-8e81-8492d3b80ee8" />
+        <classShapeMoniker Id="c2b12c1e-31a9-429a-967b-f8969d8333c5" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4887ffad-2633-455b-b8b4-ebec1d09c331" absoluteBounds="0.75, 1.125, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroOrderDispute" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fdd3a176-b9cd-428b-a76e-1d3a9014f97f" absoluteBounds="0.765, 1.5850000000000009, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d75d99ce-5607-4495-893f-3228014fc6dd" absoluteBounds="3.5, 0.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroOrderDisputeMessages" />
+      <nestedChildShapes>
+        <elementListCompartment Id="63d4b8a3-1c72-46bc-808d-5fe18a6d5967" absoluteBounds="3.5149999999999997, 1.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.01044840494792); (3.5 : 2.01044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AllegroDBDataContext/AllegroOrderDispute/AllegroOrderDispute_AllegroOrderDisputeMessages" />
+      <nodes>
+        <classShapeMoniker Id="4887ffad-2633-455b-b8b4-ebec1d09c331" />
+        <classShapeMoniker Id="d75d99ce-5607-4495-893f-3228014fc6dd" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="de383958-468e-4baa-9bc9-a676656e30d5" absoluteBounds="9.25, 23.75, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroBilling" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3833f2e8-2a86-4d33-8856-ada93f28991f" absoluteBounds="9.265, 24.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="86a70969-2064-4f86-a275-da3161918ea8" absoluteBounds="6.5, 20.125, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroBillingTypes" />
+      <nestedChildShapes>
+        <elementListCompartment Id="193d6708-0270-4204-ab84-cb6c82843be1" absoluteBounds="6.5150000000000006, 20.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 20.7219962565104); (8.63541666666667 : 20.7219962565104 : JumpStart); (8.80208333333333 : 20.7219962565104 : JumpEnd); (9.04166666666667 : 20.7219962565104 : JumpStart); (9.20833333333333 : 20.7219962565104 : JumpEnd); (9.29166666666667 : 20.7219962565104 : JumpStart); (9.45833333333333 : 20.7219962565104 : JumpEnd); (10.25 : 20.7219962565104); (10.25 : 23.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AllegroDBDataContext/AllegroBillingTypes/AllegroBillingTypes_AllegroBilling" />
+      <nodes>
+        <classShapeMoniker Id="86a70969-2064-4f86-a275-da3161918ea8" />
+        <classShapeMoniker Id="de383958-468e-4baa-9bc9-a676656e30d5" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="351451c3-2b92-4801-b84b-196011218df6" absoluteBounds="4.25, 4.25, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroProduct" />
+      <nestedChildShapes>
+        <elementListCompartment Id="781dc235-04f2-4855-b9af-f0f2426f91bc" absoluteBounds="4.265, 4.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="29bb0417-1a2e-4e8e-b550-691d30fe7cfa" absoluteBounds="6.25, 22.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroItemsRestoreView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="94dd70a5-2a03-42c2-a89b-33c0acdf3ee8" absoluteBounds="6.265, 22.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f045a58d-29c8-431d-b8ec-e0066cf1c6c3" absoluteBounds="10, 0.5, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroActionView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fa1e3c8a-4878-457f-b873-526661d11075" absoluteBounds="10.015, 0.96, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="21394d56-7248-43db-b543-52aa067b07b8" absoluteBounds="6.875, 21.75, 2, 2.5401025390625">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroAction" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fdb203dd-bb33-40f4-95f3-df837f93b425" absoluteBounds="6.89, 22.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.40625 : 28.125); (8.40625 : 24.2901025390625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/AllegroDBDataContext/AllegroActionType/AllegroActionType_AllegroAction" />
+      <nodes>
+        <classShapeMoniker Id="44b004d0-9f8b-457e-8872-54208188d481" />
+        <classShapeMoniker Id="21394d56-7248-43db-b543-52aa067b07b8" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="220202d0-ccf4-47c8-bdb4-eb0818258110" absoluteBounds="6.375, 11.375, 2, 5.4246240234375">
+      <DataClassMoniker Name="/AllegroDBDataContext/AllegroItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e1e49e3f-e0d1-40d7-97d4-1cc993effd22" absoluteBounds="6.39, 11.835, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 16.2700105794271); (8.63541666666667 : 16.2700105794271 : JumpStart); (8.80208333333333 : 16.2700105794271 : JumpEnd); (9.04166666666667 : 16.2700105794271 : JumpStart); (9.20833333333333 : 16.2700105794271 : JumpEnd); (11.7916666666667 : 16.2700105794271 : JumpStart); (11.9583333333333 : 16.2700105794271 : JumpEnd); (12.46875 : 16.2700105794271); (12.46875 : 20.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AllegroDBDataContext/AllegroItem/AllegroItem_AllegroItemBadge" />
+      <nodes>
+        <classShapeMoniker Id="220202d0-ccf4-47c8-bdb4-eb0818258110" />
+        <classShapeMoniker Id="3d2661e7-c031-4c21-9ed8-e21ad42cde3e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.375 : 13.7912532897135); (8.63541666666667 : 13.7912532897135 : JumpStart); (8.80208333333333 : 13.7912532897135 : JumpEnd); (9.125 : 13.7912532897135); (9.125 : 24.5401025390625); (9 : 24.5401025390625); (9 : 36.25); (10.25 : 36.25); (10.25 : 36.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AllegroDBDataContext/AllegroItem/AllegroItem_AllegroItemOrder" />
+      <nodes>
+        <classShapeMoniker Id="220202d0-ccf4-47c8-bdb4-eb0818258110" />
+        <classShapeMoniker Id="d08aa8d2-302c-4bee-bd4a-6bee592bef71" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.375 : 16.7996240234375); (7.375 : 19.875); (8.63541666666667 : 19.875 : JumpStart); (8.80208333333333 : 19.875 : JumpEnd); (9.04166666666667 : 19.875 : JumpStart); (9.20833333333333 : 19.875 : JumpEnd); (9.29166666666667 : 19.875 : JumpStart); (9.45833333333333 : 19.875 : JumpEnd); (11.5 : 19.875); (11.5 : 27.8301525533854); (12.25 : 27.8301525533854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AllegroDBDataContext/AllegroItem/AllegroItem_AllegroItemTransactionItem" />
+      <nodes>
+        <classShapeMoniker Id="220202d0-ccf4-47c8-bdb4-eb0818258110" />
+        <classShapeMoniker Id="db9cc2dd-7b40-48a9-9312-696c4a302fbe" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.906252 : 16.7996240234375); (7.906252 : 19.625); (8.63541666666667 : 19.625 : JumpStart); (8.80208333333333 : 19.625 : JumpEnd); (9.04166666666667 : 19.625 : JumpStart); (9.20833333333333 : 19.625 : JumpEnd); (9.375 : 19.625); (9.375 : 23.5); (9.0625 : 23.5); (9.0625 : 31.7412019856771); (9.25 : 31.7412019856771)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AllegroDBDataContext/AllegroItem/AllegroItem_AllegroOrderLineItem" />
+      <nodes>
+        <classShapeMoniker Id="220202d0-ccf4-47c8-bdb4-eb0818258110" />
+        <classShapeMoniker Id="1b788250-f820-40a5-872d-f8c1d74f1ad4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.843748 : 16.7996240234375); (6.843748 : 20); (8.63541666666667 : 20 : JumpStart); (8.80208333333333 : 20 : JumpEnd); (9.04166666666667 : 20 : JumpStart); (9.20833333333333 : 20 : JumpEnd); (9.29166666666667 : 20 : JumpStart); (9.45833333333333 : 20 : JumpEnd); (11.4166666666667 : 20 : JumpStart); (11.5833333333333 : 20 : JumpEnd); (11.625 : 20); (11.625 : 24.7604484049479); (11.7916666666667 : 24.7604484049479 : JumpStart); (11.9583333333333 : 24.7604484049479 : JumpEnd); (12.25 : 24.7604484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AllegroDBDataContext/AllegroItem/AllegroItem_AllegroPaymentDetails" />
+      <nodes>
+        <classShapeMoniker Id="220202d0-ccf4-47c8-bdb4-eb0818258110" />
+        <classShapeMoniker Id="63da8cf1-86ac-4305-98e4-16185c43b6fa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.375 : 12.5518741448568); (8.71875 : 12.5518741448568); (8.71875 : 21.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AllegroDBDataContext/AllegroItem/AllegroItem_AllegroAction" />
+      <nodes>
+        <classShapeMoniker Id="220202d0-ccf4-47c8-bdb4-eb0818258110" />
+        <classShapeMoniker Id="21394d56-7248-43db-b543-52aa067b07b8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.218748 : 22.625); (1.218748 : 14.3862939453125); (6 : 14.3862939453125); (6 : 14.0873120117187); (6.375 : 14.0873120117187)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AllegroDBDataContext/AllegroUser/AllegroUser_AllegroItem" />
+      <nodes>
+        <classShapeMoniker Id="1013cdd3-05b8-4114-8e81-8492d3b80ee8" />
+        <classShapeMoniker Id="220202d0-ccf4-47c8-bdb4-eb0818258110" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

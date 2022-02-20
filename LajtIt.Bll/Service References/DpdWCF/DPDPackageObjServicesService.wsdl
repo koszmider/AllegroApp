@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://dpdservices.dpd.com.pl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DPDPackageObjServicesService" targetNamespace="http://dpdservices.dpd.com.pl/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://dpdservices.dpd.com.pl/DPDPackageObjServicesService/DPDPackageObjServices?xsd=1" namespace="http://dpdservices.dpd.com.pl/" />
+    </xsd:schema>
+  </types>
+  <message name="generateProtocolV1">
+    <part name="parameters" element="tns:generateProtocolV1" />
+  </message>
+  <message name="generateProtocolV1Response">
+    <part name="parameters" element="tns:generateProtocolV1Response" />
+  </message>
+  <message name="DPDServiceException">
+    <part name="fault" element="tns:DPDServiceException" />
+  </message>
+  <message name="generateProtocolV2">
+    <part name="parameters" element="tns:generateProtocolV2" />
+  </message>
+  <message name="generateProtocolV2Response">
+    <part name="parameters" element="tns:generateProtocolV2Response" />
+  </message>
+  <message name="generateProtocolsWithDestinationsV1">
+    <part name="parameters" element="tns:generateProtocolsWithDestinationsV1" />
+  </message>
+  <message name="generateProtocolsWithDestinationsV1Response">
+    <part name="parameters" element="tns:generateProtocolsWithDestinationsV1Response" />
+  </message>
+  <message name="generateProtocolsWithDestinationsV2">
+    <part name="parameters" element="tns:generateProtocolsWithDestinationsV2" />
+  </message>
+  <message name="generateProtocolsWithDestinationsV2Response">
+    <part name="parameters" element="tns:generateProtocolsWithDestinationsV2Response" />
+  </message>
+  <message name="getCourierOrderAvailabilityV1">
+    <part name="parameters" element="tns:getCourierOrderAvailabilityV1" />
+  </message>
+  <message name="getCourierOrderAvailabilityV1Response">
+    <part name="parameters" element="tns:getCourierOrderAvailabilityV1Response" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+  <message name="findPostalCodeV1">
+    <part name="parameters" element="tns:findPostalCodeV1" />
+  </message>
+  <message name="findPostalCodeV1Response">
+    <part name="parameters" element="tns:findPostalCodeV1Response" />
+  </message>
+  <message name="generateSpedLabelsV1">
+    <part name="parameters" element="tns:generateSpedLabelsV1" />
+  </message>
+  <message name="generateSpedLabelsV1Response">
+    <part name="parameters" element="tns:generateSpedLabelsV1Response" />
+  </message>
+  <message name="generateSpedLabelsV2">
+    <part name="parameters" element="tns:generateSpedLabelsV2" />
+  </message>
+  <message name="generateSpedLabelsV2Response">
+    <part name="parameters" element="tns:generateSpedLabelsV2Response" />
+  </message>
+  <message name="generateSpedLabelsV3">
+    <part name="parameters" element="tns:generateSpedLabelsV3" />
+  </message>
+  <message name="generateSpedLabelsV3Response">
+    <part name="parameters" element="tns:generateSpedLabelsV3Response" />
+  </message>
+  <message name="generateSpedLabelsV4">
+    <part name="parameters" element="tns:generateSpedLabelsV4" />
+  </message>
+  <message name="generateSpedLabelsV4Response">
+    <part name="parameters" element="tns:generateSpedLabelsV4Response" />
+  </message>
+  <message name="packagesPickupCallV1">
+    <part name="parameters" element="tns:packagesPickupCallV1" />
+  </message>
+  <message name="packagesPickupCallV1Response">
+    <part name="parameters" element="tns:packagesPickupCallV1Response" />
+  </message>
+  <message name="packagesPickupCallV2">
+    <part name="parameters" element="tns:packagesPickupCallV2" />
+  </message>
+  <message name="packagesPickupCallV2Response">
+    <part name="parameters" element="tns:packagesPickupCallV2Response" />
+  </message>
+  <message name="packagesPickupCallV3">
+    <part name="parameters" element="tns:packagesPickupCallV3" />
+  </message>
+  <message name="packagesPickupCallV3Response">
+    <part name="parameters" element="tns:packagesPickupCallV3Response" />
+  </message>
+  <message name="generatePackagesNumbersV1">
+    <part name="parameters" element="tns:generatePackagesNumbersV1" />
+  </message>
+  <message name="generatePackagesNumbersV1Response">
+    <part name="parameters" element="tns:generatePackagesNumbersV1Response" />
+  </message>
+  <message name="generatePackagesNumbersV2">
+    <part name="parameters" element="tns:generatePackagesNumbersV2" />
+  </message>
+  <message name="generatePackagesNumbersV2Response">
+    <part name="parameters" element="tns:generatePackagesNumbersV2Response" />
+  </message>
+  <message name="generatePackagesNumbersV3">
+    <part name="parameters" element="tns:generatePackagesNumbersV3" />
+  </message>
+  <message name="generatePackagesNumbersV3Response">
+    <part name="parameters" element="tns:generatePackagesNumbersV3Response" />
+  </message>
+  <message name="generatePackagesNumbersV4">
+    <part name="parameters" element="tns:generatePackagesNumbersV4" />
+  </message>
+  <message name="generatePackagesNumbersV4Response">
+    <part name="parameters" element="tns:generatePackagesNumbersV4Response" />
+  </message>
+  <message name="appendParcelsToPackageV1">
+    <part name="parameters" element="tns:appendParcelsToPackageV1" />
+  </message>
+  <message name="appendParcelsToPackageV1Response">
+    <part name="parameters" element="tns:appendParcelsToPackageV1Response" />
+  </message>
+  <message name="packagesPickupCallV4">
+    <part name="parameters" element="tns:packagesPickupCallV4" />
+  </message>
+  <message name="packagesPickupCallV4Response">
+    <part name="parameters" element="tns:packagesPickupCallV4Response" />
+  </message>
+  <message name="importDeliveryBusinessEventV1">
+    <part name="parameters" element="tns:importDeliveryBusinessEventV1" />
+  </message>
+  <message name="importDeliveryBusinessEventV1Response">
+    <part name="parameters" element="tns:importDeliveryBusinessEventV1Response" />
+  </message>
+  <message name="DeniedAccessWSException">
+    <part name="fault" element="tns:DeniedAccessWSException" />
+  </message>
+  <message name="SchemaValidationException">
+    <part name="fault" element="tns:SchemaValidationException" />
+  </message>
+  <portType name="DPDPackageObjServices">
+    <operation name="generateProtocolV1">
+      <input message="tns:generateProtocolV1" />
+      <output message="tns:generateProtocolV1Response" />
+      <fault name="DPDServiceException" message="tns:DPDServiceException" />
+    </operation>
+    <operation name="generateProtocolV2">
+      <input message="tns:generateProtocolV2" />
+      <output message="tns:generateProtocolV2Response" />
+      <fault name="DPDServiceException" message="tns:DPDServiceException" />
+    </operation>
+    <operation name="generateProtocolsWithDestinationsV1">
+      <input message="tns:generateProtocolsWithDestinationsV1" />
+      <output message="tns:generateProtocolsWithDestinationsV1Response" />
+      <fault name="DPDServiceException" message="tns:DPDServiceException" />
+    </operation>
+    <operation name="generateProtocolsWithDestinationsV2">
+      <input message="tns:generateProtocolsWithDestinationsV2" />
+      <output message="tns:generateProtocolsWithDestinationsV2Response" />
+      <fault name="DPDServiceException" message="tns:DPDServiceException" />
+    </operation>
+    <operation name="getCourierOrderAvailabilityV1">
+      <input message="tns:getCourierOrderAvailabilityV1" />
+      <output message="tns:getCourierOrderAvailabilityV1Response" />
+      <fault name="DPDServiceException" message="tns:DPDServiceException" />
+      <fault name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="findPostalCodeV1">
+      <input message="tns:findPostalCodeV1" />
+      <output message="tns:findPostalCodeV1Response" />
+      <fault name="DPDServiceException" message="tns:DPDServiceException" />
+    </operation>
+    <operation name="generateSpedLabelsV1">
+      <input message="tns:generateSpedLabelsV1" />
+      <output message="tns:generateSpedLabelsV1Response" />
+      <fault name="DPDServiceException" message="tns:DPDServiceException" />
+    </operation>
+    <operation name="generateSpedLabelsV2">
+      <input message="tns:generateSpedLabelsV2" />
+      <output message="tns:generateSpedLabelsV2Response" />
+      <fault name="DPDServiceException" message="tns:DPDServiceException" />
+    </operation>
+    <operation name="generateSpedLabelsV3">
+      <input message="tns:generateSpedLabelsV3" />
+      <output message="tns:generateSpedLabelsV3Response" />
+      <fault name="DPDServiceException" message="tns:DPDServiceException" />
+    </operation>
+    <operation name="generateSpedLabelsV4">
+      <input message="tns:generateSpedLabelsV4" />
+      <output message="tns:generateSpedLabelsV4Response" />
+      <fault name="DPDServiceException" message="tns:DPDServiceException" />
+    </operation>
+    <operation name="packagesPickupCallV1">
+      <input message="tns:packagesPickupCallV1" />
+      <output message="tns:packagesPickupCallV1Response" />
+      <fault name="DPDServiceException" message="tns:DPDServiceException" />
+    </operation>
+    <operation name="packagesPickupCallV2">
+      <input message="tns:packagesPickupCallV2" />
+      <output message="tns:packagesPickupCallV2Response" />
+      <fault name="DPDServiceException" message="tns:DPDServiceException" />
+    </operation>
+    <operation name="packagesPickupCallV3">
+      <input message="tns:packagesPickupCallV3" />
+      <output message="tns:packagesPickupCallV3Response" />
+      <fault name="DPDServiceException" message="tns:DPDServiceException" />
+    </operation>
+    <operation name="generatePackagesNumbersV1">
+      <input message="tns:generatePackagesNumbersV1" />
+      <output message="tns:generatePackagesNumbersV1Response" />
+      <fault name="DPDServiceException" message="tns:DPDServiceException" />
+    </operation>
+    <operation name="generatePackagesNumbersV2">
+      <input message="tns:generatePackagesNumbersV2" />
+      <output message="tns:generatePackagesNumbersV2Response" />
+      <fault name="DPDServiceException" message="tns:DPDServiceException" />
+    </operation>
+    <operation name="generatePackagesNumbersV3">
+      <input message="tns:generatePackagesNumbersV3" />
+      <output message="tns:generatePackagesNumbersV3Response" />
+      <fault name="DPDServiceException" message="tns:DPDServiceException" />
+    </operation>
+    <operation name="generatePackagesNumbersV4">
+      <input message="tns:generatePackagesNumbersV4" />
+      <output message="tns:generatePackagesNumbersV4Response" />
+      <fault name="DPDServiceException" message="tns:DPDServiceException" />
+    </operation>
+    <operation name="appendParcelsToPackageV1">
+      <input message="tns:appendParcelsToPackageV1" />
+      <output message="tns:appendParcelsToPackageV1Response" />
+      <fault name="DPDServiceException" message="tns:DPDServiceException" />
+    </operation>
+    <operation name="packagesPickupCallV4">
+      <input message="tns:packagesPickupCallV4" />
+      <output message="tns:packagesPickupCallV4Response" />
+      <fault name="DPDServiceException" message="tns:DPDServiceException" />
+    </operation>
+    <operation name="importDeliveryBusinessEventV1">
+      <input message="tns:importDeliveryBusinessEventV1" />
+      <output message="tns:importDeliveryBusinessEventV1Response" />
+      <fault name="DeniedAccessWSException" message="tns:DeniedAccessWSException" />
+      <fault name="SchemaValidationException" message="tns:SchemaValidationException" />
+      <fault name="DPDServiceException" message="tns:DPDServiceException" />
+    </operation>
+  </portType>
+  <binding name="DPDPackageObjServicesPortBinding" type="tns:DPDPackageObjServices">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="generateProtocolV1">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="DPDServiceException">
+        <soap:fault use="literal" name="DPDServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="generateProtocolV2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="DPDServiceException">
+        <soap:fault use="literal" name="DPDServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="generateProtocolsWithDestinationsV1">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="DPDServiceException">
+        <soap:fault use="literal" name="DPDServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="generateProtocolsWithDestinationsV2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="DPDServiceException">
+        <soap:fault use="literal" name="DPDServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getCourierOrderAvailabilityV1">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="DPDServiceException">
+        <soap:fault use="literal" name="DPDServiceException" namespace="" />
+      </fault>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="findPostalCodeV1">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="DPDServiceException">
+        <soap:fault use="literal" name="DPDServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="generateSpedLabelsV1">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="DPDServiceException">
+        <soap:fault use="literal" name="DPDServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="generateSpedLabelsV2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="DPDServiceException">
+        <soap:fault use="literal" name="DPDServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="generateSpedLabelsV3">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="DPDServiceException">
+        <soap:fault use="literal" name="DPDServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="generateSpedLabelsV4">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="DPDServiceException">
+        <soap:fault use="literal" name="DPDServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="packagesPickupCallV1">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="DPDServiceException">
+        <soap:fault use="literal" name="DPDServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="packagesPickupCallV2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="DPDServiceException">
+        <soap:fault use="literal" name="DPDServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="packagesPickupCallV3">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="DPDServiceException">
+        <soap:fault use="literal" name="DPDServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="generatePackagesNumbersV1">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="DPDServiceException">
+        <soap:fault use="literal" name="DPDServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="generatePackagesNumbersV2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="DPDServiceException">
+        <soap:fault use="literal" name="DPDServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="generatePackagesNumbersV3">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="DPDServiceException">
+        <soap:fault use="literal" name="DPDServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="generatePackagesNumbersV4">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="DPDServiceException">
+        <soap:fault use="literal" name="DPDServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="appendParcelsToPackageV1">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="DPDServiceException">
+        <soap:fault use="literal" name="DPDServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="packagesPickupCallV4">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="DPDServiceException">
+        <soap:fault use="literal" name="DPDServiceException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="importDeliveryBusinessEventV1">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="DeniedAccessWSException">
+        <soap:fault use="literal" name="DeniedAccessWSException" namespace="" />
+      </fault>
+      <fault name="SchemaValidationException">
+        <soap:fault use="literal" name="SchemaValidationException" namespace="" />
+      </fault>
+      <fault name="DPDServiceException">
+        <soap:fault use="literal" name="DPDServiceException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="DPDPackageObjServicesService">
+    <port name="DPDPackageObjServicesPort" binding="tns:DPDPackageObjServicesPortBinding">
+      <soap:address location="https://dpdservices.dpd.com.pl/DPDPackageObjServicesService/DPDPackageObjServices" />
+    </port>
+  </service>
+</definitions>

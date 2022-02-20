@@ -1,0 +1,917 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="http://app.siodemka.com/mm7ws/api/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns0="http://app.siodemka.com/mm7ws/type/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" name="SiodemkaService" targetNamespace="http://app.siodemka.com/mm7ws/api/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema xmlns:soap11-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://app.siodemka.com/mm7ws/type/" elementFormDefault="qualified" targetNamespace="http://app.siodemka.com/mm7ws/type/">
+      <xsd:complexType name="KontrahentNadawca">
+        <xsd:sequence>
+          <xsd:element name="numer" type="xsd:string" />
+          <xsd:element name="nazwisko" nillable="true" type="xsd:string" />
+          <xsd:element name="imie" nillable="true" type="xsd:string" />
+          <xsd:element name="telKontakt" nillable="true" type="xsd:string" />
+          <xsd:element name="emailKontakt" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="KontrahentOdbiorca">
+        <xsd:sequence>
+          <xsd:element name="numer" nillable="true" type="xsd:string" />
+          <xsd:element name="nrExt" nillable="true" type="xsd:string" />
+          <xsd:element name="czyFirma" type="xsd:string" />
+          <xsd:element name="nazwa" nillable="true" type="xsd:string" />
+          <xsd:element name="nip" nillable="true" type="xsd:string" />
+          <xsd:element name="nazwisko" nillable="true" type="xsd:string" />
+          <xsd:element name="imie" nillable="true" type="xsd:string" />
+          <xsd:element name="kodKraju" type="xsd:string" />
+          <xsd:element name="kod" type="xsd:string" />
+          <xsd:element name="miasto" type="xsd:string" />
+          <xsd:element name="ulica" type="xsd:string" />
+          <xsd:element name="nrDom" type="xsd:string" />
+          <xsd:element name="nrLokal" nillable="true" type="xsd:string" />
+          <xsd:element name="telKontakt" nillable="true" type="xsd:string" />
+          <xsd:element name="emailKontakt" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="KontrahentPlatnik">
+        <xsd:sequence>
+          <xsd:element name="numer" type="xsd:string" />
+          <xsd:element name="telKontakt" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Ubezpieczenie">
+        <xsd:sequence>
+          <xsd:element name="kwotaUbezpieczenia" nillable="true" type="xsd:string" />
+          <xsd:element name="opisZawartosci" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Pobranie">
+        <xsd:sequence>
+          <xsd:element name="kwotaPobrania" nillable="true" type="xsd:string" />
+          <xsd:element name="formaPobrania" nillable="true" type="xsd:string" />
+          <xsd:element name="nrKonta" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Uslugi">
+        <xsd:sequence>
+          <xsd:element name="nrBezpiecznejKoperty" nillable="true" type="xsd:string" />
+          <xsd:element name="zkld" nillable="true" type="xsd:string" />
+          <xsd:element name="zd" nillable="true" type="xsd:string" />
+          <xsd:element name="ubezpieczenie" nillable="true" type="tns:Ubezpieczenie" />
+          <xsd:element name="pobranie" nillable="true" type="tns:Pobranie" />
+          <xsd:element name="awizacjaTelefoniczna" nillable="true" type="xsd:string" />
+          <xsd:element name="potwNadEmail" nillable="true" type="xsd:string" />
+          <xsd:element name="potwDostEmail" nillable="true" type="xsd:string" />
+          <xsd:element name="potwDostSMS" nillable="true" type="xsd:string" />
+          <xsd:element name="skladowanie" nillable="true" type="xsd:string" />
+          <xsd:element name="nadOdbPKP" nillable="true" type="xsd:string" />
+          <xsd:element name="odbNadgodziny" nillable="true" type="xsd:string" />
+          <xsd:element name="odbWlas" nillable="true" type="xsd:string" />
+          <xsd:element name="palNextDay" nillable="true" type="xsd:string" />
+          <xsd:element name="osobaFiz" nillable="true" type="xsd:string" />
+          <xsd:element name="market" nillable="true" type="xsd:string" />
+          <xsd:element name="zastrzDorNaGodz" nillable="true" type="xsd:string" />
+          <xsd:element name="zastrzDorNaDzien" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Paczki">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="unbounded" name="paczka" type="tns:Paczka" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Paczka">
+        <xsd:sequence>
+          <xsd:element name="nrpp" nillable="true" type="xsd:string" />
+          <xsd:element name="typ" type="xsd:string" />
+          <xsd:element name="waga" type="xsd:string" />
+          <xsd:element name="gab1" nillable="true" type="xsd:string" />
+          <xsd:element name="gab2" nillable="true" type="xsd:string" />
+          <xsd:element name="gab3" nillable="true" type="xsd:string" />
+          <xsd:element name="ksztalt" type="xsd:string" />
+          <xsd:element name="wagaGabaryt" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PotwierdzenieNadania">
+        <xsd:sequence>
+          <xsd:element name="dataNadania" type="xsd:string" />
+          <xsd:element name="numerKuriera" type="xsd:string" />
+          <xsd:element name="podpisNadawcy" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="List">
+        <xsd:sequence>
+          <xsd:element name="nrPrzesylki" nillable="true" type="xsd:string" />
+          <xsd:element name="nrExt" nillable="true" type="xsd:string" />
+          <xsd:element name="mpk" nillable="true" type="xsd:string" />
+          <xsd:element name="rodzajPrzesylki" type="xsd:string" />
+          <xsd:element name="placi" type="xsd:string" />
+          <xsd:element name="formaPlatnosci" type="xsd:string" />
+          <xsd:element name="nadawca" type="tns:KontrahentNadawca" />
+          <xsd:element name="odbiorca" type="tns:KontrahentOdbiorca" />
+          <xsd:element name="platnik" nillable="true" type="tns:KontrahentPlatnik" />
+          <xsd:element name="uslugi" nillable="true" type="tns:Uslugi" />
+          <xsd:element name="paczki" type="tns:Paczki" />
+          <xsd:element name="potwierdzenieNadania" type="tns:PotwierdzenieNadania" />
+          <xsd:element name="uwagi" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Kontrahent">
+        <xsd:sequence>
+          <xsd:element name="ulica" nillable="true" type="xsd:string" />
+          <xsd:element name="emailKontakt" nillable="true" type="xsd:string" />
+          <xsd:element name="imie" nillable="true" type="xsd:string" />
+          <xsd:element name="numer" nillable="true" type="xsd:string" />
+          <xsd:element name="nazwisko" nillable="true" type="xsd:string" />
+          <xsd:element name="nrDom" nillable="true" type="xsd:string" />
+          <xsd:element name="nrLokal" nillable="true" type="xsd:string" />
+          <xsd:element name="kod" nillable="true" type="xsd:string" />
+          <xsd:element name="nrExt" nillable="true" type="xsd:string" />
+          <xsd:element name="nazwa" nillable="true" type="xsd:string" />
+          <xsd:element name="telKontakt" nillable="true" type="xsd:string" />
+          <xsd:element name="nip" nillable="true" type="xsd:string" />
+          <xsd:element name="czyFirma" nillable="true" type="xsd:string" />
+          <xsd:element name="kodKraju" nillable="true" type="xsd:string" />
+          <xsd:element name="miasto" nillable="true" type="xsd:string" />
+          <xsd:element name="fax" nillable="true" type="xsd:string" />
+          <xsd:element name="telefonKom" nillable="true" type="xsd:string" />
+          <xsd:element name="czyNadawca" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Fault">
+        <xsd:sequence>
+          <xsd:element name="bledy" nillable="true" type="tns:Bledy" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Bledy">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="blad" nillable="true" type="tns:Blad" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Blad">
+        <xsd:sequence>
+          <xsd:element name="kod" nillable="true" type="xsd:long" />
+          <xsd:element name="opis" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StatusyPrzesylki">
+        <xsd:sequence>
+          <xsd:element name="numerListu" nillable="true" type="xsd:long" />
+          <xsd:element name="nrExt" nillable="true" type="xsd:string" />
+          <xsd:element name="nadawca" nillable="true" type="xsd:string" />
+          <xsd:element name="odbiorca" nillable="true" type="xsd:string" />
+          <xsd:element name="dataNadania" nillable="true" type="xsd:string" />
+          <xsd:element name="stacjaNad" nillable="true" type="xsd:string" />
+          <xsd:element name="stacjaDor" nillable="true" type="xsd:string" />
+          <xsd:element name="status" nillable="true" type="tns:Statusy" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Statusy">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="status" nillable="true" type="tns:PaczkaStatus" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PaczkaStatus">
+        <xsd:sequence>
+          <xsd:element name="skrot" nillable="true" type="xsd:string" />
+          <xsd:element name="oddSymbol" nillable="true" type="xsd:string" />
+          <xsd:element name="nrP" nillable="true" type="xsd:long" />
+          <xsd:element name="dataS" nillable="true" type="xsd:string" />
+          <xsd:element name="opis" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Placowka">
+        <xsd:sequence>
+          <xsd:element name="ostModyfikacja" nillable="true" type="xsd:string" />
+          <xsd:element name="nazwa" nillable="true" type="xsd:string" />
+          <xsd:element name="symbol" nillable="true" type="xsd:string" />
+          <xsd:element name="miasto" nillable="true" type="xsd:string" />
+          <xsd:element name="kod" nillable="true" type="xsd:string" />
+          <xsd:element name="ulica" nillable="true" type="xsd:string" />
+          <xsd:element name="nrLok" nillable="true" type="xsd:string" />
+          <xsd:element name="nrDom" nillable="true" type="xsd:string" />
+          <xsd:element name="telefon" nillable="true" type="xsd:string" />
+          <xsd:element name="telefon24" nillable="true" type="xsd:string" />
+          <xsd:element name="fax" nillable="true" type="xsd:string" />
+          <xsd:element name="dlugGeogr" nillable="true" type="xsd:string" />
+          <xsd:element name="szerGeogr" nillable="true" type="xsd:string" />
+          <xsd:element name="godzPracOddz" nillable="true" type="xsd:string" />
+          <xsd:element name="godzOdbPac" nillable="true" type="xsd:string" />
+          <xsd:element name="godzNadPac" nillable="true" type="xsd:string" />
+          <xsd:element name="godzNadPacNd" nillable="true" type="xsd:string" />
+          <xsd:element name="uwagi" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Placowki">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="placowka" nillable="true" type="tns:Placowka" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="listNadanieElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="przesylka" type="tns:List" />
+            <xsd:element name="klucz" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listNadanieResponseElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="tns:List" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FaultElement" type="tns:Fault" />
+      <xsd:element name="nowyDokumentWydaniaElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="kurier" type="xsd:long" />
+            <xsd:element name="numery" type="xsd:string" />
+            <xsd:element name="klucz" type="xsd:string" />
+            <xsd:element name="separator" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="nowyDokumentWydaniaResponseElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:base64Binary" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="pobierzDokumentWydaniaElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="numerDokumentu" type="xsd:string" />
+            <xsd:element name="klucz" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="pobierzDokumentWydaniaResponseElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:base64Binary" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="wydrukListPdfElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="numer" type="xsd:string" />
+            <xsd:element name="klucz" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="wydrukListPdfResponseElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:base64Binary" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="wydrukEtykietaEPLElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="numery" type="xsd:string" />
+            <xsd:element name="klucz" type="xsd:string" />
+            <xsd:element name="separator" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="wydrukEtykietaEPLResponseElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="wydrukEtykietaZPLElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="numery" type="xsd:string" />
+            <xsd:element name="klucz" type="xsd:string" />
+            <xsd:element name="separator" nillable="true" type="xsd:string" />
+            <xsd:element name="dpi" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="wydrukEtykietaZPLResponseElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="wydrukEtykietaPdfElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="numery" type="xsd:string" />
+            <xsd:element name="klucz" type="xsd:string" />
+            <xsd:element name="separator" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="wydrukEtykietaPdfResponseElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:base64Binary" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="wydrukEtykietaPngElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="numer" nillable="true" type="xsd:string" />
+            <xsd:element name="klucz" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="statusyPrzesylkiElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="numerListu" nillable="true" type="xsd:string" />
+            <xsd:element name="czyOstatni" nillable="true" type="xsd:int" />
+            <xsd:element name="klucz" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="statusyPrzesylkiResponseElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="result" nillable="true" type="tns:PaczkaStatus" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="wydrukEtykietaPngResponseElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:base64Binary" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="pobierzNumerDokumentuListElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="numerListu" nillable="true" type="xsd:string" />
+            <xsd:element name="klucz" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="pobierzNumerDokumentuListResponseElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listNadajNumerExtElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="numerListu" nillable="true" type="xsd:string" />
+            <xsd:element name="nrExt" nillable="true" type="xsd:string" />
+            <xsd:element name="klucz" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listNadajNumerExtResponseElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="statusyPrzesylkiV1Element">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="numerListu" type="xsd:string" />
+            <xsd:element name="nrExt" nillable="true" type="xsd:string" />
+            <xsd:element name="czyOstatni" type="xsd:int" />
+            <xsd:element name="klucz" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="statusyPrzesylkiV1ResponseElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="tns:StatusyPrzesylki" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="dodajNadawceElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="daneKlienta" type="tns:Kontrahent" />
+            <xsd:element name="klucz" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="dodajNadawceResponseElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="tns:Kontrahent" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="dodajOdbiorceElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="daneKlienta" type="tns:Kontrahent" />
+            <xsd:element name="klucz" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="dodajOdbiorceResponseElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="tns:Kontrahent" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="edytujKlientaElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="daneKlienta" type="tns:Kontrahent" />
+            <xsd:element name="klucz" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="edytujKlientaResponseElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="tns:Kontrahent" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="szukajKlientaElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="daneKlienta" type="tns:Kontrahent" />
+            <xsd:element name="klucz" type="xsd:string" />
+            <xsd:element name="tryb" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="szukajKlientaResponseElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="result" nillable="true" type="tns:Kontrahent" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="bazaPlacowekElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="listaPlacowek" type="tns:Placowki" />
+            <xsd:element name="klucz" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="bazaPlacowekResponseElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="tns:Placowki" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="znajdzPlacowkeElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="kodPocztowy" type="xsd:string" />
+            <xsd:element name="klucz" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="znajdzPlacowkeResponseElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="tns:Placowka" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </types>
+  <message name="SiodemkaService_listNadanie">
+    <part name="parameters" element="tns0:listNadanieElement" />
+  </message>
+  <message name="SiodemkaService_listNadanieResponse">
+    <part name="parameters" element="tns0:listNadanieResponseElement" />
+  </message>
+  <message name="Fault">
+    <part name="FaultElement" element="tns0:FaultElement" />
+  </message>
+  <message name="SiodemkaService_nowyDokumentWydania">
+    <part name="parameters" element="tns0:nowyDokumentWydaniaElement" />
+  </message>
+  <message name="SiodemkaService_nowyDokumentWydaniaResponse">
+    <part name="parameters" element="tns0:nowyDokumentWydaniaResponseElement" />
+  </message>
+  <message name="SiodemkaService_pobierzDokumentWydania">
+    <part name="parameters" element="tns0:pobierzDokumentWydaniaElement" />
+  </message>
+  <message name="SiodemkaService_pobierzDokumentWydaniaResponse">
+    <part name="parameters" element="tns0:pobierzDokumentWydaniaResponseElement" />
+  </message>
+  <message name="SiodemkaService_wydrukListPdf">
+    <part name="parameters" element="tns0:wydrukListPdfElement" />
+  </message>
+  <message name="SiodemkaService_wydrukListPdfResponse">
+    <part name="parameters" element="tns0:wydrukListPdfResponseElement" />
+  </message>
+  <message name="SiodemkaService_wydrukEtykietaEPL">
+    <part name="parameters" element="tns0:wydrukEtykietaEPLElement" />
+  </message>
+  <message name="SiodemkaService_wydrukEtykietaEPLResponse">
+    <part name="parameters" element="tns0:wydrukEtykietaEPLResponseElement" />
+  </message>
+  <message name="SiodemkaService_wydrukEtykietaZPL">
+    <part name="parameters" element="tns0:wydrukEtykietaZPLElement" />
+  </message>
+  <message name="SiodemkaService_wydrukEtykietaZPLResponse">
+    <part name="parameters" element="tns0:wydrukEtykietaZPLResponseElement" />
+  </message>
+  <message name="SiodemkaService_wydrukEtykietaPdf">
+    <part name="parameters" element="tns0:wydrukEtykietaPdfElement" />
+  </message>
+  <message name="SiodemkaService_wydrukEtykietaPdfResponse">
+    <part name="parameters" element="tns0:wydrukEtykietaPdfResponseElement" />
+  </message>
+  <message name="SiodemkaService_wydrukEtykietaPng">
+    <part name="parameters" element="tns0:wydrukEtykietaPngElement" />
+  </message>
+  <message name="SiodemkaService_wydrukEtykietaPngResponse">
+    <part name="parameters" element="tns0:wydrukEtykietaPngResponseElement" />
+  </message>
+  <message name="SiodemkaService_pobierzNumerDokumentuList">
+    <part name="parameters" element="tns0:pobierzNumerDokumentuListElement" />
+  </message>
+  <message name="SiodemkaService_pobierzNumerDokumentuListResponse">
+    <part name="parameters" element="tns0:pobierzNumerDokumentuListResponseElement" />
+  </message>
+  <message name="SiodemkaService_listNadajNumerExt">
+    <part name="parameters" element="tns0:listNadajNumerExtElement" />
+  </message>
+  <message name="SiodemkaService_listNadajNumerExtResponse">
+    <part name="parameters" element="tns0:listNadajNumerExtResponseElement" />
+  </message>
+  <message name="SiodemkaService_statusyPrzesylki">
+    <part name="parameters" element="tns0:statusyPrzesylkiElement" />
+  </message>
+  <message name="SiodemkaService_statusyPrzesylkiResponse">
+    <part name="parameters" element="tns0:statusyPrzesylkiResponseElement" />
+  </message>
+  <message name="SiodemkaService_statusyPrzesylkiV1">
+    <part name="parameters" element="tns0:statusyPrzesylkiV1Element" />
+  </message>
+  <message name="SiodemkaService_statusyPrzesylkiV1Response">
+    <part name="parameters" element="tns0:statusyPrzesylkiV1ResponseElement" />
+  </message>
+  <message name="SiodemkaService_dodajNadawce">
+    <part name="parameters" element="tns0:dodajNadawceElement" />
+  </message>
+  <message name="SiodemkaService_dodajNadawceResponse">
+    <part name="parameters" element="tns0:dodajNadawceResponseElement" />
+  </message>
+  <message name="SiodemkaService_dodajOdbiorce">
+    <part name="parameters" element="tns0:dodajOdbiorceElement" />
+  </message>
+  <message name="SiodemkaService_dodajOdbiorceResponse">
+    <part name="parameters" element="tns0:dodajOdbiorceResponseElement" />
+  </message>
+  <message name="SiodemkaService_edytujKlienta">
+    <part name="parameters" element="tns0:edytujKlientaElement" />
+  </message>
+  <message name="SiodemkaService_edytujKlientaResponse">
+    <part name="parameters" element="tns0:edytujKlientaResponseElement" />
+  </message>
+  <message name="SiodemkaService_szukajKlienta">
+    <part name="parameters" element="tns0:szukajKlientaElement" />
+  </message>
+  <message name="SiodemkaService_szukajKlientaResponse">
+    <part name="parameters" element="tns0:szukajKlientaResponseElement" />
+  </message>
+  <message name="SiodemkaService_bazaPlacowek">
+    <part name="parameters" element="tns0:bazaPlacowekElement" />
+  </message>
+  <message name="SiodemkaService_bazaPlacowekResponse">
+    <part name="parameters" element="tns0:bazaPlacowekResponseElement" />
+  </message>
+  <message name="SiodemkaService_znajdzPlacowke">
+    <part name="parameters" element="tns0:znajdzPlacowkeElement" />
+  </message>
+  <message name="SiodemkaService_znajdzPlacowkeResponse">
+    <part name="parameters" element="tns0:znajdzPlacowkeResponseElement" />
+  </message>
+  <portType name="SiodemkaService">
+    <operation name="listNadanie">
+      <input message="tns:SiodemkaService_listNadanie" />
+      <output message="tns:SiodemkaService_listNadanieResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="nowyDokumentWydania">
+      <input message="tns:SiodemkaService_nowyDokumentWydania" />
+      <output message="tns:SiodemkaService_nowyDokumentWydaniaResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="pobierzDokumentWydania">
+      <input message="tns:SiodemkaService_pobierzDokumentWydania" />
+      <output message="tns:SiodemkaService_pobierzDokumentWydaniaResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="wydrukEtykietaEPL">
+      <input message="tns:SiodemkaService_wydrukEtykietaEPL" />
+      <output message="tns:SiodemkaService_wydrukEtykietaEPLResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="wydrukEtykietaZPL">
+      <input message="tns:SiodemkaService_wydrukEtykietaZPL" />
+      <output message="tns:SiodemkaService_wydrukEtykietaZPLResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="wydrukEtykietaPdf">
+      <input message="tns:SiodemkaService_wydrukEtykietaPdf" />
+      <output message="tns:SiodemkaService_wydrukEtykietaPdfResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="wydrukEtykietaPng">
+      <input message="tns:SiodemkaService_wydrukEtykietaPng" />
+      <output message="tns:SiodemkaService_wydrukEtykietaPngResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="wydrukListPdf">
+      <input message="tns:SiodemkaService_wydrukListPdf" />
+      <output message="tns:SiodemkaService_wydrukListPdfResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="pobierzNumerDokumentuList">
+      <input message="tns:SiodemkaService_pobierzNumerDokumentuList" />
+      <output message="tns:SiodemkaService_pobierzNumerDokumentuListResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="listNadajNumerExt">
+      <input message="tns:SiodemkaService_listNadajNumerExt" />
+      <output message="tns:SiodemkaService_listNadajNumerExtResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="statusyPrzesylkiV1">
+      <input message="tns:SiodemkaService_statusyPrzesylkiV1" />
+      <output message="tns:SiodemkaService_statusyPrzesylkiV1Response" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="statusyPrzesylki">
+      <input message="tns:SiodemkaService_statusyPrzesylki" />
+      <output message="tns:SiodemkaService_statusyPrzesylkiResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="dodajNadawce">
+      <input message="tns:SiodemkaService_dodajNadawce" />
+      <output message="tns:SiodemkaService_dodajNadawceResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="dodajOdbiorce">
+      <input message="tns:SiodemkaService_dodajOdbiorce" />
+      <output message="tns:SiodemkaService_dodajOdbiorceResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="edytujKlienta">
+      <input message="tns:SiodemkaService_edytujKlienta" />
+      <output message="tns:SiodemkaService_edytujKlientaResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="szukajKlienta">
+      <input message="tns:SiodemkaService_szukajKlienta" />
+      <output message="tns:SiodemkaService_szukajKlientaResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="bazaPlacowek">
+      <input message="tns:SiodemkaService_bazaPlacowek" />
+      <output message="tns:SiodemkaService_bazaPlacowekResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="znajdzPlacowke">
+      <input message="tns:SiodemkaService_znajdzPlacowke" />
+      <output message="tns:SiodemkaService_znajdzPlacowkeResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+  </portType>
+  <binding name="SiodemkaServiceSoapHttp" type="tns:SiodemkaService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listNadanie">
+      <soap:operation soapAction="http://app.siodemka.com/mm7ws/api//listNadanie" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="nowyDokumentWydania">
+      <soap:operation soapAction="http://app.siodemka.com/mm7ws/api//nowyDokumentWydania" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="pobierzDokumentWydania">
+      <soap:operation soapAction="http://app.siodemka.com/mm7ws/api//pobierzDokumentWydania" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="wydrukEtykietaEPL">
+      <soap:operation soapAction="http://app.siodemka.com/mm7ws/api//wydrukEtykietaEPL" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="wydrukEtykietaZPL">
+      <soap:operation soapAction="http://app.siodemka.com/mm7ws/api//wydrukEtykietaZPL" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="wydrukEtykietaPdf">
+      <soap:operation soapAction="http://app.siodemka.com/mm7ws/api//wydrukEtykietaPdf" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="wydrukEtykietaPng">
+      <soap:operation soapAction="http://app.siodemka.com/mm7ws/api//wydrukEtykietaPng" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="wydrukListPdf">
+      <soap:operation soapAction="http://app.siodemka.com/mm7ws/api//wydrukListPdf" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="pobierzNumerDokumentuList">
+      <soap:operation soapAction="http://app.siodemka.com/mm7ws/api//pobierzNumerDokumentuList" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="listNadajNumerExt">
+      <soap:operation soapAction="http://app.siodemka.com/mm7ws/api//listNadajNumerExt" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="statusyPrzesylkiV1">
+      <soap:operation soapAction="http://app.siodemka.com/mm7ws/api//statusyPrzesylkiV1" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="statusyPrzesylki">
+      <soap:operation soapAction="http://app.siodemka.com/mm7ws/api//statusyPrzesylki" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="dodajNadawce">
+      <soap:operation soapAction="http://app.siodemka.com/mm7ws/api//dodajNadawce" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="dodajOdbiorce">
+      <soap:operation soapAction="http://app.siodemka.com/mm7ws/api//dodajOdbiorce" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="edytujKlienta">
+      <soap:operation soapAction="http://app.siodemka.com/mm7ws/api//edytujKlienta" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="szukajKlienta">
+      <soap:operation soapAction="http://app.siodemka.com/mm7ws/api//szukajKlienta" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="bazaPlacowek">
+      <soap:operation soapAction="http://app.siodemka.com/mm7ws/api//bazaPlacowek" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="znajdzPlacowke">
+      <soap:operation soapAction="http://app.siodemka.com/mm7ws/api//znajdzPlacowke" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="SiodemkaService">
+    <port name="SiodemkaServiceSoapHttpPort" binding="tns:SiodemkaServiceSoapHttp">
+      <soap:address location="http://webmobile7.siodemka.com:80/mm7ws/SiodemkaServiceSoapHttpPort" />
+    </port>
+  </service>
+</definitions>

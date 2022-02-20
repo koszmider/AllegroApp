@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="HelperDBLinqSet">
+  <DataContextMoniker Name="/HelperDBLinqSetDataContext" />
+  <nestedChildShapes>
+    <classShape Id="49561bd3-7ff7-4976-be99-33cd0dff1d51" absoluteBounds="8.625, 2.375, 2, 1.9631982421875">
+      <DataClassMoniker Name="/HelperDBLinqSetDataContext/UserLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9785a5c0-f65d-4787-abd9-68ef56fb9cec" absoluteBounds="8.64, 2.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ae035af8-61fd-4166-b54a-419ff06f3aee" absoluteBounds="6.5, 1.375, 2, 1.9631982421875">
+      <DataClassMoniker Name="/HelperDBLinqSetDataContext/ErrorLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="839eac5e-fcd9-4aca-b492-58fb08b0ed2b" absoluteBounds="6.515, 1.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5383a976-78f4-49bf-9edc-1fc333edf402" absoluteBounds="5.375, 2.5, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/HelperDBLinqSetDataContext/TableLogBackup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="64f154a0-422c-4aab-bce3-d70d7a2ba18e" absoluteBounds="5.39, 2.96, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

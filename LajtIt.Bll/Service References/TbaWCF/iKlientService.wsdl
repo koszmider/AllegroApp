@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://ws.alfaprojekt.com/" name="iKlientService" targetNamespace="http://ws.alfaprojekt.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://ws-tba.alfa-projekt.pl:443/iKlientWs/IklServicePort?xsd=1" namespace="http://ws.alfaprojekt.com/" />
+    </xsd:schema>
+  </types>
+  <message name="pobierzWersje">
+    <part name="parameters" element="tns:pobierzWersje" />
+  </message>
+  <message name="pobierzWersjeResponse">
+    <part name="parameters" element="tns:pobierzWersjeResponse" />
+  </message>
+  <message name="Fault">
+    <part name="fault" element="tns:Fault" />
+  </message>
+  <message name="pobierzStatusyPrzesylki">
+    <part name="parameters" element="tns:pobierzStatusyPrzesylki" />
+  </message>
+  <message name="pobierzStatusyPrzesylkiResponse">
+    <part name="parameters" element="tns:pobierzStatusyPrzesylkiResponse" />
+  </message>
+  <message name="wydrukujEtykiete">
+    <part name="parameters" element="tns:wydrukujEtykiete" />
+  </message>
+  <message name="wydrukujEtykieteResponse">
+    <part name="parameters" element="tns:wydrukujEtykieteResponse" />
+  </message>
+  <message name="wydrukujEtykietePaczki">
+    <part name="parameters" element="tns:wydrukujEtykietePaczki" />
+  </message>
+  <message name="wydrukujEtykietePaczkiResponse">
+    <part name="parameters" element="tns:wydrukujEtykietePaczkiResponse" />
+  </message>
+  <message name="wydrukjList">
+    <part name="parameters" element="tns:wydrukjList" />
+  </message>
+  <message name="wydrukjListResponse">
+    <part name="parameters" element="tns:wydrukjListResponse" />
+  </message>
+  <message name="zapiszDokumentWydania">
+    <part name="parameters" element="tns:zapiszDokumentWydania" />
+  </message>
+  <message name="zapiszDokumentWydaniaResponse">
+    <part name="parameters" element="tns:zapiszDokumentWydaniaResponse" />
+  </message>
+  <message name="pobierzDokumentWydania">
+    <part name="parameters" element="tns:pobierzDokumentWydania" />
+  </message>
+  <message name="pobierzDokumentWydaniaResponse">
+    <part name="parameters" element="tns:pobierzDokumentWydaniaResponse" />
+  </message>
+  <message name="pobierzNumerDokumentuList">
+    <part name="parameters" element="tns:pobierzNumerDokumentuList" />
+  </message>
+  <message name="pobierzNumerDokumentuListResponse">
+    <part name="parameters" element="tns:pobierzNumerDokumentuListResponse" />
+  </message>
+  <message name="zapiszList">
+    <part name="parameters" element="tns:zapiszList" />
+  </message>
+  <message name="zapiszListResponse">
+    <part name="parameters" element="tns:zapiszListResponse" />
+  </message>
+  <message name="dodajKlienta">
+    <part name="parameters" element="tns:dodajKlienta" />
+  </message>
+  <message name="dodajKlientaResponse">
+    <part name="parameters" element="tns:dodajKlientaResponse" />
+  </message>
+  <message name="zmienParametrPrzesylki">
+    <part name="parameters" element="tns:zmienParametrPrzesylki" />
+  </message>
+  <message name="zmienParametrPrzesylkiResponse">
+    <part name="parameters" element="tns:zmienParametrPrzesylkiResponse" />
+  </message>
+  <message name="dodajPaczkeDoPrzesylki">
+    <part name="parameters" element="tns:dodajPaczkeDoPrzesylki" />
+  </message>
+  <message name="dodajPaczkeDoPrzesylkiResponse">
+    <part name="parameters" element="tns:dodajPaczkeDoPrzesylkiResponse" />
+  </message>
+  <message name="edytujKlienta">
+    <part name="parameters" element="tns:edytujKlienta" />
+  </message>
+  <message name="edytujKlientaResponse">
+    <part name="parameters" element="tns:edytujKlientaResponse" />
+  </message>
+  <message name="szukajKlienta">
+    <part name="parameters" element="tns:szukajKlienta" />
+  </message>
+  <message name="szukajKlientaResponse">
+    <part name="parameters" element="tns:szukajKlientaResponse" />
+  </message>
+  <portType name="IklService">
+    <operation name="pobierzWersje">
+      <input message="tns:pobierzWersje" />
+      <output message="tns:pobierzWersjeResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="pobierzStatusyPrzesylki">
+      <input message="tns:pobierzStatusyPrzesylki" />
+      <output message="tns:pobierzStatusyPrzesylkiResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="wydrukujEtykiete">
+      <input message="tns:wydrukujEtykiete" />
+      <output message="tns:wydrukujEtykieteResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="wydrukujEtykietePaczki">
+      <input message="tns:wydrukujEtykietePaczki" />
+      <output message="tns:wydrukujEtykietePaczkiResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="wydrukjList">
+      <input message="tns:wydrukjList" />
+      <output message="tns:wydrukjListResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="zapiszDokumentWydania">
+      <input message="tns:zapiszDokumentWydania" />
+      <output message="tns:zapiszDokumentWydaniaResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="pobierzDokumentWydania">
+      <input message="tns:pobierzDokumentWydania" />
+      <output message="tns:pobierzDokumentWydaniaResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="pobierzNumerDokumentuList">
+      <input message="tns:pobierzNumerDokumentuList" />
+      <output message="tns:pobierzNumerDokumentuListResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="zapiszList">
+      <input message="tns:zapiszList" />
+      <output message="tns:zapiszListResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="dodajKlienta">
+      <input message="tns:dodajKlienta" />
+      <output message="tns:dodajKlientaResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="zmienParametrPrzesylki">
+      <input message="tns:zmienParametrPrzesylki" />
+      <output message="tns:zmienParametrPrzesylkiResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="dodajPaczkeDoPrzesylki">
+      <input message="tns:dodajPaczkeDoPrzesylki" />
+      <output message="tns:dodajPaczkeDoPrzesylkiResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="edytujKlienta">
+      <input message="tns:edytujKlienta" />
+      <output message="tns:edytujKlientaResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+    <operation name="szukajKlienta">
+      <input message="tns:szukajKlienta" />
+      <output message="tns:szukajKlientaResponse" />
+      <fault name="Fault" message="tns:Fault" />
+    </operation>
+  </portType>
+  <binding name="IklServicePortBinding" type="tns:IklService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="pobierzWersje">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="pobierzStatusyPrzesylki">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="wydrukujEtykiete">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="wydrukujEtykietePaczki">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="wydrukjList">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="zapiszDokumentWydania">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="pobierzDokumentWydania">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="pobierzNumerDokumentuList">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="zapiszList">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="dodajKlienta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="zmienParametrPrzesylki">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="dodajPaczkeDoPrzesylki">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="edytujKlienta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="szukajKlienta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Fault">
+        <soap:fault use="literal" name="Fault" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="iKlientService">
+    <port name="IklServicePort" binding="tns:IklServicePortBinding">
+      <soap:address location="https://ws-tba.alfa-projekt.pl:443/iKlientWs/IklServicePort" />
+    </port>
+  </service>
+</definitions>

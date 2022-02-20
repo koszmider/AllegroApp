@@ -1,0 +1,135 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="LajtIt.AllegroWeb.SiteMaster" %>
+
+<%@ Register Src="~/Controls/Styles.ascx" TagName="Styles" TagPrefix="uc" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <uc:Styles runat="server" />
+    <div id="container">
+        <div id="page">
+            <div id="header">
+                <div id="header_flags">
+                    <table id="table_flags" style="width: 310; height: 50; border: 0;" cellpadding="0"
+                        cellspacing="0">
+                        <tr>
+                            <td>
+                                <img src="http://www.lajtit.pl/public/assets/allegro/lajtit_flagi_01.png" width="44"
+                                    height="50" alt="" />
+                            </td>
+                            <td>
+                                <img src="http://www.lajtit.pl/public/assets/allegro/lajtit_flagi_02.png" width="45"
+                                    height="50" alt="" />
+                            </td>
+                            <td>
+                                <a href="http://static.lajtit.pl/translate.htm?l=en" target="_blank" rel="nofollow">
+                                    <img src="http://www.lajtit.pl/public/assets/allegro/lajtit_flagi_03.png" width="44"
+                                        style="border: 0;" height="50" alt="" /></a>
+                            </td>
+                            <td>
+                                <a href="http://static.lajtit.pl/translate.htm?l=cs" target="_blank" rel="nofollow">
+                                    <img src="http://www.lajtit.pl/public/assets/allegro/lajtit_flagi_04.png" width="44"
+                                        style="border: 0;" height="50" alt="" /></a>
+                            </td>
+                            <td>
+                                <a href="http://static.lajtit.pl/translate.htm?l=sk" target="_blank" rel="nofollow">
+                                    <img src="http://www.lajtit.pl/public/assets/allegro/lajtit_flagi_05.png" width="44"
+                                        style="border: 0;" height="50" alt="" /></a>
+                            </td>
+                            <td>
+                                <a href="http://static.lajtit.pl/translate.htm?l=ru" target="_blank" rel="nofollow">
+                                    <img src="http://www.lajtit.pl/public/assets/allegro/lajtit_flagi_06.png" width="45"
+                                        style="border: 0;" height="50" alt="" /></a>
+                            </td>
+                            <td>
+                                <a href="http://static.lajtit.pl/translate.htm?l=de" target="_blank" rel="nofollow">
+                                    <img src="http://www.lajtit.pl/public/assets/allegro/lajtit_flagi_07.png" width="44"
+                                        style="border: 0;" height="50" alt="" /></a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="header_links">
+                    <a href="http://allegro.pl/my_page.php?uid=678165#regulamin" target="_blank" title="Zapoznaj się z regulaminem (strona otworzy się w nowym oknie)"
+                        class="color-lajt">Regulamin</a> | <a href="http://allegro.pl/my_page.php?uid=678165#poznaj_nas"
+                            target="_blank" title="Poznajmy się! (strona otworzy się w nowym oknie)" class="color-lajt">
+                            O nas</a> | <a href="http://allegro.pl/show_user.php?uid=678165" target="_blank"
+                                title="Sprawdź komentarze jakie otrzymaliśmy (strona otworzy się w nowym oknie)"
+                                class="color-lajt">Komentarze</a> | <a href="http://allegro.pl/my_page.php?uid=678165#jak_kupowac"
+                                    target="_blank" title="Sprawdź w jaki sposób kupować w Naszych aukcjach (strona otworzy się w nowym oknie)"
+                                    class="color-lajt">Jak kupować?</a>
+                </div>
+                <div id="short">
+                    Przejdź do:<br />
+                    - <a href="#przedmiot_aukcji" class="color-lajt">przedmiot aukcji</a><br />
+                    - <a href="http://allegro.pl/my_page.php?uid=678165#jak_kupowac" class="color-lajt"
+                        target="_blank">jak zamawiać</a><br />
+                    - <a href="#wysylka" class="color-lajt">wysyłka</a><br />
+                    - <a href="#poznaj_nas" class="color-lajt">Poznaj Nas! FB, blog</a><br />
+                </div>
+            </div>
+            <div id="contact" class="color-it bold">
+                Email: <a href="mailto:kontakt@LajtIt.pl">kontakt@<span class="color-lajt bold">Lajt</span><span
+                    class="color-it bold">it</span>.pl</a> Telefon: <span class="color-white">+48 604 688
+                        227</span> GG:
+                <img src="http://status.gadu-gadu.pl/users/status.asp?id=3459943&styl=1" style="border: 0px"
+                    alt="Status GG" /><a href="gg:3459943">3459943</a> Skype:
+                <img src="http://download.skype.com/share/skypebuttons/buttons/call_blue_transparent_34x34.png"
+                    alt="Skype me!" style="border: 0px; width: 20px; vertical-align: top;" /><a href="skype:jacek-stawicki">jacek-stawicki</a>
+            </div>
+            <table style="width: 970px; height: 210px; border: 0;" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>
+                        <img src="http://www.lajtit.pl/public/assets/allegro/lajtit_header_01.png" width="338"
+                            height="210" alt="" />
+                    </td>
+                    <td>
+                        <a href="http://allegro.pl/my_page.php?uid=678165#wygraj_bon" target="_blank" title="Strona otworzy się w nowym oknie">
+                            <img src="http://www.lajtit.pl/public/assets/allegro/lajtit_header_02.png" width="310"
+                                height="210" style="border: 0px;" alt="" /></a>
+                    </td>
+                    <td>
+                        <img src="http://www.lajtit.pl/public/assets/allegro/lajtit_header_03.png" width="322"
+                            height="210" alt="" />
+                    </td>
+                </tr>
+            </table>
+            <div style="position: relative;">
+                <a name="przedmiot_aukcji"></a>
+                <img src="http://www.lajtit.pl/public/assets/allegro/lajtit_oferujemy.png" alt="Na tej aukcji oferujemy" />
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div>
+            <%--   <div id="rules">
+                <img src="http://www.lajtit.pl/public/assets/allegro/lajtit_regulamin_zakupow.png"
+                    alt="Regulamin" />
+                <div class="regular_text">
+                    Wyciąg z regulaminu zakupów:
+                    <ul>
+                       <li>Zakup przedmiotu oznacza akceptację regulaminu.</li>
+                        <li>Zakupiony towar (nieuszkodzony) można zwrócić w ciągu 10 dni od daty jego otrzymania.
+                            Koszt zwrotu towaru, w oryginalnym opakowaniu, ponosi Kupujący. Towar należy odesłać
+                            przesyłką rejestrowaną oraz niepobraniową. Zwrot kwoty zakupu towaru dokonujemy
+                            na wskazany nr konta bankowego w ciągu 7 dni od daty jego otrzymania. W przypadku
+                            aukcji z darmową wysyłką od kwoty zwrotu potrącany jest faktyczny koszt wysyłki
+                            towaru do Kupującego.</li> 
+                        <li>Nie wysyłamy towaru przesyłką pobraniową do Kupujących, którzy nie mają pełnej aktywacji
+                            konta lub posiadają negatywne komentarze dotyczące problemów z odbiorem przesyłki.</li>
+                    </ul>
+                    Pełen regulamin dostępny jest na <a href="http://allegro.pl/my_page.php?uid=678165#regulamin"
+                        target="_blank">stronie O Mnie</a>. 
+                </div>
+            </div>--%>
+        </div>
+    </div>
+    <div class="hidden">
+        ikea holmo, rismon, dudero orgel, vreten, rutbo, storm, sore, vidja, vate, puzzlelamp,
+        puzzle</div>
+    </div>
+    </form>
+</body>
+</html>

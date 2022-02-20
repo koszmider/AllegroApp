@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Lajt it. Design you like.</title>
+    <script type="text/javascript"> 
+     
+        var l = window.location.href.substring(window.location.href.length, window.location.href.length - 2);
+    
+        var referrer = document.referrer;
+
+        if (referrer.length == 0) {
+            referrer = 'http://lajtit.pl';
+            location.href = 'http://translate.google.com/translate_c?u=' +
+		escape(referrer) + '&hl=en&langpair=pl|' + l + '&tbb=1&ie=utf-8';
+        }
+        else {
+            var fromGoogle = referrer.indexOf('translate_c');
+            if (fromGoogle > 0) {
+                var urlStart = referrer.indexOf('&u=') + 3;
+                var urlEnd = referrer.indexOf('&', urlStart)
+                location.href = 'http://translate.google.com/translate_c?u=' +
+			escape(referrer.substring(urlStart, urlEnd)) +
+			'&hl=en&langpair=pl|' + l + '&tbb=1&ie=utf-8';
+            }
+            else {
+                location.href = 'http://translate.google.com/translate_c?u=' +
+			escape(referrer) + '&hl=en&langpair=pl|' + l + '&tbb=1&ie=utf-8';
+            }
+
+        } 
+</script>
+</head>
+<body>
+Za chwilę nastąpi przekierowanie.<br />
+Jeśli automatyczne przekierowanie nie działa, proszę kliknąć <a href="http://www.lajtit.pl">ten link</a>.<br /><br />
+You will be redirected shortly. If the redirection does not work please click  <a href="http://www.lajtit.pl">here</a>.
+</body>
+</html>

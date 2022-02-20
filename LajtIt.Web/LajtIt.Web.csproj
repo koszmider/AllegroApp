@@ -1,0 +1,1765 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E414EC57-60A2-42F6-984B-6281481D21F4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LajtIt.Web</RootNamespace>
+    <AssemblyName>LajtIt.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <TargetFrameworkProfile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress>
+    </Use64BitIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="LajtitAllegroDB_lajtit_www_user — wdrażanie" Order="1" Enabled="False" xmlns="">
+          <Destination Path="" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=.\sqlexpress%3bInitial Catalog=LajtitProdAllegro%3bIntegrated Security=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\LajtitAllegroDB_lajtit_www_user — wdrażanie_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+        <ObjectGroup Name="LajtitAllegroDB_wwwlajtit — wdrażanie" Order="2" xmlns="">
+          <Destination Path="" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=.\sqlexpress%3bInitial Catalog=LajtitProdAllegro%3bIntegrated Security=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\LajtitAllegroDB_wwwlajtit — wdrażanie_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+        <ObjectGroup Name="LajtitAllegroDB_jacek — wdrażanie" Order="3" Enabled="False" xmlns="">
+          <Destination Path="" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=.\sqlexpress%3bInitial Catalog=LajtitProdAllegro%3bIntegrated Security=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\LajtitAllegroDB_jacek — wdrażanie_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+        <ObjectGroup Name="LajtitDB_lajtit_www_user — wdrażanie" Order="5" Enabled="False" xmlns="">
+          <Destination Path="" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=.\sqlexpress%3bInitial Catalog=LajtitProd%3bIntegrated Security=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\LajtitDB_lajtit_www_user — wdrażanie_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+        <ObjectGroup Name="LajtitDB_wwwlajtit — wdrażanie" Order="6" xmlns="">
+          <Destination Path="" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=.\sqlexpress%3bInitial Catalog=LajtitProd%3bIntegrated Security=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\LajtitDB_wwwlajtit — wdrażanie_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+        <ObjectGroup Name="LajtitDB_jacek — wdrażanie" Order="7" Enabled="False" xmlns="">
+          <Destination Path="" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=.\sqlexpress%3bInitial Catalog=LajtitProd%3bIntegrated Security=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\LajtitDB_jacek — wdrażanie_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+        <ObjectGroup Name="LajtitHelperDB_HOME — wdrażanie" Order="9" Enabled="False" xmlns="">
+          <Destination Path="" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=.\sqlexpress%3bInitial Catalog=LajtitTestHelper%3bIntegrated Security=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\LajtitHelperDB_HOME — wdrażanie_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+        <ObjectGroup Name="LajtitHelperDB_wwwlajtit — wdrażanie" Order="10" xmlns="">
+          <Destination Path="" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=.\sqlexpress%3bInitial Catalog=LajtitProdHelper%3bIntegrated Security=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\LajtitHelperDB_wwwlajtit — wdrażanie_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+        <ObjectGroup Name="LajtitHelperDB_jacek — wdrażanie" Order="11" Enabled="False" xmlns="">
+          <Destination Path="" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=.\sqlexpress%3bInitial Catalog=LajtitProdHelper%3bIntegrated Security=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\LajtitHelperDB_jacek — wdrażanie_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+        <ObjectGroup Name="LajtitDB_tomek — wdrażanie" Order="12" xmlns="">
+          <Destination Path="" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=192.168.0.107\sqlexpress%3bInitial Catalog=LajtitProd%3bIntegrated Security=False%3b User ID=admin%3b Password=edingedu" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\LajtitDB_tomek — wdrażanie_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+        <ObjectGroup Name="LajtitAllegroDB_tomek — wdrażanie" Order="13" xmlns="">
+          <Destination Path="" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=192.168.0.107\sqlexpress%3bInitial Catalog=LajtitProdAllegro%3bIntegrated Security=False%3b User ID=admin%3b Password=edingedu" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\LajtitAllegroDB_tomek — wdrażanie_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+        <ObjectGroup Name="LajtitHelperDB_tomek — wdrażanie" Order="14" xmlns="">
+          <Destination Path="" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=192.168.0.107\sqlexpress%3bInitial Catalog=LajtitProdHelper%3bIntegrated Security=False%3b User ID=admin%3b Password=edingedu" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\LajtitHelperDB_tomek — wdrażanie_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DeployEncryptKey>Hasło szyfrowania jest używane tylko wtedy, gdy dowolne z ustawień szyfrowania jest ustawione jako bezpieczne</DeployEncryptKey>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <IncludeIisSettings>true</IncludeIisSettings>
+    <IncludeAppPool>true</IncludeAppPool>
+    <PublishDatabases>true</PublishDatabases>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\LajtIt.Web_deploy\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PublishDatabaseSettings>
+      <Objects>
+      </Objects>
+    </PublishDatabaseSettings>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=19.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.19.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxControlToolkit.HtmlEditor.Sanitizer, Version=19.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.HtmlEditor.Sanitizer.19.1.0\lib\net40\AjaxControlToolkit.HtmlEditor.Sanitizer.dll</HintPath>
+    </Reference>
+    <Reference Include="AntiXssLibrary, Version=4.3.0.0, Culture=neutral, PublicKeyToken=d127efab8a9c114f, processorArchitecture=MSIL">
+      <HintPath>..\packages\AntiXSS.4.3.0\lib\net40\AntiXssLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="CsvHelper, Version=7.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\packages\CsvHelper.7.1.1\lib\net45\CsvHelper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EAGetMail, Version=5.2.0.5, Culture=neutral, PublicKeyToken=e10a0812eb29cf94, processorArchitecture=MSIL">
+      <HintPath>..\packages\EAGetMail.5.2.0.5\lib\net45\EAGetMail.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.5.3.1, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.5.3.1\lib\net40\EPPlus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.11.18.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.11.18\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlSanitizationLibrary, Version=4.3.0.0, Culture=neutral, PublicKeyToken=d127efab8a9c114f, processorArchitecture=MSIL">
+      <HintPath>..\packages\AntiXSS.4.3.0\lib\net40\HtmlSanitizationLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqToExcel, Version=1.11.0.0, Culture=neutral, PublicKeyToken=9c8ea65a58f03f1f, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\LinqToExcel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="Remotion, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Remotion.Data.Linq, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.Data.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Remotion.Interfaces, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Remotion.Linq, Version=2.1.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.2.1.2\lib\net45\Remotion.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccoutingDocuments.aspx" />
+    <Content Include="AllegroPerformance.aspx" />
+    <Content Include="CashRegisterPayments.aspx" />
+    <Content Include="CeneoClicks.aspx" />
+    <Content Include="Controls\OrderShippingParcels.ascx" />
+    <Content Include="Controls\OrderShippingSimple.ascx" />
+    <Content Include="Controls\Product.Compare.ascx" />
+    <Content Include="Controls\ShopMenu.ascx" />
+    <Content Include="Images\courier\1.jpg" />
+    <Content Include="Images\courier\1.png" />
+    <Content Include="Images\courier\4.png" />
+    <Content Include="Images\flags\AT.png" />
+    <Content Include="Images\flags\BE.png" />
+    <Content Include="Images\flags\CH.png" />
+    <Content Include="Images\flags\CZ.png" />
+    <Content Include="Images\flags\DE.png" />
+    <Content Include="Images\flags\DK.png" />
+    <Content Include="Images\flags\EE.png" />
+    <Content Include="Images\flags\ES.png" />
+    <Content Include="Images\flags\FI.png" />
+    <Content Include="Images\flags\FR.png" />
+    <Content Include="Images\flags\GB.png" />
+    <Content Include="Images\flags\HU.png" />
+    <Content Include="Images\flags\IE.png" />
+    <Content Include="Images\flags\IT.png" />
+    <Content Include="Images\flags\LT.png" />
+    <Content Include="Images\flags\LU.png" />
+    <Content Include="Images\flags\LV.png" />
+    <Content Include="Images\flags\MC.png" />
+    <Content Include="Images\flags\NL.png" />
+    <Content Include="Images\flags\NO.png" />
+    <Content Include="Images\flags\PL.png" />
+    <Content Include="Images\flags\PT.png" />
+    <Content Include="Images\flags\RO.png" />
+    <Content Include="Images\flags\SE.png" />
+    <Content Include="Images\flags\SI.png" />
+    <Content Include="Images\flags\SK.png" />
+    <Content Include="Images\flags\SV.png" />
+    <Content Include="Images\sources\28.png" />
+    <Content Include="Images\sources\29.png" />
+    <Content Include="Invoices.aspx" />
+    <Content Include="AllegroBadge.aspx" />
+    <Content Include="AllegroBadges.aspx" />
+    <Content Include="AdminUserStats.aspx" />
+    <Content Include="AccountingReport2.aspx" />
+    <Content Include="AllegroCategoryFields.aspx" />
+    <Content Include="AllegroDeliveries.aspx" />
+    <Content Include="AllegroDeliveryCost.aspx" />
+    <Content Include="AllegroItemDrafts.aspx" />
+    <Content Include="AllegroMyUsers.aspx" />
+    <Content Include="AllegroTokens.aspx" />
+    <Content Include="ProductsIncome.aspx" />
+    <Content Include="OrdersStatisticsIncome.aspx" />
+    <Content Include="Courier.Cost.aspx" />
+    <Content Include="Payments.Marketplace.aspx" />
+    <Content Include="Payments.BankAccount.aspx" />
+    <Content Include="Payments.aspx" />
+    <Content Include="AutoComplete.asmx" />
+    <Content Include="CeneoManager.aspx" />
+    <Content Include="ChangePassword.aspx" />
+    <Content Include="Company.aspx" />
+    <Content Include="CompanyInfo.aspx" />
+    <Content Include="Complaint.aspx" />
+    <Content Include="ComplaintStats.aspx" />
+    <Content Include="Controls\OrderReceipt.ascx" />
+    <Content Include="Controls\NewDeliveryMove.ascx" />
+    <Content Include="Controls\NewDelivery.ascx" />
+    <Content Include="Controls\OrderComplaint.ascx" />
+    <Content Include="Controls\AttributeMenu.ascx" />
+    <Content Include="Controls\ShopProducer.ascx" />
+    <Content Include="Controls\SupplierMenu.ascx" />
+    <Content Include="Controls\Products.ascx" />
+    <Content Include="Controls\ShopProduct.ascx" />
+    <Content Include="Controls\OrderProductsEmail.ascx" />
+    <Content Include="Controls\ProductImages.ascx" />
+    <Content Include="Controls\ProductAttributes.ascx" />
+    <Content Include="AllegroActions.aspx" />
+    <Content Include="Controls\ProductOrderControl.ascx" />
+    <Content Include="Controls\ShopCategoryControlJson.ascx" />
+    <Content Include="Controls\SystemMenu.ascx" />
+    <Content Include="Controls\ProductCatalogGroup.ascx" />
+    <Content Include="Controls\UploadImageAllegroUser.ascx" />
+    <Content Include="Controls\UploadImage.ascx" />
+    <Content Include="Deliveries.aspx" />
+    <Content Include="DescriptionMixer.aspx" />
+    <Content Include="Duplicates.aspx" />
+    <Content Include="Images\add.png" />
+    <Content Include="Images\camera.png" />
+    <Content Include="Images\cancel.png" />
+    <Content Include="Images\edit.png" />
+    <Content Include="Images\K.png" />
+    <Content Include="Images\lajtit_footer.png" />
+    <Content Include="Images\lajtit_footer1.png" />
+    <Content Include="Images\lajtit_header.png" />
+    <Content Include="Images\lajtit_header1.png" />
+    <Content Include="Images\pdf_bgr.jpg" />
+    <Content Include="Images\print.png" />
+    <Content Include="Images\reload.ico" />
+    <Content Include="Images\sources\0.png" />
+    <Content Include="Images\sources\1.png" />
+    <Content Include="Images\sources\10.png" />
+    <Content Include="Images\sources\11.png" />
+    <Content Include="Images\sources\12.png" />
+    <Content Include="Images\sources\13.png" />
+    <Content Include="Images\sources\14.png" />
+    <Content Include="Images\sources\15.png" />
+    <Content Include="Images\sources\16.png" />
+    <Content Include="Images\sources\18.png" />
+    <Content Include="Images\sources\2.png" />
+    <Content Include="Images\sources\21.png" />
+    <Content Include="Images\sources\22.png" />
+    <Content Include="Images\sources\24.png" />
+    <Content Include="Images\sources\25.png" />
+    <Content Include="Images\sources\26.png" />
+    <Content Include="Images\sources\3.png" />
+    <Content Include="Images\sources\4.png" />
+    <Content Include="Images\sources\5.png" />
+    <Content Include="Images\sources\6.png" />
+    <Content Include="Images\sources\7.png" />
+    <Content Include="Images\sources\8.png" />
+    <Content Include="Images\sources\9.png" />
+    <Content Include="InpostTracker.aspx" />
+    <Content Include="Inventory.aspx" />
+    <Content Include="JQueryTest.aspx" />
+    <Content Include="Offer.aspx" />
+    <Content Include="Offers.aspx" />
+    <Content Include="Order.Cost.aspx" />
+    <Content Include="OrdersProcessing.aspx" />
+    <Content Include="Images\allegro.png" />
+    <Content Include="Images\cash.png" />
+    <Content Include="Images\lajtit.png" />
+    <Content Include="Images\newFile.ico" />
+    <Content Include="Images\nophoto.png" />
+    <Content Include="Images\shop.png" />
+    <Content Include="Images\tasks.png" />
+    <Content Include="Images\updown.jpg" />
+    <Content Include="InvoiceCorrection.aspx" />
+    <Content Include="NoAccess.aspx" />
+    <Content Include="OrdersProductsDelivery.aspx" />
+    <Content Include="OrdersProducts.aspx" />
+    <Content Include="Product.Status.aspx" />
+    <Content Include="ProductCatalog.Attribute.ShopAttribute.aspx" />
+    <Content Include="ProductCatalog.Attribute.AllegroMapping.aspx" />
+    <Content Include="ProductCatalog.Attribute.ShopNames.aspx" />
+    <Content Include="ProductCatalog.Attribute.ShopCategories.aspx" />
+    <Content Include="ProductCatalog.Attribute.Titles.aspx" />
+    <Content Include="ProductCatalog.Attribute.aspx" />
+    <Content Include="ProductCatalog.Packing.aspx" />
+    <Content Include="ProductCatalogNotReady.aspx" />
+    <Content Include="ProductCatalogForDb.aspx" />
+    <Content Include="ProductCatalog.Attributes.View.aspx" />
+    <Content Include="ProductCatalog.Combo.aspx" />
+    <Content Include="ProductCatalog.Images.aspx" />
+    <Content Include="ProductCatalog.History.aspx" />
+    <Content Include="ProductCatalog.Grouping.aspx" />
+    <Content Include="ProductCatalog.Preview.aspx" />
+    <Content Include="ProductCatalog.Marketing.aspx" />
+    <Content Include="ProductCatalog.Descriptions.aspx" />
+    <Content Include="ProductCatalog.Shop.aspx" />
+    <Content Include="EmailTestPage.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="ProductCatalog.Attributes.aspx" />
+    <Content Include="ProductCatalog.Specification.aspx" />
+    <Content Include="ProductCatalogGroupFamily.aspx" />
+    <Content Include="ProductCatalogOnStock.aspx" />
+    <Content Include="ProductFileImportProcessing.aspx" />
+    <Content Include="ProductFileImport.aspx" />
+    <Content Include="OrdersIncome.aspx" />
+    <Content Include="ProductsCosts.aspx" />
+    <Content Include="ProductsTracker.aspx" />
+    <Content Include="ProductTypeSchema.aspx" />
+    <Content Include="Shop.Suppliers.aspx" />
+    <Content Include="ShopCategoryManager.aspx" />
+    <Content Include="ProductCatalog.Attributes.Grouping.Page.aspx" />
+    <Content Include="ShopCategoryManagerPage.aspx" />
+    <Content Include="Promotion.aspx" />
+    <Content Include="ProductCatalog.Attributes.Grouping.aspx" />
+    <Content Include="Promotions.aspx" />
+    <Content Include="RestTestPage.aspx" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\AUTHORS.txt" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\external\jquery\jquery.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-bg_diagonals-medium_20_d34d17_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-bg_diagonals-small_0_aaaaaa_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-bg_diagonals-thick_15_444444_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-bg_diagonals-thick_95_ffdc2e_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-bg_glass_55_fbf5d0_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-bg_gloss-wave_45_817865_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-bg_gloss-wave_60_fece2f_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-bg_gloss-wave_70_ffdd57_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-bg_gloss-wave_90_fff9e5_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-bg_highlight-hard_30_285c00_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-bg_highlight-soft_100_feeebd_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-bg_highlight-soft_33_3a8104_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-bg_highlight-soft_50_4eb305_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-bg_highlight-soft_60_4ca20b_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-bg_inset-soft_10_285c00_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-bg_inset-soft_30_ffffff_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-icons_0078ae_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-icons_056b93_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-icons_3d3d3d_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-icons_4eb305_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-icons_72b42d_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-icons_bd7b00_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-icons_d19405_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-icons_e0fdff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-icons_eb990f_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-icons_ed9f26_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-icons_f5e175_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-icons_f7a50d_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-icons_fadc7a_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-icons_fcd113_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-icons_ffe180_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\index.html" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\jquery-1.12.4.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\jquery-ui.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\jquery-ui.structure.css" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\jquery-ui.structure.min.css" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\jquery-ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\jquery-ui.theme.min.css" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\LICENSE.txt" />
+    <Content Include="SellReport.aspx" />
+    <Content Include="SettingsEditor.aspx" />
+    <Content Include="ShopClickShopAttributeManager.aspx" />
+    <Content Include="ShopExportFile.aspx" />
+    <Content Include="ShopProducts.aspx" />
+    <Content Include="Shop.aspx" />
+    <Content Include="Shops.aspx" />
+    <Content Include="ShopTracker.aspx" />
+    <Content Include="ShopUpdateManager.aspx" />
+    <Content Include="Supplier.Descriptions.aspx" />
+    <Content Include="Supplier.Shops.aspx" />
+    <Content Include="Supplier.New.aspx" />
+    <Content Include="SystemAccessControlUser.aspx" />
+    <Content Include="SystemAccessControl.aspx" />
+    <Content Include="TimeTracker.aspx" />
+    <Content Include="UserTask.aspx" />
+    <Content Include="UserTasks.aspx" />
+    <Content Include="WebApiTestPage.aspx" />
+    <Content Include="LajtitImport.xls" />
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\Profile1.pubxml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\PublishProfiles\Profile2.pubxml" />
+    <None Include="Properties\PublishProfiles\Profile3.pubxml">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\package.json" />
+    <None Include="Scripts\uploader.fla" />
+    <Content Include="AllegroItems.aspx" />
+    <Content Include="AllegroTest.aspx" />
+    <Content Include="banner.html" />
+    <Content Include="Complaints.aspx" />
+    <Content Include="Controls\CostControl.ascx" />
+    <Content Include="Controls\CostsControl.ascx" />
+    <Content Include="Controls\ProductCatalogMenu.ascx" />
+    <Content Include="OrderProcessing.aspx" />
+    <Content Include="Images\licytacja.jpg" />
+    <Content Include="Images\pause.png" />
+    <Content Include="Maintanance.aspx" />
+    <Content Include="OrdersStatistics.aspx" />
+    <Content Include="Product.New.aspx" />
+    <Content Include="ProductCatalog.Delivery.aspx" />
+    <Content Include="ProductCatalog.Allegro.aspx" />
+    <Content Include="Costs.aspx" />
+    <Content Include="Images\calculator.png" />
+    <Content Include="Images\cancel.jpg" />
+    <Content Include="Images\false.jpg" />
+    <Content Include="Images\lajtit_logotyp.gif" />
+    <Content Include="Images\lajtit_logotyp.jpg" />
+    <Content Include="Images\ok.jpg" />
+    <Content Include="Images\progress.gif" />
+    <Content Include="Images\save.jpg" />
+    <Content Include="Order.aspx" />
+    <Content Include="Orders.aspx" />
+    <Content Include="AllegroUsers.aspx" />
+    <Content Include="Controls\OrderShipping.ascx" />
+    <Content Include="Controls\OrderStatusHistory.ascx" />
+    <Content Include="Controls\ItemOrderGrid.ascx" />
+    <Content Include="Controls\OrderLog.ascx" />
+    <Content Include="Controls\OrderPayment.ascx" />
+    <Content Include="EmailEditor.aspx" />
+    <Content Include="Images\edit.jpg" />
+    <Content Include="Images\view.png" />
+    <Content Include="OrderNew.aspx" />
+    <Content Include="OrdersNotPaidButSent.aspx" />
+    <Content Include="OrderStats.aspx" />
+    <Content Include="Product.aspx" />
+    <Content Include="ProductCatalog.aspx" />
+    <Content Include="ProductImport.aspx" />
+    <Content Include="ProductImports.aspx" />
+    <Content Include="ProductStats.aspx" />
+    <Content Include="Scripts\jquery-1.3.2.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-impromptu.2.6.min.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.uploadify.js" />
+    <Content Include="Scripts\uploader.swf" />
+    <Content Include="Styles\impromptu.css" />
+    <Content Include="Styles\jquery-ui.css" />
+    <Content Include="Styles\menu_styles.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Styles\uploadify.css" />
+    <Content Include="Supplier.aspx" />
+    <Content Include="Suppliers.aspx" />
+    <Content Include="TestPage.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Upload.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccoutingDocuments.aspx.cs">
+      <DependentUpon>AccoutingDocuments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccoutingDocuments.aspx.designer.cs">
+      <DependentUpon>AccoutingDocuments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllegroPerformance.aspx.cs">
+      <DependentUpon>AllegroPerformance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllegroPerformance.aspx.designer.cs">
+      <DependentUpon>AllegroPerformance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CashRegisterPayments.aspx.cs">
+      <DependentUpon>CashRegisterPayments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CashRegisterPayments.aspx.designer.cs">
+      <DependentUpon>CashRegisterPayments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CeneoClicks.aspx.cs">
+      <DependentUpon>CeneoClicks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CeneoClicks.aspx.designer.cs">
+      <DependentUpon>CeneoClicks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrderShippingParcels.ascx.cs">
+      <DependentUpon>OrderShippingParcels.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderShippingParcels.ascx.designer.cs">
+      <DependentUpon>OrderShippingParcels.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrderShippingSimple.ascx.cs">
+      <DependentUpon>OrderShippingSimple.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderShippingSimple.ascx.designer.cs">
+      <DependentUpon>OrderShippingSimple.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Product.Compare.ascx.cs">
+      <DependentUpon>Product.Compare.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Product.Compare.ascx.designer.cs">
+      <DependentUpon>Product.Compare.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShopMenu.ascx.cs">
+      <DependentUpon>ShopMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ShopMenu.ascx.designer.cs">
+      <DependentUpon>ShopMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices.aspx.cs">
+      <DependentUpon>Invoices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Invoices.aspx.designer.cs">
+      <DependentUpon>Invoices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllegroBadge.aspx.cs">
+      <DependentUpon>AllegroBadge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllegroBadge.aspx.designer.cs">
+      <DependentUpon>AllegroBadge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllegroBadges.aspx.cs">
+      <DependentUpon>AllegroBadges.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllegroBadges.aspx.designer.cs">
+      <DependentUpon>AllegroBadges.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUserStats.aspx.cs">
+      <DependentUpon>AdminUserStats.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUserStats.aspx.designer.cs">
+      <DependentUpon>AdminUserStats.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountingReport2.aspx.cs">
+      <DependentUpon>AccountingReport2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountingReport2.aspx.designer.cs">
+      <DependentUpon>AccountingReport2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllegroCategoryFields.aspx.cs">
+      <DependentUpon>AllegroCategoryFields.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllegroCategoryFields.aspx.designer.cs">
+      <DependentUpon>AllegroCategoryFields.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllegroDeliveries.aspx.cs">
+      <DependentUpon>AllegroDeliveries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllegroDeliveries.aspx.designer.cs">
+      <DependentUpon>AllegroDeliveries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllegroDeliveryCost.aspx.cs">
+      <DependentUpon>AllegroDeliveryCost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllegroDeliveryCost.aspx.designer.cs">
+      <DependentUpon>AllegroDeliveryCost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllegroItemDrafts.aspx.cs">
+      <DependentUpon>AllegroItemDrafts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllegroItemDrafts.aspx.designer.cs">
+      <DependentUpon>AllegroItemDrafts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllegroMyUsers.aspx.cs">
+      <DependentUpon>AllegroMyUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllegroMyUsers.aspx.designer.cs">
+      <DependentUpon>AllegroMyUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllegroTokens.aspx.cs">
+      <DependentUpon>AllegroTokens.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllegroTokens.aspx.designer.cs">
+      <DependentUpon>AllegroTokens.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsIncome.aspx.cs">
+      <DependentUpon>ProductsIncome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductsIncome.aspx.designer.cs">
+      <DependentUpon>ProductsIncome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersStatisticsIncome.aspx.cs">
+      <DependentUpon>OrdersStatisticsIncome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrdersStatisticsIncome.aspx.designer.cs">
+      <DependentUpon>OrdersStatisticsIncome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Courier.Cost.aspx.cs">
+      <DependentUpon>Courier.Cost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Courier.Cost.aspx.designer.cs">
+      <DependentUpon>Courier.Cost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payments.Marketplace.aspx.cs">
+      <DependentUpon>Payments.Marketplace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payments.Marketplace.aspx.designer.cs">
+      <DependentUpon>Payments.Marketplace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payments.BankAccount.aspx.cs">
+      <DependentUpon>Payments.BankAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payments.BankAccount.aspx.designer.cs">
+      <DependentUpon>Payments.BankAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payments.aspx.cs">
+      <DependentUpon>Payments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payments.aspx.designer.cs">
+      <DependentUpon>Payments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AutoComplete.asmx.cs">
+      <DependentUpon>AutoComplete.asmx</DependentUpon>
+    </Compile>
+    <Compile Include="CeneoManager.aspx.cs">
+      <DependentUpon>CeneoManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CeneoManager.aspx.designer.cs">
+      <DependentUpon>CeneoManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Company.aspx.cs">
+      <DependentUpon>Company.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Company.aspx.designer.cs">
+      <DependentUpon>Company.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyInfo.aspx.cs">
+      <DependentUpon>CompanyInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CompanyInfo.aspx.designer.cs">
+      <DependentUpon>CompanyInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Complaint.aspx.cs">
+      <DependentUpon>Complaint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Complaint.aspx.designer.cs">
+      <DependentUpon>Complaint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ComplaintStats.aspx.cs">
+      <DependentUpon>ComplaintStats.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComplaintStats.aspx.designer.cs">
+      <DependentUpon>ComplaintStats.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrderReceipt.ascx.cs">
+      <DependentUpon>OrderReceipt.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderReceipt.ascx.designer.cs">
+      <DependentUpon>OrderReceipt.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NewDeliveryMove.ascx.cs">
+      <DependentUpon>NewDeliveryMove.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\NewDeliveryMove.ascx.designer.cs">
+      <DependentUpon>NewDeliveryMove.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NewDelivery.ascx.cs">
+      <DependentUpon>NewDelivery.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\NewDelivery.ascx.designer.cs">
+      <DependentUpon>NewDelivery.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrderComplaint.ascx.cs">
+      <DependentUpon>OrderComplaint.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderComplaint.ascx.designer.cs">
+      <DependentUpon>OrderComplaint.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AttributeMenu.ascx.cs">
+      <DependentUpon>AttributeMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AttributeMenu.ascx.designer.cs">
+      <DependentUpon>AttributeMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShopProducer.ascx.cs">
+      <DependentUpon>ShopProducer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ShopProducer.ascx.designer.cs">
+      <DependentUpon>ShopProducer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SupplierMenu.ascx.cs">
+      <DependentUpon>SupplierMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SupplierMenu.ascx.designer.cs">
+      <DependentUpon>SupplierMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Products.ascx.cs">
+      <DependentUpon>Products.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Products.ascx.designer.cs">
+      <DependentUpon>Products.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShopProduct.ascx.cs">
+      <DependentUpon>ShopProduct.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ShopProduct.ascx.designer.cs">
+      <DependentUpon>ShopProduct.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrderProductsEmail.ascx.cs">
+      <DependentUpon>OrderProductsEmail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderProductsEmail.ascx.designer.cs">
+      <DependentUpon>OrderProductsEmail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProductImages.ascx.cs">
+      <DependentUpon>ProductImages.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ProductImages.ascx.designer.cs">
+      <DependentUpon>ProductImages.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProductAttributes.ascx.cs">
+      <DependentUpon>ProductAttributes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ProductAttributes.ascx.designer.cs">
+      <DependentUpon>ProductAttributes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AllegroActions.aspx.cs">
+      <DependentUpon>AllegroActions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllegroActions.aspx.designer.cs">
+      <DependentUpon>AllegroActions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProductOrderControl.ascx.cs">
+      <DependentUpon>ProductOrderControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ProductOrderControl.ascx.designer.cs">
+      <DependentUpon>ProductOrderControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShopCategoryControlJson.ascx.cs">
+      <DependentUpon>ShopCategoryControlJson.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ShopCategoryControlJson.ascx.designer.cs">
+      <DependentUpon>ShopCategoryControlJson.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SystemMenu.ascx.cs">
+      <DependentUpon>SystemMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SystemMenu.ascx.designer.cs">
+      <DependentUpon>SystemMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProductCatalogGroup.ascx.cs">
+      <DependentUpon>ProductCatalogGroup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ProductCatalogGroup.ascx.designer.cs">
+      <DependentUpon>ProductCatalogGroup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UploadImageAllegroUser.ascx.cs">
+      <DependentUpon>UploadImageAllegroUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UploadImageAllegroUser.ascx.designer.cs">
+      <DependentUpon>UploadImageAllegroUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UploadImage.ascx.cs">
+      <DependentUpon>UploadImage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UploadImage.ascx.designer.cs">
+      <DependentUpon>UploadImage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Deliveries.aspx.cs">
+      <DependentUpon>Deliveries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Deliveries.aspx.designer.cs">
+      <DependentUpon>Deliveries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DescriptionMixer.aspx.cs">
+      <DependentUpon>DescriptionMixer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DescriptionMixer.aspx.designer.cs">
+      <DependentUpon>DescriptionMixer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Duplicates.aspx.cs">
+      <DependentUpon>Duplicates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Duplicates.aspx.designer.cs">
+      <DependentUpon>Duplicates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InpostTracker.aspx.cs">
+      <DependentUpon>InpostTracker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InpostTracker.aspx.designer.cs">
+      <DependentUpon>InpostTracker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory.aspx.cs">
+      <DependentUpon>Inventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventory.aspx.designer.cs">
+      <DependentUpon>Inventory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JQueryTest.aspx.cs">
+      <DependentUpon>JQueryTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JQueryTest.aspx.designer.cs">
+      <DependentUpon>JQueryTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LajtitRestApi.cs" />
+    <Compile Include="Offer.aspx.cs">
+      <DependentUpon>Offer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Offer.aspx.designer.cs">
+      <DependentUpon>Offer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Offers.aspx.cs">
+      <DependentUpon>Offers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Offers.aspx.designer.cs">
+      <DependentUpon>Offers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order.Cost.aspx.cs">
+      <DependentUpon>Order.Cost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order.Cost.aspx.designer.cs">
+      <DependentUpon>Order.Cost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersProcessing.aspx.cs">
+      <DependentUpon>OrdersProcessing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrdersProcessing.aspx.designer.cs">
+      <DependentUpon>OrdersProcessing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceCorrection.aspx.cs">
+      <DependentUpon>InvoiceCorrection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InvoiceCorrection.aspx.designer.cs">
+      <DependentUpon>InvoiceCorrection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NoAccess.aspx.cs">
+      <DependentUpon>NoAccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NoAccess.aspx.designer.cs">
+      <DependentUpon>NoAccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersProductsDelivery.aspx.cs">
+      <DependentUpon>OrdersProductsDelivery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrdersProductsDelivery.aspx.designer.cs">
+      <DependentUpon>OrdersProductsDelivery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersProducts.aspx.cs">
+      <DependentUpon>OrdersProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrdersProducts.aspx.designer.cs">
+      <DependentUpon>OrdersProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product.Status.aspx.cs">
+      <DependentUpon>Product.Status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product.Status.aspx.designer.cs">
+      <DependentUpon>Product.Status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalog.Attribute.ShopAttribute.aspx.cs">
+      <DependentUpon>ProductCatalog.Attribute.ShopAttribute.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCatalog.Attribute.ShopAttribute.aspx.designer.cs">
+      <DependentUpon>ProductCatalog.Attribute.ShopAttribute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalog.Attribute.AllegroMapping.aspx.cs">
+      <DependentUpon>ProductCatalog.Attribute.AllegroMapping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCatalog.Attribute.AllegroMapping.aspx.designer.cs">
+      <DependentUpon>ProductCatalog.Attribute.AllegroMapping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalog.Attribute.ShopNames.aspx.cs">
+      <DependentUpon>ProductCatalog.Attribute.ShopNames.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCatalog.Attribute.ShopNames.aspx.designer.cs">
+      <DependentUpon>ProductCatalog.Attribute.ShopNames.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalog.Attribute.ShopCategories.aspx.cs">
+      <DependentUpon>ProductCatalog.Attribute.ShopCategories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCatalog.Attribute.ShopCategories.aspx.designer.cs">
+      <DependentUpon>ProductCatalog.Attribute.ShopCategories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalog.Attribute.Titles.aspx.cs">
+      <DependentUpon>ProductCatalog.Attribute.Titles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCatalog.Attribute.Titles.aspx.designer.cs">
+      <DependentUpon>ProductCatalog.Attribute.Titles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalog.Attribute.aspx.cs">
+      <DependentUpon>ProductCatalog.Attribute.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCatalog.Attribute.aspx.designer.cs">
+      <DependentUpon>ProductCatalog.Attribute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalog.Packing.aspx.cs">
+      <DependentUpon>ProductCatalog.Packing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCatalog.Packing.aspx.designer.cs">
+      <DependentUpon>ProductCatalog.Packing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalogNotReady.aspx.cs">
+      <DependentUpon>ProductCatalogNotReady.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCatalogNotReady.aspx.designer.cs">
+      <DependentUpon>ProductCatalogNotReady.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalogForDb.aspx.cs">
+      <DependentUpon>ProductCatalogForDb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCatalogForDb.aspx.designer.cs">
+      <DependentUpon>ProductCatalogForDb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalog.Attributes.View.aspx.cs">
+      <DependentUpon>ProductCatalog.Attributes.View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCatalog.Attributes.View.aspx.designer.cs">
+      <DependentUpon>ProductCatalog.Attributes.View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalog.Combo.aspx.cs">
+      <DependentUpon>ProductCatalog.Combo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCatalog.Combo.aspx.designer.cs">
+      <DependentUpon>ProductCatalog.Combo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalog.Images.aspx.cs">
+      <DependentUpon>ProductCatalog.Images.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCatalog.Images.aspx.designer.cs">
+      <DependentUpon>ProductCatalog.Images.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalog.History.aspx.cs">
+      <DependentUpon>ProductCatalog.History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCatalog.History.aspx.designer.cs">
+      <DependentUpon>ProductCatalog.History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalog.Grouping.aspx.cs">
+      <DependentUpon>ProductCatalog.Grouping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCatalog.Grouping.aspx.designer.cs">
+      <DependentUpon>ProductCatalog.Grouping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalog.Preview.aspx.cs">
+      <DependentUpon>ProductCatalog.Preview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCatalog.Preview.aspx.designer.cs">
+      <DependentUpon>ProductCatalog.Preview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalog.Marketing.aspx.cs">
+      <DependentUpon>ProductCatalog.Marketing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCatalog.Marketing.aspx.designer.cs">
+      <DependentUpon>ProductCatalog.Marketing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalog.Descriptions.aspx.cs">
+      <DependentUpon>ProductCatalog.Descriptions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCatalog.Descriptions.aspx.designer.cs">
+      <DependentUpon>ProductCatalog.Descriptions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalog.Shop.aspx.cs">
+      <DependentUpon>ProductCatalog.Shop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCatalog.Shop.aspx.designer.cs">
+      <DependentUpon>ProductCatalog.Shop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmailTestPage.aspx.cs">
+      <DependentUpon>EmailTestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmailTestPage.aspx.designer.cs">
+      <DependentUpon>EmailTestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllegroItems.aspx.cs">
+      <DependentUpon>AllegroItems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllegroItems.aspx.designer.cs">
+      <DependentUpon>AllegroItems.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllegroTest.aspx.cs">
+      <DependentUpon>AllegroTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllegroTest.aspx.designer.cs">
+      <DependentUpon>AllegroTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Complaints.aspx.cs">
+      <DependentUpon>Complaints.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Complaints.aspx.designer.cs">
+      <DependentUpon>Complaints.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CostControl.ascx.cs">
+      <DependentUpon>CostControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CostControl.ascx.designer.cs">
+      <DependentUpon>CostControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CostsControl.ascx.cs">
+      <DependentUpon>CostsControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CostsControl.ascx.designer.cs">
+      <DependentUpon>CostsControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProductCatalogMenu.ascx.cs">
+      <DependentUpon>ProductCatalogMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ProductCatalogMenu.ascx.designer.cs">
+      <DependentUpon>ProductCatalogMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderProcessing.aspx.cs">
+      <DependentUpon>OrderProcessing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderProcessing.aspx.designer.cs">
+      <DependentUpon>OrderProcessing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalog.Attributes.aspx.cs">
+      <DependentUpon>ProductCatalog.Attributes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCatalog.Attributes.aspx.designer.cs">
+      <DependentUpon>ProductCatalog.Attributes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalog.Specification.aspx.cs">
+      <DependentUpon>ProductCatalog.Specification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCatalog.Specification.aspx.designer.cs">
+      <DependentUpon>ProductCatalog.Specification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintanance.aspx.cs">
+      <DependentUpon>Maintanance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintanance.aspx.designer.cs">
+      <DependentUpon>Maintanance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersStatistics.aspx.cs">
+      <DependentUpon>OrdersStatistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrdersStatistics.aspx.designer.cs">
+      <DependentUpon>OrdersStatistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product.New.aspx.cs">
+      <DependentUpon>Product.New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product.New.aspx.designer.cs">
+      <DependentUpon>Product.New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalog.Delivery.aspx.cs">
+      <DependentUpon>ProductCatalog.Delivery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCatalog.Delivery.aspx.designer.cs">
+      <DependentUpon>ProductCatalog.Delivery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalog.Allegro.aspx.cs">
+      <DependentUpon>ProductCatalog.Allegro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCatalog.Allegro.aspx.designer.cs">
+      <DependentUpon>ProductCatalog.Allegro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Costs.aspx.cs">
+      <DependentUpon>Costs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Costs.aspx.designer.cs">
+      <DependentUpon>Costs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order.aspx.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order.aspx.designer.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllegroUsers.aspx.cs">
+      <DependentUpon>AllegroUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllegroUsers.aspx.designer.cs">
+      <DependentUpon>AllegroUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Code\WebHelper.cs" />
+    <Compile Include="Controls\OrderShipping.ascx.cs">
+      <DependentUpon>OrderShipping.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderShipping.ascx.designer.cs">
+      <DependentUpon>OrderShipping.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrderStatusHistory.ascx.cs">
+      <DependentUpon>OrderStatusHistory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderStatusHistory.ascx.designer.cs">
+      <DependentUpon>OrderStatusHistory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ItemOrderGrid.ascx.cs">
+      <DependentUpon>ItemOrderGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ItemOrderGrid.ascx.designer.cs">
+      <DependentUpon>ItemOrderGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrderLog.ascx.cs">
+      <DependentUpon>OrderLog.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderLog.ascx.designer.cs">
+      <DependentUpon>OrderLog.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrderPayment.ascx.cs">
+      <DependentUpon>OrderPayment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderPayment.ascx.designer.cs">
+      <DependentUpon>OrderPayment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmailEditor.aspx.cs">
+      <DependentUpon>EmailEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmailEditor.aspx.designer.cs">
+      <DependentUpon>EmailEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderNew.aspx.cs">
+      <DependentUpon>OrderNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderNew.aspx.designer.cs">
+      <DependentUpon>OrderNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersNotPaidButSent.aspx.cs">
+      <DependentUpon>OrdersNotPaidButSent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrdersNotPaidButSent.aspx.designer.cs">
+      <DependentUpon>OrdersNotPaidButSent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderStats.aspx.cs">
+      <DependentUpon>OrderStats.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderStats.aspx.designer.cs">
+      <DependentUpon>OrderStats.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalog.aspx.cs">
+      <DependentUpon>ProductCatalog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCatalog.aspx.designer.cs">
+      <DependentUpon>ProductCatalog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalogGroupFamily.aspx.cs">
+      <DependentUpon>ProductCatalogGroupFamily.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCatalogGroupFamily.aspx.designer.cs">
+      <DependentUpon>ProductCatalogGroupFamily.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalogOnStock.aspx.cs">
+      <DependentUpon>ProductCatalogOnStock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCatalogOnStock.aspx.designer.cs">
+      <DependentUpon>ProductCatalogOnStock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductFileImportProcessing.aspx.cs">
+      <DependentUpon>ProductFileImportProcessing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductFileImportProcessing.aspx.designer.cs">
+      <DependentUpon>ProductFileImportProcessing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductFileImport.aspx.cs">
+      <DependentUpon>ProductFileImport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductFileImport.aspx.designer.cs">
+      <DependentUpon>ProductFileImport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductImport.aspx.cs">
+      <DependentUpon>ProductImport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductImport.aspx.designer.cs">
+      <DependentUpon>ProductImport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductImports.aspx.cs">
+      <DependentUpon>ProductImports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductImports.aspx.designer.cs">
+      <DependentUpon>ProductImports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersIncome.aspx.cs">
+      <DependentUpon>OrdersIncome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrdersIncome.aspx.designer.cs">
+      <DependentUpon>OrdersIncome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsCosts.aspx.cs">
+      <DependentUpon>ProductsCosts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductsCosts.aspx.designer.cs">
+      <DependentUpon>ProductsCosts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductStats.aspx.cs">
+      <DependentUpon>ProductStats.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductStats.aspx.designer.cs">
+      <DependentUpon>ProductStats.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsTracker.aspx.cs">
+      <DependentUpon>ProductsTracker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductsTracker.aspx.designer.cs">
+      <DependentUpon>ProductsTracker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductTypeSchema.aspx.cs">
+      <DependentUpon>ProductTypeSchema.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductTypeSchema.aspx.designer.cs">
+      <DependentUpon>ProductTypeSchema.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shop.Suppliers.aspx.cs">
+      <DependentUpon>Shop.Suppliers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shop.Suppliers.aspx.designer.cs">
+      <DependentUpon>Shop.Suppliers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShopCategoryManager.aspx.cs">
+      <DependentUpon>ShopCategoryManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShopCategoryManager.aspx.designer.cs">
+      <DependentUpon>ShopCategoryManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalog.Attributes.Grouping.Page.aspx.cs">
+      <DependentUpon>ProductCatalog.Attributes.Grouping.Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCatalog.Attributes.Grouping.Page.aspx.designer.cs">
+      <DependentUpon>ProductCatalog.Attributes.Grouping.Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShopCategoryManagerPage.aspx.cs">
+      <DependentUpon>ShopCategoryManagerPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShopCategoryManagerPage.aspx.designer.cs">
+      <DependentUpon>ShopCategoryManagerPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Promotion.aspx.cs">
+      <DependentUpon>Promotion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Promotion.aspx.designer.cs">
+      <DependentUpon>Promotion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalog.Attributes.Grouping.aspx.cs">
+      <DependentUpon>ProductCatalog.Attributes.Grouping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCatalog.Attributes.Grouping.aspx.designer.cs">
+      <DependentUpon>ProductCatalog.Attributes.Grouping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Promotions.aspx.cs">
+      <DependentUpon>Promotions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Promotions.aspx.designer.cs">
+      <DependentUpon>Promotions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RestTestPage.aspx.cs">
+      <DependentUpon>RestTestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RestTestPage.aspx.designer.cs">
+      <DependentUpon>RestTestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SellReport.aspx.cs">
+      <DependentUpon>SellReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SellReport.aspx.designer.cs">
+      <DependentUpon>SellReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsEditor.aspx.cs">
+      <DependentUpon>SettingsEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SettingsEditor.aspx.designer.cs">
+      <DependentUpon>SettingsEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShopClickShopAttributeManager.aspx.cs">
+      <DependentUpon>ShopClickShopAttributeManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShopClickShopAttributeManager.aspx.designer.cs">
+      <DependentUpon>ShopClickShopAttributeManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShopExportFile.aspx.cs">
+      <DependentUpon>ShopExportFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShopExportFile.aspx.designer.cs">
+      <DependentUpon>ShopExportFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShopProducts.aspx.cs">
+      <DependentUpon>ShopProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShopProducts.aspx.designer.cs">
+      <DependentUpon>ShopProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shop.aspx.cs">
+      <DependentUpon>Shop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shop.aspx.designer.cs">
+      <DependentUpon>Shop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shops.aspx.cs">
+      <DependentUpon>Shops.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shops.aspx.designer.cs">
+      <DependentUpon>Shops.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShopTracker.aspx.cs">
+      <DependentUpon>ShopTracker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShopTracker.aspx.designer.cs">
+      <DependentUpon>ShopTracker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShopUpdateManager.aspx.cs">
+      <DependentUpon>ShopUpdateManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShopUpdateManager.aspx.designer.cs">
+      <DependentUpon>ShopUpdateManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier.Descriptions.aspx.cs">
+      <DependentUpon>Supplier.Descriptions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supplier.Descriptions.aspx.designer.cs">
+      <DependentUpon>Supplier.Descriptions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier.Shops.aspx.cs">
+      <DependentUpon>Supplier.Shops.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supplier.Shops.aspx.designer.cs">
+      <DependentUpon>Supplier.Shops.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier.New.aspx.cs">
+      <DependentUpon>Supplier.New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supplier.New.aspx.designer.cs">
+      <DependentUpon>Supplier.New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier.aspx.cs">
+      <DependentUpon>Supplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supplier.aspx.designer.cs">
+      <DependentUpon>Supplier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suppliers.aspx.cs">
+      <DependentUpon>Suppliers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suppliers.aspx.designer.cs">
+      <DependentUpon>Suppliers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemAccessControlUser.aspx.cs">
+      <DependentUpon>SystemAccessControlUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemAccessControlUser.aspx.designer.cs">
+      <DependentUpon>SystemAccessControlUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemAccessControl.aspx.cs">
+      <DependentUpon>SystemAccessControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemAccessControl.aspx.designer.cs">
+      <DependentUpon>SystemAccessControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestPage.aspx.cs">
+      <DependentUpon>TestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestPage.aspx.designer.cs">
+      <DependentUpon>TestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TimeTracker.aspx.cs">
+      <DependentUpon>TimeTracker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TimeTracker.aspx.designer.cs">
+      <DependentUpon>TimeTracker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Upload.ashx.cs">
+      <DependentUpon>Upload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UserTask.aspx.cs">
+      <DependentUpon>UserTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserTask.aspx.designer.cs">
+      <DependentUpon>UserTask.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserTasks.aspx.cs">
+      <DependentUpon>UserTasks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserTasks.aspx.designer.cs">
+      <DependentUpon>UserTasks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebApiTestPage.aspx.cs">
+      <DependentUpon>WebApiTestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebApiTestPage.aspx.designer.cs">
+      <DependentUpon>WebApiTestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LajtIt.Bll\LajtIt.Bll.csproj">
+      <Project>{BC04AB19-2A1F-4777-942F-1A18451EEC8D}</Project>
+      <Name>LajtIt.Bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LajtIt.Dal\LajtIt.Dal.csproj">
+      <Project>{83D8135D-39E4-4A9D-A68A-368B45CCCADC}</Project>
+      <Name>LajtIt.Dal</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release2|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release2|x86'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55169</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55169/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

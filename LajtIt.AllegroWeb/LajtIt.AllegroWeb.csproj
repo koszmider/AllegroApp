@@ -1,0 +1,836 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F70EF574-5A3E-461B-807A-3DF65A04FD6A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LajtIt.AllegroWeb</RootNamespace>
+    <AssemblyName>LajtIt.AllegroWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="abazur_cosmo_wiszacy.aspx" />
+    <Content Include="abazur_Kronos_L_wiszaca.aspx" />
+    <Content Include="abazur_estrella_wiszaca.aspx" />
+    <Content Include="abazur_klosz_szklany.aspx" />
+    <Content Include="abazur_klosz_not.aspx" />
+    <Content Include="abazur_Tromle_L.aspx" />
+    <Content Include="Controls\LampyOfertaKolory.ascx" />
+    <Content Include="Controls\Kronos.ascx" />
+    <Content Include="Controls\KronosLKolory.ascx" />
+    <Content Include="Controls\KronosMKolory.ascx" />
+    <Content Include="Controls\KronosProduktyUzupelniajace.ascx" />
+    <Content Include="Controls\KronosXLKolory.ascx" />
+    <Content Include="Controls\Stiga.ascx" />
+    <Content Include="Controls\StigaKolory.ascx" />
+    <Content Include="Controls\Styles.ascx" />
+    <Content Include="Controls\Tromle.ascx" />
+    <Content Include="Controls\TromleLKolory.ascx" />
+    <Content Include="Controls\TromleProduktyUzupelniajace.ascx" />
+    <Content Include="abazur_Kronos_XL_wiszaca.aspx" />
+    <Content Include="lampa_Kronos_XL_wiszaca_bez_opisu.aspx" />
+    <Content Include="lampa_Luna_podlogowa.aspx" />
+    <Content Include="lampa_Astrid_Elegance_II_nocna.aspx" />
+    <Content Include="lampa_estrella_mala_wiszaca.aspx" />
+    <Content Include="lampa_cosmo_trio_wiszaca.aspx" />
+    <Content Include="lampa_Kronos_Elegance_nocna.aspx" />
+    <Content Include="lampa_spiral_trio_wiszaca.aspx" />
+    <Content Include="lampa_Kronos_Trio_podluzna_wiszaca.aspx" />
+    <Content Include="lampa_Kronos_Trio_wiszaca.aspx" />
+    <Content Include="lampa_klosz_not.aspx" />
+    <Content Include="kinkiet_estrella.aspx" />
+    <Content Include="lampa_estrella_nocna.aspx" />
+    <Content Include="lampa_Surya_L_wiszaca.aspx" />
+    <Content Include="lampa_Surya_XL_wiszaca.aspx" />
+    <Content Include="lampa_Tromle_M_wiszaca.aspx" />
+    <Content Include="lampa_Tromle_nocna.aspx" />
+    <Content Include="lampa_Tromle_XL_podlogowa.aspx" />
+    <Content Include="lampa_Tromle_L_podlogowa.aspx" />
+    <Content Include="kinkiet_tromle.aspx" />
+    <Content Include="lampa_Tromle_XL_wiszaca.aspx" />
+    <Content Include="lampa_Tromle_L_wiszaca.aspx" />
+    <Content Include="zegar.aspx" />
+    <Content Include="lampa_szklana_nocna.aspx" />
+    <Content Include="lampa_szklana2_wiszaca.aspx" />
+    <Content Include="lampa_spark_wiszaca.aspx" />
+    <Content Include="poduszki.aspx" />
+    <Content Include="lampa_stiga_podlogowa.aspx" />
+    <Content Include="lampa_stiga_wiszaca.aspx" />
+    <Content Include="lampa_szklana_wiszaca.aspx" />
+    <Content Include="lampa_estrella_podlogowa.aspx" />
+    <Content Include="zawieszki.aspx" />
+    <Content Include="lampa_Kronos_M_stal_wiszaca.aspx" />
+    <Content Include="lampa_Orbital_wiszaca_.aspx" />
+    <Content Include="lampa_Kronos_M_wiszaca.aspx" />
+    <Content Include="lampa_Kronos_UFO_wiszaca.aspx" />
+    <Content Include="lampa_Regolit_wiszaca.aspx" />
+    <Content Include="lampa_Kronos_nocna.aspx" />
+    <Content Include="lampa_Terra_podlogowa.aspx" />
+    <Content Include="kinkiet_astrid.aspx" />
+    <Content Include="kinkiet_kronos.aspx" />
+    <Content Include="lampa_Kronos_L_stal_wiszaca.aspx" />
+    <Content Include="lampa_Kronos_Elegance_podlogowa.aspx" />
+    <Content Include="lampa_Astrid_Elegance_nocna.aspx" />
+    <Content Include="lampa_Kronos_stolowa.aspx" />
+    <Content Include="lampa_Astrid_podlogowa.aspx" />
+    <Content Include="lampa_Astrid_stolowa.aspx" />
+    <Content Include="lampa_Kronos_podlogowa.aspx" />
+    <Content Include="lampa_Kronos_Due_podlogowa.aspx" />
+    <Content Include="lampa_Kronos_XL_stal_wiszaca.aspx" />
+    <Content Include="lampa_Kronos_XL_wiszaca.aspx" />
+    <Content Include="Images\images\lajtit_header_01.png" />
+    <Content Include="Images\images\lajtit_header_02.png" />
+    <Content Include="Images\images\lajtit_header_03.png" />
+    <Content Include="Images\images\lajtit_produkty_uzupelniajace_01.png" />
+    <Content Include="Images\images\lajtit_produkty_uzupelniajace_02.png" />
+    <Content Include="Images\images\lajtit_produkty_uzupelniajace_03.png" />
+    <Content Include="Images\images\lajtit_produkty_uzupelniajace_04.png" />
+    <Content Include="Images\images\lajtit_produkty_uzupelniajace_05.png" />
+    <Content Include="Images\images\lajtit_produkty_uzupelniajace_06.png" />
+    <Content Include="Images\images\lajtit_produkty_uzupelniajace_07.png" />
+    <Content Include="Images\images\lajtit_produkty_uzupelniajace_08.png" />
+    <Content Include="Images\images\lajtit_produkty_uzupelniajace_09.png" />
+    <Content Include="Images\images\lajtit_produkty_uzupelniajace_10.png" />
+    <Content Include="Images\images\lajtit_produkty_uzupelniajace_11.png" />
+    <Content Include="Images\images\lajtit_produkty_uzupelniajace_12.png" />
+    <Content Include="Images\images\lajtit_produkty_uzupelniajace_cosmo_01.png" />
+    <Content Include="Images\images\lajtit_produkty_uzupelniajace_cosmo_02.png" />
+    <Content Include="Images\images\lajtit_produkty_uzupelniajace_cosmo_03.jpg" />
+    <Content Include="Images\images\lajtit_produkty_uzupelniajace_cosmo_04.png" />
+    <Content Include="Images\images\lajtit_produkty_uzupelniajace_cosmo_05.png" />
+    <Content Include="Images\images\lajtit_produkty_uzupelniajace_cosmo_06.png" />
+    <Content Include="Images\images\lajtit_produkty_uzupelniajace_cosmo_07.png" />
+    <Content Include="Images\images\lajtit_produkty_uzupelniajace_cosmo_08.png" />
+    <Content Include="Images\images\lajtit_produkty_uzupelniajace_cosmo_09.png" />
+    <Content Include="Images\images\lajtit_produkty_uzupelniajace_cosmo_10.png" />
+    <Content Include="Images\images\lajtit_produkty_uzupelniajace_cosmo_11.png" />
+    <Content Include="Images\images\lajtit_produkty_uzupelniajace_cosmo_12.jpg" />
+    <Content Include="Images\images\spacer.gif" />
+    <Content Include="philips_11W.aspx" />
+    <Content Include="lampa_kronos_tuba_podlogowa.aspx" />
+    <Content Include="lampa_luna_wiszaca.aspx" />
+    <Content Include="lampa_twist_wiszaca.aspx" />
+    <Content Include="lampa_drop_wiszaca.aspx" />
+    <Content Include="lampa_spiral_podlogowa.aspx" />
+    <Content Include="lampa_spiral_stolowa.aspx" />
+    <Content Include="lampa_spiral_wiszaca.aspx" />
+    <Content Include="lampa_cosmo_podlogowa.aspx" />
+    <Content Include="lampa_cosmo_stolowa.aspx" />
+    <Content Include="lampa_estrella_wiszaca.aspx" />
+    <Content Include="lampa_cosmo_wiszaca.aspx" />
+    <Content Include="Images\facebook.png" />
+    <Content Include="Images\lajtit_aranzacje.png" />
+    <Content Include="Images\lajtit_background.png" />
+    <Content Include="Images\lajtit_blog.jpg" />
+    <Content Include="Images\lajtit_header.png" />
+    <Content Include="Images\lajtit_jak_zlozyc_zamowienie.png" />
+    <Content Include="Images\lajtit_kronos_guide.gif" />
+    <Content Include="Images\lajtit_lampa_za_zdjecie.png" />
+    <Content Include="Images\lajtit_oferujemy.png" />
+    <Content Include="Images\lajtit_poznaj_nas.png" />
+    <Content Include="Images\lajtit_produkty_uzupelniajace.png" />
+    <Content Include="Images\lajtit_produkty_uzupelniajace_oferta.png" />
+    <Content Include="Images\lajtit_realizacja_zamowienia.png" />
+    <Content Include="Images\lajtit_regulamin_zakupow.png" />
+    <Content Include="Images\lajtit_underheader.png" />
+    <Content Include="Images\lajtit_zamow_telefonicznie.png" />
+    <Content Include="Images\ljatit_blog_banner.jpg" />
+    <Content Include="lampa_Kronos_L_wiszaca.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="lampa_nocna_astrid.aspx" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="static\translate.htm" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="zegar.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="abazur_cosmo_wiszacy.aspx.cs">
+      <DependentUpon>abazur_cosmo_wiszacy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="abazur_cosmo_wiszacy.aspx.designer.cs">
+      <DependentUpon>abazur_cosmo_wiszacy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="abazur_Kronos_L_wiszaca.aspx.cs">
+      <DependentUpon>abazur_Kronos_L_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="abazur_Kronos_L_wiszaca.aspx.designer.cs">
+      <DependentUpon>abazur_Kronos_L_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="abazur_estrella_wiszaca.aspx.cs">
+      <DependentUpon>abazur_estrella_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="abazur_estrella_wiszaca.aspx.designer.cs">
+      <DependentUpon>abazur_estrella_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="abazur_klosz_szklany.aspx.cs">
+      <DependentUpon>abazur_klosz_szklany.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="abazur_klosz_szklany.aspx.designer.cs">
+      <DependentUpon>abazur_klosz_szklany.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="abazur_klosz_not.aspx.cs">
+      <DependentUpon>abazur_klosz_not.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="abazur_klosz_not.aspx.designer.cs">
+      <DependentUpon>abazur_klosz_not.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="abazur_Tromle_L.aspx.cs">
+      <DependentUpon>abazur_Tromle_L.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="abazur_Tromle_L.aspx.designer.cs">
+      <DependentUpon>abazur_Tromle_L.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LampyOfertaKolory.ascx.cs">
+      <DependentUpon>LampyOfertaKolory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LampyOfertaKolory.ascx.designer.cs">
+      <DependentUpon>LampyOfertaKolory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Kronos.ascx.cs">
+      <DependentUpon>Kronos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Kronos.ascx.designer.cs">
+      <DependentUpon>Kronos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\KronosLKolory.ascx.cs">
+      <DependentUpon>KronosLKolory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\KronosLKolory.ascx.designer.cs">
+      <DependentUpon>KronosLKolory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\KronosMKolory.ascx.cs">
+      <DependentUpon>KronosMKolory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\KronosMKolory.ascx.designer.cs">
+      <DependentUpon>KronosMKolory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\KronosProduktyUzupelniajace.ascx.cs">
+      <DependentUpon>KronosProduktyUzupelniajace.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\KronosProduktyUzupelniajace.ascx.designer.cs">
+      <DependentUpon>KronosProduktyUzupelniajace.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\KronosXLKolory.ascx.cs">
+      <DependentUpon>KronosXLKolory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\KronosXLKolory.ascx.designer.cs">
+      <DependentUpon>KronosXLKolory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Stiga.ascx.cs">
+      <DependentUpon>Stiga.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Stiga.ascx.designer.cs">
+      <DependentUpon>Stiga.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StigaKolory.ascx.cs">
+      <DependentUpon>StigaKolory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\StigaKolory.ascx.designer.cs">
+      <DependentUpon>StigaKolory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Styles.ascx.cs">
+      <DependentUpon>Styles.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Styles.ascx.designer.cs">
+      <DependentUpon>Styles.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tromle.ascx.cs">
+      <DependentUpon>Tromle.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Tromle.ascx.designer.cs">
+      <DependentUpon>Tromle.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TromleLKolory.ascx.cs">
+      <DependentUpon>TromleLKolory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TromleLKolory.ascx.designer.cs">
+      <DependentUpon>TromleLKolory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TromleProduktyUzupelniajace.ascx.cs">
+      <DependentUpon>TromleProduktyUzupelniajace.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TromleProduktyUzupelniajace.ascx.designer.cs">
+      <DependentUpon>TromleProduktyUzupelniajace.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="abazur_Kronos_XL_wiszaca.aspx.cs">
+      <DependentUpon>abazur_Kronos_XL_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="abazur_Kronos_XL_wiszaca.aspx.designer.cs">
+      <DependentUpon>abazur_Kronos_XL_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Kronos_XL_wiszaca_bez_opisu.aspx.cs">
+      <DependentUpon>lampa_Kronos_XL_wiszaca_bez_opisu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Kronos_XL_wiszaca_bez_opisu.aspx.designer.cs">
+      <DependentUpon>lampa_Kronos_XL_wiszaca_bez_opisu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Luna_podlogowa.aspx.cs">
+      <DependentUpon>lampa_Luna_podlogowa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Luna_podlogowa.aspx.designer.cs">
+      <DependentUpon>lampa_Luna_podlogowa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Astrid_Elegance_II_nocna.aspx.cs">
+      <DependentUpon>lampa_Astrid_Elegance_II_nocna.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Astrid_Elegance_II_nocna.aspx.designer.cs">
+      <DependentUpon>lampa_Astrid_Elegance_II_nocna.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_estrella_mala_wiszaca.aspx.cs">
+      <DependentUpon>lampa_estrella_mala_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_estrella_mala_wiszaca.aspx.designer.cs">
+      <DependentUpon>lampa_estrella_mala_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_cosmo_trio_wiszaca.aspx.cs">
+      <DependentUpon>lampa_cosmo_trio_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_cosmo_trio_wiszaca.aspx.designer.cs">
+      <DependentUpon>lampa_cosmo_trio_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Kronos_Elegance_nocna.aspx.cs">
+      <DependentUpon>lampa_Kronos_Elegance_nocna.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Kronos_Elegance_nocna.aspx.designer.cs">
+      <DependentUpon>lampa_Kronos_Elegance_nocna.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_spiral_trio_wiszaca.aspx.cs">
+      <DependentUpon>lampa_spiral_trio_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_spiral_trio_wiszaca.aspx.designer.cs">
+      <DependentUpon>lampa_spiral_trio_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Kronos_Trio_podluzna_wiszaca.aspx.cs">
+      <DependentUpon>lampa_Kronos_Trio_podluzna_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Kronos_Trio_podluzna_wiszaca.aspx.designer.cs">
+      <DependentUpon>lampa_Kronos_Trio_podluzna_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Kronos_Trio_wiszaca.aspx.cs">
+      <DependentUpon>lampa_Kronos_Trio_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Kronos_Trio_wiszaca.aspx.designer.cs">
+      <DependentUpon>lampa_Kronos_Trio_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_klosz_not.aspx.cs">
+      <DependentUpon>lampa_klosz_not.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_klosz_not.aspx.designer.cs">
+      <DependentUpon>lampa_klosz_not.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="kinkiet_estrella.aspx.cs">
+      <DependentUpon>kinkiet_estrella.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="kinkiet_estrella.aspx.designer.cs">
+      <DependentUpon>kinkiet_estrella.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_estrella_nocna.aspx.cs">
+      <DependentUpon>lampa_estrella_nocna.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_estrella_nocna.aspx.designer.cs">
+      <DependentUpon>lampa_estrella_nocna.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Surya_L_wiszaca.aspx.cs">
+      <DependentUpon>lampa_Surya_L_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Surya_L_wiszaca.aspx.designer.cs">
+      <DependentUpon>lampa_Surya_L_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Surya_XL_wiszaca.aspx.cs">
+      <DependentUpon>lampa_Surya_XL_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Surya_XL_wiszaca.aspx.designer.cs">
+      <DependentUpon>lampa_Surya_XL_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Tromle_M_wiszaca.aspx.cs">
+      <DependentUpon>lampa_Tromle_M_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Tromle_M_wiszaca.aspx.designer.cs">
+      <DependentUpon>lampa_Tromle_M_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Tromle_nocna.aspx.cs">
+      <DependentUpon>lampa_Tromle_nocna.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Tromle_nocna.aspx.designer.cs">
+      <DependentUpon>lampa_Tromle_nocna.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Tromle_XL_podlogowa.aspx.cs">
+      <DependentUpon>lampa_Tromle_XL_podlogowa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Tromle_XL_podlogowa.aspx.designer.cs">
+      <DependentUpon>lampa_Tromle_XL_podlogowa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Tromle_L_podlogowa.aspx.cs">
+      <DependentUpon>lampa_Tromle_L_podlogowa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Tromle_L_podlogowa.aspx.designer.cs">
+      <DependentUpon>lampa_Tromle_L_podlogowa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="kinkiet_tromle.aspx.cs">
+      <DependentUpon>kinkiet_tromle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="kinkiet_tromle.aspx.designer.cs">
+      <DependentUpon>kinkiet_tromle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Tromle_XL_wiszaca.aspx.cs">
+      <DependentUpon>lampa_Tromle_XL_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Tromle_XL_wiszaca.aspx.designer.cs">
+      <DependentUpon>lampa_Tromle_XL_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Tromle_L_wiszaca.aspx.cs">
+      <DependentUpon>lampa_Tromle_L_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Tromle_L_wiszaca.aspx.designer.cs">
+      <DependentUpon>lampa_Tromle_L_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageColor.cs" />
+    <Compile Include="zegar.aspx.cs">
+      <DependentUpon>zegar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zegar.aspx.designer.cs">
+      <DependentUpon>zegar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_szklana_nocna.aspx.cs">
+      <DependentUpon>lampa_szklana_nocna.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_szklana_nocna.aspx.designer.cs">
+      <DependentUpon>lampa_szklana_nocna.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_szklana2_wiszaca.aspx.cs">
+      <DependentUpon>lampa_szklana2_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_szklana2_wiszaca.aspx.designer.cs">
+      <DependentUpon>lampa_szklana2_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_spark_wiszaca.aspx.cs">
+      <DependentUpon>lampa_spark_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_spark_wiszaca.aspx.designer.cs">
+      <DependentUpon>lampa_spark_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="poduszki.aspx.cs">
+      <DependentUpon>poduszki.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="poduszki.aspx.designer.cs">
+      <DependentUpon>poduszki.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_stiga_podlogowa.aspx.cs">
+      <DependentUpon>lampa_stiga_podlogowa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_stiga_podlogowa.aspx.designer.cs">
+      <DependentUpon>lampa_stiga_podlogowa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_stiga_wiszaca.aspx.cs">
+      <DependentUpon>lampa_stiga_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_stiga_wiszaca.aspx.designer.cs">
+      <DependentUpon>lampa_stiga_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_szklana_wiszaca.aspx.cs">
+      <DependentUpon>lampa_szklana_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_szklana_wiszaca.aspx.designer.cs">
+      <DependentUpon>lampa_szklana_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_estrella_podlogowa.aspx.cs">
+      <DependentUpon>lampa_estrella_podlogowa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_estrella_podlogowa.aspx.designer.cs">
+      <DependentUpon>lampa_estrella_podlogowa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="zawieszki.aspx.cs">
+      <DependentUpon>zawieszki.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zawieszki.aspx.designer.cs">
+      <DependentUpon>zawieszki.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Kronos_M_stal_wiszaca.aspx.cs">
+      <DependentUpon>lampa_Kronos_M_stal_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Kronos_M_stal_wiszaca.aspx.designer.cs">
+      <DependentUpon>lampa_Kronos_M_stal_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Orbital_wiszaca_.aspx.cs">
+      <DependentUpon>lampa_Orbital_wiszaca_.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Orbital_wiszaca_.aspx.designer.cs">
+      <DependentUpon>lampa_Orbital_wiszaca_.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Kronos_M_wiszaca.aspx.cs">
+      <DependentUpon>lampa_Kronos_M_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Kronos_M_wiszaca.aspx.designer.cs">
+      <DependentUpon>lampa_Kronos_M_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Kronos_UFO_wiszaca.aspx.cs">
+      <DependentUpon>lampa_Kronos_UFO_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Kronos_UFO_wiszaca.aspx.designer.cs">
+      <DependentUpon>lampa_Kronos_UFO_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Regolit_wiszaca.aspx.cs">
+      <DependentUpon>lampa_Regolit_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Regolit_wiszaca.aspx.designer.cs">
+      <DependentUpon>lampa_Regolit_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Kronos_nocna.aspx.cs">
+      <DependentUpon>lampa_Kronos_nocna.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Kronos_nocna.aspx.designer.cs">
+      <DependentUpon>lampa_Kronos_nocna.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Terra_podlogowa.aspx.cs">
+      <DependentUpon>lampa_Terra_podlogowa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Terra_podlogowa.aspx.designer.cs">
+      <DependentUpon>lampa_Terra_podlogowa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="kinkiet_astrid.aspx.cs">
+      <DependentUpon>kinkiet_astrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="kinkiet_astrid.aspx.designer.cs">
+      <DependentUpon>kinkiet_astrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="kinkiet_kronos.aspx.cs">
+      <DependentUpon>kinkiet_kronos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="kinkiet_kronos.aspx.designer.cs">
+      <DependentUpon>kinkiet_kronos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Kronos_L_stal_wiszaca.aspx.cs">
+      <DependentUpon>lampa_Kronos_L_stal_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Kronos_L_stal_wiszaca.aspx.designer.cs">
+      <DependentUpon>lampa_Kronos_L_stal_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Kronos_Elegance_podlogowa.aspx.cs">
+      <DependentUpon>lampa_Kronos_Elegance_podlogowa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Kronos_Elegance_podlogowa.aspx.designer.cs">
+      <DependentUpon>lampa_Kronos_Elegance_podlogowa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Astrid_Elegance_nocna.aspx.cs">
+      <DependentUpon>lampa_Astrid_Elegance_nocna.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Astrid_Elegance_nocna.aspx.designer.cs">
+      <DependentUpon>lampa_Astrid_Elegance_nocna.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Kronos_stolowa.aspx.cs">
+      <DependentUpon>lampa_Kronos_stolowa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Kronos_stolowa.aspx.designer.cs">
+      <DependentUpon>lampa_Kronos_stolowa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Astrid_podlogowa.aspx.cs">
+      <DependentUpon>lampa_Astrid_podlogowa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Astrid_podlogowa.aspx.designer.cs">
+      <DependentUpon>lampa_Astrid_podlogowa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Astrid_stolowa.aspx.cs">
+      <DependentUpon>lampa_Astrid_stolowa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Astrid_stolowa.aspx.designer.cs">
+      <DependentUpon>lampa_Astrid_stolowa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Kronos_podlogowa.aspx.cs">
+      <DependentUpon>lampa_Kronos_podlogowa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Kronos_podlogowa.aspx.designer.cs">
+      <DependentUpon>lampa_Kronos_podlogowa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Kronos_Due_podlogowa.aspx.cs">
+      <DependentUpon>lampa_Kronos_Due_podlogowa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Kronos_Due_podlogowa.aspx.designer.cs">
+      <DependentUpon>lampa_Kronos_Due_podlogowa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Kronos_XL_stal_wiszaca.aspx.cs">
+      <DependentUpon>lampa_Kronos_XL_stal_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Kronos_XL_stal_wiszaca.aspx.designer.cs">
+      <DependentUpon>lampa_Kronos_XL_stal_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Kronos_XL_wiszaca.aspx.cs">
+      <DependentUpon>lampa_Kronos_XL_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Kronos_XL_wiszaca.aspx.designer.cs">
+      <DependentUpon>lampa_Kronos_XL_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="philips_11W.aspx.cs">
+      <DependentUpon>philips_11W.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="philips_11W.aspx.designer.cs">
+      <DependentUpon>philips_11W.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_kronos_tuba_podlogowa.aspx.cs">
+      <DependentUpon>lampa_kronos_tuba_podlogowa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_kronos_tuba_podlogowa.aspx.designer.cs">
+      <DependentUpon>lampa_kronos_tuba_podlogowa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_luna_wiszaca.aspx.cs">
+      <DependentUpon>lampa_luna_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_luna_wiszaca.aspx.designer.cs">
+      <DependentUpon>lampa_luna_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_twist_wiszaca.aspx.cs">
+      <DependentUpon>lampa_twist_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_twist_wiszaca.aspx.designer.cs">
+      <DependentUpon>lampa_twist_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_drop_wiszaca.aspx.cs">
+      <DependentUpon>lampa_drop_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_drop_wiszaca.aspx.designer.cs">
+      <DependentUpon>lampa_drop_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_spiral_podlogowa.aspx.cs">
+      <DependentUpon>lampa_spiral_podlogowa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_spiral_podlogowa.aspx.designer.cs">
+      <DependentUpon>lampa_spiral_podlogowa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_spiral_stolowa.aspx.cs">
+      <DependentUpon>lampa_spiral_stolowa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_spiral_stolowa.aspx.designer.cs">
+      <DependentUpon>lampa_spiral_stolowa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_spiral_wiszaca.aspx.cs">
+      <DependentUpon>lampa_spiral_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_spiral_wiszaca.aspx.designer.cs">
+      <DependentUpon>lampa_spiral_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_cosmo_podlogowa.aspx.cs">
+      <DependentUpon>lampa_cosmo_podlogowa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_cosmo_podlogowa.aspx.designer.cs">
+      <DependentUpon>lampa_cosmo_podlogowa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_cosmo_stolowa.aspx.cs">
+      <DependentUpon>lampa_cosmo_stolowa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_cosmo_stolowa.aspx.designer.cs">
+      <DependentUpon>lampa_cosmo_stolowa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_estrella_wiszaca.aspx.cs">
+      <DependentUpon>lampa_estrella_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_estrella_wiszaca.aspx.designer.cs">
+      <DependentUpon>lampa_estrella_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_cosmo_wiszaca.aspx.cs">
+      <DependentUpon>lampa_cosmo_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_cosmo_wiszaca.aspx.designer.cs">
+      <DependentUpon>lampa_cosmo_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_Kronos_L_wiszaca.aspx.cs">
+      <DependentUpon>lampa_Kronos_L_wiszaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_Kronos_L_wiszaca.aspx.designer.cs">
+      <DependentUpon>lampa_Kronos_L_wiszaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="lampa_nocna_astrid.aspx.cs">
+      <DependentUpon>lampa_nocna_astrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lampa_nocna_astrid.aspx.designer.cs">
+      <DependentUpon>lampa_nocna_astrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55164</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

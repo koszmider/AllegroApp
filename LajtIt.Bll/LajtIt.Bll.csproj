@@ -1,0 +1,794 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BC04AB19-2A1F-4777-942F-1A18451EEC8D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LajtIt.Bll</RootNamespace>
+    <AssemblyName>LajtIt.Bll</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\inetpub\wwwlajtit\LajtitBatch_Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\..\inetpub\wwwlajtit\LajtitBatch\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release2|AnyCPU'">
+    <OutputPath>bin\Release2\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release2|x86'">
+    <OutputPath>bin\x86\Release2\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.1.3\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.3.4.1\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.Core.3.4.1\lib\net40\Common.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CsvHelper, Version=12.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\packages\CsvHelper.12.1.2\lib\net45\CsvHelper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EAGetMail">
+      <HintPath>..\packages\EAGetMail.5.2.0.5\lib\net45\EAGetMail.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=3.1.1.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\EPPlus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.0.0.999, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.0.0\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LINQtoCSV, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LINQtoCSV.1.5.0.0\lib\net35\LINQtoCSV.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqToExcel, Version=1.11.0.0, Culture=neutral, PublicKeyToken=9c8ea65a58f03f1f, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\LinqToExcel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.4.1\lib\net45\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.4.1\lib\net45\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.4.1\lib\net45\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.4.1\lib\net45\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenPop">
+      <HintPath>bin\OpenPop.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Remotion.Data.Linq, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.Data.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Remotion.Interfaces, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Remotion.Linq, Version=2.1.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.2.1.2\lib\net45\Remotion.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminUserHelper.cs" />
+    <Compile Include="AllegroEmailResponder.cs" />
+    <Compile Include="AllegroHelper.Seller.cs" />
+    <Compile Include="ArgonHelper.cs" />
+    <Compile Include="CosmoLightHelper.cs" />
+    <Compile Include="Integrations\Allegro\AllegroRESTHelper.Users.cs" />
+    <Compile Include="Integrations\Allegro\AllegroRESTHelper.Products.cs" />
+    <Compile Include="JPK_MAG.cs" />
+    <Compile Include="EgloHelper.cs" />
+    <Compile Include="GlasbergHelper.cs" />
+    <Compile Include="NordluxHelper.cs" />
+    <Compile Include="SalesFileHelper.cs" />
+    <Compile Include="SuMaHelper.cs" />
+    <Compile Include="PolnedHelper.cs" />
+    <Compile Include="RedluxHelper.cs" />
+    <Compile Include="HubschHelper.cs" />
+    <Compile Include="INGHelper.cs" />
+    <Compile Include="Integrations\Allegro\AllegroRESTHelper.Batch.cs" />
+    <Compile Include="Integrations\Allegro\AllegroRESTHelper.Payments.cs" />
+    <Compile Include="Integrations\Clipperon\ClipperonRestHelper.Orders.cs" />
+    <Compile Include="MarketplacePayments.cs" />
+    <Compile Include="NovaLuceHelper.cs" />
+    <Compile Include="RabaluxHelper.cs" />
+    <Compile Include="TKHelper.cs" />
+    <Compile Include="JPK_VAT.cs" />
+    <Compile Include="StepIntoDesignHelper.cs" />
+    <Compile Include="ElsteadHelper.cs" />
+    <Compile Include="Integrations\Allegro\AllegroRESTHelper.Badge.cs" />
+    <Compile Include="Integrations\Clipperon\ClipperonRestHelper.Products.cs" />
+    <Compile Include="Integrations\Clipperon\ClipperonRestHelper.cs" />
+    <Compile Include="Integrations\Erli\ErliRESTHelper.cs" />
+    <Compile Include="Integrations\Erli\ErliRESTHelper.Orders.cs" />
+    <Compile Include="Integrations\Erli\ErliRESTHelper.Products.cs" />
+    <Compile Include="Integrations\Empik\EmpikRESTHelper.Offers.CSV.cs" />
+    <Compile Include="Integrations\Empik\EmpikRESTHelper.Offers.cs" />
+    <Compile Include="Integrations\Empik\EmpikRESTHelper.Orders.cs" />
+    <Compile Include="Integrations\Morele\MoreleRESTHelper.Orders.cs" />
+    <Compile Include="Integrations\Morele\MoreleRESTHelper.Token.cs" />
+    <Compile Include="Integrations\Morele\MoreleRESTHelper.cs" />
+    <Compile Include="Integrations\Allegro\AllegroRESTHelper.Category.cs" />
+    <Compile Include="Integrations\Allegro\AllegroRESTHelper.Billing.cs" />
+    <Compile Include="Integrations\Allegro\AllegroRESTHelper.Disputes.cs" />
+    <Compile Include="Integrations\Allegro\AllegroRESTHelper.Offers.Tags.cs" />
+    <Compile Include="BrilliantHelper.cs" />
+    <Compile Include="Integrations\PGE\PgeRESTHelper.Token.cs" />
+    <Compile Include="Integrations\RESTHelper.cs" />
+    <Compile Include="Integrations\Shoper\ShopRestHelper.Producers.cs" />
+    <Compile Include="Integrations\Shoper\ShopRestHelper.Categories.cs" />
+    <Compile Include="Integrations\Shoper\ShopRestHelper.Attribute.Groups.cs" />
+    <Compile Include="Integrations\Shoper\ShopRestHelper.SpecialOffers.cs" />
+    <Compile Include="Integrations\ShopHelper.cs" />
+    <Compile Include="NovitusHelper.cs" />
+    <Compile Include="TrioRLHelper.cs" />
+    <Compile Include="LutecHelper.cs" />
+    <Compile Include="LucideHelper.cs" />
+    <Compile Include="ConsoleHelper.cs" />
+    <Compile Include="ElixirHelper.cs" />
+    <Compile Include="EmagRESTHelper.cs" />
+    <Compile Include="Integrations\Allegro\AllegroRESTHelper.Orders.cs" />
+    <Compile Include="Integrations\Allegro\AllegroRESTHelper.Variants.cs" />
+    <Compile Include="Integrations\Allegro\AllegroRESTHelper.Offers.cs" />
+    <Compile Include="Integrations\Allegro\AllegroRESTHelper.Images.cs" />
+    <Compile Include="Integrations\Allegro\AllegroRESTHelper.Delivery.cs" />
+    <Compile Include="Integrations\Allegro\AllegroRESTHelper.Parameters.cs" />
+    <Compile Include="Integrations\Allegro\AllegroRESTHelper.Token.cs" />
+    <Compile Include="AllegroScan.CreateAuctions.cs" />
+    <Compile Include="AllegroStatHelper.cs" />
+    <Compile Include="AltavolaHelper.cs" />
+    <Compile Include="BidHelper.cs" />
+    <Compile Include="Integrations\Allegro\AllegroRESTHelper.cs" />
+    <Compile Include="Altavola.cs" />
+    <Compile Include="Integrations\Ceneo\CeneoHelper.cs" />
+    <Compile Include="DpdHelper.cs" />
+    <Compile Include="Integrations\Empik\EmpikRESTHelper.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="FbHelper.cs" />
+    <Compile Include="FtpHelper.cs" />
+    <Compile Include="GoogleMerchantHelper.cs" />
+    <Compile Include="GoogleProducts.cs" />
+    <Compile Include="HomebookHelper.cs" />
+    <Compile Include="IImportData.cs" />
+    <Compile Include="InpostHelper.cs" />
+    <Compile Include="AuhilonHelper.cs" />
+    <Compile Include="JPK.cs" />
+    <Compile Include="JPKHelper.cs" />
+    <Compile Include="JPK_FA.cs" />
+    <Compile Include="CleoniHelper.cs" />
+    <Compile Include="LampexHelper.cs" />
+    <Compile Include="LightPrestigeHelper.cs" />
+    <Compile Include="PGEHelper.cs" />
+    <Compile Include="PoluxHelper.cs" />
+    <Compile Include="Przelewy24Helper.cs" />
+    <Compile Include="Integrations\Shoper\ShopRestHelper.Payments.cs" />
+    <Compile Include="Integrations\Shoper\ShopRestHelper.Orders.Products.cs" />
+    <Compile Include="Integrations\Shoper\ShopRestHelper.Orders.cs" />
+    <Compile Include="Integrations\Shoper\ShopRestHelper.Products.Images.cs" />
+    <Compile Include="ShopExportFileHelper.cs" />
+    <Compile Include="Integrations\Shoper\ShopRestHelper.Products.cs" />
+    <Compile Include="ShopUpdateHelper.Allegro.cs" />
+    <Compile Include="ShopUpdateHelper.ClickShop.cs" />
+    <Compile Include="ShopUpdateHelper.cs" />
+    <Compile Include="KingHomeHelper.cs" />
+    <Compile Include="SompexHelper.cs" />
+    <Compile Include="NowodvorskiHelper.cs" />
+    <Compile Include="Maxlight.cs" />
+    <Compile Include="MaxlightHelper.cs" />
+    <Compile Include="ItaluxHelper.cs" />
+    <Compile Include="MaytoniHelper.cs" />
+    <Compile Include="MilagroHelper.cs" />
+    <Compile Include="Mixer.cs" />
+    <Compile Include="OfferHelper.cs" />
+    <Compile Include="OrderHelper.Shipping.cs" />
+    <Compile Include="PdfCreator.cs" />
+    <Compile Include="PosnetHelper.cs" />
+    <Compile Include="ProductCatalogHelper.cs" />
+    <Compile Include="ProductFileImportHelper.cs" />
+    <Compile Include="Service References\AllegroNewWCFOLD\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DpdStatusWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DpdWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Integrations\Shoper\ShopRestHelper.cs" />
+    <Compile Include="ShopWCFHelper.cs" />
+    <Compile Include="SolluxHelper.cs" />
+    <Compile Include="TbaHelper.cs" />
+    <Compile Include="CSVHelper.cs" />
+    <Compile Include="Dto\AllegroUser.cs" />
+    <Compile Include="Dto\Email.cs" />
+    <Compile Include="Dto\UserAuctions.cs" />
+    <Compile Include="Dto\UserOrder.cs" />
+    <Compile Include="EmailEditor.cs" />
+    <Compile Include="EmailSender.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="ErrorHandler.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="InvoiceHelper.cs" />
+    <Compile Include="OrderHelper.cs" />
+    <Compile Include="PaczkomatyHelper.cs" />
+    <Compile Include="PDFInvoice.cs" />
+    <Compile Include="PocztaPolskaClass.cs" />
+    <Compile Include="PocztaPolskaHelper.cs" />
+    <Compile Include="ProductCatalogCalculator.cs" />
+    <Compile Include="ProductCatalogForAllegroHelper.cs" />
+    <Compile Include="ProductCatalogImportHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SiodemkaWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TbaWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ShopHelper.cs" />
+    <Compile Include="ThreadResult.cs" />
+    <Compile Include="UrlHelper.cs" />
+    <Compile Include="MarkslojdHelper.cs" />
+    <Compile Include="AzzardoHelper.cs" />
+    <Compile Include="CandelluxHelper.cs" />
+    <Compile Include="PaulmannHelper.cs" />
+    <Compile Include="ZumalineHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Integrations\Allegro\AllegroRESTHelper.Price.cs" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.AddressInfoStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.AfterSalesServiceConditionsStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.AlcoholDataStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.ArchiveRefundsListTypeStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.AttribStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.BidItemStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.BidListStruct2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.BlackListResStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.BlackListStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.CategoriesListType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.CategoryData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.CatInfoType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.ChangedItemStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.CompanyExtraDataStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.CompanyInfoStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.CompanySecondAddressStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.CountryInfoType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.DealsStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.FieldsValue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.FilledPostBuyFormsStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.FiltersListType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.FinishFailureStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.FutureItemStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.InvoiceDataStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.ItemBilling.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.ItemCatList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.ItemDescriptionStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.ItemImageList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.ItemImagesStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.ItemInfoExt.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.ItemInfoStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.ItemPaymentOptions.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.ItemPostBuyDataStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.ItemsListType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.MyAccountStruct2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.NotSoldItemStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.NotWonItemStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.PaymentMethodStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.PaymentsInfoStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.PayoutPaymentsStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.PayoutRefundFromStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.PayoutRefundToStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.PharmacyDataStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.PostageStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.PostBuyFormDataStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.PostBuyFormForBuyersDataStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.PostBuyFormPackageInfoStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.PostBuyFormStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.PostBuyItemInfoStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.ProductStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.ReasonInfoType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.RefundListType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.RefundsDealsListType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.RelatedItemsShipmentDataStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.RelatedItemsStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.RelatedPersonsStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.RequestPayoutStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.SellFormFieldsForCategoryStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.SellItemStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.SellRatingAverageStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.ShipmentDataStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.ShipmentPriceTypeStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.ShowUserFeedbacks.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.SiteJournal.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.SiteJournalDealsInfoStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.SiteJournalDealsStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.SiteJournalInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.SoldItemStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.StateInfoStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.StructSellAgain.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.StructSellFailed.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.SysStatusType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.UserBlackListAddResultStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.UserDataStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.UserIncomingPaymentRefundsStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.UserIncomingPaymentStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.UserPaymentRefundsStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.UserPaymentStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.UserPayoutStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\LajtIt.Bll.AllegroNewWCFOLD.WonItemStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllegroNewWCFOLD\service.wsdl">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DpdStatusWCF\DPDInfoServicesObjEvents.xsd" />
+    <None Include="Service References\DpdStatusWCF\DPDInfoServicesObjEventsService.wsdl" />
+    <None Include="Service References\DpdStatusWCF\LajtIt.Bll.DpdStatusWCF.customerEventsResponseV1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DpdStatusWCF\LajtIt.Bll.DpdStatusWCF.customerEventsResponseV2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DpdStatusWCF\LajtIt.Bll.DpdStatusWCF.customerEventsResponseV3.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DpdWCF\DPDPackageObjServices.xsd" />
+    <None Include="Service References\DpdWCF\DPDPackageObjServicesService.wsdl" />
+    <None Include="Service References\DpdWCF\LajtIt.Bll.DpdWCF.documentGenerationResponseV1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DpdWCF\LajtIt.Bll.DpdWCF.documentGenerationResponseV2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DpdWCF\LajtIt.Bll.DpdWCF.findPostalCodeResponseV1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DpdWCF\LajtIt.Bll.DpdWCF.getCourierOrderAvailabilityResponseV1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DpdWCF\LajtIt.Bll.DpdWCF.importDeliveryBusinessEventResponseV1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DpdWCF\LajtIt.Bll.DpdWCF.packagesGenerationResponseV1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DpdWCF\LajtIt.Bll.DpdWCF.packagesGenerationResponseV2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DpdWCF\LajtIt.Bll.DpdWCF.packagesPickupCallResponseV1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DpdWCF\LajtIt.Bll.DpdWCF.packagesPickupCallResponseV2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DpdWCF\LajtIt.Bll.DpdWCF.packagesPickupCallResponseV3.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DpdWCF\LajtIt.Bll.DpdWCF.parcelsAppendResponseV1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SiodemkaWCF\LajtIt.Bll.SiodemkaWCF.Kontrahent.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SiodemkaWCF\LajtIt.Bll.SiodemkaWCF.List.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SiodemkaWCF\LajtIt.Bll.SiodemkaWCF.PaczkaStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SiodemkaWCF\LajtIt.Bll.SiodemkaWCF.Placowka.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SiodemkaWCF\LajtIt.Bll.SiodemkaWCF.StatusyPrzesylki.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SiodemkaWCF\SiodemkaService.wsdl" />
+    <None Include="Service References\TbaWCF\iKlientService.wsdl" />
+    <None Include="Service References\TbaWCF\IklServicePort.xsd" />
+    <None Include="Service References\TbaWCF\LajtIt.Bll.TbaWCF.kontrahent.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TbaWCF\LajtIt.Bll.TbaWCF.list.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TbaWCF\LajtIt.Bll.TbaWCF.paczkaStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <Compile Include="Integrations\Shoper\ShopRestHelper.Bulk.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AllegroNewWCFOLD\" />
+    <WCFMetadataStorage Include="Service References\DpdStatusWCF\" />
+    <WCFMetadataStorage Include="Service References\DpdWCF\" />
+    <WCFMetadataStorage Include="Service References\SiodemkaWCF\" />
+    <WCFMetadataStorage Include="Service References\TbaWCF\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LajtIt.Dal\LajtIt.Dal.csproj">
+      <Project>{83D8135D-39E4-4A9D-A68A-368B45CCCADC}</Project>
+      <Name>LajtIt.Dal</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SiodemkaWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SiodemkaWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SiodemkaWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TbaWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TbaWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TbaWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DpdWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DpdWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DpdWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DpdStatusWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DpdStatusWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DpdStatusWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AllegroNewWCFOLD\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AllegroNewWCFOLD\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AllegroNewWCFOLD\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

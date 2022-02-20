@@ -1,0 +1,1966 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<offer file_format="IOF" version="2.6" generated="2021-12-02 15:12:48">
+<products currency="PLN">
+	<product id="29" vat="23.0">
+		<price gross="594.30" net="483.17"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255011"  code="29-0"  weight="6500" >
+			<stock id="1" quantity="4"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="31" vat="23.0">
+		<price gross="1049.30" net="853.09"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255035"  code="31-0"  weight="5000" >
+			<stock id="1" quantity="2"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="33" vat="23.0">
+		<price gross="489.30" net="397.80"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255042"  code="33-0"  weight="2000" >
+			<stock id="1" quantity="54"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="34" vat="23.0">
+		<price gross="384.30" net="312.44"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255059"  code="34-0"  weight="2400" >
+			<stock id="1" quantity="19"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="35" vat="23.0">
+		<price gross="279.30" net="227.07"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255066"  code="35-0"  weight="2100" >
+			<stock id="1" quantity="1"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="36" vat="23.0">
+		<price gross="279.30" net="227.07"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255073"  code="36-0"  weight="1850" >
+			<stock id="1" quantity="6"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="37" vat="23.0">
+		<price gross="279.30" net="227.07"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255080"  code="37-0"  weight="1450" >
+			<stock id="1" quantity="4"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="38" vat="23.0">
+		<price gross="475.30" net="386.42"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255097"  code="38-0"  weight="2250" >
+			<stock id="1" quantity="14"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="39" vat="23.0">
+		<price gross="909.30" net="739.27"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255103"  code="39-0"  weight="12500" >
+			<stock id="1" quantity="11"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="40" vat="23.0">
+		<price gross="1119.30" net="910.00"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255110"  code="40-0"  weight="12000" >
+			<stock id="1" quantity="19"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="41" vat="23.0">
+		<price gross="1259.30" net="1023.82"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255127"  code="41-0"  weight="4600" >
+			<stock id="1" quantity="4"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="42" vat="23.0">
+		<price gross="1819.30" net="1479.11"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255134"  code="42-0"  weight="7500" >
+			<stock id="1" quantity="24"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="43" vat="23.0">
+		<price gross="909.30" net="739.27"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255141"  code="43-0"  weight="12500" >
+			<stock id="1" quantity="4"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="45" vat="23.0">
+		<price gross="909.30" net="739.27"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255158"  code="45-0"  weight="12500" >
+			<stock id="1" quantity="24"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="46" vat="23.0">
+		<price gross="909.30" net="739.27"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255165"  code="46-0"  weight="12500" >
+			<stock id="1" quantity="47"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="47" vat="23.0">
+		<price gross="1049.30" net="853.09"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255172"  code="47-0"  weight="6800" >
+			<stock id="1" quantity="28"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="49" vat="23.0">
+		<price gross="279.30" net="227.07"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255189"  code="49-0"  weight="700" >
+			<stock id="1" quantity="158"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="50" vat="23.0">
+		<price gross="1889.30" net="1536.02"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255196"  code="50-0"  weight="6500" >
+			<stock id="1" quantity="23"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="51" vat="23.0">
+		<price gross="1399.30" net="1137.64"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255202"  code="51-0"  weight="10200" >
+			<stock id="1" quantity="4"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="52" vat="23.0">
+		<price gross="349.30" net="283.98"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255219"  code="52-0"  weight="2100" >
+			<stock id="1" quantity="68"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="54" vat="23.0">
+		<price gross="1679.30" net="1365.28"/>
+		<strikethrough_price gross="1329.30" net="1080.73"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255226"  code="54-0"  weight="30000" >
+			<stock id="1" quantity="12"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="55" vat="23.0">
+		<price gross="1399.30" net="1137.64"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255233"  code="55-0"  weight="8300" >
+			<stock id="1" quantity="20"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="56" vat="23.0">
+		<price gross="699.30" net="568.54"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255240"  code="56-0"  weight="1800" >
+			<stock id="1" quantity="8"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="57" vat="23.0">
+		<price gross="1749.30" net="1422.20"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255257"  code="57-0"  weight="20000" >
+			<stock id="1" quantity="3"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="58" vat="23.0">
+		<price gross="699.30" net="568.54"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255264"  code="58-0"  weight="2300" >
+			<stock id="1" quantity="36"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="59" vat="23.0">
+		<price gross="1889.30" net="1536.02"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255271"  code="59-0"  weight="5500" >
+			<stock id="1" quantity="10"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="61" vat="23.0">
+		<price gross="244.30" net="198.62"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255288"  code="61-0"  weight="800" >
+			<stock id="1" quantity="32"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="62" vat="23.0">
+		<price gross="244.30" net="198.62"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255295"  code="62-0"  weight="800" >
+			<stock id="1" quantity="19"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="63" vat="23.0">
+		<price gross="244.30" net="198.62"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255301"  code="63-0"  weight="800" >
+			<stock id="1" quantity="10"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="64" vat="23.0">
+		<price gross="279.30" net="227.07"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255318"  code="64-0"  weight="1500" >
+			<stock id="1" quantity="33"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="68" vat="23.0">
+		<price gross="279.30" net="227.07"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255332"  code="68-0"  weight="1500" >
+			<stock id="1" quantity="6"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="69" vat="23.0">
+		<price gross="279.30" net="227.07"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255349"  code="69-0"  weight="1500" >
+			<stock id="1" quantity="33"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="70" vat="23.0">
+		<price gross="699.30" net="568.54"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255356"  code="70-0"  weight="1800" >
+			<stock id="1" quantity="6"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="71" vat="23.0">
+		<price gross="279.30" net="227.07"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255363"  code="71-0"  weight="1300" >
+			<stock id="1" quantity="60"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="72" vat="23.0">
+		<price gross="279.30" net="227.07"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255370"  code="72-0"  weight="1300" >
+			<stock id="1" quantity="17"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="73" vat="23.0">
+		<price gross="279.30" net="227.07"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255387"  code="73-0"  weight="1300" >
+			<stock id="1" quantity="49"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="74" vat="23.0">
+		<price gross="489.30" net="397.80"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255394"  code="74-0"  weight="3000" >
+			<stock id="1" quantity="6"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="76" vat="23.0">
+		<price gross="489.30" net="397.80"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255400"  code="76-0"  weight="4200" >
+			<stock id="1" quantity="9"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="78" vat="23.0">
+		<price gross="209.30" net="170.16"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255417"  code="78-0"  weight="1200" >
+			<stock id="1" quantity="6"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="79" vat="23.0">
+		<price gross="209.30" net="170.16"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255424"  code="79-0"  weight="1200" >
+			<stock id="1" quantity="42"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="88" vat="23.0">
+		<price gross="1189.30" net="966.91"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255448"  code="88-0"  weight="5600" >
+			<stock id="1" quantity="18"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="89" vat="23.0">
+		<price gross="1189.30" net="966.91"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656133"  code="89-0"  weight="5600" >
+			<stock id="1" quantity="10"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="90" vat="23.0">
+		<price gross="699.30" net="568.54"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255455"  code="90-0"  weight="1800" >
+			<stock id="1" quantity="1"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="96" vat="23.0">
+		<price gross="1679.30" net="1365.28"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255462"  code="96-0"  weight="19600" >
+			<stock id="1" quantity="15"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="97" vat="23.0">
+		<price gross="839.30" net="682.36"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255479"  code="97-0"  weight="2900" >
+			<stock id="1" quantity="5"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="99" vat="23.0">
+		<price gross="1679.30" net="1365.28"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255486"  code="99-0"  weight="7500" >
+			<stock id="1" quantity="4"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="101" vat="23.0">
+		<price gross="2519.30" net="2048.21"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255493"  code="101-0"  weight="5600" >
+			<stock id="1" quantity="5"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="107" vat="23.0">
+		<price gross="475.30" net="386.42"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255509"  code="107-0"  weight="2250" >
+			<stock id="1" quantity="17"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="108" vat="23.0">
+		<price gross="195.30" net="158.78"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255516"  code="108-0"  weight="2500" >
+			<stock id="1" quantity="21"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="109" vat="23.0">
+		<price gross="195.30" net="158.78"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255523"  code="109-0"  weight="2500" >
+			<stock id="1" quantity="14"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="111" vat="23.0">
+		<price gross="909.30" net="739.27"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456096"  code="111-0"  weight="6000" >
+			<stock id="1" quantity="3"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="112" vat="23.0">
+		<price gross="1679.30" net="1365.28"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456126"  code="112-0"  weight="8600" >
+			<stock id="1" quantity="2"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="116" vat="23.0">
+		<price gross="629.30" net="511.63"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255530"  code="116-0"  weight="4000" >
+			<stock id="1" quantity="32"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="117" vat="23.0">
+		<price gross="454.30" net="369.35"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255547"  code="117-0"  weight="2900" >
+			<stock id="1" quantity="42"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="118" vat="23.0">
+		<price gross="629.30" net="511.63"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255554"  code="118-0"  weight="2300" >
+			<stock id="1" quantity="2"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="119" vat="23.0">
+		<price gross="293.30" net="238.46"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255561"  code="119-0"  weight="4300" >
+			<stock id="1" quantity="1"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="120" vat="23.0">
+		<price gross="1049.30" net="853.09"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255578"  code="120-0"  weight="6800" >
+			<stock id="1" quantity="7"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="126" vat="23.0">
+		<price gross="209.30" net="170.16"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255646"  code="126-0"  weight="1800" >
+			<stock id="1" quantity="46"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="127" vat="23.0">
+		<price gross="489.30" net="397.80"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255653"  code="127-0"  weight="6500" >
+			<stock id="1" quantity="9"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="128" vat="23.0">
+		<price gross="909.30" net="739.27"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255660"  code="128-0"  weight="12500" >
+			<stock id="1" quantity="3"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="129" vat="23.0">
+		<price gross="1259.30" net="1023.82"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255677"  code="129-0"  weight="5000" >
+			<stock id="1" quantity="23"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="133" vat="23.0">
+		<price gross="1259.30" net="1023.82"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255714"  code="133-0"  weight="16000" >
+			<stock id="1" quantity="40"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="134" vat="23.0">
+		<price gross="2239.30" net="1820.57"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255684"  code="134-0"  weight="12000" >
+			<stock id="1" quantity="8"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="135" vat="23.0">
+		<price gross="1119.30" net="910.00"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255707"  code="135-0"  weight="11000" >
+			<stock id="1" quantity="11"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="137" vat="23.0">
+		<price gross="209.30" net="170.16"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255691"  code="137-0"  weight="1600" >
+			<stock id="1" quantity="68"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="141" vat="23.0">
+		<price gross="629.30" net="511.63"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255721"  code="141-0"  weight="32000" >
+			<stock id="1" quantity="13"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="142" vat="23.0">
+		<price gross="629.30" net="511.63"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255738"  code="142-0"  weight="32000" >
+			<stock id="1" quantity="6"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="144" vat="23.0">
+		<price gross="839.30" net="682.36"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255745"  code="144-0"  weight="32000" >
+			<stock id="1" quantity="6"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="145" vat="23.0">
+		<price gross="839.30" net="682.36"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255752"  code="145-0"  weight="15500" >
+			<stock id="1" quantity="52"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="146" vat="23.0">
+		<price gross="839.30" net="682.36"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255769"  code="146-0"  weight="32000" >
+			<stock id="1" quantity="23"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="147" vat="23.0">
+		<price gross="195.30" net="158.78"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255776"  code="147-0"  weight="3500" >
+			<stock id="1" quantity="25"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="148" vat="23.0">
+		<price gross="195.30" net="158.78"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255783"  code="148-0"  weight="3500" >
+			<stock id="1" quantity="21"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="149" vat="23.0">
+		<price gross="181.30" net="147.40"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255790"  code="149-0"  weight="3500" >
+			<stock id="1" quantity="74"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="150" vat="23.0">
+		<price gross="181.30" net="147.40"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255806"  code="150-0"  weight="3500" >
+			<stock id="1" quantity="37"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="152" vat="23.0">
+		<price gross="349.30" net="283.98"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255844"  code="152-0"  weight="2200" >
+			<stock id="1" quantity="21"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="154" vat="23.0">
+		<price gross="349.30" net="283.98"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255820"  code="154-0"  weight="2200" >
+			<stock id="1" quantity="26"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="155" vat="23.0">
+		<price gross="559.30" net="454.72"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255837"  code="155-0"  weight="3000" >
+			<stock id="1" quantity="16"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="156" vat="23.0">
+		<price gross="1399.30" net="1137.64"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255868"  code="156-0"  weight="20000" >
+			<stock id="1" quantity="13"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="157" vat="23.0">
+		<price gross="3009.30" net="2446.59"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255875"  code="157-0"  weight="50000" >
+			<stock id="1" quantity="3"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="158" vat="23.0">
+		<price gross="3009.30" net="2446.59"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255882"  code="158-0"  weight="30000" >
+			<stock id="1" quantity="11"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="160" vat="23.0">
+		<price gross="1259.30" net="1023.82"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255905"  code="160-0"  weight="11000" >
+			<stock id="1" quantity="19"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="161" vat="23.0">
+		<price gross="1749.30" net="1422.20"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255929"  code="161-0"  weight="6000" >
+			<stock id="1" quantity="24"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="162" vat="23.0">
+		<price gross="1749.30" net="1422.20"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255912"  code="162-0"  weight="6000" >
+			<stock id="1" quantity="35"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="163" vat="23.0">
+		<price gross="2099.30" net="1706.75"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255936"  code="163-0"  weight="30000" >
+			<stock id="1" quantity="17"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="164" vat="23.0">
+		<price gross="769.30" net="625.45"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255943"  code="164-0"  weight="5500" >
+			<stock id="1" quantity="63"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="165" vat="23.0">
+		<price gross="454.30" net="369.35"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255950"  code="165-0"  weight="4800" >
+			<stock id="1" quantity="65"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="171" vat="23.0">
+		<price gross="909.30" net="739.27"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656119"  code="171-0"  weight="3800" >
+			<stock id="1" quantity="68"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="174" vat="23.0">
+		<price gross="489.30" net="397.80"/>
+		<sizes>
+			<size id="0"  code_producer="5903351255981"  code="174-0"  weight="2500" >
+			<stock id="1" quantity="19"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="176" vat="23.0">
+		<price gross="489.30" net="397.80"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656096"  code="176-0"  weight="2500" >
+			<stock id="1" quantity="14"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="179" vat="23.0">
+		<price gross="489.30" net="397.80"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656089"  code="179-0"  weight="2500" >
+			<stock id="1" quantity="12"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="181" vat="23.0">
+		<price gross="181.30" net="147.40"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656072"  code="181-0"  weight="3500" >
+			<stock id="1" quantity="32"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="182" vat="23.0">
+		<price gross="181.30" net="147.40"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656065"  code="182-0"  weight="3500" >
+			<stock id="1" quantity="20"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="183" vat="23.0">
+		<price gross="195.30" net="158.78"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656058"  code="183-0"  weight="3500" >
+			<stock id="1" quantity="64"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="184" vat="23.0">
+		<price gross="195.30" net="158.78"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656041"  code="184-0"  weight="3500" >
+			<stock id="1" quantity="43"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="197" vat="23.0">
+		<price gross="454.30" net="369.35"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656010"  code="197-0"  weight="1500" >
+			<stock id="1" quantity="102"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="201" vat="23.0">
+		<price gross="503.30" net="409.19"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656027"  code="201-0"  weight="1700" >
+			<stock id="1" quantity="84"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="202" vat="23.0">
+		<price gross="559.30" net="454.72"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656034"  code="202-0"  weight="2000" >
+			<stock id="1" quantity="83"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="203" vat="23.0">
+		<price gross="839.30" net="682.36"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656003"  code="203-0"  weight="6500" >
+			<stock id="1" quantity="61"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="219" vat="23.0">
+		<price gross="384.30" net="312.44"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656775"  code="219-0"  weight="2000" >
+			<stock id="1" quantity="38"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="220" vat="23.0">
+		<price gross="2099.30" net="1706.75"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656720"  code="220-0"  weight="30000" >
+			<stock id="1" quantity="1"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="223" vat="23.0">
+		<price gross="1749.30" net="1422.20"/>
+		<sizes>
+			<size id="0"  code="223-0"  weight="20000" >
+			<stock id="1" quantity="1"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="224" vat="23.0">
+		<price gross="979.30" net="796.18"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656300"  code="224-0"  weight="7000" >
+			<stock id="1" quantity="3"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="225" vat="23.0">
+		<price gross="699.30" net="568.54"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656317"  code="225-0"  weight="6200" >
+			<stock id="1" quantity="2"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="226" vat="23.0">
+		<price gross="769.30" net="625.45"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656744"  code="226-0"  weight="5500" >
+			<stock id="1" quantity="22"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="236" vat="23.0">
+		<price gross="839.30" net="682.36"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656751"  code="236-0"  weight="6500" >
+			<stock id="1" quantity="27"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="238" vat="23.0">
+		<price gross="559.30" net="454.72"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656638"  code="238-0"  weight="1300" >
+			<stock id="1" quantity="9"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="239" vat="23.0">
+		<price gross="1049.30" net="853.09"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656683"  code="239-0"  weight="6800" >
+			<stock id="1" quantity="30"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="240" vat="23.0">
+		<price gross="454.30" net="369.35"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656461"  code="240-0"  weight="4000" >
+			<stock id="1" quantity="46"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="241" vat="23.0">
+		<price gross="699.30" net="568.54"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656188"  code="241-0"  weight="4000" >
+			<stock id="1" quantity="90"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="242" vat="23.0">
+		<price gross="1049.30" net="853.09"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656195"  code="242-0"  weight="5400" >
+			<stock id="1" quantity="110"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="243" vat="23.0">
+		<price gross="1399.30" net="1137.64"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656201"  code="243-0"  weight="10000" >
+			<stock id="1" quantity="83"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="248" vat="23.0">
+		<price gross="874.65" net="711.10"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456201"  code="248-0"  weight="1500" >
+			<stock id="1" quantity="9"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="249" vat="23.0">
+		<price gross="699.65" net="568.82"/>
+		<sizes>
+			<size id="0"  code="249-0"  weight="1500" >
+			<stock id="1" quantity="6"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="250" vat="23.0">
+		<price gross="1049.30" net="853.09"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656157"  code="250-0"  weight="1500" >
+			<stock id="1" quantity="8"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="251" vat="23.0">
+		<price gross="629.30" net="511.63"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656164"  code="251-0"  weight="2850" >
+			<stock id="1" quantity="34"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="252" vat="23.0">
+		<price gross="1749.30" net="1422.20"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656218"  code="252-0"  weight="8000" >
+			<stock id="1" quantity="1"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="262" vat="23.0">
+		<price gross="559.30" net="454.72"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656256"  code="262-0"  weight="2500" >
+			<stock id="1" quantity="25"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="263" vat="23.0">
+		<price gross="384.30" net="312.44"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656263"  code="263-0"  weight="6000" >
+			<stock id="1" quantity="79"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="264" vat="23.0">
+		<price gross="1889.30" net="1536.02"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656270"  code="264-0"  weight="16000" >
+			<stock id="1" quantity="17"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="265" vat="23.0">
+		<price gross="559.30" net="454.72"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656287"  code="265-0"  weight="15000" >
+			<stock id="1" quantity="104"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="266" vat="23.0">
+		<price gross="1049.30" net="853.09"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656294"  code="266-0"  weight="15000" >
+			<stock id="1" quantity="6"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="267" vat="23.0">
+		<price gross="559.30" net="454.72"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656478"  code="267-0"  weight="5000" >
+			<stock id="1" quantity="9"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="268" vat="23.0">
+		<price gross="1959.30" net="1592.93"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656171"  code="268-0"  weight="5600" >
+			<stock id="1" quantity="17"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="269" vat="23.0">
+		<price gross="594.30" net="483.17"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656492"  code="269-0"  weight="3000" >
+			<stock id="1" quantity="16"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="270" vat="23.0">
+		<price gross="909.30" net="739.27"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656508"  code="270-0"  weight="10000" >
+			<stock id="1" quantity="24"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="271" vat="23.0">
+		<price gross="195.30" net="158.78"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656409"  code="271-0"  weight="1500" >
+			<stock id="1" quantity="72"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="272" vat="23.0">
+		<price gross="349.30" net="283.98"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656331"  code="272-0"  weight="3000" >
+			<stock id="1" quantity="15"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="273" vat="23.0">
+		<price gross="629.30" net="511.63"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656614"  code="273-0"  weight="3000" >
+			<stock id="1" quantity="12"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="274" vat="23.0">
+		<price gross="769.30" net="625.45"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656607"  code="274-0"  weight="4000" >
+			<stock id="1" quantity="3"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="275" vat="23.0">
+		<price gross="209.30" net="170.16"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656386"  code="275-0"  weight="1500" >
+			<stock id="1" quantity="15"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="277" vat="23.0">
+		<price gross="699.30" net="568.54"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656355"  code="277-0"  weight="5000" >
+			<stock id="1" quantity="6"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="278" vat="23.0">
+		<price gross="349.30" net="283.98"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656362"  code="278-0"  weight="3000" >
+			<stock id="1" quantity="14"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="279" vat="23.0">
+		<price gross="629.30" net="511.63"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656393"  code="279-0"  weight="6000" >
+			<stock id="1" quantity="5"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="290" vat="23.0">
+		<price gross="1749.30" net="1422.20"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656249"  code="290-0"  weight="6000" >
+			<stock id="1" quantity="2"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="294" vat="23.0">
+		<price gross="559.30" net="454.72"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456416"  code="294-0"  weight="3500" >
+			<stock id="1" quantity="66"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="300" vat="23.0">
+		<price gross="2449.30" net="1991.30"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656454"  code="300-0"  weight="10000" >
+			<stock id="1" quantity="8"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="304" vat="23.0">
+		<price gross="1749.30" net="1422.20"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656713"  code="304-0"  weight="5000" >
+			<stock id="1" quantity="15"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="308" vat="23.0">
+		<price gross="4199.30" net="3414.07"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656690"  code="308-0"  weight="15000" >
+			<stock id="1" quantity="3"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="309" vat="23.0">
+		<price gross="2099.30" net="1706.75"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656706"  code="309-0"  weight="10000" >
+			<stock id="1" quantity="19"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="310" vat="23.0">
+		<price gross="629.30" net="511.63"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456171"  code="310-0"  weight="2900" >
+			<stock id="1" quantity="53"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="332" vat="23.0">
+		<price gross="454.30" net="369.35"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656768"  code="332-0"  weight="4800" >
+			<stock id="1" quantity="2"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="335" vat="23.0">
+		<price gross="629.30" net="511.63"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656805"  code="335-0"  weight="3000" >
+			<stock id="1" quantity="34"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="336" vat="23.0">
+		<price gross="699.30" net="568.54"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656799"  code="336-0"  weight="2600" >
+			<stock id="1" quantity="3"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="337" vat="23.0">
+		<price gross="629.30" net="511.63"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656928"  code="337-0"  weight="2900" >
+			<stock id="1" quantity="22"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="340" vat="23.0">
+		<price gross="629.30" net="511.63"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656843"  code="340-0"  weight="4700" >
+			<stock id="1" quantity="34"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="341" vat="23.0">
+		<price gross="629.30" net="511.63"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656850"  code="341-0"  weight="4700" >
+			<stock id="1" quantity="34"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="344" vat="23.0">
+		<price gross="524.30" net="426.26"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656867"  code="344-0"  weight="4000" >
+			<stock id="1" quantity="99"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="346" vat="23.0">
+		<price gross="489.30" net="397.80"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656881"  code="346-0"  weight="3600" >
+			<stock id="1" quantity="23"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="347" vat="23.0">
+		<price gross="699.30" net="568.54"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656935"  code="347-0"  weight="4000" >
+			<stock id="1" quantity="19"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="349" vat="23.0">
+		<price gross="1329.30" net="1080.73"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656829"  code="349-0"  weight="1500" >
+			<stock id="1" quantity="6"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="350" vat="23.0">
+		<price gross="524.30" net="426.26"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656874"  code="350-0"  weight="4000" >
+			<stock id="1" quantity="79"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="356" vat="23.0">
+		<price gross="1889.30" net="1536.02"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656782"  code="356-0"  weight="7000" >
+			<stock id="1" quantity="11"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="359" vat="23.0">
+		<price gross="279.30" net="227.07"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656898"  code="359-0"  weight="1600" >
+			<stock id="1" quantity="13"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="360" vat="23.0">
+		<price gross="454.30" net="369.35"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656904"  code="360-0"  weight="7500" >
+			<stock id="1" quantity="5"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="365" vat="23.0">
+		<price gross="1259.30" net="1023.82"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656980"  code="365-0"  weight="4600" >
+			<stock id="1" quantity="33"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="366" vat="23.0">
+		<price gross="489.30" net="397.80"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456188"  code="366-0"  weight="3600" >
+			<stock id="1" quantity="27"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="367" vat="23.0">
+		<price gross="699.30" net="568.54"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456195"  code="367-0"  weight="4000" >
+			<stock id="1" quantity="9"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="368" vat="23.0">
+		<price gross="1819.30" net="1479.11"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656997 "  code="368-0"  weight="7500" >
+			<stock id="1" quantity="14"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="372" vat="23.0">
+		<price gross="699.30" net="568.54"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656942"  code="372-0"  weight="4000" >
+			<stock id="1" quantity="55"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="373" vat="23.0">
+		<price gross="1049.30" net="853.09"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656959"  code="373-0"  weight="5400" >
+			<stock id="1" quantity="17"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="374" vat="23.0">
+		<price gross="1399.30" net="1137.64"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656966"  code="374-0"  weight="10000" >
+			<stock id="1" quantity="13"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="375" vat="23.0">
+		<price gross="594.30" net="483.17"/>
+		<sizes>
+			<size id="0"  code_producer="5907614656973"  code="375-0"  weight="2500" >
+			<stock id="1" quantity="39"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="380" vat="23.0">
+		<price gross="629.30" net="511.63"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456041"  code="380-0"  weight="8000" >
+			<stock id="1" quantity="15"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="381" vat="23.0">
+		<price gross="3149.30" net="2560.41"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456836"  code="381-0"  weight="20000" >
+			<stock id="1" quantity="13"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="382" vat="23.0">
+		<price gross="1049.30" net="853.09"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456157"  code="382-0"  weight="15000" >
+			<stock id="1" quantity="26"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="386" vat="23.0">
+		<price gross="699.30" net="568.54"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456058"  code="386-0"  weight="9500" >
+			<stock id="1" quantity="8"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="387" vat="23.0">
+		<price gross="699.30" net="568.54"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456065"  code="387-0"  weight="9000" >
+			<stock id="1" quantity="3"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="388" vat="23.0">
+		<price gross="489.30" net="397.80"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456102"  code="388-0"  weight="6000" >
+			<stock id="1" quantity="2"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="390" vat="23.0">
+		<price gross="1539.30" net="1251.46"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456119"  code="390-0"  weight="7000" >
+			<stock id="1" quantity="4"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="391" vat="23.0">
+		<price gross="1889.30" net="1536.02"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456133"  code="391-0"  weight="10000" >
+			<stock id="1" quantity="7"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="392" vat="23.0">
+		<price gross="181.30" net="147.40"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456218"  code="392-0"  weight="32000" >
+			<stock id="1" quantity="10"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="394" vat="23.0">
+		<price gross="258.30" net="210.00"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456232"  code="394-0"  weight="32000" >
+			<stock id="1" quantity="20"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="395" vat="23.0">
+		<price gross="258.30" net="210.00"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456249"  code="395-0"  weight="32000" >
+			<stock id="1" quantity="24"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="396" vat="23.0">
+		<price gross="181.30" net="147.40"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456256"  code="396-0"  weight="32000" >
+			<stock id="1" quantity="21"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="397" vat="23.0">
+		<price gross="181.30" net="147.40"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456263"  code="397-0"  weight="32000" >
+			<stock id="1" quantity="20"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="398" vat="23.0">
+		<price gross="181.30" net="147.40"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456270"  code="398-0"  weight="32000" >
+			<stock id="1" quantity="13"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="399" vat="23.0">
+		<price gross="209.30" net="170.16"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456287"  code="399-0"  weight="32000" >
+			<stock id="1" quantity="23"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="401" vat="23.0">
+		<price gross="209.30" net="170.16"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456300"  code="401-0"  weight="32000" >
+			<stock id="1" quantity="20"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="404" vat="23.0">
+		<price gross="489.30" net="397.80"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456423"  code="404-0"  weight="2500" >
+			<stock id="1" quantity="20"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="405" vat="23.0">
+		<price gross="489.30" net="397.80"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456430"  code="405-0"  weight="2500" >
+			<stock id="1" quantity="20"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="406" vat="23.0">
+		<price gross="1049.30" net="853.09"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456409"  code="406-0"  weight="6800" >
+			<stock id="1" quantity="3"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="407" vat="23.0">
+		<price gross="419.30" net="340.89"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456324"  code="407-0"  weight="4800" >
+			<stock id="1" quantity="18"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="408" vat="23.0">
+		<price gross="419.30" net="340.89"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456331"  code="408-0"  weight="4800" >
+			<stock id="1" quantity="18"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="409" vat="23.0">
+		<price gross="524.30" net="426.26"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456348"  code="409-0"  weight="4800" >
+			<stock id="1" quantity="7"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="410" vat="23.0">
+		<price gross="524.30" net="426.26"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456355"  code="410-0"  weight="4800" >
+			<stock id="1" quantity="4"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="411" vat="23.0">
+		<price gross="559.30" net="454.72"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456362"  code="411-0"  weight="4800" >
+			<stock id="1" quantity="8"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="412" vat="23.0">
+		<price gross="559.30" net="454.72"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456379"  code="412-0"  weight="4800" >
+			<stock id="1" quantity="17"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="413" vat="23.0">
+		<price gross="559.30" net="454.72"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456386"  code="413-0"  weight="4800" >
+			<stock id="1" quantity="10"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="414" vat="23.0">
+		<price gross="559.30" net="454.72"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456393"  code="414-0"  weight="4800" >
+			<stock id="1" quantity="19"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="420" vat="23.0">
+		<price gross="664.30" net="540.08"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456447"  code="420-0"  weight="3500" >
+			<stock id="1" quantity="30"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="421" vat="23.0">
+		<price gross="1084.30" net="881.54"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456454"  code="421-0"  weight="4700" >
+			<stock id="1" quantity="27"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="423" vat="23.0">
+		<price gross="209.30" net="170.16"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456485"  code="423-0"  weight="32000" >
+			<stock id="1" quantity="9"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="424" vat="23.0">
+		<price gross="153.30" net="124.63"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456478"  code="424-0"  weight="32000" >
+			<stock id="1" quantity="13"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="426" vat="23.0">
+		<price gross="349.30" net="283.98"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456508"  code="426-0"  weight="4500" >
+			<stock id="1" quantity="20"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="427" vat="23.0">
+		<price gross="349.30" net="283.98"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456515"  code="427-0"  weight="32000" >
+			<stock id="1" quantity="20"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="428" vat="23.0">
+		<price gross="314.30" net="255.53"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456539"  code="428-0"  weight="32000" >
+			<stock id="1" quantity="16"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="429" vat="23.0">
+		<price gross="314.30" net="255.53"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456522"  code="429-0"  weight="32000" >
+			<stock id="1" quantity="8"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="430" vat="23.0">
+		<price gross="153.30" net="124.63"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456546"  code="430-0"  weight="32000" >
+			<stock id="1" quantity="1"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="432" vat="23.0">
+		<price gross="153.30" net="124.63"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456553"  code="432-0"  weight="32000" >
+			<stock id="1" quantity="17"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="433" vat="23.0">
+		<price gross="531.30" net="431.95"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456577"  code="433-0"  weight="32000" >
+			<stock id="1" quantity="43"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="434" vat="23.0">
+		<price gross="531.30" net="431.95"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456584"  code="434-0"  weight="32000" >
+			<stock id="1" quantity="25"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="435" vat="23.0">
+		<price gross="531.30" net="431.95"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456591"  code="435-0"  weight="32000" >
+			<stock id="1" quantity="10"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="436" vat="23.0">
+		<price gross="531.30" net="431.95"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456607"  code="436-0"  weight="32000" >
+			<stock id="1" quantity="68"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="437" vat="23.0">
+		<price gross="594.30" net="483.17"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456621"  code="437-0"  weight="32000" >
+			<stock id="1" quantity="16"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="438" vat="23.0">
+		<price gross="489.30" net="397.80"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456614"  code="438-0"  weight="32000" >
+			<stock id="1" quantity="52"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="440" vat="23.0">
+		<price gross="279.30" net="227.07"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456638"  code="440-0"  weight="32000" >
+			<stock id="1" quantity="11"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="441" vat="23.0">
+		<price gross="244.30" net="198.62"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456645"  code="441-0"  weight="32000" >
+			<stock id="1" quantity="18"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="443" vat="23.0">
+		<price gross="3849.30" net="3129.51"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456812"  code="443-0"  weight="20000" >
+			<stock id="1" quantity="1"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="445" vat="23.0">
+		<price gross="11199.30" net="9105.12"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456898"  code="445-0"  weight="68" >
+			<stock id="1" quantity="2"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="446" vat="23.0">
+		<price gross="2799.30" net="2275.85"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456935"  code="446-0"  weight="25000" >
+			<stock id="1" quantity="9"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="447" vat="23.0">
+		<price gross="2799.30" net="2275.85"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456928"  code="447-0"  weight="25000" >
+			<stock id="1" quantity="8"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="448" vat="23.0">
+		<price gross="1889.30" net="1536.02"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456942"  code="448-0"  weight="12600" >
+			<stock id="1" quantity="9"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="455" vat="23.0">
+		<price gross="3849.30" net="3129.51"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456799"  code="455-0"  weight="12000" >
+			<stock id="1" quantity="4"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="458" vat="23.0">
+		<price gross="419.30" net="340.89"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456676"  code="458-0"  weight="2000" >
+			<stock id="1" quantity="39"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="459" vat="23.0">
+		<price gross="489.30" net="397.80"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456683"  code="459-0"  weight="3000" >
+			<stock id="1" quantity="46"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="460" vat="23.0">
+		<price gross="1399.30" net="1137.64"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456690"  code="460-0"  weight="9500" >
+			<stock id="1" quantity="13"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="462" vat="23.0">
+		<price gross="699.30" net="568.54"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456713"  code="462-0"  weight="3000" >
+			<stock id="1" quantity="47"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="463" vat="23.0">
+		<price gross="1189.30" net="966.91"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456720"  code="463-0"  weight="2300" >
+			<stock id="1" quantity="24"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="464" vat="23.0">
+		<price gross="699.30" net="568.54"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456782"  code="464-0"  weight="4000" >
+			<stock id="1" quantity="10"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="465" vat="23.0">
+		<price gross="1049.30" net="853.09"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456775"  code="465-0"  weight="5400" >
+			<stock id="1" quantity="12"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="466" vat="23.0">
+		<price gross="1399.30" net="1137.64"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456768"  code="466-0"  weight="10000" >
+			<stock id="1" quantity="15"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="467" vat="23.0">
+		<price gross="559.30" net="454.72"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456737"  code="467-0"  weight="2000" >
+			<stock id="1" quantity="27"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="468" vat="23.0">
+		<price gross="909.30" net="739.27"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456744"  code="468-0"  weight="4500" >
+			<stock id="1" quantity="32"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="469" vat="23.0">
+		<price gross="1539.30" net="1251.46"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456751"  code="469-0"  weight="7000" >
+			<stock id="1" quantity="10"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="470" vat="23.0">
+		<price gross="279.30" net="227.07"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456874"  code="470-0"  weight="2000" >
+			<stock id="1" quantity="52"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="471" vat="23.0">
+		<price gross="2099.30" net="1706.75"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456829"  code="471-0"  weight="11000" >
+			<stock id="1" quantity="4"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="478" vat="23.0">
+		<price gross="1049.30" net="853.09"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456850"  code="478-0"  weight="11000" >
+			<stock id="1" quantity="25"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="479" vat="23.0">
+		<price gross="1049.30" net="853.09"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456843"  code="479-0"  weight="11000" >
+			<stock id="1" quantity="24"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="480" vat="23.0">
+		<price gross="1539.30" net="1251.46"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456867"  code="480-0"  weight="7000" >
+			<stock id="1" quantity="13"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="481" vat="23.0">
+		<price gross="279.30" net="227.07"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456881"  code="481-0"  weight="2000" >
+			<stock id="1" quantity="35"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="482" vat="23.0">
+		<price gross="1959.30" net="1592.93"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456959"  code="482-0"  weight="15500" >
+			<stock id="1" quantity="8"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="483" vat="23.0">
+		<price gross="1049.30" net="853.09"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456966"  code="483-0"  weight="6300" >
+			<stock id="1" quantity="10"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="485" vat="23.0">
+		<price gross="1889.30" net="1536.02"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456980"  code="485-0"  weight="13000" >
+			<stock id="1" quantity="10"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="486" vat="23.0">
+		<price gross="699.30" net="568.54"/>
+		<sizes>
+			<size id="0"  code_producer="5903957456997"  code="486-0"  weight="3300" >
+			<stock id="1" quantity="17"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="487" vat="23.0">
+		<price gross="279.30" net="227.07"/>
+		<sizes>
+			<size id="0"  code_producer="5904323448011"  code="487-0"  weight="6000" >
+			<stock id="1" quantity="7"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="488" vat="23.0">
+		<price gross="629.30" net="511.63"/>
+		<sizes>
+			<size id="0"  code_producer="5904323448004"  code="488-0"  weight="5000" >
+			<stock id="1" quantity="17"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="489" vat="23.0">
+		<price gross="2799.30" net="2275.85"/>
+		<sizes>
+			<size id="0"  code_producer="5904323448035"  code="489-0"  weight="12000" >
+			<stock id="1" quantity="13"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="490" vat="23.0">
+		<price gross="6499.00" net="5283.74"/>
+		<sizes>
+			<size id="0"  code_producer="5904323448042"  code="490-0"  weight="12000" >
+			<stock id="1" quantity="4"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="493" vat="23.0">
+		<price gross="384.30" net="312.44"/>
+		<sizes>
+			<size id="0"  code_producer="5904323448073"  code="493-0"  weight="6000" >
+			<stock id="1" quantity="7"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="494" vat="23.0">
+		<price gross="3149.30" net="2560.41"/>
+		<sizes>
+			<size id="0"  code_producer="5904323448080"  code="494-0"  weight="20000" >
+			<stock id="1" quantity="14"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="506" vat="23.0">
+		<price gross="279.30" net="227.07"/>
+		<sizes>
+			<size id="0"  code="506-0"  weight="32000" >
+			<stock id="1" quantity="4"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="510" vat="23.0">
+		<price gross="1049.30" net="853.09"/>
+		<sizes>
+			<size id="0"  code_producer="5904323448202"  code="510-0"  weight="4700" >
+			<stock id="1" quantity="14"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="511" vat="23.0">
+		<price gross="1049.30" net="853.09"/>
+		<sizes>
+			<size id="0"  code_producer="5904323448219"  code="511-0"  weight="4700" >
+			<stock id="1" quantity="15"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="523" vat="23.0">
+		<price gross="489.30" net="397.80"/>
+		<sizes>
+			<size id="0"  code="523-0"  weight="32000" >
+			<stock id="1" quantity="18"/>
+			</size>
+		</sizes>
+	</product>
+	<product id="524" vat="23.0">
+		<price gross="594.30" net="483.17"/>
+		<sizes>
+			<size id="0"  code="524-0"  weight="32000" >
+			<stock id="1" quantity="12"/>
+			</size>
+		</sizes>
+	</product>
+</products>
+</offer>

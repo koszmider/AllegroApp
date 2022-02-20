@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.e-point.pl/b2b/catalog-item-import"
+	xmlns:cii="http://www.e-point.pl/b2b/catalog-item-import"
+	elementFormDefault="qualified">
+
+	<simpleType name="price">
+		<restriction base="string">
+			<pattern value="[0-9]+(\.[0-9]{0,2})?"></pattern>
+		</restriction>
+	</simpleType>
+
+	<complexType name="property">
+		<simpleContent>
+			<extension base="string">
+				<attribute name="name" type="cii:string100"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+
+	<complexType name="priceRange">
+		<sequence>
+			<element name="priceMin" type="cii:price" nillable="false" />
+			<element name="priceMax" type="cii:price" nillable="false" />
+		</sequence>
+	</complexType>
+
+	<complexType name="priceThreshold">
+		<sequence>
+			<element maxOccurs="unbounded" name="threshold" nillable="false">
+				<complexType>
+					<sequence>
+						<element minOccurs="0" name="quantityMax" type="decimal" />
+						<element name="price" type="cii:price" nillable="false" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+
+	<complexType name="offer">
+		<choice maxOccurs="unbounded">
+			<element name="id" type="string" minOccurs="1" nillable="false" />
+			<element name="name" minOccurs="1" nillable="false" type="cii:string100" />
+			<element name="description" type="string" />
+			<element name="url" type="anyURI" />
+			<element name="image" type="string" />
+			<element name="instock" type="decimal" />
+			<element name="weight" type="string" />
+			<element name="price" type="cii:price" />
+			<element name="priceUnknown" type="anySimpleType" />
+			<element name="priceConstant" type="cii:price" nillable="false" />
+			<element name="priceRange" type="cii:priceRange" nillable="false" />
+			<element name="priceThreshold" type="cii:priceThreshold" />
+			<element name="category" type="string" />
+			<element name="producer" type="string" />
+			<element name="shipping" type="cii:price" />
+			<element name="property" type="cii:property" />
+			<element name="promo" type="string" />
+			<element name="availability" type="string" />
+			<element name="warranty" type="string" />
+			<element name="aleo" type="cii:aleoT" />
+		</choice>
+	</complexType>
+
+	<complexType name="aleoT">
+		<choice maxOccurs="unbounded" minOccurs="0">
+			<element name="description-tab" type="cii:descriptionTabT" />
+			<element name="unit" type="cii:string100" />
+			<element name="box-unit" type="cii:string100" />
+			<element name="box-size" type="positiveInteger" />
+			<element name="min-order" type="positiveInteger" />
+		</choice>
+	</complexType>
+
+	<complexType name="descriptionTabT">
+		<sequence>
+			<element name="name">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="100" />
+					</restriction>				
+				</simpleType>
+			</element>
+			<element name="trait" minOccurs="0" maxOccurs="unbounded">
+				<complexType>
+					<sequence>
+						<element name="name">
+							<simpleType>
+								<restriction base="string">
+									<maxLength value="100" />
+								</restriction>							
+							</simpleType>
+						</element>
+						<element name="value">
+							<simpleType>
+								<restriction base="string">
+									<maxLength value="1000" />
+								</restriction>
+							</simpleType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+
+
+	<element name="nokaut">
+		<complexType>
+			<sequence>
+				<element name="offers">
+					<complexType>
+						<sequence>
+							<element minOccurs="0" maxOccurs="unbounded" name="offer"
+								type="cii:offer" />
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+			<attribute use="optional" name="generator" type="string" />
+			<attribute use="optional" name="ver" type="string" />
+		</complexType>
+	</element>
+
+	<simpleType name="string100">
+	  <restriction base="string">
+	    <maxLength value="100" />
+	  </restriction>
+	</simpleType>
+
+</schema>
+

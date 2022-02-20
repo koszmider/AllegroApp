@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 36, 39.375" name="LajtitViewsDB">
+  <DataContextMoniker Name="/LajtitViewsDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="09386410-b052-4d6a-98f3-251e1040572f" absoluteBounds="0.75, 0.75, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/AccountPaymentsView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c55c1d79-7cca-479c-89fd-625c3ab919fa" absoluteBounds="0.765, 1.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ab4ea758-5ef7-419d-9fbc-b6886f2f47c7" absoluteBounds="3.75, 0.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/TimeTrackerView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="110b57c6-97a6-4a72-a1e4-60b9aae0be47" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="47c8c1fd-bb5b-4a2e-b43e-93673876e883" absoluteBounds="3.75, 4.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/AllegroDeliveryCostTypesWithNumbers" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0b0483d0-71f9-4393-b34f-a7009488fab2" absoluteBounds="3.765, 5.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dc61bcb2-794b-48f5-ad4e-4c5ea1bb2a39" absoluteBounds="6.75, 0.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/AllegroDeliveryCostUniqueFields" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7e5a5675-cd83-4688-ab03-0267323476ab" absoluteBounds="6.765, 1.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e7a948c9-8913-4408-8f80-7c6fddc9f62d" absoluteBounds="6.75, 2.75, 2, 4.6554182942708326">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/BankAccountView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b2836a13-ef3c-478f-b786-7f3b66e82d7b" absoluteBounds="6.765, 3.21, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ed8e8eee-95ae-4bf9-8c11-e5f06a0a9838" absoluteBounds="0.75, 7.75, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/CeneoClicksView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="12a5de6a-8731-45d5-bd4d-d770b63fad77" absoluteBounds="0.765, 8.21, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="86111798-51a9-4e3a-bc53-3bacbd461deb" absoluteBounds="3.75, 8.75, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ComplaintsStats" />
+      <nestedChildShapes>
+        <elementListCompartment Id="94de19d3-5ed3-4aba-befa-8329c60a7c4f" absoluteBounds="3.765, 9.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="654b49fe-9177-4afc-adfb-3bbe3174c389" absoluteBounds="6.75, 8.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ComplaintsView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8849fa44-1ecb-4408-8113-14b832837179" absoluteBounds="6.765, 9.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="308f6dfc-a107-4934-ac87-548aefbd0ec6" absoluteBounds="9.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/CostsView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="58a3e545-78a1-4028-9c40-bc09b4ef6185" absoluteBounds="9.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b42a6b45-24b5-45a6-b7f2-6f8e9a53f62c" absoluteBounds="9.75, 3.75, 2, 5.6169254557291666">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/DpdPaymentsView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5f7120a3-3bb2-409a-ab08-67a16da3a0b3" absoluteBounds="9.765, 4.21, 1.9700000000000002, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0d403a9a-cbf6-448f-83f2-31fdf33e7986" absoluteBounds="9.75, 10.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/FtpFilesOnServerNotInDB" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e9b754b8-6573-4334-8915-7b39a6aefff9" absoluteBounds="9.765, 11.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="169d0d03-5ce5-4a0f-96a2-31aa2d7ede54" absoluteBounds="12.75, 0.75, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/InventoryView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b1e8fd53-6437-4865-bd7e-c2d98be003a1" absoluteBounds="12.765, 1.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="383fe8d9-d34a-496c-819d-0a6d7b18ce52" absoluteBounds="0.75, 12.75, 2, 5.8092268880208309">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/InvoicesManagerView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7d91c7b7-373b-4b88-ac7d-387ddfa12e9b" absoluteBounds="0.765, 13.21, 1.9700000000000002, 5.249226888020833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bcdb8492-8603-4413-b5bd-3f3cfd185df8" absoluteBounds="3.75, 12.75, 2, 6.7707340494791666">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/InvoicesView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="279300e4-96ea-4e53-ba48-787519e436a7" absoluteBounds="3.765, 13.21, 1.9700000000000002, 6.2107340494791661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d9fd29dd-7d32-434e-a18c-d9305b2014be" absoluteBounds="12.75, 5.75, 2, 4.8477197265624987">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/OfferProductsView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0218fab3-6557-43bd-9212-c2fb33df8212" absoluteBounds="12.765, 6.21, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ac7e16fa-c9b4-4b97-a59d-a350308b3c05" absoluteBounds="6.75, 12.75, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/OrderClientsForSearch" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0c8d2c38-3210-4243-a16c-f2bbc55c2794" absoluteBounds="6.765, 13.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="502b1643-7c7f-4e02-b19a-352dba846a3c" absoluteBounds="9.75, 12.75, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/OrderCostView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1f1c3b98-86c5-4757-80b6-27a6e90f04e8" absoluteBounds="9.765, 13.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="72308c74-aae0-48d5-a945-1c17fc8bfc80" absoluteBounds="12.75, 11.75, 2, 5.6169254557291666">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/OrderInpostView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8ecd3d9d-927b-4ec9-8c8a-b5cbf6ac75fc" absoluteBounds="12.765, 12.21, 1.9700000000000002, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b502ca77-5919-4cb3-9faf-b1384f16de74" absoluteBounds="15.75, 0.75, 2, 7.5399397786458318">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/OrderInvoiceCorrection" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8c234705-08d1-4fc0-bbff-d7d514949883" absoluteBounds="15.765, 1.21, 1.9700000000000002, 6.979939778645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="746d03a0-8c8a-4554-86ff-a35b24d6b2f8" absoluteBounds="6.75, 15.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/OrderLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="81ae2212-1ab9-4df0-941d-0dfdda0a54f1" absoluteBounds="6.765, 16.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3270c44a-d898-4e73-8d7f-23d376ad0689" absoluteBounds="15.75, 9.75, 2, 2.9247054036458309">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/OrderNotificationsView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="40f27dc1-abce-40fc-abfa-1d80515579a4" absoluteBounds="15.765, 10.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="40df41ee-f859-46b4-b95c-c9b42560f79c" absoluteBounds="15.75, 13.75, 2, 4.8477197265625005">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/OrderPaymentsView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c50964d5-791c-42d8-8914-b4c0a1607b10" absoluteBounds="15.765, 14.21, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7efa8056-25e8-46a2-bf27-508ed5fb003b" absoluteBounds="18.75, 0.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/OrderProductCostView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6df1ee35-00e7-437e-8d31-809aeb899fe3" absoluteBounds="18.765, 1.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="01c576d6-3da1-46dd-b624-3c3a496ac277" absoluteBounds="18.75, 4.75, 2, 3.1170068359375005">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/OrderProductsForWarehouseView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="35817a80-6d5b-423c-9c1a-3d389d638591" absoluteBounds="18.765, 5.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="99264240-3b05-45c3-bfa3-36b05b56054d" absoluteBounds="6.75, 18.75, 2, 7.3476383463541666">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/OrderProductsView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e329a8f9-b6e6-4ccb-a8da-c3654ee19f94" absoluteBounds="6.765, 19.21, 1.9700000000000002, 6.7876383463541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="96914cd4-8836-4098-b17d-1037ebbc7337" absoluteBounds="9.75, 18.75, 2, 3.6939111328125023">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/OrderShippingView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0e05f5bb-6c5e-43fb-981e-cd58630d86ad" absoluteBounds="9.765, 19.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="206e410d-ec00-43a8-8343-758d198acde7" absoluteBounds="18.75, 16.75, 2, 2.9247054036458309">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/OrdersIncomeView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="32247d05-769a-4908-8f4d-9e8845498fa9" absoluteBounds="18.765, 17.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1e0184bb-86e3-4f68-a2cb-f9ef51e17627" absoluteBounds="12.75, 19.75, 2, 3.6939111328125023">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/OrdersNotPaidButSentView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ded3ab5e-9cbb-40e7-83ea-011a91fd4a7e" absoluteBounds="12.765, 20.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="04f39d42-000d-41b4-91c8-12cf19113b51" absoluteBounds="0.75, 20.75, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/OrdersProcessingReport" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b0cf84a9-b991-4253-a67e-b0e9c4bedd17" absoluteBounds="0.765, 21.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="617045c3-d37b-44fc-a911-e64900329bc4" absoluteBounds="15.75, 20.75, 2, 3.5016097005208309">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/OrdersReadyForSent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="15fcc825-5418-4ea0-ae28-fa819d5a12b4" absoluteBounds="15.765, 21.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1380a1a9-84d2-4796-8c29-2153cc986d0f" absoluteBounds="18.75, 20.75, 2, 4.0785139973958309">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/OrderStats" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3fea1ce1-6109-47aa-82aa-076b3d131700" absoluteBounds="18.765, 21.21, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="18f709d9-0f67-4e09-bca2-411a27bc846d" absoluteBounds="21.75, 0.75, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/OrderStatsByDay" />
+      <nestedChildShapes>
+        <elementListCompartment Id="40b9f020-decd-46dc-a886-cca25c051d95" absoluteBounds="21.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d4cef170-6f35-4549-9685-38a2dd7a85b0" absoluteBounds="21.75, 3.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/OrdersUprocessed" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1ed471e8-f2c8-4293-ad51-db127e9b4d05" absoluteBounds="21.765, 4.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="11605f62-800f-4770-98d1-053b3c8b8f5b" absoluteBounds="21.75, 6.75, 2, 7.1553369140624987">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/OrdersView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1e8dd59a-a1d4-40b3-a31f-3ee089d7d978" absoluteBounds="21.765, 7.21, 1.9700000000000002, 6.5953369140625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="002717fd-3cbc-41f6-874c-7e62afcfec14" absoluteBounds="21.75, 14.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/OrdersWithoutReceipt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="08c33380-c874-44e3-b014-35a0ac9366bb" absoluteBounds="21.765, 15.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="561f54fb-382f-4fc5-9ea0-d2504cf6ebdd" absoluteBounds="21.75, 17.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/OrdersWithReceipt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a3fb2403-eb6b-48cb-87ee-51573a3cbd3c" absoluteBounds="21.765, 18.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d9755395-f658-4789-8787-a79d372935d1" absoluteBounds="21.75, 19.75, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/OrderTransactiongNumber" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5310254d-9bb8-4505-9385-d4ac864654a9" absoluteBounds="21.765, 20.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5dc02481-f326-4449-8f5f-b5f2a9eedd1c" absoluteBounds="0.75, 23.75, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/PaczkomatyView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0c8c179a-fc5d-4acc-8f5c-48ce0e744b9d" absoluteBounds="0.765, 24.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7d1ef80e-8bba-46f3-a02a-80407bcd8915" absoluteBounds="21.75, 23.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogAllegroCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="433c2ea3-1654-4313-b8df-3816c29225e6" absoluteBounds="21.765, 24.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="37a6b39b-65b3-4099-b19d-50cfbe301041" absoluteBounds="24.75, 0.75, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogAllegroHistoryView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="56803549-2925-4e22-8720-f8059d77fc69" absoluteBounds="24.765, 1.21, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="56919044-029a-436b-b17f-51e84a8a8589" absoluteBounds="24.75, 6.75, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogAllegroItemActivatingView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="34f9494d-b0b1-4493-94eb-5bf86f38173f" absoluteBounds="24.765, 7.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5073279a-4cd0-4271-97f8-5beea29c49fb" absoluteBounds="9.75, 24.75, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogAllegroItemErrorsView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4347de10-c871-4cba-b664-135483e2f842" absoluteBounds="9.765, 25.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="37e3f256-407e-405c-ad03-3704d1acfb04" absoluteBounds="24.75, 10.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogAllegroItemsActive" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e0b0c8e8-137c-4185-bc58-438779e14e33" absoluteBounds="24.765, 11.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="93524eec-8421-4675-97f0-46a7cd9ba6a0" absoluteBounds="24.75, 13.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogAllegroItemsDraftView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="44f2fdc9-1f9a-4972-8547-6839d2f4c4b7" absoluteBounds="24.765, 14.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dbf5f308-ae2d-44b6-8822-2013027ad57e" absoluteBounds="24.75, 17.75, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogAllegroItemsToReActivateView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="825503f7-9a7d-4737-9178-a4c4cfa94cb6" absoluteBounds="24.765, 18.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a22e2ae1-ea97-420a-abc0-c61c20a7d5ce" absoluteBounds="24.75, 20.75, 2, 5.4246240234375023">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogAllegroItemsView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="13d95783-d5c6-4630-8e04-807ff1822043" absoluteBounds="24.765, 21.21, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="34f3c677-910f-4e79-bcd2-8273d6326851" absoluteBounds="0.75, 25.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogAllegroItemsWithoutProducsView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9bdb4536-7eba-4255-bf10-aceb65cdea43" absoluteBounds="0.765, 26.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7672d7f0-1a71-49e5-a844-567a2a2d1a47" absoluteBounds="12.75, 25.75, 2, 7.5399397786458309">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogAllegroShopProductView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="515302dc-9792-41c9-b18f-b5fd71df1442" absoluteBounds="12.765, 26.21, 1.9700000000000002, 6.979939778645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2fc46d61-a32c-4133-aede-09d54f199d24" absoluteBounds="15.75, 25.75, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogAttributeGroupDict" />
+      <nestedChildShapes>
+        <elementListCompartment Id="98fa6760-ad93-4808-8041-69e2da7eb05b" absoluteBounds="15.765, 26.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a21f3654-9cd1-48f2-98c9-ab467529e2f1" absoluteBounds="18.75, 26.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogAttributesCompleted" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0e76e3f3-9028-41d6-a38f-ab67f6c7c1f2" absoluteBounds="18.765, 27.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a2de7769-448d-4cce-9007-84ea92bf88c5" absoluteBounds="27.75, 0.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogAttributesView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b3f34cd8-c34b-4963-9d85-1f4471bcaee6" absoluteBounds="27.765, 1.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7cedf132-b156-4fdb-b64f-caafa479a985" absoluteBounds="0.75, 27.75, 2, 3.6939111328125023">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogDeliveryInvoiceView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4c574219-6944-4a63-977c-0c447221172b" absoluteBounds="0.765, 28.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b99e99c8-f657-496d-8d2e-6b05f2dea62c" absoluteBounds="3.75, 27.75, 2, 5.2323225911458309">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogDeliveryManagerView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fc3a45a6-fa5e-4113-a2ac-c4d0729c6577" absoluteBounds="3.765, 28.21, 1.9700000000000002, 4.672322591145833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ea582d2f-bcd1-4b54-a42b-367e12ed7eee" absoluteBounds="27.75, 4.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogDeliveryStatsView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8ffa3de8-b0ac-406e-9cc2-bf411d87a550" absoluteBounds="27.765, 5.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8a89ae50-f6d9-4bd6-80c8-b6ce29e6a461" absoluteBounds="6.75, 27.75, 2, 4.0785139973958309">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogDeliveryView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7d6a5649-c06b-49fa-8958-da08a9162884" absoluteBounds="6.765, 28.21, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2c86d5ec-d3cb-45df-a9c3-1ba81d0731b4" absoluteBounds="27.75, 7.75, 2, 3.5016097005208318">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogDeliveryWarehouseView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="876f6a83-620b-4804-bbc9-a1c06bf22e3a" absoluteBounds="27.765, 8.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="23f57b29-3f9a-40ee-998e-d8e50388a2d2" absoluteBounds="27.75, 12.75, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogDuplicates" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b79346e7-e5be-4bce-b4d0-81d7e3ab492f" absoluteBounds="27.765, 13.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a4611a6c-71f4-467a-aa4c-4b3a51e1f57a" absoluteBounds="27.75, 15.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogFamilyGroupView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7dae1595-d082-4a74-843a-79411168e602" absoluteBounds="27.765, 16.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7eab426e-3e20-4bd9-8d0d-16a260805dc2" absoluteBounds="27.75, 19.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogFileSpecificationView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="63affb4a-4156-4375-9045-cdcf898b9b86" absoluteBounds="27.765, 20.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bd4b26e7-a951-485e-9896-03a6fdea8e8f" absoluteBounds="21.75, 27.75, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogFileView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4ea6d07d-0eed-49a3-a232-993f060f238f" absoluteBounds="21.765, 28.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="915c2368-bb61-4e31-8ff1-5004b5b626e5" absoluteBounds="27.75, 23.75, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogGroupView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4e142ec9-7f74-4824-a836-cf7c9e601bc1" absoluteBounds="27.765, 24.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3e486cad-07f9-4079-8ccb-3b3aaaf0a9c0" absoluteBounds="24.75, 27.75, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogImageThumb" />
+      <nestedChildShapes>
+        <elementListCompartment Id="80171c8f-acb8-4f88-b852-94891e1de10d" absoluteBounds="24.765, 28.21, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c9bd5ac8-66ac-4f25-b8da-4ed2b0d891ee" absoluteBounds="27.75, 26.75, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogMixerAttributeGroupRandomView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b2963002-fd48-4325-818c-019b3bd724b1" absoluteBounds="27.765, 27.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f7a4b072-9aa8-4e00-9d3a-4b69fe48cfee" absoluteBounds="15.75, 29.75, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogOnStock" />
+      <nestedChildShapes>
+        <elementListCompartment Id="afa215e5-5d14-4b01-a647-7eab73c0508a" absoluteBounds="15.765, 30.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d17dd2f7-0cbd-4f47-a947-ce8558d06deb" absoluteBounds="30.75, 0.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogPricesView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d6fd8a42-b332-415d-a160-8a065413e16a" absoluteBounds="30.765, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5c000165-80bf-42e2-a5e7-d595abdf6cd7" absoluteBounds="30.75, 4.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogProductTypeView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a13365ac-f73f-4da2-b625-f264de044c3c" absoluteBounds="30.765, 5.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="894b5270-ea34-4b77-be85-d3743e19edcb" absoluteBounds="30.75, 6.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogStatusView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3ef6a475-bcba-4cd8-b274-5b02aaf6f071" absoluteBounds="30.765, 7.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1a1fd376-8e13-4c3c-90aa-cd8485d15ca5" absoluteBounds="30.75, 10.75, 2, 3.6939111328124987">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogSubProductsView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="44746990-108f-49f3-8120-a87b3b4cffeb" absoluteBounds="30.765, 11.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4278c00d-9d8c-4592-b85e-5133cd07cfe2" absoluteBounds="30.75, 15.75, 2, 8.3091455078125023">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a037cf98-33d0-4c06-8b47-259ab272e4bd" absoluteBounds="30.765, 16.21, 1.9700000000000002, 7.7491455078125009" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="377779e7-e335-46d6-a0f2-8e2023757282" absoluteBounds="30.75, 25.75, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogWithoutAllegroProductView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd409e70-d3fa-465f-a5b3-fb7b4c5663df" absoluteBounds="30.765, 26.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6fe7d4d4-7cce-4b2d-9d0b-1e5de561329f" absoluteBounds="30.75, 27.75, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductOrderDeliveryView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6214f310-bdec-46ce-8510-8d3e631d3593" absoluteBounds="30.765, 28.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="61e58330-1e33-4ea2-974d-c06a8e96c6ef" absoluteBounds="18.75, 31.75, 2, 5.040021158854163">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductsCostsView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="476998b1-8f77-4629-8004-858238216bed" absoluteBounds="18.765, 32.21, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b915384e-b597-4ce1-9781-7cbe8d8a6bae" absoluteBounds="27.75, 31.75, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/PromotionProductView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1d1ebbc5-2444-4941-8515-2c789c169bbf" absoluteBounds="27.765, 32.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4b3b2e45-486d-46d9-9f25-550d6155599b" absoluteBounds="30.75, 31.75, 2, 7.347638346354163">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ShippingExport" />
+      <nestedChildShapes>
+        <elementListCompartment Id="135d3bd0-4baa-40f6-b23f-66f76a3f7a7a" absoluteBounds="30.765, 32.21, 1.9700000000000002, 6.7876383463541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="39489a82-0c66-4db7-9a1b-a2ee565485a8" absoluteBounds="6.75, 32.75, 2, 1.5785953776041595">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ShopCategoryManagerShopView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b2d9d68f-d035-4787-b5b6-1b4234607169" absoluteBounds="6.765, 33.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="213573c9-cef6-414d-a476-1ed072e7ab87" absoluteBounds="33.75, 0.75, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ShopCategoryView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="214f8408-876b-4042-a309-81fc34abea26" absoluteBounds="33.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="171d2083-0725-4d86-8851-aee0bb2dcb3a" absoluteBounds="0.75, 33.75, 2, 2.1554996744791595">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ShopColumnTypeShopTypeView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4d09eb75-5f62-47f4-89fc-7fefc650355f" absoluteBounds="0.765, 34.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3e4077aa-97a1-4e23-9b57-eced4b68a6a5" absoluteBounds="33.75, 3.75, 2, 4.0785139973958326">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ShopPaymentTrackerView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c0a18013-1fa9-4eb6-9fa0-f8ad24977ba5" absoluteBounds="33.765, 4.21, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1d17dbc7-f064-48be-b6ef-a2a8934315ab" absoluteBounds="33.75, 8.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ShopUpdateColumnsView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="072477c3-7827-424e-9020-34886a71a19d" absoluteBounds="33.765, 9.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d9fa4a68-d3f6-4735-bd2e-9f421f7c9f9b" absoluteBounds="33.75, 10.75, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/SupplierProductCatalogNotReadyView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d094975a-b9ea-4abf-93f2-c741521d5866" absoluteBounds="33.765, 11.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a55db646-f54f-42f7-8614-3e6299fc55e6" absoluteBounds="33.75, 13.75, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/TableLogView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="913f1b0c-ea9b-4662-93a0-4efe16faa773" absoluteBounds="33.765, 14.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1f9e769c-caa9-46b3-8cf8-40b6aa228c86" absoluteBounds="33.75, 17.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/TaskTrackerStatusHistoryView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c08055b3-bae2-4878-a2d7-ac6538b5cd28" absoluteBounds="33.765, 18.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0cd29448-7483-4d70-9306-c81708d22b3f" absoluteBounds="33.75, 20.75, 2, 3.5016097005208309">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/TaskTrackerView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a8c4c9fa-3830-4e2f-913e-6607f65742f4" absoluteBounds="33.765, 21.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="64d62115-7c18-4b5b-b5d4-05d881054a59" absoluteBounds="21.75, 33.75, 2, 1.5785953776041595">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/TimeTrackerMonthView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="195f3eb8-78cb-4617-8c0a-0b28da4b0bce" absoluteBounds="21.765, 34.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="73a7dc13-bca1-4bda-83ce-6cc2044d1c95" absoluteBounds="18, 2.5, 2, 6.9630354817708326">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/OrderProductsWaitingForDelivery" />
+      <nestedChildShapes>
+        <elementListCompartment Id="99fd3942-50ce-4a83-95dd-b59445734842" absoluteBounds="18.015, 2.96, 1.9700000000000002, 6.403035481770833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="749b581e-5b7a-42f5-b57f-920fb545eafa" absoluteBounds="5.625, 0.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogMissingDescriptions" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c81c0d30-cc72-4868-98fc-d37d4792c136" absoluteBounds="5.64, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

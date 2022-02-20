@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{83D8135D-39E4-4A9D-A68A-368B45CCCADC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LajtIt.Dal</RootNamespace>
+    <AssemblyName>LajtIt.Dal</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\inetpub\wwwlajtit\LajtitBatch_Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\..\inetpub\wwwlajtit\LajtitBatch\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release2|AnyCPU'">
+    <OutputPath>bin\Release2\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release2|x86'">
+    <OutputPath>bin\x86\Release2\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LinqToExcel, Version=1.11.0.0, Culture=neutral, PublicKeyToken=9c8ea65a58f03f1f, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\LinqToExcel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Remotion, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Remotion.Data.Linq, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.Data.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Remotion.Interfaces, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountingHelper.cs" />
+    <Compile Include="AccountingHelper2.cs" />
+    <Compile Include="Accounting\Accounting.Company.cs" />
+    <Compile Include="Accounting\Accounting.Costs.cs" />
+    <Compile Include="AdminUserHelper.cs" />
+    <Compile Include="AllegroDB.cs">
+      <DependentUpon>AllegroDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="AllegroDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AllegroDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="AllegroDBLinqSet.cs">
+      <DependentUpon>AllegroDBLinqSet.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="AllegroDBLinqSet.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AllegroDBLinqSet.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="AllegroRestHelper.cs" />
+    <Compile Include="Allegro\AllegroHelper.Payments.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="FtpHelper.cs" />
+    <Compile Include="InventoryHelper.cs" />
+    <Compile Include="KingHomeHelper.cs" />
+    <Compile Include="LajtitViewsDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LajtitViewsDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="LightPrestigeHelper.cs" />
+    <Compile Include="MixerHelper.cs" />
+    <Compile Include="OfferHelper.cs" />
+    <Compile Include="Orders\OrdersHelper.Receipt.cs" />
+    <Compile Include="Orders\OrdersHelper.cs" />
+    <Compile Include="ProductCatalogGroupHelper.cs" />
+    <Compile Include="ProductCatalog\ProductCatalogHelper.Allegro.cs" />
+    <Compile Include="ProductCatalog\ProductCatalogHelper.cs" />
+    <Compile Include="ProductCatalog\ProductCatalogHelper.Attributes.cs" />
+    <Compile Include="ProductCatalog\ProductCatalogHelper.Shop.cs" />
+    <Compile Include="ProductCatalog\ProductCatalogHelper.Product.cs" />
+    <Compile Include="ProductCatalog\ProductCatalogHelper.Delivery.cs" />
+    <Compile Include="ProductCatalog\ProductCatalogHelper.Supplier.cs" />
+    <Compile Include="ProductFileImportHelper.cs" />
+    <Compile Include="AllegroScan.cs" />
+    <Compile Include="AllegroScan.Orders.cs" />
+    <Compile Include="AllegroStatHelper.cs" />
+    <Compile Include="HelperDBLinqSet.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HelperDBLinqSet.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="PromotionHelper.cs" />
+    <Compile Include="SettingsHelper.cs" />
+    <Compile Include="Shops\ShopHelper.cs" />
+    <Compile Include="ShopUpdateHelper.cs" />
+    <Compile Include="SolluxHelper.cs" />
+    <Compile Include="SystemAccessControl.cs" />
+    <Compile Include="TaskTrackerHelper.cs" />
+    <Compile Include="TimeTrackerHelper.cs" />
+    <Compile Include="PaczkomatyHelper.cs" />
+    <Compile Include="ProductCatalogHelper.cs" />
+    <Compile Include="DalHelper.cs" />
+    <Compile Include="ErrorHandler.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="OrderHelper.cs" />
+    <Compile Include="ProductCatalogImportHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ShopHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AllegroDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>AllegroDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AllegroDB.dbml.layout">
+      <DependentUpon>AllegroDB.dbml</DependentUpon>
+    </None>
+    <None Include="AllegroDBLinqSet.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>AllegroDBLinqSet.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AllegroDBLinqSet.dbml.layout">
+      <DependentUpon>AllegroDBLinqSet.dbml</DependentUpon>
+    </None>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CatalogItemImport.xsd" />
+    <None Include="HelperDBLinqSet.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>HelperDBLinqSet.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HelperDBLinqSet.dbml.layout">
+      <DependentUpon>HelperDBLinqSet.dbml</DependentUpon>
+    </None>
+    <None Include="LajtitViewsDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>LajtitViewsDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LajtitViewsDB.dbml.layout">
+      <DependentUpon>LajtitViewsDB.dbml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
