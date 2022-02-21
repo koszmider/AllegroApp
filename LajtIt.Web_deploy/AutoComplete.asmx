@@ -1,1 +1,0 @@
-﻿<%@ WebService Language="C#" CodeBehind="AutoComplete.asmx.cs" Class="LajtIt.Web.AutoCompleteExample.AutoComplete" %>

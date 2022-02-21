@@ -33,7 +33,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\..\..\..\inetpub\wwwlajtit\wwwlajtit_Debug\</OutputPath>
+    <OutputPath>bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -399,7 +399,15 @@
     <Content Include="WebApiTestPage.aspx" />
     <Content Include="LajtitImport.xls" />
     <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\Profile1.pubxml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\PublishProfiles\Profile2.pubxml" />
+    <None Include="Properties\PublishProfiles\Profile3.pubxml">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="Scripts\jquery-ui-1.12.1.custom\package.json" />
     <None Include="Scripts\uploader.fla" />
     <Content Include="AllegroItems.aspx" />
