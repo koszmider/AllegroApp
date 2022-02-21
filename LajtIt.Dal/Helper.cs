@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Configuration;
 using System.ComponentModel;
 using System.Text.RegularExpressions;
+using System.IO;
 
 namespace LajtIt.Dal
 {
