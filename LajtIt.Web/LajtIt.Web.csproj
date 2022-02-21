@@ -33,7 +33,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\..\..\..\inetpub\wwwlajtit\</OutputPath>
+    <OutputPath>..\..\..\..\..\..\inetpub\wwwlajtit\wwwlajtit_Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -95,7 +95,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\LajtIt.Web_deploy\</OutputPath>
+    <OutputPath>..\..\..\..\..\..\inetpub\wwwlajtit\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -442,6 +442,7 @@
     <Content Include="LajtitImport.xls" />
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-ui-1.12.1.custom\package.json" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\uploader.fla" />
     <Content Include="AllegroItems.aspx" />
     <Content Include="AllegroTest.aspx" />
@@ -1623,7 +1624,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />
