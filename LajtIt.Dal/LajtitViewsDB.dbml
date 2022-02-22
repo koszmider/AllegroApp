@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LajtitProd" Class="LajtitViewsDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.0.107\sqlexpress;Initial Catalog=LajtitProd;Integrated Security=False; User ID=admin; Password=edingedu" SettingsObjectName="LajtIt.Dal.Properties.Settings" SettingsPropertyName="LajtitProdConnectionString3" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=SERWER;Initial Catalog=LajtitProd;Integrated Security=True" SettingsObjectName="LajtIt.Dal.Properties.Settings" SettingsPropertyName="LajtitProdConnectionString3" Provider="System.Data.SqlClient" />
   <Table Name="dbo.AccountPaymentsView" Member="AccountPaymentsView">
     <Type Name="AccountPaymentsView">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />

@@ -5,24 +5,24 @@
     <Setting Name="LajtitProdHelperConnectionString3" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=192.168.0.107;Initial Catalog=LajtitProdHelper;Integrated Security=False; User ID=admin; Password=edingedu&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=SERWER;Initial Catalog=LajtitProdHelper;Integrated Security=True;Connection Timeout=3600&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=192.168.0.107;Initial Catalog=LajtitProdHelper;Integrated Security=False; User ID=admin; Password=edingedu</Value>
+      <Value Profile="(Default)">Data Source=SERWER;Initial Catalog=LajtitProdHelper;Integrated Security=True;Connection Timeout=3600</Value>
     </Setting>
     <Setting Name="LajtitProdAllegroConnectionString3" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=192.168.0.107;Initial Catalog=LajtitProdAllegro;Integrated Security=False; User ID=admin; Password=edingedu&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=SERWER;Initial Catalog=LajtitProdAllegro;Integrated Security=True;Connection Timeout=3600&lt;/ConnectionString&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=192.168.0.107;Initial Catalog=LajtitProdAllegro;Integrated Security=False; User ID=admin; Password=edingedu</Value>
+      <Value Profile="(Default)">Data Source=SERWER;Initial Catalog=LajtitProdAllegro;Integrated Security=True;Connection Timeout=3600</Value>
     </Setting>
     <Setting Name="LajtitProdConnectionString3" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=192.168.0.107;Initial Catalog=LajtitProd;Integrated Security=False; User ID=admin; Password=edingedu&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=SERWER;Initial Catalog=LajtitProd;Integrated Security=True;Connection Timeout=3600&lt;/ConnectionString&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=192.168.0.107;Initial Catalog=LajtitProd;Integrated Security=False; User ID=admin; Password=edingedu</Value>
+      <Value Profile="(Default)">Data Source=SERWER;Initial Catalog=LajtitProd;Integrated Security=True;Connection Timeout=3600</Value>
     </Setting>
   </Settings>
 </SettingsFile>
