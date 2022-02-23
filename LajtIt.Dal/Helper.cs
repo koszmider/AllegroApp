@@ -350,8 +350,8 @@ namespace LajtIt.Dal
         public static void SetEnv()
         {
 
-            if ( Environment.UserName == "lajtit_www_user"
-                || Environment.UserName == "wwwlajtit"
+            if ( Environment.UserName == "wwwlajtit"
+//                || Environment.UserName == "Tomek"
                 || Environment.UserName.ToLower() == "administrator")
                 Dal.Helper.Env = Dal.Helper.EnvirotmentEnum.Prod;
 
