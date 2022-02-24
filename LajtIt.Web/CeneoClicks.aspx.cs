@@ -20,20 +20,22 @@ namespace LajtIt.Web
         private decimal totalSell = 0;
         public class CeneoXlsFile
         {
-            [ExcelColumn("Kategoria główna")]
+            [ExcelColumn("Kategoria glowna")]
             public string KategoriaGlowna { get; set; }
-            [ExcelColumn("Kategoria najniższa")]
+            [ExcelColumn("Kategoria najnizsza")]
             public string KategoriaNajnizsza { get; set; }
             [ExcelColumn("Produkt")]
             public string Produkt { get; set; }
-            [ExcelColumn("ID produktu w sklepie")]
+            [ExcelColumn("Id produktu w sklepie")]
             public string IdProduktu { get; set; }
             [ExcelColumn("Data")]
             public DateTime Data { get; set; }
-            [ExcelColumn("Stawka przekilku")]
+            [ExcelColumn("Stawka przekliku")]
             public decimal StawkaPrzekliku { get; set; }
             [ExcelColumn("Stawka podbicia")]
             public decimal? StawkaPodbicia { get; set; }
+            [ExcelColumn("Koszt przekliku razem")]
+            public decimal? KosztPrzeklikuRazem { get; set; }
             [ExcelColumn("Zajmowana pozycja")]
             public int? ZajmowanaPozycja { get; set; }
             [ExcelColumn("IP")]
@@ -125,7 +127,7 @@ namespace LajtIt.Web
         {
             ExcelQueryFactory eqf = new ExcelQueryFactory(saveLocation.ToString());// @"C:\Users\Jacek\Documents\Visual Studio 2015\Projects\AllegroApp\LajtIt.Web\Files\ImportFiles\Maytoni_201810021244.xlsx");// @"C:\Users\Jacek\Documents\Visual Studio 2015\Projects\AllegroApp\LajtIt.Web\Files\ImportFiles\LajtitImport.xls");
             //eqf.WorksheetNoHeader();
-            var r = from p in eqf.WorksheetRange<CeneoXlsFile>("A9", "K60000", 0) select p;
+            var r = from p in eqf.WorksheetRange<CeneoXlsFile>("A5", "K90000", 0) select p;
 
             var rr = r.ToList();
 

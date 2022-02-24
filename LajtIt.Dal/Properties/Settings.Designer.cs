@@ -28,9 +28,9 @@ namespace LajtIt.Dal.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SERWER;Initial Catalog=LajtitProdHelper;Integrated Security=True;Conn" +
             "ection Timeout=3600")]
-        public string LajtitProdHelperConnectionString {
+        public string LajtitProdHelperConnectionString3 {
             get {
-                return ((string)(this["LajtitProdHelperConnectionString"]));
+                return ((string)(this["LajtitProdHelperConnectionString3"]));
             }
         }
         
@@ -39,39 +39,6 @@ namespace LajtIt.Dal.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SERWER;Initial Catalog=LajtitProdAllegro;Integrated Security=True;Con" +
             "nection Timeout=3600")]
-        public string LajtitProdAllegroConnectionString {
-            get {
-                return ((string)(this["LajtitProdAllegroConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SERWER;Initial Catalog=LajtitProd;Integrated Security=True;Connection" +
-            " Timeout=3600")]
-        public string LajtitProdConnectionString {
-            get {
-                return ((string)(this["LajtitProdConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.107;Initial Catalog=LajtitProd;Integrated Security=False; U" +
-            "ser ID=admin; Password=edingedu")]
-        public string LajtitProdConnectionString3 {
-            get {
-                return ((string)(this["LajtitProdConnectionString3"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.107;Initial Catalog=LajtitProdAllegro;Integrated Security=F" +
-            "alse; User ID=admin; Password=edingedu")]
         public string LajtitProdAllegroConnectionString3 {
             get {
                 return ((string)(this["LajtitProdAllegroConnectionString3"]));
@@ -81,11 +48,44 @@ namespace LajtIt.Dal.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SERWER;Initial Catalog=LajtitProd;Integrated Security=True;Connection" +
+            " Timeout=3600")]
+        public string LajtitProdConnectionString3 {
+            get {
+                return ((string)(this["LajtitProdConnectionString3"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.107;Initial Catalog=LajtitProd;Integrated Security=False; U" +
+            "ser ID=admin; Password=edingedu")]
+        public string LajtitProdConnectionString5 {
+            get {
+                return ((string)(this["LajtitProdConnectionString5"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.107;Initial Catalog=LajtitProdAllegro;Integrated Security=F" +
+            "alse; User ID=admin; Password=edingedu")]
+        public string LajtitProdAllegroConnectionString5 {
+            get {
+                return ((string)(this["LajtitProdAllegroConnectionString5"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.107;Initial Catalog=LajtitProdHelper;Integrated Security=Fa" +
             "lse; User ID=admin; Password=edingedu")]
-        public string LajtitProdHelperConnectionString3 {
+        public string LajtitProdHelperConnectionString5 {
             get {
-                return ((string)(this["LajtitProdHelperConnectionString3"]));
+                return ((string)(this["LajtitProdHelperConnectionString5"]));
             }
         }
     }
