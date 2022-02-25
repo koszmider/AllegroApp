@@ -178,10 +178,10 @@ namespace LajtIt.Dal
                     {
                         productToUpdate.IsAvailable = pc.IsAvailable;
                         productToUpdate.SupplierQuantity = pc.SupplierQuantity;
-
+                        productToUpdate.IsDiscontinued = pc.IsDiscontinued;
                         //   if (pc.Ean != null && productToUpdate.Ean == null)
                         //      productToUpdate.Ean = pc.Ean;
-                        productToUpdate.Code = pc.Code;
+                        // productToUpdate.Code = pc.Code;
                     }
 
                     try

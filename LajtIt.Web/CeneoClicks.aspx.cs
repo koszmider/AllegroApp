@@ -127,7 +127,7 @@ namespace LajtIt.Web
         {
             ExcelQueryFactory eqf = new ExcelQueryFactory(saveLocation.ToString());// @"C:\Users\Jacek\Documents\Visual Studio 2015\Projects\AllegroApp\LajtIt.Web\Files\ImportFiles\Maytoni_201810021244.xlsx");// @"C:\Users\Jacek\Documents\Visual Studio 2015\Projects\AllegroApp\LajtIt.Web\Files\ImportFiles\LajtitImport.xls");
             //eqf.WorksheetNoHeader();
-            var r = from p in eqf.WorksheetRange<CeneoXlsFile>("A5", "K90000", 0) select p;
+            var r = from p in eqf.WorksheetRange<CeneoXlsFile>("A5", "K60000", 0) select p;
 
             var rr = r.ToList();
 

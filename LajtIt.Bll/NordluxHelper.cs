@@ -22,44 +22,31 @@ namespace LajtIt.Bll
         {
             public string Code { get; set; }
             public string Ean { get; set; }
-            public string Stock { get; set; }
-            public bool IsAvailable
-            {
-                get
-                {
-
-                    if (!Stock.Equals("Not in stock"))
-                        return Stock.Trim() != "0";
-                    else
-                        return false;
-                }
-            }
+            public bool IsDiscontinued { get; set; }
+            public bool IsAvailable { get; set; }
+            public int? SupplierQuantity { get; set; }
         }
 
-        public sealed class FooMap1 : ClassMap<NordluxImport>
+        public class NxdiscontinuedXlsxFile
         {
-            public FooMap1()
-            {
-                Map(m => m.Code).Index(0);
-                Map(m => m.Ean).Index(1);
-                Map(m => m.Stock).Index(6);
-            }
-        }
-
-
-        public class Int32Converter<T> : DefaultTypeConverter
-        {
-            public override object ConvertFromString(string text, IReaderRow row, MemberMapData memberMapData)
-            {
-                return Int32.Parse(text, System.Globalization.CultureInfo.InvariantCulture);
-            }
-        }
-
-        public class NordluxXlsxFile1
-        {
-            [ExcelColumn("Item no.")]
+            [ExcelColumn("No#")]
             public string Code { get; set; }
-            [ExcelColumn("EAN no.")]
+            [ExcelColumn("Description - English")]
+            public string Name { get; set; }
+            [ExcelColumn("Fase")]
+            public string Fase { get; set; }
+            [ExcelColumn("EAN")]
+            public string Ean { get; set; }
+            [ExcelColumn("DB no#")]
+            public string DbCode { get; set; }
+
+        }
+
+        public class NordluxNAPXlsxFile
+        {
+            [ExcelColumn("Item no#")]
+            public string Code { get; set; }
+            [ExcelColumn("EAN no#")]
             public string Ean { get; set; }
             [ExcelColumn("Description")]
             public string Name { get; set; }
@@ -74,100 +61,96 @@ namespace LajtIt.Bll
 
         }
 
-        public class NordluxXlsxFile
+        public class NordluxPriceXlsxFile
         {
-            [ExcelColumn("Kod produktu/Product Code")]
-            public string KodProduktu { get; set; }
-            [ExcelColumn("Lokalizacja")]
-            public string Lokalizacja { get; set; }
-            [ExcelColumn("Ilość / QTY in Stock")]
-            public int Ilosc { get; set; }
-            [ExcelColumn("uwagi")]
-            public string uwagi { get; set; }
-
+            [ExcelColumn("Model")]
+            public string Model { get; set; }
+            [ExcelColumn("Type")]
+            public string Type { get; set; }
+            [ExcelColumn("Material")]
+            public string Material { get; set; }
+            [ExcelColumn("Color")]
+            public string Color { get; set; }
+            [ExcelColumn("Number")]
+            public string Number { get; set; }
+            [ExcelColumn("EAN")]
+            public string EAN { get; set; }
+            [ExcelColumn("Package")]
+            public string Package { get; set; }
+            [ExcelColumn("RRP €")]
+            public string RRP { get; set; }
+            [ExcelColumn("DETAL RRP PLN 10/2021")]
+            public Decimal Detal { get; set; }
+            [ExcelColumn("RRP PLN NETTO ")]
+            public Decimal RRPPLNNETTO { get; set; }
+            [ExcelColumn("CENA ZAKUPU PLN NETTO")]
+            public Decimal CENAZAKUPUPLNNETTO { get; set; }
 
         }
 
+        private string[] files = new string[3];
+        private List<NordluxImport>[] objects = new List<NordluxImport>[3];
 
-        public new void LoadData<T>()
+        public NordluxHelper()
         {
-            Dal.OrderHelper oh = new Dal.OrderHelper();
-            Dal.SettingsHelper sh = new Dal.SettingsHelper();
-
-
-            Dal.Supplier supplier = oh.GetSupplier(SupplierId);
-            string path = ConfigurationManager.AppSettings[String.Format("ProductImportFilesDirectory_{0}", Dal.Helper.Env.ToString())];
-
-            string fileName = String.Format(path, String.Format("{0}_{1:yyyyMMMddHHmmss}.xlsx", supplier.Name, DateTime.Now));
-            try
+            for (int i = 0; i < files.Count(); i++)
             {
-                WebClient client = new WebClient();
-
-                client.DownloadFile(/*supplier.ImportUrl*/@"https://lightingbrands-my.sharepoint.com/personal/export_lighting-brands_com/_layouts/15/download.aspx?UniqueId=9b065570%2Dc6d4%2D4619%2D836a%2Dbb3cd2f28576", fileName);
+                files[i] = "";
+                objects[i] = null;
             }
-            catch (Exception ex)
-            {
-                Bll.ErrorHandler.SendError(ex, String.Format("Błąd wczytywania pliku: {0} ", supplier.Name));
-
-            }
-
-
-            ProcessData(fileName);
         }
 
-        public void ProcessData(string fileName)
-        {
-            ExcelQueryFactory eqf = new ExcelQueryFactory(fileName);
+        //private void ProcessPriceListData(string fileName)
+        //{
+        //    ExcelQueryFactory eqf = new ExcelQueryFactory(fileName);
 
 
-            var r = from p in eqf.WorksheetRange<NordluxXlsxFile>("A1", "D1500", 0) select p;
-
-
-
-            var rr = r.ToList();
-
-            rr = rr.Where(x => x.KodProduktu != null).ToList();
-
-            if (rr.Count == 0)
-            {
-                Bll.ErrorHandler.SendEmail("Plik Nordlux nie zwraca danych. Sprawdź jego strukturę");
-                return;
-            }
+        //    var r = from p in eqf.WorksheetRange<NordluxXlsxFile>("A6", "K60000", 0) select p;
 
 
 
+        //    var rr = r.ToList();
 
-            List<Dal.ProductCatalog> products = new List<Dal.ProductCatalog>();
+        //    rr = rr.Where(x => x.Number != null).ToList();
 
-            foreach (NordluxXlsxFile max in rr)
-            {
-                Dal.ProductCatalog pc = Dal.ProductCatalogHelper.GetProductCatalog(SupplierId, max.KodProduktu, max.Ilosc > 0);
-
-                pc.SupplierQuantity = max.Ilosc;
-
-                pc.IsAvailable = pc.SupplierQuantity > 0;
-
-                if (max.KodProduktu != null)
-                    max.KodProduktu = max.KodProduktu.Trim();
-
-                pc.Code = max.KodProduktu;
-
-                products.Add(pc);
-            }
-
-            Dal.ProductCatalogHelper pch = new Dal.ProductCatalogHelper();
+        //    if (rr.Count == 0)
+        //    {
+        //        Bll.ErrorHandler.SendEmail("Plik Nordlux nie zwraca danych. Sprawdź jego strukturę");
+        //        return;
+        //    }
 
 
 
-            Dal.OrderHelper oh = new Dal.OrderHelper();
+
+        //    List<Dal.ProductCatalog> products = new List<Dal.ProductCatalog>();
+
+        //    foreach (NordluxXlsxFile max in rr)
+        //    {
+        //        Dal.ProductCatalog pc = Dal.ProductCatalogHelper.GetProductCatalog(SupplierId, max.Number, true);
+
+        //        pc.SupplierQuantity = null;
+
+        //        if (max.Number != null)
+        //            max.Number = max.Number.Trim();
+
+        //        pc.Code = max.Number;
+
+        //        products.Add(pc);
+        //    }
+
+        //    Dal.ProductCatalogHelper pch = new Dal.ProductCatalogHelper();
 
 
-            pch.SetProductCatalogUpdateNordlux(products);
 
-            oh.SetSupplierImportDate(SupplierId, DateTime.Now);
+        //    Dal.OrderHelper oh = new Dal.OrderHelper();
 
 
-        }
+        //    pch.SetProductCatalogUpdateNordlux(products);
+
+        //    oh.SetSupplierImportDate(SupplierId, DateTime.Now);
+
+
+        //}
 
         public void ReadMailbox()
         {
@@ -205,35 +188,111 @@ namespace LajtIt.Bll
                         //    break;
 
 
-
                         if (oMail.Headers.Subject.Contains("Nordlux"))
                         {
-
 
                             foreach (var attachment in oMail.FindAllAttachments())
                             {
                                 string filePath = Path.Combine(@"C:\Attachment", attachment.FileName);
+
                                 if (attachment.FileName.EndsWith(".xlsx"))
                                 {
                                     string path = ConfigurationManager.AppSettings[String.Format("ProductImportFilesDirectory_{0}", Dal.Helper.Env.ToString())];
+                                    string fileName = "";
+                                    int fileKind = -1;
+                                    if (files[0].Equals("") && (attachment.FileName.Contains("Nordlux Price")))// || attachment.FileName.Contains("DFTP Price")))
+                                    {
+                                        fileKind = 0;
+                                        fileName = String.Format("Nordlux_Price_{0:yyyyMMddHHmm}.xlsx", DateTime.Now);
+                                        files[fileKind] = String.Format(path, fileName);
+                                    }
+                                    else if (files[1].Equals("") && attachment.FileName.Contains("Nx discontinued"))
+                                    {
+                                        fileKind = 1;
+                                        fileName = String.Format("Nordlux_Discontinued_{0:yyyyMMddHHmm}.xlsx", DateTime.Now);
+                                        files[fileKind] = String.Format(path, fileName);
+                                    }
+                                    else if (files[2].Equals("") && attachment.FileName.Contains("Nordlux NAP"))
+                                    {
+                                        fileKind = 2;
+                                        fileName = String.Format("Nordlux_NAP_{0:yyyyMMddHHmm}.xlsx", DateTime.Now);
+                                        files[fileKind] = String.Format(path, fileName);
+                                    }
 
-                                    string fileName = String.Format("Nordlux_{0:yyyyMMddHHmm}.xlsx", DateTime.Now);
-                                    string saveLocation = String.Format(path, fileName);
+                                    if (fileKind >= 0)
+                                    {
+                                        FileStream Stream = new FileStream(files[fileKind], FileMode.Create);
+                                        BinaryWriter BinaryStream = new BinaryWriter(Stream);
+                                        BinaryStream.Write(attachment.Body);
+                                        BinaryStream.Close();
 
-                                    FileStream Stream = new FileStream(saveLocation, FileMode.Create);
-                                    BinaryWriter BinaryStream = new BinaryWriter(Stream);
-                                    BinaryStream.Write(attachment.Body);
-                                    BinaryStream.Close();
+                                        if (files[fileKind].Equals("")) break;
 
-                                    ProcessFile(saveLocation);
-                                    break;
+                                        switch (fileKind)
+                                        {
+                                            case 0:
+                                                {
+                                                    ExcelQueryFactory eqf = new ExcelQueryFactory(files[fileKind]);
+                                                    var r = from p in eqf.WorksheetRange<NordluxPriceXlsxFile>("A6", "K60000", 0) select p;
+                                                    var rr = r.Select(x => new NordluxImport()
+                                                    {
+                                                        Ean = x.EAN,
+                                                        Code = x.Number,
+                                                        IsAvailable = true,
+                                                        IsDiscontinued = false,
+                                                        SupplierQuantity = null
+                                                    }
+                                                    ).ToList();
+                                                    objects[fileKind] = rr;
+                                                }
+                                                break;
+
+                                            case 1:
+                                                {
+                                                    ExcelQueryFactory eqf = new ExcelQueryFactory(files[fileKind]);
+                                                    var r = from p in eqf.WorksheetRange<NxdiscontinuedXlsxFile>("A2", "E60000", 0) select p;
+                                                    var rr = r.Select(x => new NordluxImport()
+                                                    {
+                                                        Ean = x.Ean,
+                                                        Code = x.Code,
+                                                        IsAvailable = false,
+                                                        IsDiscontinued = true,
+                                                        SupplierQuantity = null
+                                                    }
+                                                    ).ToList();
+                                                    objects[fileKind] = rr;
+                                                }
+                                                break;
+
+                                            case 2:
+                                                {
+                                                    ExcelQueryFactory eqf = new ExcelQueryFactory(files[fileKind]);
+                                                    var r = from p in eqf.WorksheetRange<NordluxNAPXlsxFile>("A1", "H60000", 0) select p;
+                                                    var rr = r.Select(x => new NordluxImport()
+                                                    {
+                                                        Ean = x.Ean,
+                                                        Code = x.Code,
+                                                        IsAvailable = false,
+                                                        IsDiscontinued = false,
+                                                        SupplierQuantity = null
+                                                    }
+                                                    ).ToList();
+                                                    objects[fileKind] = rr;
+                                                }
+                                                break;
+                                        }
+
+                                    }
+
                                 }
                             }
 
+                            if (!files[0].Equals("") && !files[1].Equals("") && !files[2].Equals(""))
+                                break;
                         }
-
-
                     }
+
+                    ProcessDatas();
                 }
                 Console.WriteLine("Completed!");
             }
@@ -243,48 +302,69 @@ namespace LajtIt.Bll
             }
 
         }
-        
-        private void ProcessFile(string saveLocation)
+
+        private void ProcessDatas()
         {
-            ExcelQueryFactory eqf = new ExcelQueryFactory(saveLocation);
-
-            var r = from p in eqf.Worksheet<NordluxXlsxFile1>(0) select p;
-
-            var rr = r.Select(x => new NordluxImport()
-            {
-                Stock = x.Stock,
-                Ean = x.Ean,
-                Code = x.Code
-            }
-            ).ToList();
-
-            ProcessData(rr);
-
-        }
-
-        public void ProcessData(List<NordluxImport> obj)
-        {
-
             Dal.ProductCatalogHelper pch = new Dal.ProductCatalogHelper();
             List<Dal.ProductCatalog> products = pch.GetProductCatalogBySupplier(new int[] { SupplierId })
                 .ToList();
+
+            NordluxImport o0 = null;
+            NordluxImport o1 = null;
+            NordluxImport o2 = null;
 
             foreach (Dal.ProductCatalog pc in products)
             {
                 try
                 {
-                    var r = obj.Where(x => x.Ean == pc.Ean).FirstOrDefault();
+                    pc.SupplierQuantity = null;
 
-                    if (r == null)
+                    if (objects[0] != null)
                     {
-                        pc.IsAvailable = true;
-                        pc.SupplierQuantity = null;
+                        o0 = objects[0].Where(x => x.Ean == pc.Ean).FirstOrDefault();
+                        if (o0 == null)
+                        {
+                            pc.IsDiscontinued = true;
+                            if (pc.LeftQuantity > 0)
+                                pc.IsAvailable = true;
+                            else
+                                pc.IsAvailable = false;
+                        }
+                        else
+                        {
+                            pc.IsDiscontinued = false;
+                            pc.IsAvailable = true;
+                        }
                     }
-                    else
+
+                    if (objects[1] != null)
                     {
-                        pc.SupplierQuantity = null;
-                        pc.IsAvailable = false;
+                        o1 = objects[1].Where(x => x.Ean == pc.Ean).FirstOrDefault();
+                        if (o1 != null)
+                        {
+                            pc.IsDiscontinued = true;
+                            if (pc.LeftQuantity > 0)
+                                pc.IsAvailable = true;
+                            else
+                                pc.IsAvailable = false;
+                        }
                     }
+
+                    if (objects[2] != null)
+                    {
+                        o2 = objects[2].Where(x => x.Ean == pc.Ean).FirstOrDefault();
+                        if (o2 != null)
+                        {
+                            pc.IsAvailable = false;
+                        }
+                        else
+                        {
+                            if (pc.IsDiscontinued == false)
+                                pc.IsAvailable = true;
+                        }
+                    }
+
+                    
                 }
                 catch (Exception ex)
                 {

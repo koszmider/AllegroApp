@@ -297,8 +297,7 @@ namespace LajtIt.Bll
         {
             LajtIt.Bll.NordluxHelper ah = new NordluxHelper();
             ah.SupplierId = 61;
-            ah.LoadData<Bll.CeneoHelper.Offers>();
-            //ah.ReadMailbox();
+            ah.ReadMailbox();
         }
 
         public void MaxligthImport()
