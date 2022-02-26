@@ -573,7 +573,7 @@ namespace LajtIt.Dal
     #endregion
 		
 		public AllegroDBLinqSetDataContext() : 
-				base(global::LajtIt.Dal.Properties.Settings.Default.LajtitProdConnectionString3, mappingSource)
+				base(global::LajtIt.Dal.Properties.Settings.Default.LajtitProdConnectionString5, mappingSource)
 		{
 			OnCreated();
 		}

@@ -88,8 +88,8 @@ namespace LajtIt.Bll
 
         }
 
-        private string[] files = new string[3];
-        private List<NordluxImport>[] objects = new List<NordluxImport>[3];
+        private string[] files = new string[4];
+        private List<NordluxImport>[] objects = new List<NordluxImport>[4];
 
         public NordluxHelper()
         {
@@ -200,10 +200,16 @@ namespace LajtIt.Bll
                                     string path = ConfigurationManager.AppSettings[String.Format("ProductImportFilesDirectory_{0}", Dal.Helper.Env.ToString())];
                                     string fileName = "";
                                     int fileKind = -1;
-                                    if (files[0].Equals("") && (attachment.FileName.Contains("Nordlux Price")))// || attachment.FileName.Contains("DFTP Price")))
+                                    if (files[0].Equals("") && attachment.FileName.Contains("Nordlux Price"))
                                     {
                                         fileKind = 0;
                                         fileName = String.Format("Nordlux_Price_{0:yyyyMMddHHmm}.xlsx", DateTime.Now);
+                                        files[fileKind] = String.Format(path, fileName);
+                                    }
+                                    else if (files[0].Equals("") && attachment.FileName.Contains("DFTP Price"))
+                                    {
+                                        fileKind = 3;
+                                        fileName = String.Format("DFTP_Price_{0:yyyyMMddHHmm}.xlsx", DateTime.Now);
                                         files[fileKind] = String.Format(path, fileName);
                                     }
                                     else if (files[1].Equals("") && attachment.FileName.Contains("Nx discontinued"))
@@ -231,6 +237,7 @@ namespace LajtIt.Bll
                                         switch (fileKind)
                                         {
                                             case 0:
+                                            case 3:
                                                 {
                                                     ExcelQueryFactory eqf = new ExcelQueryFactory(files[fileKind]);
                                                     var r = from p in eqf.WorksheetRange<NordluxPriceXlsxFile>("A6", "K60000", 0) select p;
@@ -287,7 +294,7 @@ namespace LajtIt.Bll
                                 }
                             }
 
-                            if (!files[0].Equals("") && !files[1].Equals("") && !files[2].Equals(""))
+                            if (!files[0].Equals("") && !files[1].Equals("") && !files[2].Equals("") && !files[3].Equals(""))
                                 break;
                         }
                     }
@@ -312,12 +319,31 @@ namespace LajtIt.Bll
             NordluxImport o0 = null;
             NordluxImport o1 = null;
             NordluxImport o2 = null;
+            NordluxImport o3 = null;
 
             foreach (Dal.ProductCatalog pc in products)
             {
                 try
                 {
                     pc.SupplierQuantity = null;
+
+                    if (objects[3] != null)
+                    {
+                        o3 = objects[3].Where(x => x.Ean == pc.Ean).FirstOrDefault();
+                        if (o3 == null)
+                        {
+                            pc.IsDiscontinued = true;
+                            if (pc.LeftQuantity > 0)
+                                pc.IsAvailable = true;
+                            else
+                                pc.IsAvailable = false;
+                        }
+                        else
+                        {
+                            pc.IsDiscontinued = false;
+                            pc.IsAvailable = true;
+                        }
+                    }
 
                     if (objects[0] != null)
                     {

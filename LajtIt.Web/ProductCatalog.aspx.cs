@@ -13,9 +13,7 @@ namespace LajtIt.Web
 {
     [Developer("52a8955b-ca2a-45d1-8c06-2147ee115a0e")]
     public partial class ProductCatalog : LajtitPage
-    { 
-
-
+    {
         private int total = 0;
         private int totalQuantity = 0;
         private bool canChangeImages = false;
@@ -526,12 +524,6 @@ namespace LajtIt.Web
       
         private void SetSettings(int[] productIds)
         {
-            //if (ddlSettingsStatus.SelectedIndex == 0 || lsbxSettings.SelectedIndex == -1)
-            //{
-            //    DisplayMessage("Należy wybrać źródło zmiany ustawień oraz status");
-            //    return;
-            //} 
-
             Dal.ProductCatalog pc = new Dal.ProductCatalog();
 
             
