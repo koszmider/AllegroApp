@@ -42,7 +42,7 @@ namespace LajtIt.Bll
         {
             Dal.OrderHelper oh = new Dal.OrderHelper();
             Dal.Order order = Dal.DbHelper.Orders.GetOrder(orderId);
-
+            
             Dal.Invoice invoice = order.Invoice;
 
             if (invoice == null)
@@ -141,6 +141,7 @@ namespace LajtIt.Bll
         {
             Dal.OrderHelper oh = new Dal.OrderHelper();
             Dal.Order order = Dal.DbHelper.Orders.GetOrder(orderId);
+            Dal.OrdersView ov = Dal.DbHelper.Orders.GetOrderView(orderId);
             Dal.Invoice invoice = order.Invoice;
             
             if (invoice == null  )
@@ -149,7 +150,7 @@ namespace LajtIt.Bll
 
             //throw new NotImplementedException();
             if (checkPayments)
-                if (((order.AmountPaid == 0 || order.AmountBalance < 0) /*&& order.ShippingType.PayOnDelivery == false*/))
+                if (((order.AmountPaid == 0 || order.AmountBalance < 0) && ov.PayOnDelivery != true /*&& order.ShippingType.PayOnDelivery == false*/))
                     return false;
 
 

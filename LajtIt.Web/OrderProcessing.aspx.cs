@@ -200,7 +200,8 @@ namespace LajtIt.Web
 
             gvUserOrders.DataSource = orderProducts.Where(x=>x.Quantity>0 && 
             (x.OrderProductStatusId == (int)Dal.Helper.OrderProductStatus.New||
-            x.OrderProductStatusId == (int)Dal.Helper.OrderProductStatus.Ready));
+            x.OrderProductStatusId == (int)Dal.Helper.OrderProductStatus.Ready||
+            x.OrderProductStatusId == (int)Dal.Helper.OrderProductStatus.Ordered));
             gvUserOrders.DataBind();
 
             lblOrderStatus.Text = order.OrderStatus.StatusName;

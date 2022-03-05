@@ -669,6 +669,11 @@ namespace LajtIt.Bll
             Bll.ProductFileImportHelper ph = new ProductFileImportHelper();
             ph.SetImportProductImagesAdHoc(supplierId, dir);
         }
+        public void SetImportProductImagesByCodeAddNotExisting(string actingUser, int supplierId, string dir)
+        {
+            Bll.ProductFileImportHelper ph = new ProductFileImportHelper();
+            ph.ImagesByCodeAddNotExisting(supplierId, dir);
+        }
         public void SetImportProductImagesByCatalog(string actingUser, int supplierId, string dir)
         {
             Bll.ProductFileImportHelper ph = new ProductFileImportHelper();

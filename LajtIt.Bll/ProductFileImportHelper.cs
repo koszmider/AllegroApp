@@ -280,6 +280,60 @@ namespace LajtIt.Bll
             }
         }
 
+        public void ImagesByCodeAddNotExisting(int supplierId, string dir)
+        {
+            //string dir = @"C:\Users\Jacek\Desktop\MATERIAŁY ON_LINE 26.04.2018\ZDJĘCIA";
+            string[] extensions = new[] { ".jpg", ".bmp", ".png", ".jpeg" };
+
+            FileInfo[] files = Directory.GetFiles(dir, "*.*", SearchOption.AllDirectories)
+                .Select(x => new FileInfo(x))
+                .Where(f => extensions.Contains(f.Extension.ToLower()))
+                //.Where(f=>f.FullName.Contains("E9371-37-LED-BL"))
+                .ToArray();
+
+
+            Dal.ProductCatalogHelper pch = new Dal.ProductCatalogHelper();
+            List<Dal.ProductCatalog> products = pch.GetProductCatalogBySupplier(new int[] { supplierId })
+                //.Where(x => x.ImageId == null)
+                .ToList();
+
+            foreach (ProductCatalog pc in products)
+            {
+                try
+
+                {
+                    string code = pc.Code.Split('.').Last();
+                    string codes = pc.Code.Replace("/", "_");
+                    //codes = codes.Replace("_", "/");
+
+                    FileInfo[] filesForProduct = files.Where(x => Path.GetFileNameWithoutExtension(x.FullName).Contains(code)
+                    || Path.GetFileNameWithoutExtension(x.FullName).Contains(codes)
+                    ).ToArray();
+
+                    List<Dal.ProductCatalogImage> images = pch.GetProductCatalogImages(pc.ProductCatalogId);
+
+                    foreach (FileInfo fi in filesForProduct)
+                    {
+                        string fileName = String.Format("{0}{1}", Guid.NewGuid(), System.IO.Path.GetExtension(fi.FullName));
+                        string orginalFileName = System.IO.Path.GetFileName(fi.FullName);
+                        Dal.ProductCatalogImage image = images.Where(x => x.OriginalFileName.Equals(orginalFileName)).FirstOrDefault();
+                        if (image == null)
+                        {
+                            string saveLocation = String.Format(ConfigurationManager.AppSettings[String.Format("ProductCatalogImagesDirectory_{0}", Dal.Helper.Env.ToString())], fileName);
+
+                            File.Copy(fi.FullName, saveLocation);
+                            Bll.ProductCatalogHelper.SaveFile(new int[] { pc.ProductCatalogId }, saveLocation, fileName, orginalFileName);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Bll.ErrorHandler.LogError(ex, String.Format("PId: {0}", pc.ProductCatalogId));
+
+                }
+            }
+        }
+
         public void ImagesByCodeByCatalog(int supplierId, string dir)
         {
             //string dir = @"C:\Users\Jacek\Desktop\MATERIAŁY ON_LINE 26.04.2018\ZDJĘCIA";
@@ -352,7 +406,7 @@ namespace LajtIt.Bll
                 string code = pc.Code;
                 if (code.Equals(""))
                     continue;
-
+                
                 string dirFound = null;
                 foreach (string s in dirs)
                 {

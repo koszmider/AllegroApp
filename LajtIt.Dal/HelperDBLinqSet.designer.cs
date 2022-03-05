@@ -42,7 +42,7 @@ namespace LajtIt.Dal
     #endregion
 		
 		public HelperDBLinqSetDataContext() : 
-				base(global::LajtIt.Dal.Properties.Settings.Default.LajtitProdHelperConnectionString5, mappingSource)
+				base(global::LajtIt.Dal.Properties.Settings.Default.LajtitProdHelperConnectionString3, mappingSource)
 		{
 			OnCreated();
 		}

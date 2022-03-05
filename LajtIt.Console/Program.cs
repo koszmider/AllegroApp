@@ -563,6 +563,9 @@ namespace LajtIt.Console
                     case "IMPORT_IMAGES_ADHOC": // ok 
                         allegroScan.SetImportProductImagesAdHoc("Auto", Convert.ToInt32(args[1]), args[2]);
                         break;
+                    case "IMPORT_IMAGES_BY_CODE_NOT_EXISTING": // ok 
+                        allegroScan.SetImportProductImagesByCodeAddNotExisting("Auto", Convert.ToInt32(args[1]), args[2]);
+                        break;
                     case "IMPORT_IMAGES_BY_CATALOG": // ok
                         int s = Convert.ToInt32(args[1]);
                         string d = args[2];

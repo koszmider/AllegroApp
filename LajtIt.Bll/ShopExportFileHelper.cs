@@ -460,8 +460,25 @@ namespace LajtIt.Bll
             //products = products.Where(x => x.SupplierId == 2).ToList();
 
             //Dal.OrderHelper oh = new Dal.OrderHelper();
+            //List<string> lines = File.ReadAllLines("c:\\Users\\Tomek\\Desktop\\Weryfikacja czasu produkty z indywidualnym czasem dostawy_nowy1.csv").ToList();
+            //using (StreamWriter outputFile = new StreamWriter(Path.Combine("c:\\Users\\Tomek\\Desktop\\", "out.csv")))
+            //{
+            //    foreach (string line in lines)
+            //    {
+            //        List<string> elements = line.Split(';').ToList();
+            //        ShopFnResult product = products.Where(x => elements[3].Equals(x.Ean)).FirstOrDefault();
+            //        if (product != null)
+            //        {
+            //            if (product.pcDeliveryId != null)
+            //                product.DeliveryId = (int)product.pcDeliveryId;
+            //            string outString = elements[0] + ";" + String.Format("{0}", product.DeliveryId) + ";" + elements[2] + ";" + "\"[\"\"" + elements[3] + "\"\"]\"";
+            //            outputFile.WriteLine(outString);
+            //        }
+            //    }
+            //    outputFile.Close();
+            //}
 
-            //using (StreamWriter outputFile = new StreamWriter(Path.Combine("", "WriteLines.txt")))
+            //using (StreamWriter outputFile = new StreamWriter(Path.Combine("c:\\Users\\Tomek\\Desktop\\", "out.csv")))
             //{
             //    outputFile.WriteLine("vendorPartNumber;deliveryDays\n");
             //    foreach (ShopFnResult product in products)

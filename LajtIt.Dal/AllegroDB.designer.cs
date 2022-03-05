@@ -114,7 +114,7 @@ namespace LajtIt.Dal
     #endregion
 		
 		public AllegroDBDataContext() : 
-				base(global::LajtIt.Dal.Properties.Settings.Default.LajtitProdAllegroConnectionString5, mappingSource)
+				base(global::LajtIt.Dal.Properties.Settings.Default.LajtitProdAllegroConnectionString3, mappingSource)
 		{
 			OnCreated();
 		}
