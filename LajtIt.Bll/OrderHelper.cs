@@ -358,8 +358,8 @@ namespace LajtIt.Bll
 
             email.ToRoles = new List<Dal.Helper.SystemRole>
             {
-                Dal.Helper.SystemRole.Manager,
-                Dal.Helper.SystemRole.Customer
+                Dal.Helper.SystemRole.Manager//,
+                //Dal.Helper.SystemRole.Customer
             };
 
             emailSender.SendEmail(email);
