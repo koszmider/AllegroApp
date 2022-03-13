@@ -32,12 +32,6 @@ namespace LajtIt.Dal
     partial void OnCreated();
     #endregion
 		
-		public LajtitViewsDBDataContext() : 
-				base(global::LajtIt.Dal.Properties.Settings.Default.LajtitProdConnectionString3, mappingSource)
-		{
-			OnCreated();
-		}
-		
 		public LajtitViewsDBDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
@@ -747,6 +741,14 @@ namespace LajtIt.Dal
 			get
 			{
 				return this.GetTable<ProductCatalogMissingDescriptions>();
+			}
+		}
+		
+		public System.Data.Linq.Table<ProductCatalogDeliveryWarehouseViewWithPrice> ProductCatalogDeliveryWarehouseViewWithPrice
+		{
+			get
+			{
+				return this.GetTable<ProductCatalogDeliveryWarehouseViewWithPrice>();
 			}
 		}
 	}
@@ -20438,6 +20440,285 @@ namespace LajtIt.Dal
 				if ((this._ProductCatalogId != value))
 				{
 					this._ProductCatalogId = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ProductCatalogDeliveryWarehouseViewWithPrice")]
+	public partial class ProductCatalogDeliveryWarehouseViewWithPrice
+	{
+		
+		private int _DeliveryId;
+		
+		private int _ProductCatalogId;
+		
+		private int _Quantity;
+		
+		private decimal _Price;
+		
+		private int _WarehouseId;
+		
+		private System.Nullable<int> _OrderId;
+		
+		private System.Nullable<System.DateTime> _InsertDate;
+		
+		private string _InsertUser;
+		
+		private System.Nullable<int> _OrderStatusId;
+		
+		private string _StatusName;
+		
+		private string _WarehouseName;
+		
+		private string _ProductName;
+		
+		private string _Code;
+		
+		private string _SupplierName;
+		
+		private int _SupplierOwnerId;
+		
+		public ProductCatalogDeliveryWarehouseViewWithPrice()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeliveryId", DbType="Int NOT NULL")]
+		public int DeliveryId
+		{
+			get
+			{
+				return this._DeliveryId;
+			}
+			set
+			{
+				if ((this._DeliveryId != value))
+				{
+					this._DeliveryId = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductCatalogId", DbType="Int NOT NULL")]
+		public int ProductCatalogId
+		{
+			get
+			{
+				return this._ProductCatalogId;
+			}
+			set
+			{
+				if ((this._ProductCatalogId != value))
+				{
+					this._ProductCatalogId = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Quantity", DbType="Int NOT NULL")]
+		public int Quantity
+		{
+			get
+			{
+				return this._Quantity;
+			}
+			set
+			{
+				if ((this._Quantity != value))
+				{
+					this._Quantity = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Price", DbType="Decimal(18,2) NOT NULL")]
+		public decimal Price
+		{
+			get
+			{
+				return this._Price;
+			}
+			set
+			{
+				if ((this._Price != value))
+				{
+					this._Price = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_WarehouseId", DbType="Int NOT NULL")]
+		public int WarehouseId
+		{
+			get
+			{
+				return this._WarehouseId;
+			}
+			set
+			{
+				if ((this._WarehouseId != value))
+				{
+					this._WarehouseId = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OrderId", DbType="Int")]
+		public System.Nullable<int> OrderId
+		{
+			get
+			{
+				return this._OrderId;
+			}
+			set
+			{
+				if ((this._OrderId != value))
+				{
+					this._OrderId = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InsertDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> InsertDate
+		{
+			get
+			{
+				return this._InsertDate;
+			}
+			set
+			{
+				if ((this._InsertDate != value))
+				{
+					this._InsertDate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InsertUser", DbType="NVarChar(50)")]
+		public string InsertUser
+		{
+			get
+			{
+				return this._InsertUser;
+			}
+			set
+			{
+				if ((this._InsertUser != value))
+				{
+					this._InsertUser = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OrderStatusId", DbType="Int")]
+		public System.Nullable<int> OrderStatusId
+		{
+			get
+			{
+				return this._OrderStatusId;
+			}
+			set
+			{
+				if ((this._OrderStatusId != value))
+				{
+					this._OrderStatusId = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StatusName", DbType="NVarChar(50)")]
+		public string StatusName
+		{
+			get
+			{
+				return this._StatusName;
+			}
+			set
+			{
+				if ((this._StatusName != value))
+				{
+					this._StatusName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_WarehouseName", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string WarehouseName
+		{
+			get
+			{
+				return this._WarehouseName;
+			}
+			set
+			{
+				if ((this._WarehouseName != value))
+				{
+					this._WarehouseName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductName", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string ProductName
+		{
+			get
+			{
+				return this._ProductName;
+			}
+			set
+			{
+				if ((this._ProductName != value))
+				{
+					this._ProductName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Code", DbType="NVarChar(254)")]
+		public string Code
+		{
+			get
+			{
+				return this._Code;
+			}
+			set
+			{
+				if ((this._Code != value))
+				{
+					this._Code = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SupplierName", DbType="NVarChar(256) NOT NULL", CanBeNull=false)]
+		public string SupplierName
+		{
+			get
+			{
+				return this._SupplierName;
+			}
+			set
+			{
+				if ((this._SupplierName != value))
+				{
+					this._SupplierName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SupplierOwnerId", DbType="Int NOT NULL")]
+		public int SupplierOwnerId
+		{
+			get
+			{
+				return this._SupplierOwnerId;
+			}
+			set
+			{
+				if ((this._SupplierOwnerId != value))
+				{
+					this._SupplierOwnerId = value;
 				}
 			}
 		}

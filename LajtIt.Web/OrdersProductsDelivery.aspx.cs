@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
 namespace LajtIt.Web
 {
     [Developer("ec5a5680-9628-4df8-b0a0-874b6e0dddcb")]
@@ -495,6 +496,18 @@ namespace LajtIt.Web
         protected void btnChangeDate_Click(object sender, EventArgs e)
         {
             BindProductsLog();
+        }
+
+        protected void btn13ChangeDate_Click(object sender, EventArgs e)
+        {
+            if (!TextBox13.Text.Equals("") && !TextBox23.Text.Equals(""))
+            {
+                Bll.SalesFileHelper.GenerateWarehouseDeliveryReport(TextBox13.Text, TextBox23.Text);
+
+                DisplayMessage("Raporty zostały wysłane na maila");
+            }
+            else
+                DisplayMessage("Obydwa pola z datami muszą być wypełnione!");
         }
     }
 }

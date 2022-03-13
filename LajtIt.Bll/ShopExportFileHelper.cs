@@ -543,8 +543,10 @@ namespace LajtIt.Bll
             List<ShopFnResult> products = GetProducts(shopExport, shopImport)
                 //.Where(x => x.SupplierId == 22 || x.SupplierId == 32 || x.LeftQuantity > 0)
                 .ToList();
-                
-                ;
+
+            //Tymczasowo 08.03.2022
+            //products = products.Where(x => x.SupplierId != 57).ToList();
+
             //.Take(100).OrderBy(x=>Guid.NewGuid()).ToList();
 
             List<ProductCatalogShopCategoryFnResult> categories = null;

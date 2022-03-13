@@ -206,7 +206,8 @@ namespace LajtIt.Bll
                 try
 
                 {
-                    string code = pc.Code;
+                    //string code = pc.Code;
+                    string code = pc.Code.Split('.').Last();
                     string codes = pc.Code.Replace("/", "_");
 
                     FileInfo[] filesForProduct = files.Where(x => Path.GetFileNameWithoutExtension(x.FullName).Contains(code)

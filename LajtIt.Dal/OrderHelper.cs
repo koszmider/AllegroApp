@@ -594,6 +594,15 @@ namespace LajtIt.Dal
             }
         }
 
+        public List<ProductCatalogDeliveryWarehouseViewWithPrice> GetProductCatalogDeliveryWarehouse(DateTime dateFrom, DateTime dateTo)
+        {
+            using (LajtitViewsDB ctx = new LajtitViewsDB())
+            {
+                return ctx.ProductCatalogDeliveryWarehouseViewWithPrice.Where(x => x.InsertDate.Value.Year >= dateFrom.Year && x.InsertDate.Value.Month >= dateFrom.Month && x.InsertDate.Value.Day >= dateFrom.Day
+                && x.InsertDate.Value.Year <= dateTo.Year && x.InsertDate.Value.Month <= dateTo.Month && x.InsertDate.Value.Day <= dateTo.Day).ToList();
+            }
+        }
+
         public List<ProductCatalogDeliveryWarehouseView> GetProductCatalogDeliveryWarehouse(DateTime date)
         {
             using (LajtitViewsDB ctx = new LajtitViewsDB())

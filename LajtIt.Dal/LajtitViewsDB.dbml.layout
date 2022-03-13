@@ -518,5 +518,11 @@
         <elementListCompartment Id="c81c0d30-cc72-4868-98fc-d37d4792c136" absoluteBounds="5.64, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="4908fd29-ea7d-4a5f-9389-441a98bbcc67" absoluteBounds="2.125, 4.625, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/LajtitViewsDBDataContext/ProductCatalogDeliveryWarehouseViewWithPrice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e90c2ad5-7f65-45bc-ac67-405189bc48cc" absoluteBounds="2.14, 5.085, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

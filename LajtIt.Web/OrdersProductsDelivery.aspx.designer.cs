@@ -7,13 +7,11 @@
 // </generowany automatycznie>
 //------------------------------------------------------------------------------
 
-namespace LajtIt.Web
-{
-
-
-    public partial class OrdersProductsDelivery
-    {
-
+namespace LajtIt.Web {
+    
+    
+    public partial class OrdersProductsDelivery {
+        
         /// <summary>
         /// Kontrolka upSuppliers.
         /// </summary>
@@ -22,7 +20,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.UpdatePanel upSuppliers;
-
+        
         /// <summary>
         /// Kontrolka rblSupplierOwners.
         /// </summary>
@@ -31,7 +29,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList rblSupplierOwners;
-
+        
         /// <summary>
         /// Kontrolka chbWarehouse.
         /// </summary>
@@ -40,7 +38,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBoxList chbWarehouse;
-
+        
         /// <summary>
         /// Kontrolka UpdatePanel1.
         /// </summary>
@@ -49,7 +47,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
-
+        
         /// <summary>
         /// Kontrolka pnDelivery.
         /// </summary>
@@ -58,7 +56,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnDelivery;
-
+        
         /// <summary>
         /// Kontrolka ddlCompany.
         /// </summary>
@@ -67,7 +65,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlCompany;
-
+        
         /// <summary>
         /// Kontrolka txbDeliveryDocument.
         /// </summary>
@@ -76,7 +74,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txbDeliveryDocument;
-
+        
         /// <summary>
         /// Kontrolka btnAddDelivery.
         /// </summary>
@@ -85,7 +83,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAddDelivery;
-
+        
         /// <summary>
         /// Kontrolka lbtnNewDelivery.
         /// </summary>
@@ -94,7 +92,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lbtnNewDelivery;
-
+        
         /// <summary>
         /// Kontrolka gvProductCatalog.
         /// </summary>
@@ -103,7 +101,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvProductCatalog;
-
+        
         /// <summary>
         /// Kontrolka btnNewDelivery.
         /// </summary>
@@ -112,7 +110,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnNewDelivery;
-
+        
         /// <summary>
         /// Kontrolka txbDeliveryDate.
         /// </summary>
@@ -121,7 +119,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txbDeliveryDate;
-
+        
         /// <summary>
         /// Kontrolka btnChangeDate.
         /// </summary>
@@ -130,7 +128,34 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnChangeDate;
-
+        
+        /// <summary>
+        /// Kontrolka TextBox13.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox13;
+        
+        /// <summary>
+        /// Kontrolka TextBox23.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox23;
+        
+        /// <summary>
+        /// Kontrolka Button13.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Button13;
+        
         /// <summary>
         /// Kontrolka pnOrdersToSend.
         /// </summary>
@@ -139,7 +164,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnOrdersToSend;
-
+        
         /// <summary>
         /// Kontrolka gvOrdersToSend.
         /// </summary>
@@ -148,7 +173,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvOrdersToSend;
-
+        
         /// <summary>
         /// Kontrolka pnOrdersToPabianicka.
         /// </summary>
@@ -157,7 +182,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnOrdersToPabianicka;
-
+        
         /// <summary>
         /// Kontrolka gvOrdersToPabianicka.
         /// </summary>
@@ -166,7 +191,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvOrdersToPabianicka;
-
+        
         /// <summary>
         /// Kontrolka pnOrdersToWarehouse.
         /// </summary>
@@ -175,7 +200,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnOrdersToWarehouse;
-
+        
         /// <summary>
         /// Kontrolka gvWarehouse.
         /// </summary>

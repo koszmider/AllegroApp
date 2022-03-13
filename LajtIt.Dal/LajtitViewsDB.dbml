@@ -1394,4 +1394,23 @@
       <Column Name="ProductCatalogId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
+  <Table Name="dbo.ProductCatalogDeliveryWarehouseViewWithPrice" Member="ProductCatalogDeliveryWarehouseViewWithPrice">
+    <Type Name="ProductCatalogDeliveryWarehouseViewWithPrice">
+      <Column Name="DeliveryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductCatalogId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="WarehouseId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OrderId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InsertDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="InsertUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OrderStatusId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StatusName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WarehouseName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(254)" CanBeNull="true" />
+      <Column Name="SupplierName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="SupplierOwnerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
 </Database>

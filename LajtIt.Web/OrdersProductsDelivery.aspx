@@ -141,8 +141,28 @@
                     </td>
                 </tr>
             </table>
-            Data dostawy:
-            <asp:TextBox runat="server" ID="txbDeliveryDate" TextMode="Date"></asp:TextBox><asp:Button runat="server" ID="btnChangeDate" Text="Pokaż" OnClick="btnChangeDate_Click" />
+            
+            <table style="width: 100%">
+            <tr>
+                <td>
+                    Data dostawy:
+                </td>
+                <td>
+                    Wybierz miesiące (od - do (niezależnie od podanego dnia miesiąca raporty generowane będą od 1go dnia miesiąca (od) do ostatniego dnia miesiąca (do))):
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:TextBox runat="server" ID="txbDeliveryDate" TextMode="Date"></asp:TextBox>
+                    <asp:Button runat="server" ID="btnChangeDate" Text="Pokaż" OnClick="btnChangeDate_Click" />
+                </td>
+                <td>
+                    <asp:TextBox runat="server" ID="TextBox13" TextMode="Date"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="TextBox23" TextMode="Date"></asp:TextBox>
+                    <asp:LinkButton runat="server" ID="Button13" Text="Generuj miesięczne raporty" OnClick="btn13ChangeDate_Click"></asp:LinkButton>
+                </td>
+            </tr>
+            </table>
             <asp:Panel runat="server" ID="pnOrdersToSend" GroupingText="Produkty do wysyłki">
                 <asp:GridView runat="server" ID="gvOrdersToSend" AutoGenerateColumns="false">
                     <Columns>

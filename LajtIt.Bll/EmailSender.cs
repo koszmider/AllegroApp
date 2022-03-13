@@ -52,11 +52,11 @@ namespace LajtIt.Bll
 
                     if (Dal.Helper.Env == Dal.Helper.EnvirotmentEnum.Dev)// || email.ToEmail == null)
                     {
-                        message.To.Add(new MailAddress(Dal.Helper.DevEmail, email.ToName));
+                        message.To.Add(new MailAddress("tomek@lajtit.pl", "System"));// Dal.Helper.DevEmail, email.ToName));
                     }
                     else
                         if(email.ToEmail!=null)
-                        message.To.Add(new MailAddress(email.ToEmail, email.ToName));
+                            message.To.Add(new MailAddress(email.ToEmail, email.ToName));
 
                     if (email.ToEmail==null && email.ToRoles!=null)
                     {
@@ -69,9 +69,8 @@ namespace LajtIt.Bll
                         }
 
                     }
-                    
 
-                        if (email.ToEmail!=null && !email.ToEmail.EndsWith("lajtit.pl"))
+                    if (email.ToEmail!=null && !email.ToEmail.EndsWith("lajtit.pl"))
                         message.Bcc.Add(new MailAddress(supportEmail));
 
 

@@ -6,13 +6,135 @@ using System.Text;
 using System.Threading.Tasks;
 using OfficeOpenXml;
 using LajtIt.Dal;
+using System.Globalization;
 using LajtIt.Bll;
+using System.Net;
 
 
 namespace LajtIt.Bll
 {
     public class SalesFileHelper
     {
+
+        public static void GenerateWarehouseDeliveryReport(string fromMonth, string toMonth)
+        {
+            DateTime dateFrom = DateTime.Parse(fromMonth);
+            DateTime dateTo = DateTime.Parse(toMonth);
+            DateTime temp = DateTime.Parse(fromMonth);
+
+            using (ExcelPackage excel = new ExcelPackage())
+            {
+                while (temp <= dateTo)
+                {
+                    var firstDayOfMonth = new DateTime(temp.Year, temp.Month, 1);
+                    var lastDayOfMonth = firstDayOfMonth.AddMonths(1).AddDays(-1);
+
+                    excel.Workbook.Worksheets.Add(firstDayOfMonth.ToShortDateString());
+
+                    string[] header = new string[] {
+
+                        "Produkt",
+                        "Cena",
+                        "Ilość",
+                        "Łączna kwota",
+                        "Producent",
+                        "Kod producenta",
+                        "Data",
+                        "Użytkownik"
+                    };
+
+                    var headerRow = new List<string[]>();
+                    headerRow.Add(header);
+
+                    int row = 2;
+
+                    var worksheet = excel.Workbook.Worksheets[firstDayOfMonth.ToShortDateString()];
+
+                    string headerRange = "A1:" + Char.ConvertFromUtf32(headerRow[0].Length + 64) + "1";
+                    worksheet.Cells[headerRange].LoadFromArrays(headerRow);
+
+                    Dal.OrderHelper oh = new Dal.OrderHelper();
+                    List<Dal.ProductCatalogDeliveryWarehouseViewWithPrice> products = oh.GetProductCatalogDeliveryWarehouse(firstDayOfMonth, lastDayOfMonth);
+
+                    var toWarehouse = products.Where(x => x.WarehouseId == (int)Dal.Helper.Warehouse.Przewodnia && !x.OrderId.HasValue).OrderBy(x => x.InsertDate).ToList();
+
+                    foreach (Dal.ProductCatalogDeliveryWarehouseViewWithPrice wv in toWarehouse)
+                    {
+                        if (row % 2 != 0)
+                        {
+                            worksheet.Cells[String.Format("A{0}:", row) + Char.ConvertFromUtf32(headerRow[0].Length + 64) + String.Format("{0}", row)].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
+                            worksheet.Cells[String.Format("A{0}:", row) + Char.ConvertFromUtf32(headerRow[0].Length + 64) + String.Format("{0}", row)].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.LightGray);
+                        }
+                        worksheet.Cells[String.Format("A{0}", row)].Style.Font.Italic = true;
+                        worksheet.Cells[String.Format("A{0}", row)].Value = wv.ProductName;
+                        worksheet.Cells[String.Format("A{0}", row)].Style.Border.Left.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                        worksheet.Cells[String.Format("B{0}", row)].Value = wv.Price;
+                        worksheet.Cells[String.Format("B{0}", row)].Style.Border.Left.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                        worksheet.Cells[String.Format("C{0}", row)].Value = wv.Quantity;
+                        worksheet.Cells[String.Format("C{0}", row)].Style.Border.Left.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                        worksheet.Cells[String.Format("D{0}", row)].Value = wv.Price * (Decimal)wv.Quantity;
+                        worksheet.Cells[String.Format("D{0}", row)].Style.Border.Left.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                        worksheet.Cells[String.Format("E{0}", row)].Value = wv.SupplierName;
+                        worksheet.Cells[String.Format("E{0}", row)].Style.Border.Left.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                        worksheet.Cells[String.Format("F{0}", row)].Value = wv.Code;
+                        worksheet.Cells[String.Format("F{0}", row)].Style.Border.Left.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                        worksheet.Cells[String.Format("G{0}", row)].Value = wv.InsertDate.ToString();
+                        worksheet.Cells[String.Format("G{0}", row)].Style.Border.Left.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                        worksheet.Cells[String.Format("H{0}", row)].Value = wv.InsertUser;
+                        worksheet.Cells[String.Format("H{0}", row)].Style.Border.Left.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                        worksheet.Cells[String.Format("H{0}", row)].Style.Border.Right.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+
+                        row++;
+                    }
+
+                    for (int i = 0; i < header.Length; i++)
+                        worksheet.Column(i + 1).AutoFit();
+
+                    worksheet.Cells[headerRange].Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
+                    worksheet.Cells[headerRange].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
+                    worksheet.Cells[headerRange].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.LightSteelBlue);
+                    worksheet.Cells[headerRange].Style.Border.Top.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                    worksheet.Cells[headerRange].Style.Border.Left.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                    worksheet.Cells[headerRange].Style.Border.Right.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                    worksheet.Cells[headerRange].Style.Border.Bottom.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                    worksheet.Cells[headerRange].Style.Font.Bold = true;
+                    worksheet.Cells[headerRange].Style.Font.Italic = true;
+
+                    temp = temp.AddMonths(1);
+                }
+
+                var firstDay = new DateTime(dateFrom.Year, dateFrom.Month, 1);
+                var last = new DateTime(dateTo.Year, dateTo.Month, 1);
+                var lastDay = last.AddMonths(1).AddDays(-1);
+
+                string path = @"c:\tmp\";
+                string filename = firstDay.ToShortDateString() + "-" + lastDay.ToShortDateString() + ".xlsx";
+
+                FileInfo excelFile = new FileInfo(path + filename);
+                excel.SaveAs(excelFile);
+
+                //using (WebClient webClient = new WebClient())
+                //    webClient.DownloadFile(@"c:\Users\Tomek\Desktop", fromMonth + " - " + toMonth + ".xlsx");
+
+                Bll.EmailSender emailSender = new EmailSender();
+
+                string subject = "Raport miesięczny (magazyn)";
+
+                string body = "Raport miesięczny (magazyn) od " + firstDay.ToShortDateString() + " do " + lastDay.ToShortDateString() + ".";
+
+                Dto.Email email = new Dto.Email()
+                {
+                    Body = body,
+                    Subject = subject,
+                    ToName = "",
+                    ToEmail = "magda@lajtit.pl",
+                    AttachmentFile = path + filename
+                };
+
+                emailSender.SendEmail(email);
+            }
+
+        }
 
         public static void WriteToXlsxFile1(string sFrom, string sTo, string fName)
         {
@@ -428,7 +550,7 @@ namespace LajtIt.Bll
             }
         }
 
-        public static void Generate()
+        public static void GenerateSellFileReport()
         {
             string sFrom = "2022-01-01";
             string sTo = "2022-01-31";

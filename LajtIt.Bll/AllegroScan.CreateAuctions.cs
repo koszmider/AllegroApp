@@ -13,6 +13,8 @@ namespace LajtIt.Bll
 {
     public partial class AllegroScan
     {
+
+
         public void AllegroUpdateProducts()
         {
             // Set a variable to the My Documents path.

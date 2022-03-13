@@ -572,12 +572,6 @@ namespace LajtIt.Dal
     partial void DeleteProductCatalogAllegroItem(ProductCatalogAllegroItem instance);
     #endregion
 		
-		public AllegroDBLinqSetDataContext() : 
-				base(global::LajtIt.Dal.Properties.Settings.Default.LajtitProdConnectionString3, mappingSource)
-		{
-			OnCreated();
-		}
-		
 		public AllegroDBLinqSetDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
