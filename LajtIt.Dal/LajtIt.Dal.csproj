@@ -155,6 +155,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HelperDBLinqSet.dbml</DependentUpon>
     </Compile>
+    <Compile Include="PromoHelper.cs" />
     <Compile Include="PromotionHelper.cs" />
     <Compile Include="SettingsHelper.cs" />
     <Compile Include="Shops\ShopHelper.cs" />

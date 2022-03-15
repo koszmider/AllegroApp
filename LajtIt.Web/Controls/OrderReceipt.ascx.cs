@@ -99,7 +99,7 @@ namespace LajtIt.Web.Controls
                 DisplayMessage("W przypadku faktury z NIP nie ma możliwości wydrukowania paragonu.");
             }
 
-
+            ucReceiptOrderGrid.BindReceipts(OrderId);
 
             List<Dal.OrderReceipt> receipts = Dal.DbHelper.Orders.GetReceipts(OrderId);
 
@@ -177,8 +177,7 @@ namespace LajtIt.Web.Controls
                 txbPrePayment.Enabled = false;
             }
 
- 
-
+            
 
             //if (receipts.Where(x=>x.ReceiptTypeId==1).Count()>0 || order.AmountBalance.Value<0)
             //{

@@ -122,7 +122,7 @@
         <elementListCompartment Id="4dbcc4cb-6cba-4bee-af27-bf356d917789" absoluteBounds="3.515, 20.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(11.5 : 17.8277498372396); (13.25 : 17.8277498372396); (13.25 : 20.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(11.5 : 17.8277498372396); (11.7916666666667 : 17.8277498372396 : JumpStart); (11.9583333333333 : 17.8277498372396 : JumpEnd); (13.25 : 17.8277498372396); (13.25 : 20.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/AllegroDBDataContext/AllegroBadge/AllegroBadge_AllegroItemBadge" />
       <nodes>
         <classShapeMoniker Id="5052a331-f804-417e-8df8-75eadad28d18" />
@@ -273,7 +273,7 @@
         <elementListCompartment Id="193d6708-0270-4204-ab84-cb6c82843be1" absoluteBounds="6.5150000000000006, 20.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(8.5 : 20.7219962565104); (8.63541666666667 : 20.7219962565104 : JumpStart); (8.80208333333333 : 20.7219962565104 : JumpEnd); (9.04166666666667 : 20.7219962565104 : JumpStart); (9.20833333333333 : 20.7219962565104 : JumpEnd); (9.29166666666667 : 20.7219962565104 : JumpStart); (9.45833333333333 : 20.7219962565104 : JumpEnd); (10.25 : 20.7219962565104); (10.25 : 23.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(8.5 : 20.7219962565104); (10.25 : 20.7219962565104); (10.25 : 23.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/AllegroDBDataContext/AllegroBillingTypes/AllegroBillingTypes_AllegroBilling" />
       <nodes>
         <classShapeMoniker Id="86a70969-2064-4f86-a275-da3161918ea8" />
@@ -317,35 +317,35 @@
         <elementListCompartment Id="e1e49e3f-e0d1-40d7-97d4-1cc993effd22" absoluteBounds="6.39, 11.835, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(8.375 : 16.2700105794271); (9.04166666666667 : 16.2700105794271 : JumpStart); (9.20833333333333 : 16.2700105794271 : JumpEnd); (12.46875 : 16.2700105794271); (12.46875 : 20.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(8.375 : 16.2700105794271); (8.63541666666667 : 16.2700105794271 : JumpStart); (8.80208333333333 : 16.2700105794271 : JumpEnd); (9.04166666666667 : 16.2700105794271 : JumpStart); (9.20833333333333 : 16.2700105794271 : JumpEnd); (11.7916666666667 : 16.2700105794271 : JumpStart); (11.9583333333333 : 16.2700105794271 : JumpEnd); (12.46875 : 16.2700105794271); (12.46875 : 20.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/AllegroDBDataContext/AllegroItem/AllegroItem_AllegroItemBadge" />
       <nodes>
         <classShapeMoniker Id="220202d0-ccf4-47c8-bdb4-eb0818258110" />
         <classShapeMoniker Id="3d2661e7-c031-4c21-9ed8-e21ad42cde3e" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(8.375 : 13.7912532897135); (9.125 : 13.7912532897135); (9.125 : 24.5401025390625); (9 : 24.5401025390625); (9 : 36.25); (10.25 : 36.25); (10.25 : 36.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(8.375 : 13.7912532897135); (8.63541666666667 : 13.7912532897135 : JumpStart); (8.80208333333333 : 13.7912532897135 : JumpEnd); (9.125 : 13.7912532897135); (9.125 : 24.5401025390625); (9 : 24.5401025390625); (9 : 36.25); (10.25 : 36.25); (10.25 : 36.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/AllegroDBDataContext/AllegroItem/AllegroItem_AllegroItemOrder" />
       <nodes>
         <classShapeMoniker Id="220202d0-ccf4-47c8-bdb4-eb0818258110" />
         <classShapeMoniker Id="d08aa8d2-302c-4bee-bd4a-6bee592bef71" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(7.375 : 16.7996240234375); (7.375 : 19.875); (9.04166666666667 : 19.875 : JumpStart); (9.20833333333333 : 19.875 : JumpEnd); (11.5 : 19.875); (11.5 : 27.8301525533854); (12.25 : 27.8301525533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(7.375 : 16.7996240234375); (7.375 : 19.875); (8.63541666666667 : 19.875 : JumpStart); (8.80208333333333 : 19.875 : JumpEnd); (9.04166666666667 : 19.875 : JumpStart); (9.20833333333333 : 19.875 : JumpEnd); (9.29166666666667 : 19.875 : JumpStart); (9.45833333333333 : 19.875 : JumpEnd); (11.5 : 19.875); (11.5 : 27.8301525533854); (12.25 : 27.8301525533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/AllegroDBDataContext/AllegroItem/AllegroItem_AllegroItemTransactionItem" />
       <nodes>
         <classShapeMoniker Id="220202d0-ccf4-47c8-bdb4-eb0818258110" />
         <classShapeMoniker Id="db9cc2dd-7b40-48a9-9312-696c4a302fbe" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(7.906252 : 16.7996240234375); (7.906252 : 19.625); (9.04166666666667 : 19.625 : JumpStart); (9.20833333333333 : 19.625 : JumpEnd); (9.375 : 19.625); (9.375 : 23.5); (9.0625 : 23.5); (9.0625 : 31.7412019856771); (9.25 : 31.7412019856771)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(7.906252 : 16.7996240234375); (7.906252 : 19.625); (8.63541666666667 : 19.625 : JumpStart); (8.80208333333333 : 19.625 : JumpEnd); (9.04166666666667 : 19.625 : JumpStart); (9.20833333333333 : 19.625 : JumpEnd); (9.375 : 19.625); (9.375 : 23.5); (9.0625 : 23.5); (9.0625 : 31.7412019856771); (9.25 : 31.7412019856771)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/AllegroDBDataContext/AllegroItem/AllegroItem_AllegroOrderLineItem" />
       <nodes>
         <classShapeMoniker Id="220202d0-ccf4-47c8-bdb4-eb0818258110" />
         <classShapeMoniker Id="1b788250-f820-40a5-872d-f8c1d74f1ad4" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(6.843748 : 16.7996240234375); (6.843748 : 20); (9.04166666666667 : 20 : JumpStart); (9.20833333333333 : 20 : JumpEnd); (11.625 : 20); (11.625 : 24.7604484049479); (12.25 : 24.7604484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(6.843748 : 16.7996240234375); (6.843748 : 20); (8.63541666666667 : 20 : JumpStart); (8.80208333333333 : 20 : JumpEnd); (9.04166666666667 : 20 : JumpStart); (9.20833333333333 : 20 : JumpEnd); (9.29166666666667 : 20 : JumpStart); (9.45833333333333 : 20 : JumpEnd); (11.625 : 20); (11.625 : 24.7604484049479); (11.7916666666667 : 24.7604484049479 : JumpStart); (11.9583333333333 : 24.7604484049479 : JumpEnd); (12.25 : 24.7604484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/AllegroDBDataContext/AllegroItem/AllegroItem_AllegroPaymentDetails" />
       <nodes>
         <classShapeMoniker Id="220202d0-ccf4-47c8-bdb4-eb0818258110" />

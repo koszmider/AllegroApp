@@ -22,6 +22,15 @@ namespace LajtIt.Web {
         protected global::System.Web.UI.WebControls.HyperLink hlPromotions;
         
         /// <summary>
+        /// Kontrolka tab1.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabPanel tab1;
+        
+        /// <summary>
         /// Kontrolka txbName.
         /// </summary>
         /// <remarks>
@@ -74,6 +83,15 @@ namespace LajtIt.Web {
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::AjaxControlToolkit.CalendarExtender calDateTo;
+        
+        /// <summary>
+        /// Kontrolka tab2.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabPanel tab2;
         
         /// <summary>
         /// Kontrolka lbxSuppliers.
@@ -238,6 +256,15 @@ namespace LajtIt.Web {
         protected global::System.Web.UI.WebControls.ListBox lbxAttributesSelected;
         
         /// <summary>
+        /// Kontrolka tab3.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabPanel tab3;
+        
+        /// <summary>
         /// Kontrolka txbDescription.
         /// </summary>
         /// <remarks>
@@ -299,6 +326,15 @@ namespace LajtIt.Web {
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvPromotionProducts;
+        
+        /// <summary>
+        /// Kontrolka tab4.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabPanel tab4;
         
         /// <summary>
         /// Kontrolka hlProductCatalog.

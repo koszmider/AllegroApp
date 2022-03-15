@@ -526,7 +526,6 @@ namespace LajtIt.Web
         {
             Dal.ProductCatalog pc = new Dal.ProductCatalog();
 
-            
             if (lsbxSettings.Items.FindByValue("0").Selected)
                 pc.IsOutlet = ddlSettingsStatus.SelectedValue == "1";
             if (lsbxSettings.Items.FindByValue("1").Selected)
@@ -562,9 +561,44 @@ namespace LajtIt.Web
                 }
             }
 
+            if (txbStartPromoDate.Text != "" && txbPricePromo.Text != "0")
+            {
+                Dal.PromoHelper ph = new Dal.PromoHelper();
+                Dal.Promo p = new Dal.Promo();
+                p.Description = txbPromoDesc.Text;
+                p.InsertUser = "Adninistrator";
+                p.InsertDate = DateTime.Now;
+                p.StartDate = DateTime.Parse(txbStartPromoDate.Text);
+                p.EndDate = DateTime.Parse(txbPricePromoDate.Text);
+                p.PercentValue = Convert.ToInt32(txbPricePromo.Text);
+                p.IsActive = true;
+                p.IsGoingOn = false;
 
-            Dal.ProductCatalogHelper pch = new Dal.ProductCatalogHelper();
-            pch.SetProductCatalogSettings(productIds, pc, changeLockRebates, UserName);
+                int pid = ph.AddPromotion(p);
+
+                List<Dal.PromoProduct> prodList = new List<Dal.PromoProduct>();
+
+                foreach (int id in productIds)
+                {
+                    Dal.PromoProduct pr = new Dal.PromoProduct();
+                    pr.PromotionId = pid;
+                    pr.ProductCatalogId = id;
+                    pr.LockRabates = pc.LockRebates;
+                    pr.Outlet = pc.IsOutlet;
+                    pr.Paczkomaty = pc.IsPaczkomatAvailable;
+                    pr.ChangeLockRabates = changeLockRebates;
+                    prodList.Add(pr);
+                }
+
+                ph.AddPromotionProducts(prodList);
+
+            }
+            else
+            {
+                Dal.ProductCatalogHelper pch = new Dal.ProductCatalogHelper();
+                pch.SetProductCatalogSettings(productIds, pc, changeLockRebates, UserName);
+            }
+
             DisplayMessage(String.Format("Zaktualizowano {0} produktów", productIds.Length));
         }
         private void SetStatus(int[] productIds)

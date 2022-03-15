@@ -178,6 +178,11 @@ namespace LajtIt.Bll
         }
 
 
+        public void ManagePromotions()
+        {
+            Bll.PromoHelper ph = new PromoHelper();
+            ph.ManagePromos();
+        }
 
 
         //public void SetAllegroPromotions(string v)

@@ -8,8 +8,8 @@
         <asp:HyperLink runat="server" ID="hlPromotions" NavigateUrl="/Promotions.aspx" Text="Zobacz wszystkie promocje"></asp:HyperLink>
     </div>
 
-    <asp:TabContainer runat="server">
-        <asp:TabPanel runat="server"
+    <asp:TabContainer runat="server" ActiveTabIndex="0">
+        <asp:TabPanel runat="server" ID="tab1"
             HeaderText="Konfiguracja">
             <ContentTemplate>
                 <table>
@@ -42,7 +42,7 @@
                 </table>
             </ContentTemplate>
         </asp:TabPanel>
-        <asp:TabPanel runat="server"
+        <asp:TabPanel runat="server" ID="tab2"
             HeaderText="Warunki">
             <ContentTemplate>
                 <table>
@@ -145,7 +145,7 @@
                 </table>
             </ContentTemplate>
         </asp:TabPanel>
-        <asp:TabPanel runat="server"
+        <asp:TabPanel runat="server" ID="tab3"
             HeaderText="Działania">
             <ContentTemplate>
                 <table>
@@ -309,7 +309,7 @@
                 </table>
             </ContentTemplate>
         </asp:TabPanel>
-        <asp:TabPanel runat="server"
+        <asp:TabPanel runat="server" ID="tab4"
             HeaderText="Wybrane produkty">
             <ContentTemplate>
                 <div style="text-align: right;">

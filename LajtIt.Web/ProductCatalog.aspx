@@ -266,6 +266,14 @@
                                     ID="calDate" runat="server" Format="yyyy/MM/dd" TargetControlID="txbPricePromoDate"></asp:CalendarExtender> (wstaw 0 by usunąć promocję lub nie wypełniaj by nie zmieniać)
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <td>Wgraj z opóźnieniem od dnia: 
+                                        </td>
+                                        <td>
+                                            <asp:TextBox textmode="DateTime" runat="server" ID="txbStartPromoDate" Width="150"></asp:TextBox>
+                                            <asp:CalendarExtender Format="yyyy/MM/dd HH':'mm" ID="CalendarExtender2" runat="server" TargetControlID="txbStartPromoDate"></asp:CalendarExtender> (pozostaw puste by wgrać natychmiast)
+                                        </td>
+                                   </tr>
         <tr>
             <td>Blokuj rabaty koszykowe
             </td>
@@ -278,6 +286,11 @@
                 </asp:DropDownList>&nbsp;<asp:Label runat="server" ID="Label1"></asp:Label>
             </td>
         </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Opis promocji: <asp:TextBox runat="server" ID="txbPromoDesc" Width="350" MaxLength="256"></asp:TextBox>
+                                        </td>
+                                    </tr>
                                      
                                 </table>
                             </asp:Panel>

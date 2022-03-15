@@ -107,6 +107,14 @@ namespace LajtIt.Dal.DbHelper
         }
 
 
+        public static List<ReceiptsForOrderFnResult> GetReceiptsFn(int orderId)
+        {
+            using (LajtitDB ctx = new LajtitDB())
+            {
+                return ctx.ReceiptsForOrderFn(orderId).ToList();
+            }
+        }
+
 
         public static List<OrderReceipt> GetReceipts(int orderId)
         {

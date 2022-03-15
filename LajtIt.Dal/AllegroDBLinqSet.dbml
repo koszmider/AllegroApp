@@ -985,6 +985,7 @@
       <Association Name="ProductCatalog_ShopCategoryManagerShopProduct" Member="ShopCategoryManagerShopProduct" ThisKey="ProductCatalogId" OtherKey="ProductCatalogId" Type="ShopCategoryManagerShopProduct" />
       <Association Name="ProductCatalog_ShopMainPage" Member="ShopMainPage" ThisKey="ProductCatalogId" OtherKey="ProductCatalogId" Type="ShopMainPage" />
       <Association Name="ProductCatalog_ProductCatalogAllegroItem" Member="ProductCatalogAllegroItem" ThisKey="ProductCatalogId" OtherKey="ProductCatalogId" Type="ProductCatalogAllegroItem" />
+      <Association Name="ProductCatalog_PromoProduct" Member="PromoProduct" ThisKey="ProductCatalogId" OtherKey="ProductCatalogId" Type="PromoProduct" />
       <Association Name="ProductCatalogImage_ProductCatalog" Member="ProductCatalogImage" ThisKey="ImageId" OtherKey="ImageId" Type="ProductCatalogImage" IsForeignKey="true" />
       <Association Name="ProductCatalogType_ProductCatalog" Member="ProductCatalogType" ThisKey="ProductTypeId" OtherKey="ProductTypeId" Type="ProductCatalogType" IsForeignKey="true" />
       <Association Name="Supplier_ProductCatalog" Member="Supplier" ThisKey="SupplierId" OtherKey="SupplierId" Type="Supplier" IsForeignKey="true" />
@@ -2666,6 +2667,33 @@
       <Association Name="ProductCatalog_ProductCatalogAllegroItem" Member="ProductCatalog" ThisKey="ProductCatalogId" OtherKey="ProductCatalogId" Type="ProductCatalog" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.Promo" Member="Promo">
+    <Type Name="Promo">
+      <Column Name="PromotionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InsertDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="InsertUser" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PercentValue" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsGoingOn" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Promo_PromoProduct" Member="PromoProduct" ThisKey="PromotionId" OtherKey="PromotionId" Type="PromoProduct" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PromoProduct" Member="PromoProduct">
+    <Type Name="PromoProduct">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductCatalogId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PromotionId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Outlet" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Paczkomaty" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LockRabates" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ChangeLockRabates" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="ProductCatalog_PromoProduct" Member="ProductCatalog" ThisKey="ProductCatalogId" OtherKey="ProductCatalogId" Type="ProductCatalog" IsForeignKey="true" />
+      <Association Name="Promo_PromoProduct" Member="Promo" ThisKey="PromotionId" OtherKey="PromotionId" Type="Promo" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Function Name="dbo.AccountingPeriodSet" Method="AccountingPeriodSet">
     <Parameter Name="Month" Parameter="month" Type="System.DateTime" DbType="DateTime" />
     <Return Type="System.Int32" />
@@ -4335,6 +4363,15 @@
       <Column Name="Comment" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
       <Column Name="PaymentTypeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="AccountingTypeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ReceiptsForOrderFn" Method="ReceiptsForOrderFn" IsComposable="true">
+    <Parameter Name="OrderId" Parameter="orderId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ReceiptsForOrderFnResult">
+      <Column Name="ReceiptId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="InsertDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ReceiptAmount" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="OrderReceiptTypeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>

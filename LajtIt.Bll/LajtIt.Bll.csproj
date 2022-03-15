@@ -172,6 +172,7 @@
     <Compile Include="AllegroHelper.Seller.cs" />
     <Compile Include="ArgonHelper.cs" />
     <Compile Include="CosmoLightHelper.cs" />
+    <Compile Include="PromoHelper.cs" />
     <Compile Include="Integrations\Allegro\AllegroRESTHelper.Users.cs" />
     <Compile Include="Integrations\Allegro\AllegroRESTHelper.Products.cs" />
     <Compile Include="JPK_MAG.cs" />

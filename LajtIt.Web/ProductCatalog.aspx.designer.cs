@@ -301,6 +301,24 @@ namespace LajtIt.Web {
         protected global::AjaxControlToolkit.CalendarExtender calDate;
         
         /// <summary>
+        /// Kontrolka txbStartPromoDate.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txbStartPromoDate;
+        
+        /// <summary>
+        /// Kontrolka CalendarExtender2.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::AjaxControlToolkit.CalendarExtender CalendarExtender2;
+        
+        /// <summary>
         /// Kontrolka ddlLockRebates.
         /// </summary>
         /// <remarks>
@@ -317,6 +335,15 @@ namespace LajtIt.Web {
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
+        
+        /// <summary>
+        /// Kontrolka txbPromoDesc.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txbPromoDesc;
         
         /// <summary>
         /// Kontrolka pnStatus.

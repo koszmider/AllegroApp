@@ -1,5 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrderReceipt.ascx.cs"
     Inherits="LajtIt.Web.Controls.OrderReceiptControl" %>
+<%@ Register Src="~/Controls/ReceiptOrderGrid.ascx" TagName="ReceiptOrderGrid" TagPrefix="uc" %>
 <style>
     .tabSelected {
         background-color: white;
@@ -61,7 +62,9 @@
                 <asp:Label runat="server" ID="lblReceiptTotal"></asp:Label></td>
         </tr>
         <tr>
-            <td colspan="2"></td>
+            <td colspan="2">
+                <uc:ReceiptOrderGrid runat="server" ID="ucReceiptOrderGrid" />
+            </td>
         </tr>
         <tr>
             <td colspan="2"><br />Status drukarki fiskalnej:<br />
