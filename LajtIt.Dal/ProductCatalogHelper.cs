@@ -1597,8 +1597,8 @@ namespace LajtIt.Dal
                     pc.UpdateReason = "Aktualizacja automatyczna";
                 }
 
-                var productsToAdd = productsFromFile.Where(x => x.IsFollowed.HasValue == false).ToList();
-                ctx.ProductCatalog.InsertAllOnSubmit(productsToAdd);
+                //var productsToAdd = productsFromFile.Where(x => x.IsFollowed.HasValue == false).ToList();
+                //ctx.ProductCatalog.InsertAllOnSubmit(productsToAdd);
 
                 ctx.SubmitChanges();
             }

@@ -7,13 +7,11 @@
 // </generowany automatycznie>
 //------------------------------------------------------------------------------
 
-namespace LajtIt.Web
-{
-
-
-    public partial class AccoutingDocuments
-    {
-
+namespace LajtIt.Web {
+    
+    
+    public partial class AccoutingDocuments {
+        
         /// <summary>
         /// Kontrolka ddlMonth.
         /// </summary>
@@ -22,7 +20,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlMonth;
-
+        
         /// <summary>
         /// Kontrolka lbtnLajtit.
         /// </summary>
@@ -31,7 +29,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lbtnLajtit;
-
+        
         /// <summary>
         /// Kontrolka lbtnAllegro.
         /// </summary>
@@ -40,7 +38,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lbtnAllegro;
-
+        
         /// <summary>
         /// Kontrolka lbtnDpd.
         /// </summary>
@@ -49,7 +47,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lbtnDpd;
-
+        
         /// <summary>
         /// Kontrolka lbtnCeneo.
         /// </summary>
@@ -58,7 +56,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lbtnCeneo;
-
+        
         /// <summary>
         /// Kontrolka lbtnMorele.
         /// </summary>
@@ -67,7 +65,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lbtnMorele;
-
+        
         /// <summary>
         /// Kontrolka lbtnFirstData.
         /// </summary>
@@ -76,7 +74,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lbtnFirstData;
-
+        
         /// <summary>
         /// Kontrolka lbtnEvidence.
         /// </summary>
@@ -85,7 +83,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lbtnEvidence;
-
+        
         /// <summary>
         /// Kontrolka lbtnInvoices.
         /// </summary>
@@ -94,7 +92,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lbtnInvoices;
-
+        
         /// <summary>
         /// Kontrolka lbtnInvoicesCorrections.
         /// </summary>
@@ -103,7 +101,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lbtnInvoicesCorrections;
-
+        
         /// <summary>
         /// Kontrolka lbtnInvoicesSummary.
         /// </summary>
@@ -112,16 +110,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lbtnInvoicesSummary;
-
-        /// <summary>
-        /// Kontrolka lbtnPayBack.
-        /// </summary>
-        /// <remarks>
-        /// Pole generowane automatycznie.
-        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbtnPayBack;
-
+        
         /// <summary>
         /// Kontrolka lbtnPayBack2.
         /// </summary>
@@ -130,16 +119,25 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lbtnPayBack2;
-
+        
         /// <summary>
-        /// Kontrolka lbtnPayBack3.
+        /// Kontrolka lbtnPayBack21.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbtnPayBack3;
-
+        protected global::System.Web.UI.WebControls.LinkButton lbtnPayBack21;
+        
+        /// <summary>
+        /// Kontrolka LinkButton1.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        
         /// <summary>
         /// Kontrolka lbtnJPK.
         /// </summary>
@@ -148,7 +146,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lbtnJPK;
-
+        
         /// <summary>
         /// Kontrolka lbtnJPKMAG.
         /// </summary>
@@ -157,7 +155,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lbtnJPKMAG;
-
+        
         /// <summary>
         /// Kontrolka lbtnWarehouse.
         /// </summary>
@@ -166,7 +164,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lbtnWarehouse;
-
+        
         /// <summary>
         /// Kontrolka lbtnWarehouseEndMonthList.
         /// </summary>

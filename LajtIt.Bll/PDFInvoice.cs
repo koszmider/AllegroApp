@@ -1883,11 +1883,10 @@ BDO: {0}", invoice.Company.BDO),
             doc1.Add(CreateParagraph(" ", fontText, Element.ALIGN_LEFT));
 
             Font headerCell = new Font(STF_Helvetica_Polish, 6, Font.BOLD);
-            PdfPTable table = new PdfPTable(7);
-            table.SetWidthPercentage(new float[] { 70f, 100f, 70f, 70f, 70f, 70f, 50f }, PageSize.A4_LANDSCAPE);
+            PdfPTable table = new PdfPTable(6);
+            table.SetWidthPercentage(new float[] { 70f, 70f, 70f, 70f, 70f, 50f }, PageSize.A4_LANDSCAPE);
             
             table.AddCell(CreateHeaderCell("Data zwrotu", headerCell));
-            table.AddCell(CreateHeaderCell("Rodzaj zwrotu", headerCell));
             table.AddCell(CreateHeaderCell("Kwota brutto", headerCell));
             table.AddCell(CreateHeaderCell("Kwota netto", headerCell));
             table.AddCell(CreateHeaderCell("Wartość VAT", headerCell));
@@ -1911,6 +1910,7 @@ BDO: {0}", invoice.Company.BDO),
             table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, String.Format("{0:C}", list.Sum(x => x.Amount / (1 + x.VAT))), rowCell));
             table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, String.Format("{0:C}", list.Sum(x => x.Amount - x.Amount / (1 + x.VAT))), rowCell));
             table.AddCell(CreateRowCell(Element.ALIGN_LEFT, "", rowCell));
+            table.AddCell(CreateRowCell(Element.ALIGN_LEFT, "", rowCell));
 
             doc1.Add(table);
             doc1.Close();
@@ -1923,14 +1923,9 @@ BDO: {0}", invoice.Company.BDO),
 
             Font rowCell = new Font(STF_Helvetica_Polish, 6, Font.NORMAL);
 
-            
             table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, String.Format("{0:yyyy/MM/dd} ", payment.InsertDate), rowCell));
-            string paymentName = "";
-            if (payment.PaymentTypeId == 27) paymentName = "zwrot fiskalny";
-            else if (payment.PaymentTypeId == 28) paymentName = "zwrot niefiskalny/faktura";
-            table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, paymentName, rowCell));
 
-            if (payment.AccountingTypeId !=  (int)Dal.Helper.OrderPaymentAccoutingType.Evidence)
+            if (payment.AccountingTypeId != (int)Dal.Helper.OrderPaymentAccoutingType.Evidence)
             {
                 table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, "", rowCell));
                 table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, "", rowCell));
@@ -1939,12 +1934,11 @@ BDO: {0}", invoice.Company.BDO),
             else
             {
                 table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, String.Format("{0:C}", payment.Amount), rowCell));
-                table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, String.Format("{0:C}", payment.Amount / (1+payment.VAT)), rowCell));
+                table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, String.Format("{0:C}", payment.Amount / (1 + payment.VAT)), rowCell));
                 table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, String.Format("{0:C}", payment.Amount - payment.Amount / (1 + payment.VAT)), rowCell));
             }
             table.AddCell(CreateRowCell(Element.ALIGN_LEFT, payment.AccountingName, rowCell));
             table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, String.Format("{0}", payment.OrderId), rowCell));
-
 
         }
         public string InvoicesReport(List<Dal.InvoicesView> list, DateTime month)

@@ -338,7 +338,6 @@ namespace LajtIt.Web
                 new int[] { }
                 ).Where(x => x.Amount < 0).ToList();
 
-
             string fileName = pdf.OrderPaymentsReport(payments, DateTime.Parse(ddlMonth.SelectedValue), "Zwroty ewidencja");
 
 
@@ -351,6 +350,67 @@ namespace LajtIt.Web
             Response.WriteFile(fileName);
             Response.End();
         }
+
+        protected void lbtnPayBack21_Click(object sender, EventArgs e)
+        {
+            Dal.AccountingHelper2 ah = new Dal.AccountingHelper2();
+            PDF pdf = new PDF(Server.MapPath("/Images"), Server.MapPath("/Files"));
+
+            List<Dal.OrderPaymentsView> payments = Dal.DbHelper.Orders
+                .GetOrderPayments(
+                DateTime.Parse(ddlMonth.SelectedValue),
+                (int)Dal.Helper.DefaultCompanyId,
+                false,
+                false,
+                new int[] { (int)Dal.Helper.OrderPaymentAccoutingType.Evidence },
+                new int[] { }
+                ).Where(x => x.Amount < 0).ToList();
+
+            payments = payments.Where(x => x.PaymentTypeId == 27).ToList();
+
+            string fileName = pdf.OrderPaymentsReport(payments, DateTime.Parse(ddlMonth.SelectedValue), "Zwroty niefiskalne ewidencja");
+
+
+            string contentType = contentType = "Application/pdf";
+
+            Response.ContentType = contentType;
+            Response.AppendHeader("content-disposition", "attachment; filename=Zwroty_" + (new FileInfo(fileName)).Name);
+
+            //Write the file directly to the HTTP content output stream.
+            Response.WriteFile(fileName);
+            Response.End();
+        }
+
+        protected void lbtnPayBack22_Click(object sender, EventArgs e)
+        {
+            Dal.AccountingHelper2 ah = new Dal.AccountingHelper2();
+            PDF pdf = new PDF(Server.MapPath("/Images"), Server.MapPath("/Files"));
+
+            List<Dal.OrderPaymentsView> payments = Dal.DbHelper.Orders
+                .GetOrderPayments(
+                DateTime.Parse(ddlMonth.SelectedValue),
+                (int)Dal.Helper.DefaultCompanyId,
+                false,
+                false,
+                new int[] { (int)Dal.Helper.OrderPaymentAccoutingType.Evidence },
+                new int[] { }
+                ).Where(x => x.Amount < 0).ToList();
+
+            payments = payments.Where(x => x.PaymentTypeId == 28).ToList();
+
+            string fileName = pdf.OrderPaymentsReport(payments, DateTime.Parse(ddlMonth.SelectedValue), "Zwroty niefiskalne ewidencja");
+
+
+            string contentType = contentType = "Application/pdf";
+
+            Response.ContentType = contentType;
+            Response.AppendHeader("content-disposition", "attachment; filename=Zwroty_" + (new FileInfo(fileName)).Name);
+
+            //Write the file directly to the HTTP content output stream.
+            Response.WriteFile(fileName);
+            Response.End();
+        }
+
         protected void lbtnPayBack3_Click(object sender, EventArgs e)
         {
             Dal.AccountingHelper2 ah = new Dal.AccountingHelper2();

@@ -566,7 +566,7 @@ namespace LajtIt.Web
                 Dal.PromoHelper ph = new Dal.PromoHelper();
                 Dal.Promo p = new Dal.Promo();
                 p.Description = txbPromoDesc.Text;
-                p.InsertUser = "Adninistrator";
+                p.InsertUser = "Administrator";
                 p.InsertDate = DateTime.Now;
                 p.StartDate = DateTime.Parse(txbStartPromoDate.Text);
                 p.EndDate = DateTime.Parse(txbPricePromoDate.Text);

@@ -105,9 +105,12 @@ namespace LajtIt.Dal
 
         public void AddPromotionProducts(List<PromoProduct> list)
         {
+            if (list.Count() == 0) return;
+
             using (LajtitDB ctx = new LajtitDB())
             {
                 List<Promo> active = GetActivePromotions();
+                active = active.Where(x => x.PromotionId != list.First().PromotionId).ToList();
                 foreach (Promo promo in active)
                 {
                     List<int> intList = list.Select(x => x.ProductCatalogId).ToList();

@@ -259,20 +259,40 @@ Odznacz tę opcję a następnie dokonaj ręcznej aktualizacji VAT dla każdego z
 
             }
 
-
-            Dal.OrderPayment payment = new Dal.OrderPayment()
+            Dal.OrderPayment payment;
+            if (Convert.ToInt32(ddlOrderPaymentTypes.SelectedValue) == 27 || Convert.ToInt32(ddlOrderPaymentTypes.SelectedValue) == 28)
             {
-                Amount = Convert.ToDecimal(txbAmount.Text),
-                ExternalPaymentId = txbExternalId.Text.Trim(),
-                InsertDate = calDateFrom.SelectedDate.Value.AddHours(DateTime.Now.Hour).AddMinutes(DateTime.Now.Minute).AddSeconds(DateTime.Now.Second),// DateTime.Now,
-                OrderId = OrderId,
-                PaymentTypeId = Convert.ToInt32(ddlOrderPaymentTypes.SelectedValue),
-                InsertUser = UserName,
-                CurrencyRate=1,
-                AmountCurrency= Convert.ToDecimal(txbAmount.Text),
-                CurrencyCode="PLN"
+                payment = new Dal.OrderPayment()
+                {
+                    Amount = Convert.ToDecimal(txbAmount.Text),
+                    ExternalPaymentId = txbExternalId.Text.Trim(),
+                    InsertDate = calDateFrom.SelectedDate.Value.AddHours(DateTime.Now.Hour).AddMinutes(DateTime.Now.Minute).AddSeconds(DateTime.Now.Second),// DateTime.Now,
+                    OrderId = OrderId,
+                    PaymentTypeId = Convert.ToInt32(ddlOrderPaymentTypes.SelectedValue),
+                    InsertUser = UserName,
+                    CurrencyRate = 1,
+                    AmountCurrency = Convert.ToDecimal(txbAmount.Text),
+                    CurrencyCode = "PLN",
+                    AccountingTypeId = (int)Dal.Helper.OrderPaymentAccoutingType.Evidence
 
-            };
+                };
+            }
+            else
+            {
+                payment = new Dal.OrderPayment()
+                {
+                    Amount = Convert.ToDecimal(txbAmount.Text),
+                    ExternalPaymentId = txbExternalId.Text.Trim(),
+                    InsertDate = calDateFrom.SelectedDate.Value.AddHours(DateTime.Now.Hour).AddMinutes(DateTime.Now.Minute).AddSeconds(DateTime.Now.Second),// DateTime.Now,
+                    OrderId = OrderId,
+                    PaymentTypeId = Convert.ToInt32(ddlOrderPaymentTypes.SelectedValue),
+                    InsertUser = UserName,
+                    CurrencyRate = 1,
+                    AmountCurrency = Convert.ToDecimal(txbAmount.Text),
+                    CurrencyCode = "PLN"
+
+                };
+            }
             string actingUser = "";
             oh.SetOrderPayment(payment, actingUser);
             BindPayments(OrderId, AllowEdit);
