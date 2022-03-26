@@ -85,6 +85,28 @@ namespace LajtIt.Dal.DbHelper
             }
         }
 
+        public static List<OrderProductsSentView> GetOrderProductsSent(DateTime date)
+        {
+            using (LajtitViewsDB ctx = new LajtitViewsDB())
+            {
+                return ctx.OrderProductsSentView
+                    .Where(x => x.InsertDate.Year == date.Year && x.InsertDate.Month == date.Month)
+                    .OrderBy(x => x.InsertDate)
+                    .ToList();
+            }
+        }
+
+        public static List<ProductCatalogDeliveryWarehouseViewWithPrice> GetProductCatalogDelivery(DateTime date)
+        {
+            using (LajtitViewsDB ctx = new LajtitViewsDB())
+            {
+                return ctx.ProductCatalogDeliveryWarehouseViewWithPrice
+                    .Where(x => x.InsertDate.Value.Year == date.Year && x.InsertDate.Value.Month == date.Month)
+                    .OrderBy(x => x.InsertDate)
+                    .ToList();
+            }
+        }
+
         public static List<ProductCatalogDeliveryInvoiceView> GetProductCatalogDeliveryInvoice(DateTime date)
         {
             using (LajtitViewsDB ctx = new LajtitViewsDB())

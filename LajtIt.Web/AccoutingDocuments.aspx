@@ -24,6 +24,8 @@
             <asp:PostBackTrigger ControlID="lbtnPayBack21" />
             <asp:PostBackTrigger ControlID="lbtnPayBack22" />
             <asp:PostBackTrigger ControlID="lbtnWarehouseEndMonthList" />
+            <asp:PostBackTrigger ControlID="lbtnPz" />
+            <asp:PostBackTrigger ControlID="lbtnWz" />
         </Triggers>
     </asp:UpdatePanel>
     Miesiąc:                
@@ -105,9 +107,12 @@
             <tr>
                 <td style="width: 500px">Ewidencja (zwroty [fiskalne i niefiskalne])</td>
                 <td style="width: 500px">
-                    <asp:LinkButton runat="server" ID="lbtnPayBack2" OnClick="lbtnPayBack2_Click" Text="Pobierz"></asp:LinkButton> 
-                    [<asp:LinkButton runat="server" ID="lbtnPayBack21" OnClick="lbtnPayBack21_Click" Text="Pobierz"></asp:LinkButton>,
-                    <asp:LinkButton runat="server" ID="LinkButton1" OnClick="lbtnPayBack22_Click" Text="Pobierz"></asp:LinkButton>]
+                    <asp:LinkButton runat="server" ID="lbtnPayBack2" OnClick="lbtnPayBack2_Click" Text="Pobierz"></asp:LinkButton>
+                    &nbsp; 
+                    [<asp:LinkButton runat="server" ID="lbtnPayBack21" OnClick="lbtnPayBack21_Click" Text="Pobierz"></asp:LinkButton>
+                    ,
+                    <asp:LinkButton runat="server" ID="lbtnPayBack22" OnClick="lbtnPayBack22_Click" Text="Pobierz"></asp:LinkButton>
+                    ]
                 </td>
             </tr>
             <%--        <tr>
@@ -115,6 +120,22 @@
             <td style="width: 500px">
                 <asp:LinkButton runat="server" ID="lbtnPayBack3" OnClick="lbtnPayBack3_Click" Text="Pobierz"></asp:LinkButton></td>
         </tr> --%>
+        </table>
+    </asp:Panel>
+    <asp:Panel runat="server" GroupingText="Magazyn">
+        <table>
+            <tr>
+                <td style="width: 500px">Pz - przyjęcia</td>
+                <td style="width: 500px">
+                    <asp:LinkButton runat="server" ID="lbtnPz" OnClick="lbtnPz_Click" Text="Pobierz"></asp:LinkButton>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 500px">Wz - wydania</td>
+                <td style="width: 500px">
+                    <asp:LinkButton runat="server" ID="lbtnWz" OnClick="lbtnWz_Click" Text="Pobierz"></asp:LinkButton>
+                </td>
+            </tr>
         </table>
     </asp:Panel>
     <asp:Panel runat="server" GroupingText="Pozostałe">

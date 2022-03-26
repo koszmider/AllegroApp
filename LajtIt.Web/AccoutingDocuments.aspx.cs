@@ -294,6 +294,34 @@ namespace LajtIt.Web
             Response.End();
         }
 
+        protected void lbtnPz_Click(object sender, EventArgs e)
+        {
+            string fileName = PaymentsBankAccountMarketplace.GetProductCatalogDelivery(DateTime.Parse(ddlMonth.SelectedValue));
+            string contentType = "Application/pdf";
+
+            Response.ContentType = contentType;
+            Response.AppendHeader("content-disposition", "attachment; filename=Magazyn_" + (new FileInfo(fileName)).Name);
+
+            //Write the file directly to the HTTP content output stream.
+            Response.WriteFile(fileName);
+            Response.End();
+
+        }
+
+        protected void lbtnWz_Click(object sender, EventArgs e)
+        {
+            string fileName = PaymentsBankAccountMarketplace.GetOrderProductsSent(DateTime.Parse(ddlMonth.SelectedValue));
+            string contentType = "Application/pdf";
+
+            Response.ContentType = contentType;
+            Response.AppendHeader("content-disposition", "attachment; filename=Magazyn_" + (new FileInfo(fileName)).Name);
+
+            //Write the file directly to the HTTP content output stream.
+            Response.WriteFile(fileName);
+            Response.End();
+
+        }
+
         protected void lbtnWarehouse_Click(object sender, EventArgs e)
         {
             string fileName = PaymentsBankAccountMarketplace.GetProductCatalogWarehouse(DateTime.Parse(ddlMonth.SelectedValue));
@@ -368,7 +396,7 @@ namespace LajtIt.Web
 
             payments = payments.Where(x => x.PaymentTypeId == 27).ToList();
 
-            string fileName = pdf.OrderPaymentsReport(payments, DateTime.Parse(ddlMonth.SelectedValue), "Zwroty niefiskalne ewidencja");
+            string fileName = pdf.OrderPaymentsReport(payments, DateTime.Parse(ddlMonth.SelectedValue), "Zwroty fiskalne ewidencja");
 
 
             string contentType = contentType = "Application/pdf";

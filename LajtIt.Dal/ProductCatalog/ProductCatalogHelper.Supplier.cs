@@ -140,5 +140,16 @@ namespace LajtIt.Dal.DbHelper
                 return ctx.SupplierOwner.ToList();
             }
         }
+        public static string GetSupplierName(int supplierId)
+        {
+            using (LajtitDB ctx = new LajtitDB())
+            {
+                Supplier supplier = ctx.Supplier.Where(x => x.SupplierId == supplierId).FirstOrDefault();
+                if (supplier != null)
+                    return supplier.Name;
+
+                return "";
+            }
+        }
     }
 }

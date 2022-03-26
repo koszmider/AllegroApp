@@ -178,6 +178,12 @@ namespace LajtIt.Bll
         }
 
 
+        public void ManageUpdates()
+        {
+            Bll.PromoHelper ph = new PromoHelper();
+            ph.ManageUpdates();
+        }
+
         public void ManagePromotions()
         {
             Bll.PromoHelper ph = new PromoHelper();

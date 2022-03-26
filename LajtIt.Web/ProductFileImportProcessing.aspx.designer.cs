@@ -7,13 +7,11 @@
 // </generowany automatycznie>
 //------------------------------------------------------------------------------
 
-namespace LajtIt.Web
-{
-
-
-    public partial class ProductFileImportProcessing
-    {
-
+namespace LajtIt.Web {
+    
+    
+    public partial class ProductFileImportProcessing {
+        
         /// <summary>
         /// Kontrolka upSearch.
         /// </summary>
@@ -22,7 +20,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.UpdatePanel upSearch;
-
+        
         /// <summary>
         /// Kontrolka ddlProductExists.
         /// </summary>
@@ -31,7 +29,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlProductExists;
-
+        
         /// <summary>
         /// Kontrolka txbName.
         /// </summary>
@@ -40,7 +38,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txbName;
-
+        
         /// <summary>
         /// Kontrolka ddlValidationErrors.
         /// </summary>
@@ -49,7 +47,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlValidationErrors;
-
+        
         /// <summary>
         /// Kontrolka btnSearch.
         /// </summary>
@@ -58,7 +56,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSearch;
-
+        
         /// <summary>
         /// Kontrolka UpdateProgress1.
         /// </summary>
@@ -67,7 +65,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.UpdateProgress UpdateProgress1;
-
+        
         /// <summary>
         /// Kontrolka chbPaging.
         /// </summary>
@@ -76,7 +74,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chbPaging;
-
+        
         /// <summary>
         /// Kontrolka chbImages.
         /// </summary>
@@ -85,7 +83,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chbImages;
-
+        
         /// <summary>
         /// Kontrolka upStatus.
         /// </summary>
@@ -94,7 +92,25 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.UpdatePanel upStatus;
-
+        
+        /// <summary>
+        /// Kontrolka txbUpdateDate.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txbUpdateDate;
+        
+        /// <summary>
+        /// Kontrolka CalendarExtender1.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::AjaxControlToolkit.CalendarExtender CalendarExtender1;
+        
         /// <summary>
         /// Kontrolka ddlStatus.
         /// </summary>
@@ -103,7 +119,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlStatus;
-
+        
         /// <summary>
         /// Kontrolka hlProductCatalog.
         /// </summary>
@@ -112,7 +128,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hlProductCatalog;
-
+        
         /// <summary>
         /// Kontrolka UpdateProgress2.
         /// </summary>
@@ -121,7 +137,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.UpdateProgress UpdateProgress2;
-
+        
         /// <summary>
         /// Kontrolka upJoin.
         /// </summary>
@@ -130,7 +146,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.UpdatePanel upJoin;
-
+        
         /// <summary>
         /// Kontrolka chbAddNew.
         /// </summary>
@@ -139,7 +155,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chbAddNew;
-
+        
         /// <summary>
         /// Kontrolka chbUpdateExisting.
         /// </summary>
@@ -148,7 +164,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chbUpdateExisting;
-
+        
         /// <summary>
         /// Kontrolka chbDuplicates.
         /// </summary>
@@ -157,7 +173,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chbDuplicates;
-
+        
         /// <summary>
         /// Kontrolka btnAddUpdate.
         /// </summary>
@@ -166,7 +182,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAddUpdate;
-
+        
         /// <summary>
         /// Kontrolka lblCount.
         /// </summary>
@@ -175,7 +191,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblCount;
-
+        
         /// <summary>
         /// Kontrolka lblCountFound.
         /// </summary>
@@ -184,7 +200,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblCountFound;
-
+        
         /// <summary>
         /// Kontrolka rblJoinColumn.
         /// </summary>
@@ -193,7 +209,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList rblJoinColumn;
-
+        
         /// <summary>
         /// Kontrolka btnJoinColumnSave.
         /// </summary>
@@ -202,7 +218,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton btnJoinColumnSave;
-
+        
         /// <summary>
         /// Kontrolka UpdateProgress3.
         /// </summary>
@@ -211,7 +227,7 @@ namespace LajtIt.Web
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.UpdateProgress UpdateProgress3;
-
+        
         /// <summary>
         /// Kontrolka gvFiles.
         /// </summary>

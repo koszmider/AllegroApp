@@ -130,22 +130,22 @@ namespace LajtIt.Web {
         protected global::System.Web.UI.WebControls.Button btnChangeDate;
         
         /// <summary>
-        /// Kontrolka TextBox13.
+        /// Kontrolka ddlMonth1.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox13;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMonth1;
         
         /// <summary>
-        /// Kontrolka TextBox23.
+        /// Kontrolka ddlMonth2.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox23;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMonth2;
         
         /// <summary>
         /// Kontrolka Button13.

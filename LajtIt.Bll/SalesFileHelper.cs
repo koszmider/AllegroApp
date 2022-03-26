@@ -16,11 +16,11 @@ namespace LajtIt.Bll
     public class SalesFileHelper
     {
 
-        public static void GenerateWarehouseDeliveryReport(string fromMonth, string toMonth)
+        public static void GenerateWarehouseDeliveryReport(DateTime dateFrom, DateTime dateTo)
         {
-            DateTime dateFrom = DateTime.Parse(fromMonth);
-            DateTime dateTo = DateTime.Parse(toMonth);
-            DateTime temp = DateTime.Parse(fromMonth);
+            //DateTime dateFrom = DateTime.Parse(fromMonth);
+            //DateTime dateTo = DateTime.Parse(toMonth);
+            DateTime temp = dateFrom;// DateTime.Parse(fromMonth);
 
             using (ExcelPackage excel = new ExcelPackage())
             {

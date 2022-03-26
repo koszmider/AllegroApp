@@ -119,8 +119,8 @@ namespace LajtIt.Bll
                     {
                         if (r.Stany == 0)
                         {
-                            pc.IsAvailable = false;
-                            pc.SupplierQuantity = 0;
+                            pc.IsAvailable = true;
+                            pc.SupplierQuantity = null;
                         }
                         else
                         {

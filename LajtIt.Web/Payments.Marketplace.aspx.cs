@@ -233,7 +233,39 @@ namespace LajtIt.Web
 
 
         }
-    public static string GetProductCatalogWarehouse(DateTime date)
+        public static string GetOrderProductsSent(DateTime date)
+        {
+
+            PDF pdf = new PDF(
+                String.Format(ConfigurationManager.AppSettings[String.Format("ImagesDirectory_{0}", Dal.Helper.Env.ToString())], ""),
+                String.Format(ConfigurationManager.AppSettings[String.Format("ProductImportFilesDirectory_{0}", Dal.Helper.Env.ToString())], ""));
+
+            List<Dal.OrderProductsSentView> ops = Dal.DbHelper.Accounting.GetOrderProductsSent(date);
+
+
+            string fileName = pdf.OrderProductsSent(ops, date);
+
+            return fileName;
+
+
+        }
+        public static string GetProductCatalogDelivery(DateTime date)
+        {
+
+            PDF pdf = new PDF(
+                String.Format(ConfigurationManager.AppSettings[String.Format("ImagesDirectory_{0}", Dal.Helper.Env.ToString())], ""),
+                String.Format(ConfigurationManager.AppSettings[String.Format("ProductImportFilesDirectory_{0}", Dal.Helper.Env.ToString())], ""));
+
+            List<Dal.ProductCatalogDeliveryWarehouseViewWithPrice> deliveries = Dal.DbHelper.Accounting.GetProductCatalogDelivery(date);
+
+
+            string fileName = pdf.ProductCatalogDelivery(deliveries, date);
+
+            return fileName;
+
+
+        }
+        public static string GetProductCatalogWarehouse(DateTime date)
         {
     
             PDF pdf = new PDF(

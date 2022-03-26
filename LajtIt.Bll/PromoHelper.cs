@@ -15,19 +15,21 @@ namespace LajtIt.Bll
     {
         public void ManagePromos()
         {
-            Dal.PromoHelper pch = new Dal.PromoHelper();
+            GarbagePromosCleaner();
 
-            List<Promo> activeNotStarted = pch.GetActiveNotStartedPromotions();
-            List<Promo> active = pch.GetActivePromotions();
+            Dal.PromoHelper ph = new Dal.PromoHelper();
+
+            List<Promo> activeNotStarted = ph.GetActiveNotStartedPromotions();
+            List<Promo> active = ph.GetActivePromotions();
 
             foreach (Promo p in activeNotStarted)
             {
                 if (p.StartDate < DateTime.Now)
                 {
-                    int[] productIds = pch.GetPromotionProducts(p.PromotionId);
+                    int[] productIds = ph.GetPromotionProductsIds(p.PromotionId);
                     StartPromotion(p, productIds);
                     p.IsGoingOn = true;
-                    pch.UpdatePromotion(p);
+                    ph.UpdatePromotion(p);
                 }
             }
 
@@ -35,12 +37,29 @@ namespace LajtIt.Bll
             {
                 if (p.EndDate < DateTime.Now)
                 {
-                    int[] productIds = pch.GetPromotionProducts(p.PromotionId);
+                    int[] productIds = ph.GetPromotionProductsIds(p.PromotionId);
                     StopPromotion(p, productIds);
-                    pch.DeletePromotion(p);
+                    ph.DeletePromotion(p);
                 }
             }
 
+        }
+
+        private void GarbagePromosCleaner()
+        {
+            Dal.PromoHelper ph = new Dal.PromoHelper();
+
+            int[] pIds = ph.GetPromotionProductsIdsFromCatalog();
+
+            Dal.ProductCatalog pc = new Dal.ProductCatalog();
+            pc.LockRebates = null;
+            pc.IsPaczkomatAvailable = null;
+            pc.IsOutlet = null;
+            pc.PriceBruttoPromo = null;
+            pc.PriceBruttoPromoDate = null;
+
+            Dal.ProductCatalogHelper pch = new Dal.ProductCatalogHelper();
+            pch.SetProductCatalogSettings(pIds, pc, false, "System");
         }
  
         private void StartPromotion(Promo promo, int[] productIds)
@@ -55,11 +74,10 @@ namespace LajtIt.Bll
             pc.PriceBruttoPromoDate = promo.EndDate.Value.AddHours(23).AddMinutes(59);
 
             Dal.ProductCatalogHelper pch = new Dal.ProductCatalogHelper();
-            pch.SetProductCatalogSettings(productIds, pc, false, "Administrator");
+            pch.SetProductCatalogSettings(productIds, pc, false, "System");
         }
 
-
-        private void StopPromotion(Promo promo, int[] productIds)
+        public void StopPromotion(Promo promo, int[] productIds)
         {
             Dal.ProductCatalog pc = new Dal.ProductCatalog();
 
@@ -71,8 +89,51 @@ namespace LajtIt.Bll
             pc.PriceBruttoPromoDate = null;
 
             Dal.ProductCatalogHelper pch = new Dal.ProductCatalogHelper();
-            pch.SetProductCatalogSettings(productIds, pc, false, "Administrator");
+            pch.SetProductCatalogSettings(productIds, pc, false, "System");
         }
 
+
+
+        public void ManageUpdates()
+        {
+            Dal.PromoHelper ph = new Dal.PromoHelper();
+            Dal.ProductFileImportHelper pf = new Dal.ProductFileImportHelper();
+
+            List<Update> activeUpdates = ph.GetActiveUpdates();
+            List<Update> notActiveUpdates = ph.GetNotActiveUpdates();
+
+            foreach (Update update in activeUpdates)
+            {
+                Dal.ProductCatalogFile file = pf.GetFile(update.FileId);
+                if (file.FileImportStatusId == (int)Dal.Helper.FileImportStatus.Imported)
+                    ph.DeleteUpdate(update);
+            }
+
+            foreach (Update update in notActiveUpdates)
+            {
+                if (update.StartDate < DateTime.Now)
+                {
+                    SetReadyToImportFileStatus(update);
+                }
+            }
+        }
+
+        private void SetReadyToImportFileStatus(Update update)
+        {
+            Dal.PromoHelper ph = new Dal.PromoHelper();
+
+            update.IsActive = true;
+            ph.UpdateUpdate(update);
+
+            Dal.ProductCatalogFile pcf = new Dal.ProductCatalogFile()
+            {
+                FileImportStatusId = (int)Dal.Helper.FileImportStatus.ReadyToImport,
+                ProductCatalogFileId = update.FileId
+
+            };
+
+            Dal.ProductFileImportHelper pf = new Dal.ProductFileImportHelper();
+            pf.SetFileUpdateStatus(pcf);
+        }
     }
 }

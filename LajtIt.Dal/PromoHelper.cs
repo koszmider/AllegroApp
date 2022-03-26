@@ -9,8 +9,15 @@ namespace LajtIt.Dal
 {
     public class PromoHelper
     {
+        public int[] GetPromotionProductsIdsFromCatalog()
+        {
+            using (LajtitDB ctx = new LajtitDB())
+            {
+                return ctx.ProductCatalog.Where(x => x.IsActivePricePromo == false && (x.PriceBruttoPromoDate != null || x.PriceBruttoPromo != null)).Select(x => x.ProductCatalogId).ToArray();
+            }
+        }
 
-        public int[] GetPromotionProducts(int promoId)
+        public int[] GetPromotionProductsIds(int promoId)
         {
             using (LajtitDB ctx = new LajtitDB())
             {
@@ -18,7 +25,7 @@ namespace LajtIt.Dal
             }
         }
 
-        public List<PromoProduct> GetPromotionProductsList(int promoId)
+        public List<PromoProduct> GetPromotionProductsIdsList(int promoId)
         {
             using (LajtitDB ctx = new LajtitDB())
             {
@@ -31,6 +38,14 @@ namespace LajtIt.Dal
             using (LajtitDB ctx = new LajtitDB())
             {
                 return ctx.Promo.Where(x => x.IsActive == true && x.IsGoingOn == false).ToList();
+            }
+        }
+
+        public List<Promo> GetPromotions()
+        {
+            using (LajtitDB ctx = new LajtitDB())
+            {
+                return ctx.Promo.ToList();
             }
         }
 
@@ -64,7 +79,7 @@ namespace LajtIt.Dal
         {
             using (LajtitDB ctx = new LajtitDB())
             {
-                List<PromoProduct> list = GetPromotionProductsList(promotion.PromotionId);
+                List<PromoProduct> list = GetPromotionProductsIdsList(promotion.PromotionId);
                 foreach (PromoProduct pr in list)
                 {
                     PromoProduct propro = ctx.PromoProduct.Where(x => x.ProductCatalogId == pr.ProductCatalogId && x.PromotionId == pr.PromotionId).FirstOrDefault();
@@ -137,5 +152,71 @@ namespace LajtIt.Dal
 
 
 
+        public int AddUpdate(Update update)
+        {
+            using (LajtitDB ctx = new LajtitDB())
+            {
+                ctx.Update.InsertOnSubmit(update);
+                ctx.SubmitChanges();
+
+                return update.UpdateId;
+            }
+        }
+
+        public int UpdateUpdate(Update update)
+        {
+            using (LajtitDB ctx = new LajtitDB())
+            {
+                Update upd = ctx.Update.Where(x => x.UpdateId == update.UpdateId).FirstOrDefault();
+
+                upd.IsActive = update.IsActive;
+                ctx.SubmitChanges();
+
+                return update.UpdateId;
+            }
+        }
+
+        public void DeleteUpdate(Update update)
+        {
+            using (LajtitDB ctx = new LajtitDB())
+            {
+                Update upd = ctx.Update.Where(x => x.FileId == update.FileId).FirstOrDefault();
+                ctx.Update.DeleteOnSubmit(upd);
+
+                ctx.SubmitChanges();
+            }
+        }
+
+        public List<Update> GetAllUpdates()
+        {
+            using (LajtitDB ctx = new LajtitDB())
+            {
+                return ctx.Update.ToList();
+            }
+        }
+
+        public List<Update> GetNotActiveUpdates()
+        {
+            using (LajtitDB ctx = new LajtitDB())
+            {
+                return ctx.Update.Where(x => x.IsActive == false).ToList();
+            }
+        }
+
+        public List<Update> GetActiveUpdates()
+        {
+            using (LajtitDB ctx = new LajtitDB())
+            {
+                return ctx.Update.Where(x => x.IsActive == true).ToList();
+            }
+        }
+
+        public Update GetUpdate(int updateId)
+        {
+            using (LajtitDB ctx = new LajtitDB())
+            {
+                return ctx.Update.Where(x => x.UpdateId == updateId).FirstOrDefault();
+            }
+        }
     }
 }

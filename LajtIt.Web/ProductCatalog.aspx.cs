@@ -569,7 +569,7 @@ namespace LajtIt.Web
                 p.InsertUser = "Administrator";
                 p.InsertDate = DateTime.Now;
                 p.StartDate = DateTime.Parse(txbStartPromoDate.Text);
-                p.EndDate = DateTime.Parse(txbPricePromoDate.Text);
+                p.EndDate = DateTime.Parse(txbPricePromoDate.Text).AddDays(1).AddMinutes(-15);
                 p.PercentValue = Convert.ToInt32(txbPricePromo.Text);
                 p.IsActive = true;
                 p.IsGoingOn = false;

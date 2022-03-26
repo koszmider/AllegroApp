@@ -32,11 +32,40 @@ namespace LajtIt.Web
             Dal.ProductCatalogFile file = pf.GetFile(FileId);
 
             if (statusId == (int)Dal.Helper.FileImportStatus.ReadyToImport)
+            {
                 if (file.FileImportStatusId != (int)Dal.Helper.FileImportStatus.Ok)
                 {
                     DisplayMessage("Aby zatwierdzić plik do importu musi mieć status OK");
                     return;
                 }
+
+                if (!txbUpdateDate.Text.Equals(""))
+                {
+                    Dal.Update update = new Dal.Update()
+                    {
+                        InsertDate = DateTime.Now,
+                        InsertUser = "Administrator",
+                        StartDate = DateTime.Parse(txbUpdateDate.Text),
+                        FileId = FileId,
+                        IsActive = false,
+                        Description = Dal.DbHelper.ProductCatalog.GetSupplierName(file.SupplierId) + " " + file.Comment
+                    };
+
+                    Dal.PromoHelper ph = new Dal.PromoHelper();
+
+                    ph.AddUpdate(update);
+                    DisplayMessage("Zmiana statusu została pomyślnie zaplanowana");
+                    return;
+                }
+            }
+            else
+            {
+                if (!txbUpdateDate.Text.Equals(""))
+                {
+                    DisplayMessage("Opóźnienie zmiany statusu możliwe jest jedynie dla statusu \"Gotowy do importu\"");
+                    return;
+                }
+            }
 
             Dal.ProductCatalogFile pcf = new Dal.ProductCatalogFile()
             {

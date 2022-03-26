@@ -61,13 +61,12 @@ namespace LajtIt.Console
                     //    allegroScan.ProcessMyJournal("Auto");
                     //    break;
 
-                    case "CHECK_PROMOS":
-                        allegroScan.ManagePromotions();
+                    case "CHECK_UPDATES":
+                        allegroScan.ManageUpdates();
                         break;
 
-                    case "GENERATE_WAREHOUSE_DELIVERY_REPORT":
-                        if (args.Length == 3)
-                            Bll.SalesFileHelper.GenerateWarehouseDeliveryReport(args[1], args[2]);
+                    case "CHECK_PROMOS":
+                        allegroScan.ManagePromotions();
                         break;
 
                     case "GENERATE_SALES_FILE":

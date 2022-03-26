@@ -148,7 +148,7 @@
                     Data dostawy:
                 </td>
                 <td>
-                    Wybierz miesiące (od - do (niezależnie od podanego dnia miesiąca raporty generowane będą od 1go dnia miesiąca (od) do ostatniego dnia miesiąca (do))):
+                    Wybierz miesiące (od - do):
                 </td>
             </tr>
             <tr>
@@ -157,8 +157,8 @@
                     <asp:Button runat="server" ID="btnChangeDate" Text="Pokaż" OnClick="btnChangeDate_Click" />
                 </td>
                 <td>
-                    <asp:TextBox runat="server" ID="TextBox13" TextMode="Date"></asp:TextBox>
-                    <asp:TextBox runat="server" ID="TextBox23" TextMode="Date"></asp:TextBox>
+                    <asp:DropDownList runat="server" ID="ddlMonth1"></asp:DropDownList>
+                    <asp:DropDownList runat="server" ID="ddlMonth2"></asp:DropDownList>
                     <asp:LinkButton runat="server" ID="Button13" Text="Generuj miesięczne raporty" OnClick="btn13ChangeDate_Click"></asp:LinkButton>
                 </td>
             </tr>

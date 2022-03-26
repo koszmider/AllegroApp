@@ -7,27 +7,18 @@
 // </generowany automatycznie>
 //------------------------------------------------------------------------------
 
-namespace LajtIt.Web {
+namespace LajtIt.Web.Controls {
     
     
-    public partial class Promotions {
+    public partial class UpdateGrid {
         
         /// <summary>
-        /// Kontrolka ucPromoGrid.
+        /// Kontrolka gvPromos.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::LajtIt.Web.Controls.PromoGrid ucPromoGrid;
-        
-        /// <summary>
-        /// Kontrolka ucUpdateGrid.
-        /// </summary>
-        /// <remarks>
-        /// Pole generowane automatycznie.
-        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
-        /// </remarks>
-        protected global::LajtIt.Web.Controls.UpdateGrid ucUpdateGrid;
+        protected global::System.Web.UI.WebControls.GridView gvPromos;
     }
 }

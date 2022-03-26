@@ -1,12 +1,27 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Promotions.aspx.cs" Inherits="LajtIt.Web.Promotions" %>
 
+<%@ Register Src="~/Controls/PromoGrid.ascx" TagName="PromoGrid" TagPrefix="uc" %>
+<%@ Register Src="~/Controls/UpdateGrid.ascx" TagName="UpdateGrid" TagPrefix="uc" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>Promocje</h1>
+
     <div style="text-align: right;">
+        <uc:PromoGrid runat="server" ID="ucPromoGrid" />
+    </div>
+
+    <br />
+
+    <h1>Aktualizacje</h1>
+
+    <div style="text-align: right;">
+        <uc:UpdateGrid runat="server" ID="ucUpdateGrid" />
+    </div>
+
+<%--    <div style="text-align: right;">
         <asp:LinkButton runat="server" ID="lbtnPromotionAdd" Text="Dodaj nową promocję" OnClick="lbtnPromotionAdd_Click" OnClientClick="return confirm('Dodać nową promocję?');"></asp:LinkButton>
     </div>
     <asp:GridView runat="server" ID="gvPromotions" AutoGenerateColumns="false" DataKeyNames="PromotionId">
@@ -16,5 +31,5 @@
             <asp:BoundField DataField="EndDate" HeaderText="Do" DataFormatString="{0:yyyy/MM/dd}" />
             <asp:CheckBoxField DataField="IsActive" HeaderText="Aktywny" />
         </Columns>
-    </asp:GridView>
+    </asp:GridView>--%>
 </asp:Content>

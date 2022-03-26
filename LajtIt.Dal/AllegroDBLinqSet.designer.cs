@@ -576,6 +576,9 @@ namespace LajtIt.Dal
     partial void InsertPromoProduct(PromoProduct instance);
     partial void UpdatePromoProduct(PromoProduct instance);
     partial void DeletePromoProduct(PromoProduct instance);
+    partial void InsertUpdate(Update instance);
+    partial void UpdateUpdate(Update instance);
+    partial void DeleteUpdate(Update instance);
     #endregion
 		
 		public AllegroDBLinqSetDataContext(string connection) : 
@@ -2087,6 +2090,14 @@ namespace LajtIt.Dal
 			get
 			{
 				return this.GetTable<PromoProduct>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Update> Update
+		{
+			get
+			{
+				return this.GetTable<Update>();
 			}
 		}
 		
@@ -61472,17 +61483,9 @@ namespace LajtIt.Dal
 		private string _Description;
 		
 		private EntitySet<PromoProduct> _PromoProduct;
-        private DateTime now;
-        private string v1;
-        private DateTime dateTime1;
-        private DateTime dateTime2;
-        private int v2;
-        private bool v3;
-        private bool v4;
-        private string text;
-
-        #region Extensibility Method Definitions
-        partial void OnLoaded();
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
     partial void OnPromotionIdChanging(int value);
@@ -61510,20 +61513,8 @@ namespace LajtIt.Dal
 			this._PromoProduct = new EntitySet<PromoProduct>(new Action<PromoProduct>(this.attach_PromoProduct), new Action<PromoProduct>(this.detach_PromoProduct));
 			OnCreated();
 		}
-
-        public Promo(DateTime now, string v1, DateTime dateTime1, DateTime dateTime2, int v2, bool v3, bool v4, string text)
-        {
-            this.now = now;
-            this.v1 = v1;
-            this.dateTime1 = dateTime1;
-            this.dateTime2 = dateTime2;
-            this.v2 = v2;
-            this.v3 = v3;
-            this.v4 = v4;
-            this.text = text;
-        }
-
-        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PromotionId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PromotionId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int PromotionId
 		{
 			get
@@ -62012,6 +62003,212 @@ namespace LajtIt.Dal
 						this._PromotionId = default(int);
 					}
 					this.SendPropertyChanged("Promo");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[Update]")]
+	public partial class Update : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _UpdateId;
+		
+		private System.DateTime _InsertDate;
+		
+		private string _InsertUser;
+		
+		private System.DateTime _StartDate;
+		
+		private int _FileId;
+		
+		private bool _IsActive;
+		
+		private string _Description;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnUpdateIdChanging(int value);
+    partial void OnUpdateIdChanged();
+    partial void OnInsertDateChanging(System.DateTime value);
+    partial void OnInsertDateChanged();
+    partial void OnInsertUserChanging(string value);
+    partial void OnInsertUserChanged();
+    partial void OnStartDateChanging(System.DateTime value);
+    partial void OnStartDateChanged();
+    partial void OnFileIdChanging(int value);
+    partial void OnFileIdChanged();
+    partial void OnIsActiveChanging(bool value);
+    partial void OnIsActiveChanged();
+    partial void OnDescriptionChanging(string value);
+    partial void OnDescriptionChanged();
+    #endregion
+		
+		public Update()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UpdateId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int UpdateId
+		{
+			get
+			{
+				return this._UpdateId;
+			}
+			set
+			{
+				if ((this._UpdateId != value))
+				{
+					this.OnUpdateIdChanging(value);
+					this.SendPropertyChanging();
+					this._UpdateId = value;
+					this.SendPropertyChanged("UpdateId");
+					this.OnUpdateIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InsertDate", DbType="DateTime NOT NULL")]
+		public System.DateTime InsertDate
+		{
+			get
+			{
+				return this._InsertDate;
+			}
+			set
+			{
+				if ((this._InsertDate != value))
+				{
+					this.OnInsertDateChanging(value);
+					this.SendPropertyChanging();
+					this._InsertDate = value;
+					this.SendPropertyChanged("InsertDate");
+					this.OnInsertDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InsertUser", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
+		public string InsertUser
+		{
+			get
+			{
+				return this._InsertUser;
+			}
+			set
+			{
+				if ((this._InsertUser != value))
+				{
+					this.OnInsertUserChanging(value);
+					this.SendPropertyChanging();
+					this._InsertUser = value;
+					this.SendPropertyChanged("InsertUser");
+					this.OnInsertUserChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StartDate", DbType="DateTime NOT NULL")]
+		public System.DateTime StartDate
+		{
+			get
+			{
+				return this._StartDate;
+			}
+			set
+			{
+				if ((this._StartDate != value))
+				{
+					this.OnStartDateChanging(value);
+					this.SendPropertyChanging();
+					this._StartDate = value;
+					this.SendPropertyChanged("StartDate");
+					this.OnStartDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FileId", DbType="Int NOT NULL")]
+		public int FileId
+		{
+			get
+			{
+				return this._FileId;
+			}
+			set
+			{
+				if ((this._FileId != value))
+				{
+					this.OnFileIdChanging(value);
+					this.SendPropertyChanging();
+					this._FileId = value;
+					this.SendPropertyChanged("FileId");
+					this.OnFileIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsActive", DbType="Bit NOT NULL")]
+		public bool IsActive
+		{
+			get
+			{
+				return this._IsActive;
+			}
+			set
+			{
+				if ((this._IsActive != value))
+				{
+					this.OnIsActiveChanging(value);
+					this.SendPropertyChanging();
+					this._IsActive = value;
+					this.SendPropertyChanged("IsActive");
+					this.OnIsActiveChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", DbType="NVarChar(MAX)")]
+		public string Description
+		{
+			get
+			{
+				return this._Description;
+			}
+			set
+			{
+				if ((this._Description != value))
+				{
+					this.OnDescriptionChanging(value);
+					this.SendPropertyChanging();
+					this._Description = value;
+					this.SendPropertyChanged("Description");
+					this.OnDescriptionChanged();
 				}
 			}
 		}

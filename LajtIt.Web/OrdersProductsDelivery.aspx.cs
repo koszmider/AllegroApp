@@ -84,19 +84,51 @@ namespace LajtIt.Web
             }
 
         }
+
+        bool hasFullView = false;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            hasFullView = this.HasActionAccess(Guid.Parse("8a6b8ca6-8d38-4eb2-a014-d9133cabc9d8"));
 
             if (!Page.IsPostBack)
             {
                 txbDeliveryDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
                 BindProducts("",SortDirection.Ascending);
+                BindMonths();
             }
             BindProductsLog();
         }
 
-       
+        private void BindMonths()
+        {
+            List<ListItem> items = new List<ListItem>();
+            for (int year = DateTime.Now.Year; year >= 2010; year--)
+                for (int month = DateTime.Now.Year == year ? DateTime.Now.Month : 12; month >= 1; month--)
+                {
+                    ListItem item = new ListItem()
+                    {
+                        Text = String.Format("{0}/{1}", year, month),
+                        Value = String.Format("{0}/{1}/{2}", year, month, 1)
+                    };
+                    items.Add(item);
+                }
+
+
+            if (hasFullView)
+            {
+                ddlMonth1.Items.AddRange(items.ToArray());
+                ddlMonth2.Items.AddRange(items.ToArray());
+            }
+            else
+            {
+                ddlMonth1.Items.AddRange(items.Take(3).ToArray());
+                ddlMonth2.Items.AddRange(items.Take(3).ToArray());
+            }
+
+            ddlMonth1.SelectedIndex = 1;
+            ddlMonth2.SelectedIndex = 1;
+        }
 
         protected void btnNewDelivery_Click(object sender, EventArgs e)
         {
@@ -500,9 +532,9 @@ namespace LajtIt.Web
 
         protected void btn13ChangeDate_Click(object sender, EventArgs e)
         {
-            if (!TextBox13.Text.Equals("") && !TextBox23.Text.Equals(""))
+            if (!ddlMonth1.SelectedValue.Equals("") && !ddlMonth2.SelectedValue.Equals(""))
             {
-                Bll.SalesFileHelper.GenerateWarehouseDeliveryReport(TextBox13.Text, TextBox23.Text);
+                Bll.SalesFileHelper.GenerateWarehouseDeliveryReport(DateTime.Parse(ddlMonth1.SelectedValue), DateTime.Parse(ddlMonth2.SelectedValue));
 
                 DisplayMessage("Raporty zostały wysłane na maila");
             }

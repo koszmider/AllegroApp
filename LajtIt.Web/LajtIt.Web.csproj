@@ -150,6 +150,8 @@
     <Content Include="AllegroPerformance.aspx" />
     <Content Include="CashRegisterPayments.aspx" />
     <Content Include="CeneoClicks.aspx" />
+    <Content Include="Controls\UpdateGrid.ascx" />
+    <Content Include="Controls\PromoGrid.ascx" />
     <Content Include="Controls\ReceiptOrderGrid.ascx" />
     <Content Include="Controls\OrderShippingParcels.ascx" />
     <Content Include="Controls\OrderShippingSimple.ascx" />
@@ -513,6 +515,20 @@
     </Compile>
     <Compile Include="CeneoClicks.aspx.designer.cs">
       <DependentUpon>CeneoClicks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UpdateGrid.ascx.cs">
+      <DependentUpon>UpdateGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UpdateGrid.ascx.designer.cs">
+      <DependentUpon>UpdateGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PromoGrid.ascx.cs">
+      <DependentUpon>PromoGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PromoGrid.ascx.designer.cs">
+      <DependentUpon>PromoGrid.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\ReceiptOrderGrid.ascx.cs">
       <DependentUpon>ReceiptOrderGrid.ascx</DependentUpon>

@@ -751,6 +751,14 @@ namespace LajtIt.Dal
 				return this.GetTable<ProductCatalogDeliveryWarehouseViewWithPrice>();
 			}
 		}
+		
+		public System.Data.Linq.Table<OrderProductsSentView> OrderProductsSentView
+		{
+			get
+			{
+				return this.GetTable<OrderProductsSentView>();
+			}
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.AccountPaymentsView")]
@@ -20719,6 +20727,177 @@ namespace LajtIt.Dal
 				if ((this._SupplierOwnerId != value))
 				{
 					this._SupplierOwnerId = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.OrderProductsSentView")]
+	public partial class OrderProductsSentView
+	{
+		
+		private System.Nullable<int> _ProductCatalogId;
+		
+		private string _Code;
+		
+		private string _Name;
+		
+		private System.Nullable<int> _Quantity;
+		
+		private System.Nullable<decimal> _Price;
+		
+		private System.Nullable<decimal> _Netto;
+		
+		private System.Nullable<decimal> _Brutto;
+		
+		private System.DateTime _InsertDate;
+		
+		private int _OrderId;
+		
+		public OrderProductsSentView()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductCatalogId", DbType="Int")]
+		public System.Nullable<int> ProductCatalogId
+		{
+			get
+			{
+				return this._ProductCatalogId;
+			}
+			set
+			{
+				if ((this._ProductCatalogId != value))
+				{
+					this._ProductCatalogId = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Code", DbType="NVarChar(254)")]
+		public string Code
+		{
+			get
+			{
+				return this._Code;
+			}
+			set
+			{
+				if ((this._Code != value))
+				{
+					this._Code = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(256)")]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this._Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Quantity", DbType="Int")]
+		public System.Nullable<int> Quantity
+		{
+			get
+			{
+				return this._Quantity;
+			}
+			set
+			{
+				if ((this._Quantity != value))
+				{
+					this._Quantity = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Price", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> Price
+		{
+			get
+			{
+				return this._Price;
+			}
+			set
+			{
+				if ((this._Price != value))
+				{
+					this._Price = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Netto", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> Netto
+		{
+			get
+			{
+				return this._Netto;
+			}
+			set
+			{
+				if ((this._Netto != value))
+				{
+					this._Netto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Brutto", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> Brutto
+		{
+			get
+			{
+				return this._Brutto;
+			}
+			set
+			{
+				if ((this._Brutto != value))
+				{
+					this._Brutto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InsertDate", DbType="DateTime NOT NULL")]
+		public System.DateTime InsertDate
+		{
+			get
+			{
+				return this._InsertDate;
+			}
+			set
+			{
+				if ((this._InsertDate != value))
+				{
+					this._InsertDate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OrderId", DbType="Int NOT NULL")]
+		public int OrderId
+		{
+			get
+			{
+				return this._OrderId;
+			}
+			set
+			{
+				if ((this._OrderId != value))
+				{
+					this._OrderId = value;
 				}
 			}
 		}

@@ -14,45 +14,55 @@ namespace LajtIt.Web
         {
             if (!Page.IsPostBack)
             {
- 
                 BindPromotions();
-
-                
+                BindUpdates();
             }
           
         }
 
-        protected void PromotionAdded(object sender, EventArgs e)
-        {
-            BindPromotions();
+        //protected void PromotionAdded(object sender, EventArgs e)
+        //{
+        //    BindPromotions();
 
-        }
+        //}
 
         private void BindPromotions()
         {
-            Dal.PromotionHelper ph = new Dal.PromotionHelper();
+            ucPromoGrid.BindPromos();
 
-            gvPromotions.DataSource = ph.GetPromotions();
-            gvPromotions.DataBind();
+            //Dal.PromotionHelper ph = new Dal.PromotionHelper();
+
+            //gvPromotions.DataSource = ph.GetPromotions();
+            //gvPromotions.DataBind();
         }
 
-        protected void lbtnPromotionAdd_Click(object sender, EventArgs e)
+        private void BindUpdates()
         {
-            Dal.Promotion promotion = new Dal.Promotion()
-            {
-                EndDate = null,
-                InsertDate = DateTime.Now,
-                InsertUser = UserName,
-                IsActive = false,
-                IsWatekmarkActive = false,
-                Name = String.Format("Nowa promocja {0:yyyyMMdd HH:mm}", DateTime.Now),
-                StartDate = DateTime.Now.AddDays(7)
-            };
+            ucUpdateGrid.BindUpdates();
 
-            Dal.PromotionHelper ph = new Dal.PromotionHelper();
-            Response.Redirect(String.Format("Promotion.aspx?id={0}", ph.SetPromotion(promotion)));
+            //Dal.PromotionHelper ph = new Dal.PromotionHelper();
 
-
+            //gvPromotions.DataSource = ph.GetPromotions();
+            //gvPromotions.DataBind();
         }
+
+        //protected void lbtnPromotionAdd_Click(object sender, EventArgs e)
+        //{
+        //    Dal.Promotion promotion = new Dal.Promotion()
+        //    {
+        //        EndDate = null,
+        //        InsertDate = DateTime.Now,
+        //        InsertUser = UserName,
+        //        IsActive = false,
+        //        IsWatekmarkActive = false,
+        //        Name = String.Format("Nowa promocja {0:yyyyMMdd HH:mm}", DateTime.Now),
+        //        StartDate = DateTime.Now.AddDays(7)
+        //    };
+
+        //    Dal.PromotionHelper ph = new Dal.PromotionHelper();
+        //    Response.Redirect(String.Format("Promotion.aspx?id={0}", ph.SetPromotion(promotion)));
+
+
+        //}
     }
 }

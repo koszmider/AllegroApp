@@ -2694,6 +2694,17 @@
       <Association Name="Promo_PromoProduct" Member="Promo" ThisKey="PromotionId" OtherKey="PromotionId" Type="Promo" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.[Update]" Member="Update">
+    <Type Name="Update">
+      <Column Name="UpdateId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InsertDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="InsertUser" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FileId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Function Name="dbo.AccountingPeriodSet" Method="AccountingPeriodSet">
     <Parameter Name="Month" Parameter="month" Type="System.DateTime" DbType="DateTime" />
     <Return Type="System.Int32" />

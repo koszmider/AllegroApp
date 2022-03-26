@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ProductFileImportProcessing.aspx.cs" Inherits="LajtIt.Web.ProductFileImportProcessing" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -48,6 +50,17 @@
     <asp:UpdatePanel runat="server" ID="upStatus">
         <ContentTemplate>
             <table style="width:100%">
+
+                <tr>
+                    <td style="width:70%; text-align: right">
+                        <asp:TextBox textmode="DateTime" runat="server" ID="txbUpdateDate" Width="155"></asp:TextBox>
+                        <asp:CalendarExtender Format="yyyy/MM/dd HH':'mm" ID="CalendarExtender1" runat="server" TargetControlID="txbUpdateDate"></asp:CalendarExtender> 
+                        &nbsp;&nbsp;
+                    </td>
+                    <td style="text-align: left">
+                        Zaimportuj z opóźnieniem (pozostaw puste by zaimportować natychmiast)
+                    </td>
+                </tr>
                 <tr>
                     <td style="text-align: right">
                         <asp:DropDownList runat="server" ID="ddlStatus" ValidationGroup="status">
@@ -58,6 +71,8 @@
 
                         </asp:DropDownList>
                         <asp:RequiredFieldValidator runat="server" ValidationGroup="status" Text="*" ControlToValidate="ddlStatus"></asp:RequiredFieldValidator>
+                    </td>
+                    <td style="text-align: left">
                         <asp:LinkButton runat="server" Text="Zmień status" ValidationGroup="status" OnClick="lbtnStatusChange_Click"></asp:LinkButton><br />
                         <asp:HyperLink runat="server" ID="hlProductCatalog" Target="_blank" NavigateUrl="~/ProductCatalogForDb.aspx?FileImportId={0}&SupplierId={1}">Wyszukaj w katalogu</asp:HyperLink><span style="position: absolute;">
                             <asp:UpdateProgress ID="UpdateProgress2" runat="server" AssociatedUpdatePanelID="upStatus">

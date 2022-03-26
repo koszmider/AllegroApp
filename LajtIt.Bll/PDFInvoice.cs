@@ -1558,6 +1558,155 @@ BDO: {0}", invoice.Company.BDO),
             table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, stock.TotalValue.Value.ToString("C"), rowCell));
 
         }
+        public string OrderProductsSent(List<Dal.OrderProductsSentView> ops, DateTime month)
+        {
+            doc1 = new Document(PageSize.A4_LANDSCAPE);
+            string invoiceFile = path + @"\" + "Wz" + "_" + Guid.NewGuid().ToString() + ".pdf";
+            PdfWriter.GetInstance(doc1, new FileStream(invoiceFile, FileMode.Create));
+            doc1.Open();
+
+            Dal.Company company = Dal.DbHelper.Accounting.GetCompany(78);
+
+            iTextSharp.text.Font fontText = new iTextSharp.text.Font(STF_Helvetica_Polish, 18, iTextSharp.text.Font.NORMAL);
+
+
+            //  doc1.Add(CreateParagraph("Miejsce wystawienia: PL, Łódź", fontText, Element.ALIGN_RIGHT));
+            doc1.Add(CreateParagraph(String.Format("{0}", company.Name), fontText, Element.ALIGN_CENTER));
+
+            doc1.Add(CreateParagraph(String.Format("Magazyn - wydania {0:yyyy/MM}", month), fontText, Element.ALIGN_CENTER));
+
+            doc1.Add(CreateParagraph(" ", fontText, Element.ALIGN_LEFT));
+
+            Font headerCell = new Font(STF_Helvetica_Polish, 8, Font.BOLD);
+            PdfPTable table = new PdfPTable(7);
+
+            table.SetWidthPercentage(new float[] { 60f, 100f, 100f, 100f, 60f, 70f, 70f }, PageSize.A4_LANDSCAPE);
+
+            table.AddCell(CreateHeaderCell("Data przyjęcia", headerCell));
+            table.AddCell(CreateHeaderCell("Kod", headerCell));
+            table.AddCell(CreateHeaderCell("Dostawca", headerCell));
+            table.AddCell(CreateHeaderCell("Cena", headerCell));
+            table.AddCell(CreateHeaderCell("Ilość", headerCell));
+            table.AddCell(CreateHeaderCell("Wartość netto", headerCell));
+            table.AddCell(CreateHeaderCell("Wartość brutto", headerCell));
+
+            int qunatity = 0;
+            decimal total = 0;
+            decimal totalBrutto = 0;
+            foreach (Dal.OrderProductsSentView op in ops)
+            {
+                if (op.Price != null && op.Quantity != null)
+                {
+                    CreateOrderProductsSentTable(op, table);
+                    total += (decimal)op.Netto;
+                    totalBrutto += (decimal)op.Brutto;
+                    qunatity += (int)op.Quantity;
+                }
+            }
+
+
+            table.AddCell(CreateHeaderCell("", headerCell));
+            table.AddCell(CreateHeaderCell("", headerCell));
+            table.AddCell(CreateHeaderCell("", headerCell));
+            table.AddCell(CreateHeaderCell("", headerCell));
+            Font rowCell = new Font(STF_Helvetica_Polish, 7, Font.NORMAL);
+            table.AddCell(CreateRowCell(Element.ALIGN_CENTER, qunatity.ToString(), headerCell));
+            table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, total.ToString("C"), headerCell));
+            table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, totalBrutto.ToString("C"), headerCell));
+
+            doc1.Add(table);
+            doc1.Close();
+
+            return invoiceFile;
+        }
+        private void CreateOrderProductsSentTable(Dal.OrderProductsSentView ops, PdfPTable table)
+        {
+
+            Font rowCell = new Font(STF_Helvetica_Polish, 7, Font.NORMAL);
+
+            table.AddCell(CreateRowCell(Element.ALIGN_CENTER, ops.InsertDate.ToString("yyyy/MM/dd"), rowCell));
+            table.AddCell(CreateRowCell(Element.ALIGN_CENTER, ops.Code, rowCell));
+            table.AddCell(CreateRowCell(Element.ALIGN_CENTER, ops.Name, rowCell));
+            table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, ops.Price.Value.ToString("C"), rowCell));
+            table.AddCell(CreateRowCell(Element.ALIGN_CENTER, ops.Quantity.ToString(), rowCell));
+            table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, ops.Netto.Value.ToString("C"), rowCell));
+            table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, ops.Brutto.Value.ToString("C"), rowCell));
+
+        }
+        public string ProductCatalogDelivery(List<Dal.ProductCatalogDeliveryWarehouseViewWithPrice> deliveries, DateTime month)
+        {
+            doc1 = new Document(PageSize.A4_LANDSCAPE);
+            string invoiceFile = path + @"\" + "Pz" + "_" + Guid.NewGuid().ToString() + ".pdf";
+            PdfWriter.GetInstance(doc1, new FileStream(invoiceFile, FileMode.Create));
+            doc1.Open();
+
+            Dal.Company company = Dal.DbHelper.Accounting.GetCompany(78);
+
+            iTextSharp.text.Font fontText = new iTextSharp.text.Font(STF_Helvetica_Polish, 18, iTextSharp.text.Font.NORMAL);
+
+
+            //  doc1.Add(CreateParagraph("Miejsce wystawienia: PL, Łódź", fontText, Element.ALIGN_RIGHT));
+            doc1.Add(CreateParagraph(String.Format("{0}", company.Name), fontText, Element.ALIGN_CENTER));
+
+            doc1.Add(CreateParagraph(String.Format("Magazyn - przyjęcia {0:yyyy/MM}", month), fontText, Element.ALIGN_CENTER));
+
+            doc1.Add(CreateParagraph(" ", fontText, Element.ALIGN_LEFT));
+
+            Font headerCell = new Font(STF_Helvetica_Polish, 8, Font.BOLD);
+            PdfPTable table = new PdfPTable(6);
+
+            table.SetWidthPercentage(new float[] { 60f, 100f, /*100f,*/ 100f, 60f, 70f, 70f }, PageSize.A4_LANDSCAPE);
+
+            table.AddCell(CreateHeaderCell("Data przyjęcia", headerCell));
+
+            // table.AddCell(CreateHeaderCell("Nazwa", headerCell));
+            table.AddCell(CreateHeaderCell("Kod", headerCell));
+            table.AddCell(CreateHeaderCell("Dostawca", headerCell));
+            table.AddCell(CreateHeaderCell("Cena", headerCell));
+            table.AddCell(CreateHeaderCell("Ilość", headerCell));
+            table.AddCell(CreateHeaderCell("Wartość", headerCell));
+
+            int qunatity = 0;
+            decimal total = 0;
+            foreach (Dal.ProductCatalogDeliveryWarehouseViewWithPrice delivery in deliveries)
+            {
+                CreateProductCatalogDeliveryTable(delivery, table);
+                total += delivery.Quantity * delivery.Price;
+                qunatity += delivery.Quantity;
+            }
+
+
+            table.AddCell(CreateHeaderCell("", headerCell));
+
+            // table.AddCell(CreateHeaderCell("Nazwa", headerCell));
+            table.AddCell(CreateHeaderCell("", headerCell));
+            table.AddCell(CreateHeaderCell("", headerCell));
+            table.AddCell(CreateHeaderCell("", headerCell));
+            Font rowCell = new Font(STF_Helvetica_Polish, 7, Font.NORMAL);
+            table.AddCell(CreateRowCell(Element.ALIGN_CENTER, qunatity.ToString(), headerCell));
+            table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, total.ToString("C"), headerCell));
+
+            doc1.Add(table);
+            doc1.Close();
+
+            return invoiceFile;
+        }
+        private void CreateProductCatalogDeliveryTable(Dal.ProductCatalogDeliveryWarehouseViewWithPrice delivery, PdfPTable table)
+        {
+
+            Font rowCell = new Font(STF_Helvetica_Polish, 7, Font.NORMAL);
+
+            table.AddCell(CreateRowCell(Element.ALIGN_CENTER, delivery.InsertDate.Value.ToString("yyyy/MM/dd"), rowCell));
+
+            //table.AddCell(CreateRowCell(Element.ALIGN_CENTER, delivery.Name, rowCell));
+            table.AddCell(CreateRowCell(Element.ALIGN_CENTER, delivery.Code, rowCell));
+            table.AddCell(CreateRowCell(Element.ALIGN_CENTER, delivery.SupplierName, rowCell));
+
+            table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, delivery.Price.ToString("C"), rowCell));
+            table.AddCell(CreateRowCell(Element.ALIGN_CENTER, delivery.Quantity.ToString(), rowCell));
+            table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, (delivery.Quantity * delivery.Price).ToString("C"), rowCell));
+
+        }
         public string ProductCatalogWarehouse(List<Dal.ProductCatalogDeliveryInvoiceView> deliveries, DateTime month)
         {
             doc1 = new Document(PageSize.A4_LANDSCAPE);
@@ -1580,7 +1729,7 @@ BDO: {0}", invoice.Company.BDO),
             Font headerCell = new Font(STF_Helvetica_Polish, 8, Font.BOLD);
             PdfPTable table = new PdfPTable(6);
 
-            table.SetWidthPercentage(new float[] { 60f, 100f, /*100f,*/ 100f, 60f, 70f, 70f }, PageSize.A4_LANDSCAPE);
+            table.SetWidthPercentage(new float[] { 60f, 100f, /*100f,*/100f, 60f, 70f, 70f }, PageSize.A4_LANDSCAPE);
 
             table.AddCell(CreateHeaderCell("Data przyjęcia", headerCell));
 
