@@ -722,7 +722,7 @@ namespace LajtIt.Dal
             using (LajtitDB ctx = new LajtitDB())
             {
                 
-                return ctx.CeneoShop((int)ceneoShop, (int)shop).Where(x => /*x.SupplierId == 57 && */x.ShopProductId != null && x.CeneoShopProductId != null).ToList();
+                return ctx.CeneoShop((int)ceneoShop, (int)shop).Where(x => /*x.SupplierId == 38 && */x.ShopProductId != null && x.CeneoShopProductId != null).ToList();
 
             }
         }

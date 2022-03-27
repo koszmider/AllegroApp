@@ -67,6 +67,15 @@ namespace LajtIt.Web {
         protected global::LajtIt.Web.Controls.SystemMenu ucSystemMenu;
         
         /// <summary>
+        /// Kontrolka ListBoxSuppliers.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListBox ListBoxSuppliers;
+        
+        /// <summary>
         /// Kontrolka pnlUser.
         /// </summary>
         /// <remarks>

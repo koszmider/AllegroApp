@@ -74,6 +74,26 @@ namespace LajtIt.Web
                 lblInfo.Text = String.Format("Zadań: {0}", cntr);
             }
 
+            if (!HttpContext.Current.User.Identity.Name.Equals(""))
+            {
+                ListBoxSuppliers.Attributes.Add("Style", "background-color:#feeebd");
+
+                List <Dal.Supplier> ls = Dal.DbHelper.ProductCatalog.GetSuppliers();
+                ls = ls.Where(x => x.LastImportDate != null && x.IsActive == true && x.SupplierImportType.Name.Equals("Automatycznie")).ToList();
+                ls = ls.Where(x => x.LastImportDate.Value < DateTime.Now.AddDays(-1)).OrderBy(x => x.Name).ToList();
+
+                if (ls.Count() > 0)
+                {
+                    ListBoxSuppliers.Visible = true;
+                    ListBoxSuppliers.DataSource = ls.Select(x => x.Name);
+                    ListBoxSuppliers.DataBind();
+                }
+                else
+                {
+                    ListBoxSuppliers.Visible = false;
+                }
+            }
+
         }
         protected void lbtnLogout_Click(object sender, EventArgs e)
         {

@@ -139,10 +139,16 @@
                 </div>
                 <div class="page">
                     <div class="header test" runat="server" id="divHeader" style="" >
-                        <table style="width:100%">
+                        <table style="width:100%;">
                             <tr valign="top">
                                 <td>
                                     <uc:SystemMenu runat="server" ID="ucSystemMenu"></uc:SystemMenu>
+                                </td>
+                                <td style="width:150px;">
+                                    <asp:ListBox Visible="false" id="ListBoxSuppliers" Width="100%" runat="server">
+                                    </asp:ListBox>
+                                </td>
+                                <td style="width:100px;">
                                 </td>
                                 <td style="width:200px;">
                                     <table>
