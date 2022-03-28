@@ -20750,6 +20750,8 @@ namespace LajtIt.Dal
 		
 		private System.Nullable<decimal> _Brutto;
 		
+		private decimal _VAT;
+		
 		private System.DateTime _InsertDate;
 		
 		private int _OrderId;
@@ -20790,7 +20792,7 @@ namespace LajtIt.Dal
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(256)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(256) NOT NULL", CanBeNull=false)]
 		public string Name
 		{
 			get
@@ -20866,6 +20868,22 @@ namespace LajtIt.Dal
 				if ((this._Brutto != value))
 				{
 					this._Brutto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VAT", DbType="Decimal(18,2) NOT NULL")]
+		public decimal VAT
+		{
+			get
+			{
+				return this._VAT;
+			}
+			set
+			{
+				if ((this._VAT != value))
+				{
+					this._VAT = value;
 				}
 			}
 		}

@@ -20,6 +20,15 @@ namespace LajtIt.Dal.DbHelper
             public int[] ShopIds { get; set; }
 
         }
+
+        public static List<ProductCatalogDelivery> GetProductCatalogDeliveries(int productCatalogId)
+        {
+            using (LajtitDB ctx = new LajtitDB())
+            {
+                return ctx.ProductCatalogDelivery.Where(x => x.ProductCatalogId == productCatalogId && x.OrderId == null && x.Quantity > 0).ToList();
+            }
+        }
+
         public static List<ProductsCostsView> GetProductsCostsView(ProductsCostsSearch pcs)
         {
             using (LajtitViewsDB ctx = new LajtitViewsDB())
@@ -98,7 +107,7 @@ namespace LajtIt.Dal.DbHelper
             {
                 return ctx.ProductCatalogFileDataFn(2697).Where(x => x.ProductCatalogId == productCatalogId).FirstOrDefault();
             }
-            }
+        }
 
         public static void SetDeliveriesInvoice(int[] deliveryIds, int costId)
         {

@@ -145,7 +145,7 @@
                                     <uc:SystemMenu runat="server" ID="ucSystemMenu"></uc:SystemMenu>
                                 </td>
                                 <td style="width:150px;">
-                                    <asp:ListBox Visible="false" id="ListBoxSuppliers" Width="100%" runat="server">
+                                    <asp:ListBox Enabled="false" Visible="false" id="ListBoxSuppliers" Width="100%" runat="server" Height="115px">
                                     </asp:ListBox>
                                 </td>
                                 <td style="width:100px;">

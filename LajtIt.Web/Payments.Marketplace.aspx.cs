@@ -241,9 +241,22 @@ namespace LajtIt.Web
                 String.Format(ConfigurationManager.AppSettings[String.Format("ProductImportFilesDirectory_{0}", Dal.Helper.Env.ToString())], ""));
 
             List<Dal.OrderProductsSentView> ops = Dal.DbHelper.Accounting.GetOrderProductsSent(date);
+            //ops = ops.Where(x => x.OrderId == 107518).ToList();
+            List<Dal.OrderProductsSentView> opsPrice = ops.Where(x => x.Price != null).ToList();
+            List<Dal.OrderProductsSentView> opsNullPrice = ops.Where(x => x.Price == null).ToList();
+            foreach (Dal.OrderProductsSentView op in opsNullPrice)
+            {
+                Dal.ProductCatalogDelivery pcd = Dal.DbHelper.ProductCatalog.GetProductCatalogDeliveries((int)op.ProductCatalogId).FirstOrDefault();
+                if (pcd != null)
+                {
+                    op.Price = pcd.Price;
+                    op.Netto = pcd.Price * op.Quantity;
+                    op.Brutto = pcd.Price * op.Quantity * ((Decimal)1.00 + op.VAT);
+                    opsPrice.Add(op);
+                }
+            }
 
-
-            string fileName = pdf.OrderProductsSent(ops, date);
+            string fileName = pdf.OrderProductsSent(opsPrice, date);
 
             return fileName;
 

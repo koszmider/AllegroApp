@@ -1578,9 +1578,9 @@ BDO: {0}", invoice.Company.BDO),
             doc1.Add(CreateParagraph(" ", fontText, Element.ALIGN_LEFT));
 
             Font headerCell = new Font(STF_Helvetica_Polish, 8, Font.BOLD);
-            PdfPTable table = new PdfPTable(7);
+            PdfPTable table = new PdfPTable(8);
 
-            table.SetWidthPercentage(new float[] { 60f, 100f, 100f, 100f, 60f, 70f, 70f }, PageSize.A4_LANDSCAPE);
+            table.SetWidthPercentage(new float[] { 60f, 110f, 80f, 60f, 30f, 70f, 70f, 80f }, PageSize.A4_LANDSCAPE);
 
             table.AddCell(CreateHeaderCell("Data przyjęcia", headerCell));
             table.AddCell(CreateHeaderCell("Kod", headerCell));
@@ -1589,6 +1589,7 @@ BDO: {0}", invoice.Company.BDO),
             table.AddCell(CreateHeaderCell("Ilość", headerCell));
             table.AddCell(CreateHeaderCell("Wartość netto", headerCell));
             table.AddCell(CreateHeaderCell("Wartość brutto", headerCell));
+            table.AddCell(CreateHeaderCell("Nr zamówienia", headerCell));
 
             int qunatity = 0;
             decimal total = 0;
@@ -1613,6 +1614,7 @@ BDO: {0}", invoice.Company.BDO),
             table.AddCell(CreateRowCell(Element.ALIGN_CENTER, qunatity.ToString(), headerCell));
             table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, total.ToString("C"), headerCell));
             table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, totalBrutto.ToString("C"), headerCell));
+            table.AddCell(CreateHeaderCell("", headerCell));
 
             doc1.Add(table);
             doc1.Close();
@@ -1631,7 +1633,7 @@ BDO: {0}", invoice.Company.BDO),
             table.AddCell(CreateRowCell(Element.ALIGN_CENTER, ops.Quantity.ToString(), rowCell));
             table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, ops.Netto.Value.ToString("C"), rowCell));
             table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, ops.Brutto.Value.ToString("C"), rowCell));
-
+            table.AddCell(CreateRowCell(Element.ALIGN_CENTER, ops.OrderId.ToString(), rowCell));
         }
         public string ProductCatalogDelivery(List<Dal.ProductCatalogDeliveryWarehouseViewWithPrice> deliveries, DateTime month)
         {
@@ -1655,7 +1657,7 @@ BDO: {0}", invoice.Company.BDO),
             Font headerCell = new Font(STF_Helvetica_Polish, 8, Font.BOLD);
             PdfPTable table = new PdfPTable(6);
 
-            table.SetWidthPercentage(new float[] { 60f, 100f, /*100f,*/ 100f, 60f, 70f, 70f }, PageSize.A4_LANDSCAPE);
+            table.SetWidthPercentage(new float[] { 60f, 130f, 100f, 30f, 70f, 70f }, PageSize.A4_LANDSCAPE);
 
             table.AddCell(CreateHeaderCell("Data przyjęcia", headerCell));
 
