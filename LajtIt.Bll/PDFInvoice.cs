@@ -1582,7 +1582,7 @@ BDO: {0}", invoice.Company.BDO),
 
             table.SetWidthPercentage(new float[] { 60f, 110f, 80f, 60f, 30f, 70f, 70f, 80f }, PageSize.A4_LANDSCAPE);
 
-            table.AddCell(CreateHeaderCell("Data przyjęcia", headerCell));
+            table.AddCell(CreateHeaderCell("Data wydania", headerCell));
             table.AddCell(CreateHeaderCell("Kod", headerCell));
             table.AddCell(CreateHeaderCell("Dostawca", headerCell));
             table.AddCell(CreateHeaderCell("Cena", headerCell));
@@ -1655,18 +1655,17 @@ BDO: {0}", invoice.Company.BDO),
             doc1.Add(CreateParagraph(" ", fontText, Element.ALIGN_LEFT));
 
             Font headerCell = new Font(STF_Helvetica_Polish, 8, Font.BOLD);
-            PdfPTable table = new PdfPTable(6);
+            PdfPTable table = new PdfPTable(7);
 
-            table.SetWidthPercentage(new float[] { 60f, 130f, 100f, 30f, 70f, 70f }, PageSize.A4_LANDSCAPE);
+            table.SetWidthPercentage(new float[] { 60f, 110f, 80f, 60f, 30f, 70f, 80f }, PageSize.A4_LANDSCAPE);
 
             table.AddCell(CreateHeaderCell("Data przyjęcia", headerCell));
-
-            // table.AddCell(CreateHeaderCell("Nazwa", headerCell));
             table.AddCell(CreateHeaderCell("Kod", headerCell));
             table.AddCell(CreateHeaderCell("Dostawca", headerCell));
             table.AddCell(CreateHeaderCell("Cena", headerCell));
             table.AddCell(CreateHeaderCell("Ilość", headerCell));
             table.AddCell(CreateHeaderCell("Wartość", headerCell));
+            table.AddCell(CreateHeaderCell("Nr zamówienia", headerCell));
 
             int qunatity = 0;
             decimal total = 0;
@@ -1679,14 +1678,13 @@ BDO: {0}", invoice.Company.BDO),
 
 
             table.AddCell(CreateHeaderCell("", headerCell));
-
-            // table.AddCell(CreateHeaderCell("Nazwa", headerCell));
             table.AddCell(CreateHeaderCell("", headerCell));
             table.AddCell(CreateHeaderCell("", headerCell));
             table.AddCell(CreateHeaderCell("", headerCell));
             Font rowCell = new Font(STF_Helvetica_Polish, 7, Font.NORMAL);
             table.AddCell(CreateRowCell(Element.ALIGN_CENTER, qunatity.ToString(), headerCell));
             table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, total.ToString("C"), headerCell));
+            table.AddCell(CreateHeaderCell("", headerCell));
 
             doc1.Add(table);
             doc1.Close();
@@ -1699,14 +1697,12 @@ BDO: {0}", invoice.Company.BDO),
             Font rowCell = new Font(STF_Helvetica_Polish, 7, Font.NORMAL);
 
             table.AddCell(CreateRowCell(Element.ALIGN_CENTER, delivery.InsertDate.Value.ToString("yyyy/MM/dd"), rowCell));
-
-            //table.AddCell(CreateRowCell(Element.ALIGN_CENTER, delivery.Name, rowCell));
             table.AddCell(CreateRowCell(Element.ALIGN_CENTER, delivery.Code, rowCell));
             table.AddCell(CreateRowCell(Element.ALIGN_CENTER, delivery.SupplierName, rowCell));
-
             table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, delivery.Price.ToString("C"), rowCell));
             table.AddCell(CreateRowCell(Element.ALIGN_CENTER, delivery.Quantity.ToString(), rowCell));
             table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, (delivery.Quantity * delivery.Price).ToString("C"), rowCell));
+            table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, delivery.OrderId.ToString(), rowCell));
 
         }
         public string ProductCatalogWarehouse(List<Dal.ProductCatalogDeliveryInvoiceView> deliveries, DateTime month)
