@@ -20752,7 +20752,7 @@ namespace LajtIt.Dal
 		
 		private decimal _VAT;
 		
-		private System.DateTime _InsertDate;
+		private System.Nullable<System.DateTime> _InsertDate;
 		
 		private int _OrderId;
 		
@@ -20888,8 +20888,8 @@ namespace LajtIt.Dal
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InsertDate", DbType="DateTime NOT NULL")]
-		public System.DateTime InsertDate
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InsertDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> InsertDate
 		{
 			get
 			{

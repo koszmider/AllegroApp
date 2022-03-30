@@ -1626,7 +1626,7 @@ BDO: {0}", invoice.Company.BDO),
 
             Font rowCell = new Font(STF_Helvetica_Polish, 7, Font.NORMAL);
 
-            table.AddCell(CreateRowCell(Element.ALIGN_CENTER, ops.InsertDate.ToString("yyyy/MM/dd"), rowCell));
+            table.AddCell(CreateRowCell(Element.ALIGN_CENTER, ops.InsertDate.Value.ToString("yyyy/MM/dd"), rowCell));
             table.AddCell(CreateRowCell(Element.ALIGN_CENTER, ops.Code, rowCell));
             table.AddCell(CreateRowCell(Element.ALIGN_CENTER, ops.Name, rowCell));
             table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, ops.Price.Value.ToString("C"), rowCell));

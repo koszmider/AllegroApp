@@ -90,7 +90,7 @@ namespace LajtIt.Dal.DbHelper
             using (LajtitViewsDB ctx = new LajtitViewsDB())
             {
                 return ctx.OrderProductsSentView
-                    .Where(x => x.InsertDate.Year == date.Year && x.InsertDate.Month == date.Month)
+                    .Where(x => x.InsertDate.Value.Year == date.Year && x.InsertDate.Value.Month == date.Month)
                     .OrderBy(x => x.InsertDate)
                     .ToList();
             }

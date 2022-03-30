@@ -57,7 +57,8 @@ namespace LajtIt.Bll
             var lines = File.ReadAllLines(saveLocation);
             foreach (String line in lines)
             {
-                if (line.Equals(";;;;"))
+                int result = line.ToCharArray().Count(c => c == ';');
+                if (line.Length == result)
                     lines[cnt] = "";
                 cnt++;
             }

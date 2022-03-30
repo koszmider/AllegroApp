@@ -53,7 +53,16 @@ namespace LajtIt.Bll
 
             }
 
-
+            int cnt = 0;
+            var lines = File.ReadAllLines(saveLocation);
+            foreach (String line in lines)
+            {
+                int result = line.ToCharArray().Count(c => c == ';');
+                if (line.Length == result)
+                    lines[cnt] = "";
+                cnt++;
+            }
+            File.WriteAllLines(saveLocation, lines);
 
             using (TextReader reader = File.OpenText(saveLocation)) 
             {
