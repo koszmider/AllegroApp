@@ -543,11 +543,13 @@ namespace LajtIt.Bll
                 {
                     if(deliveryDays>0)
                     {
-                        if (deliveryDays > supplier.DeliveryId)
+                        //if (deliveryDays > supplier.DeliveryId)
                             product.DeliveryId = deliveries.Where(x => x.DeliveryId <= deliveryDays).OrderByDescending(x => x.DeliveryId).FirstOrDefault().DeliveryId;
-                        else
-                            product.DeliveryId = null;
+                        //else
+                            //product.DeliveryId = null;
                     }
+                    else
+                        product.DeliveryId = null;
 
                 }
 

@@ -563,6 +563,7 @@ namespace LajtIt.Web
 
             if (txbStartPromoDate.Text != "" && txbPricePromo.Text != "0")
             {
+                //Bll.PromoHelper ph = new Bll.PromoHelper();
                 Dal.PromoHelper ph = new Dal.PromoHelper();
                 Dal.Promo p = new Dal.Promo();
                 p.Description = txbPromoDesc.Text;
@@ -573,6 +574,8 @@ namespace LajtIt.Web
                 p.PercentValue = Convert.ToInt32(txbPricePromo.Text);
                 p.IsActive = true;
                 p.IsGoingOn = false;
+
+                //ph.AddPromotion(p, productIds);
 
                 int pid = ph.AddPromotion(p);
 

@@ -18,6 +18,25 @@ namespace LajtIt.Bll
         {
             oh = new Dal.OrderHelper();
         }
+
+        public int GetOrderProductOriginalQuantity(int orderId, string code)
+        {
+            string comment = Dal.DbHelper.Orders.GetOrdersStatusNoteComment(orderId);
+            comment = Regex.Replace(comment, "<br?>", String.Empty);
+            List<string> strl = Regex.Split(comment, "<.*?>").Where(l => l != string.Empty).ToList();
+            int cnt = 0;
+            foreach (string s in strl)
+            {
+                if (s.Contains(code))
+                {
+                    cnt++;
+                    break;
+                }
+                cnt++;
+            }
+            return Int32.Parse(strl[cnt]);
+        }
+
         public static int SetReceipt(int orderId, int cashRegisterId, int receiptTypeId, decimal amount, string n, string userName)
         {
 

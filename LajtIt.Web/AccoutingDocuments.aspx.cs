@@ -322,6 +322,20 @@ namespace LajtIt.Web
 
         }
 
+        protected void lbtnBk_Click(object sender, EventArgs e)
+        {
+            string fileName = PaymentsBankAccountMarketplace.GetOrderProductsBlocked(DateTime.Parse(ddlMonth.SelectedValue));
+            string contentType = "Application/pdf";
+
+            Response.ContentType = contentType;
+            Response.AppendHeader("content-disposition", "attachment; filename=Magazyn_" + (new FileInfo(fileName)).Name);
+
+            //Write the file directly to the HTTP content output stream.
+            Response.WriteFile(fileName);
+            Response.End();
+
+        }
+
         protected void lbtnWarehouse_Click(object sender, EventArgs e)
         {
             string fileName = PaymentsBankAccountMarketplace.GetProductCatalogWarehouse(DateTime.Parse(ddlMonth.SelectedValue));

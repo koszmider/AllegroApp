@@ -233,6 +233,21 @@ namespace LajtIt.Web
 
 
         }
+        public static string GetOrderProductsBlocked(DateTime date)
+        {
+
+            PDF pdf = new PDF(
+                String.Format(ConfigurationManager.AppSettings[String.Format("ImagesDirectory_{0}", Dal.Helper.Env.ToString())], ""),
+                String.Format(ConfigurationManager.AppSettings[String.Format("ProductImportFilesDirectory_{0}", Dal.Helper.Env.ToString())], ""));
+
+            List<Dal.ProductCatalogDeliveryWarehouseViewWithPrice> blocked = Dal.DbHelper.Accounting.GetProductCatalogDeliveryBlocked(date);
+
+            string fileName = pdf.ProductCatalogDeliveryBlocked(blocked, date);
+
+            return fileName;
+
+
+        }
         public static string GetOrderProductsSent(DateTime date)
         {
 

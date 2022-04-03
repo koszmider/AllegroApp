@@ -744,19 +744,19 @@ namespace LajtIt.Dal
 			}
 		}
 		
-		public System.Data.Linq.Table<ProductCatalogDeliveryWarehouseViewWithPrice> ProductCatalogDeliveryWarehouseViewWithPrice
-		{
-			get
-			{
-				return this.GetTable<ProductCatalogDeliveryWarehouseViewWithPrice>();
-			}
-		}
-		
 		public System.Data.Linq.Table<OrderProductsSentView> OrderProductsSentView
 		{
 			get
 			{
 				return this.GetTable<OrderProductsSentView>();
+			}
+		}
+		
+		public System.Data.Linq.Table<ProductCatalogDeliveryWarehouseViewWithPrice> ProductCatalogDeliveryWarehouseViewWithPrice
+		{
+			get
+			{
+				return this.GetTable<ProductCatalogDeliveryWarehouseViewWithPrice>();
 			}
 		}
 	}
@@ -20453,6 +20453,195 @@ namespace LajtIt.Dal
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.OrderProductsSentView")]
+	public partial class OrderProductsSentView
+	{
+		
+		private System.Nullable<int> _ProductCatalogId;
+		
+		private string _Code;
+		
+		private string _Name;
+		
+		private System.Nullable<int> _Quantity;
+		
+		private System.Nullable<decimal> _Price;
+		
+		private System.Nullable<decimal> _Netto;
+		
+		private System.Nullable<decimal> _Brutto;
+		
+		private decimal _VAT;
+		
+		private System.Nullable<System.DateTime> _InsertDate;
+		
+		private int _OrderId;
+		
+		public OrderProductsSentView()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductCatalogId", DbType="Int")]
+		public System.Nullable<int> ProductCatalogId
+		{
+			get
+			{
+				return this._ProductCatalogId;
+			}
+			set
+			{
+				if ((this._ProductCatalogId != value))
+				{
+					this._ProductCatalogId = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Code", DbType="NVarChar(254)")]
+		public string Code
+		{
+			get
+			{
+				return this._Code;
+			}
+			set
+			{
+				if ((this._Code != value))
+				{
+					this._Code = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(256) NOT NULL", CanBeNull=false)]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this._Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Quantity", DbType="Int")]
+		public System.Nullable<int> Quantity
+		{
+			get
+			{
+				return this._Quantity;
+			}
+			set
+			{
+				if ((this._Quantity != value))
+				{
+					this._Quantity = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Price", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> Price
+		{
+			get
+			{
+				return this._Price;
+			}
+			set
+			{
+				if ((this._Price != value))
+				{
+					this._Price = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Netto", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> Netto
+		{
+			get
+			{
+				return this._Netto;
+			}
+			set
+			{
+				if ((this._Netto != value))
+				{
+					this._Netto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Brutto", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> Brutto
+		{
+			get
+			{
+				return this._Brutto;
+			}
+			set
+			{
+				if ((this._Brutto != value))
+				{
+					this._Brutto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VAT", DbType="Decimal(18,2) NOT NULL")]
+		public decimal VAT
+		{
+			get
+			{
+				return this._VAT;
+			}
+			set
+			{
+				if ((this._VAT != value))
+				{
+					this._VAT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InsertDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> InsertDate
+		{
+			get
+			{
+				return this._InsertDate;
+			}
+			set
+			{
+				if ((this._InsertDate != value))
+				{
+					this._InsertDate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OrderId", DbType="Int NOT NULL")]
+		public int OrderId
+		{
+			get
+			{
+				return this._OrderId;
+			}
+			set
+			{
+				if ((this._OrderId != value))
+				{
+					this._OrderId = value;
+				}
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ProductCatalogDeliveryWarehouseViewWithPrice")]
 	public partial class ProductCatalogDeliveryWarehouseViewWithPrice
 	{
@@ -20486,6 +20675,8 @@ namespace LajtIt.Dal
 		private string _SupplierName;
 		
 		private int _SupplierOwnerId;
+		
+		private int _QuantityBlocked;
 		
 		public ProductCatalogDeliveryWarehouseViewWithPrice()
 		{
@@ -20730,192 +20921,19 @@ namespace LajtIt.Dal
 				}
 			}
 		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.OrderProductsSentView")]
-	public partial class OrderProductsSentView
-	{
 		
-		private System.Nullable<int> _ProductCatalogId;
-		
-		private string _Code;
-		
-		private string _Name;
-		
-		private System.Nullable<int> _Quantity;
-		
-		private System.Nullable<decimal> _Price;
-		
-		private System.Nullable<decimal> _Netto;
-		
-		private System.Nullable<decimal> _Brutto;
-		
-		private decimal _VAT;
-		
-		private System.Nullable<System.DateTime> _InsertDate;
-		
-		private int _OrderId;
-		
-		public OrderProductsSentView()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductCatalogId", DbType="Int")]
-		public System.Nullable<int> ProductCatalogId
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QuantityBlocked", DbType="Int NOT NULL")]
+		public int QuantityBlocked
 		{
 			get
 			{
-				return this._ProductCatalogId;
+				return this._QuantityBlocked;
 			}
 			set
 			{
-				if ((this._ProductCatalogId != value))
+				if ((this._QuantityBlocked != value))
 				{
-					this._ProductCatalogId = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Code", DbType="NVarChar(254)")]
-		public string Code
-		{
-			get
-			{
-				return this._Code;
-			}
-			set
-			{
-				if ((this._Code != value))
-				{
-					this._Code = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(256) NOT NULL", CanBeNull=false)]
-		public string Name
-		{
-			get
-			{
-				return this._Name;
-			}
-			set
-			{
-				if ((this._Name != value))
-				{
-					this._Name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Quantity", DbType="Int")]
-		public System.Nullable<int> Quantity
-		{
-			get
-			{
-				return this._Quantity;
-			}
-			set
-			{
-				if ((this._Quantity != value))
-				{
-					this._Quantity = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Price", DbType="Decimal(18,2)")]
-		public System.Nullable<decimal> Price
-		{
-			get
-			{
-				return this._Price;
-			}
-			set
-			{
-				if ((this._Price != value))
-				{
-					this._Price = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Netto", DbType="Decimal(18,2)")]
-		public System.Nullable<decimal> Netto
-		{
-			get
-			{
-				return this._Netto;
-			}
-			set
-			{
-				if ((this._Netto != value))
-				{
-					this._Netto = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Brutto", DbType="Decimal(18,2)")]
-		public System.Nullable<decimal> Brutto
-		{
-			get
-			{
-				return this._Brutto;
-			}
-			set
-			{
-				if ((this._Brutto != value))
-				{
-					this._Brutto = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VAT", DbType="Decimal(18,2) NOT NULL")]
-		public decimal VAT
-		{
-			get
-			{
-				return this._VAT;
-			}
-			set
-			{
-				if ((this._VAT != value))
-				{
-					this._VAT = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InsertDate", DbType="DateTime")]
-		public System.Nullable<System.DateTime> InsertDate
-		{
-			get
-			{
-				return this._InsertDate;
-			}
-			set
-			{
-				if ((this._InsertDate != value))
-				{
-					this._InsertDate = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OrderId", DbType="Int NOT NULL")]
-		public int OrderId
-		{
-			get
-			{
-				return this._OrderId;
-			}
-			set
-			{
-				if ((this._OrderId != value))
-				{
-					this._OrderId = value;
+					this._QuantityBlocked = value;
 				}
 			}
 		}

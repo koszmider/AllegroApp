@@ -92,6 +92,11 @@ namespace LajtIt.Bll
             pch.SetProductCatalogSettings(productIds, pc, false, "System");
         }
 
+        public void AddPromotion(Dal.Promo p, int[] ids)
+        {
+
+        }
+
 
 
         public void ManageUpdates()

@@ -96,6 +96,17 @@ namespace LajtIt.Dal.DbHelper
             }
         }
 
+        public static List<ProductCatalogDeliveryWarehouseViewWithPrice> GetProductCatalogDeliveryBlocked(DateTime date)
+        {
+            using (LajtitViewsDB ctx = new LajtitViewsDB())
+            {
+                return ctx.ProductCatalogDeliveryWarehouseViewWithPrice
+                    .Where(x => x.InsertDate.Value.Year == date.Year && x.InsertDate.Value.Month == date.Month && x.QuantityBlocked > 0)
+                    .OrderBy(x => x.InsertDate)
+                    .ToList();
+            }
+        }
+
         public static List<ProductCatalogDeliveryWarehouseViewWithPrice> GetProductCatalogDelivery(DateTime date)
         {
             using (LajtitViewsDB ctx = new LajtitViewsDB())

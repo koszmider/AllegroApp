@@ -26,6 +26,7 @@
             <asp:PostBackTrigger ControlID="lbtnWarehouseEndMonthList" />
             <asp:PostBackTrigger ControlID="lbtnPz" />
             <asp:PostBackTrigger ControlID="lbtnWz" />
+            <asp:PostBackTrigger ControlID="lbtnBk" />
         </Triggers>
     </asp:UpdatePanel>
     Miesiąc:                
@@ -134,6 +135,12 @@
                 <td style="width: 500px">Wz - wydania</td>
                 <td style="width: 500px">
                     <asp:LinkButton runat="server" ID="lbtnWz" OnClick="lbtnWz_Click" Text="Pobierz"></asp:LinkButton>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 500px">Bk - zablokowane (uszkodzone, zutylizowane)</td>
+                <td style="width: 500px">
+                    <asp:LinkButton runat="server" ID="lbtnBk" OnClick="lbtnBk_Click" Text="Pobierz"></asp:LinkButton>
                 </td>
             </tr>
         </table>

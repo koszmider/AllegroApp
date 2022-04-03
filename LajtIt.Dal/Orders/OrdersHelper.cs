@@ -22,6 +22,17 @@ namespace LajtIt.Dal.DbHelper
             public bool? IsReady { get; set; }
 
         }
+
+        public static string GetOrdersStatusNoteComment(int orderId)
+        {
+            using (LajtitDB ctx = new LajtitDB())
+            {
+                OrderStatusHistory p = ctx.OrderStatusHistory.Where(x => x.OrderId == orderId && x.OrderStatusId == 8 && x.Comment.Contains("Zamówienie zostało przyjęte do realizacji i jest kompletowane")).FirstOrDefault();
+
+                return p.Comment;
+            }
+        }
+
         public static List<OrdersIncomeFnResult> GetOrdersIncomeSearch(OrdersIncomeSearch pcs)
         {
             using (LajtitDB ctx = new LajtitDB())

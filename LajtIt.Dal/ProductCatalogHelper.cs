@@ -11,6 +11,13 @@ namespace LajtIt.Dal
     public partial class ProductCatalogHelper
     {
 
+        public Dal.ProductCatalog GetProductCatalog(int prodCatId)
+        {
+            using (LajtitDB ctx = new LajtitDB())
+            {
+                return ctx.ProductCatalog.Where(x => x.ProductCatalogId == prodCatId).FirstOrDefault();
+            }
+        }
 
         public void SetProductCatalogImages(List<ProductCatalogImage> images, List<int> imagesToDelete)
         {

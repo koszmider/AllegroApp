@@ -7,6 +7,7 @@ using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web;
 
@@ -55,6 +56,7 @@ namespace LajtIt.Bll
         //}
         public static void SetShippingNumbers()
         {
+
             Dal.OrderHelper oh = new Dal.OrderHelper();
 
             List<OrderShipping> orders = oh.GetOrdersWithoutTrackingNumbers2()
