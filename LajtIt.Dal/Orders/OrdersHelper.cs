@@ -492,7 +492,7 @@ namespace LajtIt.Dal.DbHelper
 
 
 
-                return r    .OrderBy(x => x.InsertDate)
+                return r.OrderBy(x => x.InsertDate)
                     .ToList();
 
             }

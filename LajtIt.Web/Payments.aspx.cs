@@ -80,7 +80,7 @@ namespace LajtIt.Web
             if(hasFullView)
                 ddlMonth.Items.AddRange(items.ToArray());
             else
-                ddlMonth.Items.AddRange(items.Take(2).ToArray());
+                ddlMonth.Items.AddRange(items.Take(4).ToArray());
         }
         protected void lbtnInvoiceSummary_Click(object sender, EventArgs e)
         {

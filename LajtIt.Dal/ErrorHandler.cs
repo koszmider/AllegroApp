@@ -17,7 +17,7 @@ namespace LajtIt.Dal
         }
         public static void LogError(Exception ex, string comment)
         {
-
+            return;//koszmid
             using (LajtitHelperDB ctx = new LajtitHelperDB())
             {
                 ErrorLog e = new ErrorLog();

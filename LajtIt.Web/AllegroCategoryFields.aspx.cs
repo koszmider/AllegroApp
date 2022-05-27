@@ -469,7 +469,7 @@ namespace LajtIt.Web
 
             Dal.ShopHelper oh = new Dal.ShopHelper();
 
-
+            string catid = ucShopCategoryControl.GetShopCategoryId();
             List<Dal.ShopCategoryField> categoryFields = oh.GetShopCategoryFieldsByCategoryId( ucShopCategoryControl.GetShopType().Value, ucShopCategoryControl.GetShopCategoryId(), null);
 
             gvShopCategoryFields.DataSource = categoryFields;

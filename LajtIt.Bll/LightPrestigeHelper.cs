@@ -152,7 +152,10 @@ namespace LajtIt.Bll
                 Produkt p = pm.Produkt.Where(x => x.Ean == ean).FirstOrDefault();
                 if(p!=null)
                 {
-                    Dal.ProductCatalog pc = Dal.ProductCatalogHelper.GetProductCatalog(SupplierId, p.Indeks, Decimal.Parse(p.Stan_mag.Replace(".", ",")) > 0);
+                    string str = "0";
+                    if (!p.Stan_mag.Equals(""))
+                        str = p.Stan_mag;
+                    Dal.ProductCatalog pc = Dal.ProductCatalogHelper.GetProductCatalog(SupplierId, p.Indeks, Decimal.Parse(str.Replace(".", ",")) > 0);
                     pc.Ean = String.IsNullOrEmpty(p.Ean)?null: p.Ean;
                     pc.Name = p.Nazwa.Substring(0, Math.Min(p.Nazwa.Length, 100));
                     pc.PriceBruttoFixed = Decimal.Parse(p.Cena_kat_brutto.Replace(".", ","));

@@ -40,7 +40,14 @@ namespace LajtIt.Bll
  
         public T LoadData<T>(string remoteUri, string name)
         {
-       
+
+            //FtpWebRequest request =
+            //(FtpWebRequest)WebRequest.Create("ftp://maytoni.com/stock-retail.csv");
+            //request.Credentials = new NetworkCredential("stockretail", "EszMDYSaojhxDAt");
+            //request.EnableSsl = true;
+            //request.Method = WebRequestMethods.Ftp.DownloadFile;
+
+            //FtpWebResponse response = (FtpWebResponse)request.GetResponse();
 
 
             string path = ConfigurationManager.AppSettings[String.Format("ProductImportFilesDirectory_{0}", Dal.Helper.Env.ToString())];

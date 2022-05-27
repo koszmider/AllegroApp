@@ -300,11 +300,11 @@ namespace LajtIt.Bll
                 //}
                 if (shopOrder.payment_mode_id == "3" && shopOrder.payment_status == "1")
                 {
-                    int accountingType;
-                    if (!String.IsNullOrEmpty(shopOrder.customer.billing_nip))
-                        accountingType = (int)Dal.Helper.OrderPaymentAccoutingType.Invoice;
-                    else
-                        accountingType = (int)Dal.Helper.OrderPaymentAccoutingType.CashRegister;
+                    //int accountingType;
+                    //if (!String.IsNullOrEmpty(shopOrder.customer.billing_nip))
+                    //    accountingType = (int)Dal.Helper.OrderPaymentAccoutingType.Invoice;
+                    //else
+                    //    accountingType = (int)Dal.Helper.OrderPaymentAccoutingType.CashRegister;
 
                     p = new OrderPayment()
                     {
@@ -314,7 +314,7 @@ namespace LajtIt.Bll
                         InsertDate = DateTime.Parse(shopOrder.date_created),
                         InsertUser = "system",
                         PaymentTypeId = (int)Dal.Helper.OrderPaymentType.Przelewy24,
-                        AccountingTypeId = accountingType,
+                        AccountingTypeId = null,// accountingType,
                         CurrencyCode = "PLN",
                         CurrencyRate = 1,
                         AmountCurrency = Decimal.Parse(shopOrder.customer_payment, System.Globalization.CultureInfo.InvariantCulture)

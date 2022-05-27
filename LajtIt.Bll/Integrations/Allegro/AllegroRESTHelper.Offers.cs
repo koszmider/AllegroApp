@@ -866,7 +866,7 @@ namespace LajtIt.Bll
 
 
             Dal.Shop shop = allegroShops.Where(x => x.ExternalId == allegroUserId).FirstOrDefault();
-
+            //shop.SellOnlyFromStock = true;//koszmid 19.05.2022
             if (shop.SellOnlyFromStock)
                 quantity = item.LeftQuantity;
             else

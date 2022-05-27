@@ -148,6 +148,15 @@ namespace LajtIt.Web {
         protected global::System.Web.UI.WebControls.LinkButton lbtnPz;
         
         /// <summary>
+        /// Kontrolka lbtnPzz.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbtnPzz;
+        
+        /// <summary>
         /// Kontrolka lbtnWz.
         /// </summary>
         /// <remarks>
@@ -155,15 +164,6 @@ namespace LajtIt.Web {
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lbtnWz;
-        
-        /// <summary>
-        /// Kontrolka lbtnBk.
-        /// </summary>
-        /// <remarks>
-        /// Pole generowane automatycznie.
-        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbtnBk;
         
         /// <summary>
         /// Kontrolka lbtnJPK.

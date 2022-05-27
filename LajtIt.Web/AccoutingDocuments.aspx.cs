@@ -322,9 +322,9 @@ namespace LajtIt.Web
 
         }
 
-        protected void lbtnBk_Click(object sender, EventArgs e)
+        protected void lbtnPzz_Click(object sender, EventArgs e)
         {
-            string fileName = PaymentsBankAccountMarketplace.GetOrderProductsBlocked(DateTime.Parse(ddlMonth.SelectedValue));
+            string fileName = "";
             string contentType = "Application/pdf";
 
             Response.ContentType = contentType;

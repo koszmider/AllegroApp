@@ -403,8 +403,8 @@ tel: 600 732 000",
             doc1.Add(CreateParagraph(" ", fontText, Element.ALIGN_LEFT));
             doc1.Add(CreateParagraph("Sklep online", fontText, Element.ALIGN_CENTER));
             doc1.Add(CreateParagraph("www.lajtit.pl", new iTextSharp.text.Font(STF_Helvetica_Polish, 22, iTextSharp.text.Font.NORMAL), Element.ALIGN_CENTER));
-            doc1.Add(CreateParagraph("Salon firmowy", fontText, Element.ALIGN_CENTER));
-            doc1.Add(CreateParagraph("Pabianicka 163/165, 93-490 Łódź", new iTextSharp.text.Font(STF_Helvetica_Polish, 22, iTextSharp.text.Font.NORMAL), Element.ALIGN_CENTER));
+            //doc1.Add(CreateParagraph("Salon firmowy", fontText, Element.ALIGN_CENTER));
+            doc1.Add(CreateParagraph("Przewodnia 16, 93-490 Łódź", new iTextSharp.text.Font(STF_Helvetica_Polish, 22, iTextSharp.text.Font.NORMAL), Element.ALIGN_CENTER));
             doc1.Add(CreateParagraph(" ", fontText, Element.ALIGN_CENTER));
             doc1.Add(CreateParagraph(" ", fontText, Element.ALIGN_CENTER));
             doc1.Add(CreateParagraph("Pomoc techniczna", fontText, Element.ALIGN_CENTER));
@@ -451,8 +451,8 @@ tel: 600 732 000 ", company.Name, company.Address, company.PostalCode, company.C
             doc1.Add(CreateParagraph(" ", fontText, Element.ALIGN_LEFT));
             doc1.Add(CreateParagraph("Sklep online", fontText, Element.ALIGN_CENTER));
             doc1.Add(CreateParagraph("www.lajtit.pl", new iTextSharp.text.Font(STF_Helvetica_Polish, 22, iTextSharp.text.Font.NORMAL), Element.ALIGN_CENTER));
-            doc1.Add(CreateParagraph("Salon firmowy", fontText, Element.ALIGN_CENTER));
-            doc1.Add(CreateParagraph("Pabianicka 163/165, 93-490 Łódź", new iTextSharp.text.Font(STF_Helvetica_Polish, 22, iTextSharp.text.Font.NORMAL), Element.ALIGN_CENTER));
+            //doc1.Add(CreateParagraph("Salon firmowy", fontText, Element.ALIGN_CENTER));
+            doc1.Add(CreateParagraph("Przewodnia 16, 93-490 Łódź", new iTextSharp.text.Font(STF_Helvetica_Polish, 22, iTextSharp.text.Font.NORMAL), Element.ALIGN_CENTER));
             doc1.Add(CreateParagraph(" ", fontText, Element.ALIGN_CENTER));
             doc1.Add(CreateParagraph(" ", fontText, Element.ALIGN_CENTER));
            // doc1.Add(CreateParagraph("Pomoc techniczna", fontText, Element.ALIGN_CENTER));
@@ -1634,76 +1634,6 @@ BDO: {0}", invoice.Company.BDO),
             table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, ops.Netto.Value.ToString("C"), rowCell));
             table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, ops.Brutto.Value.ToString("C"), rowCell));
             table.AddCell(CreateRowCell(Element.ALIGN_CENTER, ops.OrderId.ToString(), rowCell));
-        }
-        public string ProductCatalogDeliveryBlocked(List<Dal.ProductCatalogDeliveryWarehouseViewWithPrice> deliveries, DateTime month)
-        {
-            doc1 = new Document(PageSize.A4_LANDSCAPE);
-            string invoiceFile = path + @"\" + "Bk" + "_" + Guid.NewGuid().ToString() + ".pdf";
-            PdfWriter.GetInstance(doc1, new FileStream(invoiceFile, FileMode.Create));
-            doc1.Open();
-
-            Dal.Company company = Dal.DbHelper.Accounting.GetCompany(78);
-
-            iTextSharp.text.Font fontText = new iTextSharp.text.Font(STF_Helvetica_Polish, 18, iTextSharp.text.Font.NORMAL);
-
-
-            //  doc1.Add(CreateParagraph("Miejsce wystawienia: PL, Łódź", fontText, Element.ALIGN_RIGHT));
-            doc1.Add(CreateParagraph(String.Format("{0}", company.Name), fontText, Element.ALIGN_CENTER));
-
-            doc1.Add(CreateParagraph(String.Format("Magazyn - blokowania {0:yyyy/MM}", month), fontText, Element.ALIGN_CENTER));
-
-            doc1.Add(CreateParagraph(" ", fontText, Element.ALIGN_LEFT));
-
-            Font headerCell = new Font(STF_Helvetica_Polish, 8, Font.BOLD);
-            PdfPTable table = new PdfPTable(7);
-
-            table.SetWidthPercentage(new float[] { 60f, 110f, 80f, 60f, 30f, 70f, 80f }, PageSize.A4_LANDSCAPE);
-
-            table.AddCell(CreateHeaderCell("Data przyjęcia", headerCell));
-            table.AddCell(CreateHeaderCell("Kod", headerCell));
-            table.AddCell(CreateHeaderCell("Dostawca", headerCell));
-            table.AddCell(CreateHeaderCell("Cena", headerCell));
-            table.AddCell(CreateHeaderCell("Ilość", headerCell));
-            table.AddCell(CreateHeaderCell("Wartość", headerCell));
-            table.AddCell(CreateHeaderCell("Nr zamówienia", headerCell));
-
-            int qunatity = 0;
-            decimal total = 0;
-            foreach (Dal.ProductCatalogDeliveryWarehouseViewWithPrice delivery in deliveries)
-            {
-                CreateProductCatalogDeliveryTable(delivery, table);
-                total += delivery.Quantity * delivery.Price;
-                qunatity += delivery.Quantity;
-            }
-
-
-            table.AddCell(CreateHeaderCell("", headerCell));
-            table.AddCell(CreateHeaderCell("", headerCell));
-            table.AddCell(CreateHeaderCell("", headerCell));
-            table.AddCell(CreateHeaderCell("", headerCell));
-            Font rowCell = new Font(STF_Helvetica_Polish, 7, Font.NORMAL);
-            table.AddCell(CreateRowCell(Element.ALIGN_CENTER, qunatity.ToString(), headerCell));
-            table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, total.ToString("C"), headerCell));
-            table.AddCell(CreateHeaderCell("", headerCell));
-
-            doc1.Add(table);
-            doc1.Close();
-
-            return invoiceFile;
-        }
-        private void CreateProductCatalogDeliveryBlockedTable(Dal.ProductCatalogDeliveryWarehouseViewWithPrice delivery, PdfPTable table)
-        {
-
-            Font rowCell = new Font(STF_Helvetica_Polish, 7, Font.NORMAL);
-
-            table.AddCell(CreateRowCell(Element.ALIGN_CENTER, delivery.InsertDate.Value.ToString("yyyy/MM/dd"), rowCell));
-            table.AddCell(CreateRowCell(Element.ALIGN_CENTER, delivery.Code, rowCell));
-            table.AddCell(CreateRowCell(Element.ALIGN_CENTER, delivery.SupplierName, rowCell));
-            table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, delivery.Price.ToString("C"), rowCell));
-            table.AddCell(CreateRowCell(Element.ALIGN_CENTER, delivery.Quantity.ToString(), rowCell));
-            table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, (delivery.Quantity * delivery.Price).ToString("C"), rowCell));
-            table.AddCell(CreateRowCell(Element.ALIGN_RIGHT, delivery.OrderId.ToString(), rowCell));
-
         }
         public string ProductCatalogDelivery(List<Dal.ProductCatalogDeliveryWarehouseViewWithPrice> deliveries, DateTime month)
         {

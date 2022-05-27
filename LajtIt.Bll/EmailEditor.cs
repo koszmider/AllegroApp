@@ -226,7 +226,7 @@ Przejdź do sklepu <a href='https://lajtit.pl/rabaty_na_zakup_oswietlenia_lamp' 
             switch (order.OrderShipping.ShippingServiceModeId)
             {
                 case (int)Dal.Helper.ShippingServiceMode.Showroom:
-                    str = "Odbiór w salonie Lajtit<br>ul. Pabianicka 163/165, 93-419 Łódź";break;
+                    str = "Odbiór w salonie Lajtit<br>ul. Przewodnia 16, 93-419 Łódź";break;
                     default:
                             str = String.Format("{0} {1}", order.OrderShipping.ShippingServiceMode.Name, order.OrderShipping.ShippingCompany.Name); break;
             }
